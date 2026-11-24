@@ -15,6 +15,7 @@ class StoryMetadata:
     author: str
     language: str
     status: str
+    synopsis: str = ""
 
 
 @dataclass(frozen=True)

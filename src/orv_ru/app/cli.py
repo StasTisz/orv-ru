@@ -27,6 +27,12 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Path to TOML configuration file (default: config.toml)",
     )
     root_common.add_argument(
+        "--story",
+        type=str,
+        default=None,
+        help="Target story slug (e.g. orv, cont, side; default: primary story in config)",
+    )
+    root_common.add_argument(
         "--json",
         action="store_true",
         dest="as_json",
@@ -41,6 +47,12 @@ def _build_parser() -> argparse.ArgumentParser:
         type=Path,
         default=argparse.SUPPRESS,
         help="Path to TOML configuration file (default: config.toml)",
+    )
+    sub_common.add_argument(
+        "--story",
+        type=str,
+        default=argparse.SUPPRESS,
+        help="Target story slug (e.g. orv, cont, side; default: primary story in config)",
     )
     sub_common.add_argument(
         "--json",
@@ -389,7 +401,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     try:
-        controller = WorkspaceController.from_config(args.config)
+        controller = WorkspaceController.from_config(args.config, story_slug=args.story)
     except Exception as exc:
         _print_output(
             {"error": str(exc)},

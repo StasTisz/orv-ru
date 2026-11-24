@@ -20,12 +20,13 @@ def main(argv: Sequence[str] | None = None) -> int:
         description="Export protected translation packet(s) for the next untranslated chapter(s)."
     )
     parser.add_argument("--config", type=Path, default=Path("config.toml"))
+    parser.add_argument("--story", type=str, default=None, help="Target story slug (orv, cont, side)")
     parser.add_argument("--count", type=int, default=1, help="Number of untranslated chapters to export")
     parser.add_argument("--chapter", type=int, default=None, help="Explicit chapter number to export")
     parser.add_argument("--work-dir", type=Path, default=Path("data/work"))
     args = parser.parse_args(argv)
 
-    controller = WorkspaceController.from_config(args.config)
+    controller = WorkspaceController.from_config(args.config, story_slug=args.story)
     args.work_dir.mkdir(parents=True, exist_ok=True)
 
     if args.chapter is not None:

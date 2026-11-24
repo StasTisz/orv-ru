@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from collections.abc import Sequence
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Protocol
@@ -45,6 +46,15 @@ class SiteBuilder(Protocol):
         story: StoryMetadata,
         chapters: list[Chapter],
         output_dir: Path,
+    ) -> SiteBuildReport: ...
+
+    def build_collection(
+        self,
+        stories: Sequence[tuple[StoryMetadata, list[Chapter]]],
+        output_dir: Path,
+        *,
+        primary_slug: str | None = None,
+        source_counts: dict[str, int] | None = None,
     ) -> SiteBuildReport: ...
 
 

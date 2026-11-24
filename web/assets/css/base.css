@@ -176,6 +176,13 @@ body {
     background: rgba(255, 255, 255, 0.1);
 }
 
+.btn.is-disabled {
+    opacity: 0.48;
+    cursor: default;
+    border-color: rgba(255, 255, 255, 0.45);
+    pointer-events: none;
+}
+
 .bottom-group {
     display: flex;
     flex-direction: column;

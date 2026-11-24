@@ -109,7 +109,8 @@ body {
 .card img {
     display: block;
     width: 100%;
-    height: auto;
+    aspect-ratio: 800 / 1120;
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 

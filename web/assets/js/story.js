@@ -11,13 +11,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const state = window.OrvStorage.getReaderState();
     const lastRead = state.last_read && state.last_read[slug];
-    if (lastRead) {
+
+    function updateReadButton() {
         const readLink = document.getElementById('read-link');
         const readBtn = document.getElementById('read-btn');
-        if (readLink && readBtn) {
+        if (!readLink || !readBtn) return;
+
+        if (!chapters.length) {
+            readLink.href = '#';
+            readLink.addEventListener('click', (e) => e.preventDefault());
+            readBtn.disabled = true;
+            readBtn.setAttribute('aria-disabled', 'true');
+            readBtn.textContent = 'Скоро';
+            return;
+        }
+
+        readBtn.disabled = false;
+        readBtn.removeAttribute('aria-disabled');
+        if (lastRead && chapters.some((ch) => Number(ch.number) === Number(lastRead))) {
             readLink.href = `./read/ch_${lastRead}.html`;
             readBtn.textContent = 'Продолжить';
             readBtn.title = `Продолжить с главы ${lastRead}`;
+        } else {
+            readLink.href = `./read/${chapters[0].href}`;
+            readBtn.textContent = 'Читать';
         }
     }
 
@@ -31,6 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderChapterList(items) {
         const listEl = document.getElementById('chapter-list');
         if (!listEl) return;
+        if (!chapters.length) {
+            listEl.innerHTML =
+                '<div class="chapter_item is-empty"><p>Перевод первых глав ещё готовится — загляните чуть позже.</p></div>';
+            return;
+        }
         if (!items.length) {
             listEl.innerHTML = '<div class="chapter_item"><p>Глава не найдена</p></div>';
             return;
@@ -61,10 +83,14 @@ document.addEventListener('DOMContentLoaded', () => {
         .then((meta) => {
             const metaBox = document.getElementById('story-meta');
             if (metaBox) {
+                const countText =
+                    meta.source_chapters !== undefined && meta.source_chapters !== meta.chapters
+                        ? `${meta.chapters} (всего ${meta.source_chapters})`
+                        : `${meta.chapters}`;
                 metaBox.innerHTML = `
                     <p class="story-title">${escapeHtml(meta.title)}</p>
                     <p>Автор: ${escapeHtml(meta.author)}<br>
-                    Глав: ${meta.chapters}<br>
+                    Глав: ${escapeHtml(countText)}<br>
                     Статус: ${escapeHtml(meta.status)}</p>
                 `;
             }
@@ -75,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then((res) => (res.ok ? res.json() : Promise.reject(res.statusText)))
         .then((data) => {
             chapters = data.slice().sort((a, b) => a.number - b.number);
+            updateReadButton();
             applyFilterAndSort();
         })
         .catch(() => {});

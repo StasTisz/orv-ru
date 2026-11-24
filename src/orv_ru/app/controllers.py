@@ -6,8 +6,9 @@ from pathlib import Path
 from typing import Any
 
 from orv_ru.app.models import ValidationSummary, WorkspaceStatus, serialize_report
-from orv_ru.config import AppConfig, load_config
+from orv_ru.config import AppConfig, StoryConfigEntry, load_config
 from orv_ru.domain.chapter import Chapter
+from orv_ru.domain.story import StoryMetadata
 from orv_ru.domain.validation import Severity, ValidationIssue, ValidationReport
 from orv_ru.parsing import OrvMarkupParser, OrvMarkupSerializer, StructuralValidator
 from orv_ru.ports.renderer import BookBuilder, EpubBuildReport, SiteBuilder, SiteBuildReport
@@ -41,6 +42,10 @@ class WorkspaceController:
         site_builder: SiteBuilder,
         epub_builder: BookBuilder,
         glossary_checker: GlossaryChecker | None = None,
+        *,
+        active_story: StoryMetadata | None = None,
+        parser: OrvMarkupParser | None = None,
+        serializer: OrvMarkupSerializer | None = None,
     ) -> None:
         self._config = config
         self._source_repo = source_repo
@@ -49,21 +54,30 @@ class WorkspaceController:
         self._site_builder = site_builder
         self._epub_builder = epub_builder
         self._glossary_checker = glossary_checker or GlossaryChecker()
+        self._active_story = active_story or config.story
+        self._parser = parser or OrvMarkupParser()
+        self._serializer = serializer or OrvMarkupSerializer()
 
     @classmethod
-    def from_config(cls, config_path: Path) -> WorkspaceController:
+    def from_config(
+        cls,
+        config_path: Path,
+        *,
+        story_slug: str | None = None,
+    ) -> WorkspaceController:
         """Composition root wiring concrete adapters from `config.toml`."""
         resolved_cfg = config_path.resolve()
         cfg = load_config(resolved_cfg)
+        entry = cfg.resolve_story(story_slug)
         web_dir = resolved_cfg.parent / "web"
 
         parser = OrvMarkupParser()
         serializer = OrvMarkupSerializer()
         validator = StructuralValidator()
 
-        source_repo = FileSystemChapterRepository(cfg.paths.source_chapters, parser, serializer)
+        source_repo = FileSystemChapterRepository(entry.source_chapters, parser, serializer)
         translated_repo = FileSystemChapterRepository(
-            cfg.paths.translated_chapters, parser, serializer
+            entry.translated_chapters, parser, serializer
         )
         asset_resolver = AssetResolver(cfg.paths.assets_images)
         site_builder = StaticSiteBuilder(
@@ -83,6 +97,35 @@ class WorkspaceController:
             site_builder=site_builder,
             epub_builder=epub_builder,
             glossary_checker=GlossaryChecker(),
+            active_story=entry.story,
+            parser=parser,
+            serializer=serializer,
+        )
+
+    @property
+    def active_story(self) -> StoryMetadata:
+        return self._active_story
+
+    def for_story(self, slug: str) -> WorkspaceController:
+        """Return a controller view bound to another configured story slug."""
+        entry = self._config.resolve_story(slug)
+        if entry.story.slug == self._active_story.slug:
+            return self
+        return WorkspaceController(
+            config=self._config,
+            source_repo=FileSystemChapterRepository(
+                entry.source_chapters, self._parser, self._serializer
+            ),
+            translated_repo=FileSystemChapterRepository(
+                entry.translated_chapters, self._parser, self._serializer
+            ),
+            validator=self._validator,
+            site_builder=self._site_builder,
+            epub_builder=self._epub_builder,
+            glossary_checker=self._glossary_checker,
+            active_story=entry.story,
+            parser=self._parser,
+            serializer=self._serializer,
         )
 
     @property
@@ -116,7 +159,7 @@ class WorkspaceController:
                 invalid_chapters.append(num)
 
         return WorkspaceStatus(
-            story_slug=self._config.story.slug,
+            story_slug=self._active_story.slug,
             source_count=len(source_nums),
             translated_count=len(translated_nums),
             remaining_count=len(remaining),
@@ -342,7 +385,7 @@ class WorkspaceController:
             llm_client=llm_client,
             validator=self._validator,
             glossary_checker=self._glossary_checker,
-            prompt_builder=PromptBuilder(self._config.story),
+            prompt_builder=PromptBuilder(self._active_story),
             chunker=ChapterChunker(max_chars=max_chars),
             max_retries=max_retries,
         )
@@ -381,12 +424,43 @@ class WorkspaceController:
         use_source: bool = False,
         limit: int | None = None,
     ) -> SiteBuildReport:
-        """Build the static HTML reader from translated (or source) chapters."""
-        chapters = self._load_chapters_for_build(use_source=use_source, limit=limit)
-        return self._site_builder.build(
-            story=self._config.story,
-            chapters=chapters,
-            output_dir=self._config.paths.site_output,
+        """Build the static HTML reader across all configured stories."""
+        entries: tuple[StoryConfigEntry, ...] = self._config.stories
+        if len(entries) <= 1:
+            chapters = self._load_chapters_for_build(use_source=use_source, limit=limit)
+            return self._site_builder.build(
+                story=self._active_story,
+                chapters=chapters,
+                output_dir=self._config.paths.site_output,
+            )
+
+        if limit is not None and limit <= 0:
+            raise ValueError(f"--limit must be positive, got {limit}")
+
+        collection: list[tuple[StoryMetadata, list[Chapter]]] = []
+        source_counts: dict[str, int] = {}
+        total_chapters = 0
+        for entry in entries:
+            scoped = self.for_story(entry.story.slug)
+            src_nums = scoped._source_repo.list_chapter_numbers()
+            source_counts[entry.story.slug] = len(src_nums)
+            repo: ChapterReader = scoped._source_repo if use_source else scoped._translated_repo
+            numbers = repo.list_chapter_numbers()
+            if limit is not None:
+                numbers = numbers[:limit]
+            loaded = [repo.load(num) for num in numbers]
+            total_chapters += len(loaded)
+            collection.append((entry.story, loaded))
+
+        if total_chapters == 0:
+            label = "source" if use_source else "translated"
+            raise FileNotFoundError(f"No {label} chapters available for build.")
+
+        return self._site_builder.build_collection(
+            collection,
+            self._config.paths.site_output,
+            primary_slug=self._active_story.slug,
+            source_counts=source_counts,
         )
 
     def build_epub(
@@ -395,12 +469,12 @@ class WorkspaceController:
         use_source: bool = False,
         limit: int | None = None,
     ) -> EpubBuildReport:
-        """Build the EPUB book from translated (or source) chapters."""
+        """Build the EPUB book for the active story from translated (or source) chapters."""
         chapters = self._load_chapters_for_build(use_source=use_source, limit=limit)
-        epub_name = f"orv_{self._config.story.slug}_{self._config.story.language}.epub"
+        epub_name = f"orv_{self._active_story.slug}_{self._active_story.language}.epub"
         output_file = self._config.paths.epub_output / epub_name
         return self._epub_builder.build(
-            story=self._config.story,
+            story=self._active_story,
             chapters=chapters,
             output_file=output_file,
         )

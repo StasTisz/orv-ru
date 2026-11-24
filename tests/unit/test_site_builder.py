@@ -129,3 +129,57 @@ def test_site_builder_copies_branding_media_without_slop_placeholders(tmp_path: 
         text = html_file.read_text(encoding="utf-8")
         assert "emblem.svg" not in text
         assert "cover-placeholder.svg" not in text
+
+
+def test_site_builder_builds_three_story_tabs_with_empty_states(tmp_path: Path) -> None:
+    images_dir = tmp_path / "src_images"
+    images_dir.mkdir()
+    branding_dir = tmp_path / "branding"
+    (branding_dir / "covers").mkdir(parents=True)
+    for slug in ("orv", "cont", "side"):
+        (branding_dir / "covers" / f"{slug}.webp").write_bytes(b"cover-bytes")
+
+    epub_dir = tmp_path / "epubs"
+    epub_dir.mkdir()
+    (epub_dir / "orv_cont_ru.epub").write_bytes(b"fake-epub")
+
+    orv_meta = StoryMetadata("orv", "Основная история", "ORV", "Sing Shong", "ru", "Завершён", "Синопсис 1")
+    cont_meta = StoryMetadata("cont", "Побочная история", "ORV Sequel", "Sing Shong", "ru", "Онгоинг", "Синопсис 2")
+    side_meta = StoryMetadata("side", "Ваншоты", "One Shots", "Sing Shong", "ru", "Завершён", "Синопсис 3")
+
+    cont_ch = Chapter(number=553, title="553 Пролог", blocks=(ParagraphBlock("Текст."),))
+
+    builder = StaticSiteBuilder(
+        web_dir=Path(__file__).resolve().parents[2] / "web",
+        block_renderer=HtmlBlockRenderer(),
+        asset_resolver=AssetResolver(images_dir),
+        epub_source_dir=epub_dir,
+        branding_dir=branding_dir,
+    )
+    out_dir = tmp_path / "multi_site"
+    report = builder.build_collection(
+        [(orv_meta, []), (cont_meta, [cont_ch]), (side_meta, [])],
+        out_dir,
+        primary_slug="cont",
+        source_counts={"orv": 551, "cont": 516, "side": 5},
+    )
+
+    assert report.chapters_built == 1
+    stories_html = (out_dir / "stories" / "index.html").read_text(encoding="utf-8")
+    assert 'href="orv/index.html"' in stories_html
+    assert 'href="cont/index.html"' in stories_html
+    assert 'href="side/index.html"' in stories_html
+
+    orv_index = (out_dir / "stories" / "orv" / "index.html").read_text(encoding="utf-8")
+    assert "Синопсис 1" in orv_index
+    assert 'disabled aria-disabled="true"' in orv_index
+    assert "0 (всего 551)" in orv_index
+
+    download_html = (out_dir / "download.html").read_text(encoding="utf-8")
+    assert "./downloads/orv_cont_ru.epub" in download_html
+    assert "is-disabled" in download_html
+
+    for slug in ("orv", "cont", "side"):
+        assert (out_dir / "assets" / "media" / "covers" / f"{slug}.webp").is_file()
+        assert (out_dir / "meta" / f"{slug}.json").is_file()
+        assert (out_dir / "meta" / f"{slug}_meta.json").is_file()

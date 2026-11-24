@@ -118,6 +118,17 @@ body {
     color: #000000;
 }
 
+#read-btn:disabled {
+    opacity: 0.48;
+    cursor: default;
+    border-color: rgba(255, 255, 255, 0.45);
+}
+
+#read-btn:disabled:hover {
+    background-color: transparent;
+    color: #ffffff;
+}
+
 .info .status {
     margin: 0 0.4em;
     line-height: 1.55;
@@ -230,6 +241,18 @@ body {
     margin: 0;
     font-size: 0.95em;
     line-height: 1.4;
+}
+
+.chapter_item.is-empty {
+    border-style: dashed;
+    border-color: rgba(255, 255, 255, 0.4);
+    padding: 1.1em 1em;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.chapter_item.is-empty:hover {
+    background: rgba(0, 0, 0, 0.22);
 }
 
 @media screen and (min-width: 701px) {

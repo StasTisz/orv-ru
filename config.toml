@@ -5,6 +5,40 @@ original_title = "Omniscient Reader's Viewpoint Sequel (Ch 553+)"
 author = "Sing Shong"
 language = "ru"
 status = "Онгоинг"
+synopsis = "История рассказывает о Ли Хакхёне — авторе веб-новеллы «Точка зрения всеведущего читателя» из другой мировой линии. Вместе с другими читателями он переносится внутрь мира «Способов выжить», однако ход сценариев меняется из-за вмешательства читателей и «Компании Ким Докчи»."
+
+[[stories]]
+slug = "orv"
+title = "Точка зрения всеведущего читателя"
+original_title = "Omniscient Reader's Viewpoint"
+author = "Sing Shong"
+language = "ru"
+status = "Завершён"
+synopsis = "Ким Докча — обычный офисный работник, который обнаруживает, что его любимая веб-новелла «Три способа выжить в разрушенном мире» стала реальностью. Вооружившись уникальным знанием грядущей катастрофы, он стремится изменить предначертанный финал и спасти свой мир."
+source_chapters = "../reference-orv-reader/chapters/orv"
+translated_chapters = "data/chapters/orv"
+
+[[stories]]
+slug = "cont"
+title = "Побочная история (Гл. 553+)"
+original_title = "Omniscient Reader's Viewpoint Sequel (Ch 553+)"
+author = "Sing Shong"
+language = "ru"
+status = "Онгоинг"
+synopsis = "История рассказывает о Ли Хакхёне — авторе веб-новеллы «Точка зрения всеведущего читателя» из другой мировой линии. Вместе с другими читателями он переносится внутрь мира «Способов выжить», однако ход сценариев меняется из-за вмешательства читателей и «Компании Ким Докчи»."
+source_chapters = "../reference-orv-reader/chapters/cont"
+translated_chapters = "data/chapters/cont"
+
+[[stories]]
+slug = "side"
+title = "Ваншоты и бонусные истории"
+original_title = "Omniscient Reader's Viewpoint Side Stories"
+author = "Sing Shong"
+language = "ru"
+status = "Завершён"
+synopsis = "Сборник коротких историй, вышедших после завершения основного романа. Их можно читать в любое время после прочтения основной истории."
+source_chapters = "../reference-orv-reader/chapters/side"
+translated_chapters = "data/chapters/side"
 
 [paths]
 source_chapters = "../reference-orv-reader/chapters/cont"

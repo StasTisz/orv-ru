@@ -50,3 +50,17 @@ def test_fs_repository_numeric_order_and_round_trip(tmp_path: Path) -> None:
     )
     assert repo.load(553).title == "553 Обновлено"
     assert not list(tmp_path.glob("*.tmp"))
+
+
+def test_fs_repository_supports_zero_padded_chap_filenames(tmp_path: Path) -> None:
+    (tmp_path / "chap_00001.txt").write_text("<title>Ch 1\nPrologue.\n", encoding="utf-8")
+    (tmp_path / "chap_00012.txt").write_text("<title>Ch 12\nScene.\n", encoding="utf-8")
+
+    repo = FileSystemChapterRepository(
+        directory=tmp_path,
+        parser=OrvMarkupParser(),
+        serializer=OrvMarkupSerializer(),
+    )
+    assert repo.list_chapter_numbers() == [1, 12]
+    assert repo.load(1).title == "Ch 1"
+    assert repo.load(12).source_name == "chap_00012.txt"

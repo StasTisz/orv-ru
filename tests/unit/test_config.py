@@ -18,3 +18,10 @@ def test_load_project_config() -> None:
         cfg.paths.assets_branding
         == (project_root / "../reference-orv-reader/website/assets").resolve()
     )
+    assert [entry.story.slug for entry in cfg.stories] == ["orv", "cont", "side"]
+    assert cfg.resolve_story("orv").source_chapters == (
+        project_root / "../reference-orv-reader/chapters/orv"
+    ).resolve()
+    assert cfg.resolve_story("side").translated_chapters == (
+        project_root / "data/chapters/side"
+    ).resolve()

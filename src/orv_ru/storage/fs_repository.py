@@ -10,11 +10,12 @@ from pathlib import Path
 from orv_ru.domain.chapter import Chapter
 from orv_ru.ports.parser import ChapterParser, ChapterSerializer
 
-_CHAPTER_FILE_RE = re.compile(r"^(\d+)\.txt$")
+# Matches both `<N>.txt` (`cont`, `side`, translations) and `chap_<0000N>.txt` (`orv` corpus).
+_CHAPTER_FILE_RE = re.compile(r"^(?:chap_)?(\d+)\.txt$")
 
 
 class FileSystemChapterRepository:
-    """Stores and loads chapters as `<number>.txt` files in a local directory."""
+    """Stores and loads chapters as `<number>.txt` (or `chap_<N>.txt`) files in a directory."""
 
     def __init__(
         self,
@@ -30,31 +31,41 @@ class FileSystemChapterRepository:
     def directory(self) -> Path:
         return self._directory
 
-    def list_chapter_numbers(self) -> list[int]:
-        """Return all chapter numbers present in the directory in numeric order."""
+    def _scan_files(self) -> dict[int, Path]:
         if not self._directory.exists():
-            return []
-        numbers: list[int] = []
+            return {}
+        found: dict[int, Path] = {}
         for entry in self._directory.iterdir():
             if not entry.is_file():
                 continue
             match = _CHAPTER_FILE_RE.match(entry.name)
             if match:
-                numbers.append(int(match.group(1)))
-        numbers.sort()
-        return numbers
+                num = int(match.group(1))
+                # Prefer canonical `<N>.txt` over `chap_<N>.txt` if both exist.
+                if num not in found or not entry.name.startswith("chap_"):
+                    found[num] = entry
+        return found
+
+    def list_chapter_numbers(self) -> list[int]:
+        """Return all chapter numbers present in the directory in numeric order."""
+        return sorted(self._scan_files())
 
     def load(self, chapter_number: int) -> Chapter:
-        """Load and parse `{chapter_number}.txt` as UTF-8."""
-        file_path = self._directory / f"{chapter_number}.txt"
-        if not file_path.is_file():
-            raise FileNotFoundError(f"Chapter file not found: {file_path}")
+        """Load and parse `{chapter_number}.txt` (or `chap_{chapter_number:05d}.txt`) as UTF-8."""
+        direct = self._directory / f"{chapter_number}.txt"
+        file_path = direct if direct.is_file() else self._scan_files().get(chapter_number)
+        if file_path is None or not file_path.is_file():
+            raise FileNotFoundError(f"Chapter file not found: {direct}")
         raw_text = file_path.read_text(encoding="utf-8")
         return self._parser.parse(chapter_number, raw_text, source_name=file_path.name)
 
     def load_all(self) -> list[Chapter]:
         """Load all chapters sorted by chapter number ascending."""
-        return [self.load(num) for num in self.list_chapter_numbers()]
+        files = self._scan_files()
+        return [
+            self._parser.parse(num, files[num].read_text(encoding="utf-8"), source_name=files[num].name)
+            for num in sorted(files)
+        ]
 
     def save(self, chapter: Chapter) -> Path:
         """Atomically serialize and write a chapter to `{chapter.number}.txt` in UTF-8."""

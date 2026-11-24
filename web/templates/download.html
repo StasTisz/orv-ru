@@ -6,8 +6,8 @@
     <link rel="manifest" href="assets/manifest.json">
     <link rel="shortcut icon" href="assets/media/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/base.css">
-    <title>Скачать EPUB — {{STORY_TITLE}}</title>
-    <meta name="description" content="Скачать EPUB: {{STORY_TITLE}}">
+    <title>Скачать EPUB — ORV-RU</title>
+    <meta name="description" content="Скачать EPUB: Точка зрения всеведущего читателя, Побочная история и Ваншоты">
 </head>
 <body>
     <div class="background" aria-hidden="true"></div>
@@ -20,19 +20,10 @@
             <img class="logo" src="assets/media/od-stigma.webp" alt="Точка зрения всеведущего читателя">
 
             <div class="quote-container">
-                <p class="quote">«Скачайте полную версию истории и читайте офлайн в любое время и в любом месте».</p>
+                <p class="quote">«Скачайте полную версию историй и читайте офлайн в любое время и в любом месте».</p>
             </div>
 
-            <div class="cta-buttons cta-stack">
-                <a href="{{EPUB_HREF}}" download="{{EPUB_FILENAME}}" class="btn btn-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
-                    <span>Скачать Побочную историю (EPUB)</span>
-                </a>
-                <a href="stories/index.html" class="btn btn-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true"><path d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-640h-80v280l-100-60-100 60v-280H240v640Z"/></svg>
-                    <span>Открыть в браузере</span>
-                </a>
-            </div>
+            <div class="cta-buttons cta-stack">{{EPUB_BUTTONS_HTML}}</div>
         </div>
 
         <div class="bottom-group">

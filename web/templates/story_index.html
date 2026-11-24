@@ -26,7 +26,7 @@
             </div>
             <div class="read-btn">
                 <a id="read-link" href="{{FIRST_CHAPTER_HREF}}">
-                    <button id="read-btn" type="button">Читать</button>
+                    <button id="read-btn" type="button"{{READ_BTN_DISABLED_ATTR}}>{{READ_BTN_TEXT}}</button>
                 </a>
             </div>
             <div class="status" id="story-meta">
@@ -34,7 +34,7 @@
                 <p>Автор: {{STORY_AUTHOR}}<br>Глав: {{CHAPTER_COUNT}}<br>Статус: {{STORY_STATUS}}</p>
             </div>
             <div class="synopsis">
-                <p>История рассказывает о Ли Хакхёне — авторе веб-новеллы «Точка зрения всеведущего читателя» из другой мировой линии. Вместе с другими читателями он переносится внутрь мира «Способов выжить», однако ход сценариев меняется из-за вмешательства читателей и «Компании Ким Докчи».</p>
+                <p>{{STORY_SYNOPSIS}}</p>
             </div>
         </aside>
 
