@@ -1,0 +1,6350 @@
+{
+  "schema_version": 1,
+  "chapter_number": 1,
+  "title": "Story 1 — Treasure Hunt",
+  "instructions": "Переведите `title` и `lines` каждого элемента в `items` на русский язык. Не меняйте `block_index`, не добавляйте и не удаляйте строки в `lines`, сохраняйте точное количество тегов <br> внутри каждой строки.",
+  "expected_output_format": {
+    "chapter_number": 1,
+    "title": "<переведённый заголовок>",
+    "items": [
+      {
+        "block_index": 0,
+        "lines": [
+          "<переведённая строка>"
+        ]
+      }
+    ]
+  },
+  "rules": {
+    "honorifics": "Сохранять ключевые корейские обращения в русской транскрипции: -сси, аджосси, хён, нуна, онни, оппа, -ним (там, где они передают дистанцию, вежливость или близость персонажей).",
+    "profanity_and_tone": "Не смягчать резкие реплики, грубость и ругательства; сохранять живой эмоциональный накал сцен.",
+    "story_fable_tale": "Системные и лорные понятия Story / Fable / Tale (с заглавной буквы как сущность Звёздного Потока) унифицировать как «История» (или «Гигантская История»). Обычные бытовые значения переводить по контексту («рассказ», «история», «сказка»).",
+    "fear_concept": "Понятие Fear (сущность/феномен Царства Страха, с заглавной буквы) переводить как «Страх» (с большой буквы в терминологическом смысле); обычную эмоцию — со строчной.",
+    "brackets_and_quotes": "Строго сохранять типографику ORV: [...] — системные сообщения и навыки, 「...」 — цитаты и внутренний голос, 【...】 — речь Внешних Богов, <...> — Туманности и корпорации.",
+    "jang_hayoung_pronouns": "Чан Хаён: когда о ней/нём говорят посторонние — мужской род (он/его); когда говорит о себе сам(а) или с близкими — женский род (она/её), строго по контексту сцены.",
+    "weapons_41st_yjh": "Оружие Ю Джунхёка 41-й регрессии — большое копьё («Копьё Тёмной Небесной Луны»), не меч и не алебарда.",
+    "sneaky_vs_secretive": "Secretive Plotter («Скрытный Интриган») и Sneaky Schemer («Коварный Интриган») — две РАЗНЫЕ сущности. Категорически запрещено подменять одну другой.",
+    "korean_name_declension": "Мужские корейские имена склонять естественно по нормам русского языка (Ким Докча -> Ким Докчи/Докчу, Ю Джунхёк -> Ю Джунхёка), а женские имена, оканчивающиеся на согласный, оставлять несклоняемыми (Хан Суён, Чон Хивон, Син Юсон, Ли Джихё, Кён Сэин)."
+  },
+  "glossary": [
+    {
+      "source": "Kim Dokja",
+      "target": "Ким Докча",
+      "category": "characters",
+      "notes": "Главный герой; игра слов с «докча» (читатель / единственный ребёнок).",
+      "aliases": [
+        "Докча"
+      ],
+      "forbidden": [
+        "Ким Докжа",
+        "Ким Докчжа"
+      ]
+    },
+    {
+      "source": "Yoo Sangah",
+      "target": "Ю Сана",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Сана"
+      ],
+      "forbidden": [
+        "Ю Сангах"
+      ]
+    },
+    {
+      "source": "Reincarnator",
+      "target": "Реинкарнатор",
+      "category": "terms",
+      "notes": "",
+      "aliases": [
+        "Перерожденец"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Scenario",
+      "target": "Сценарий",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "World After the Fall",
+      "target": "Мир после падения",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    }
+  ],
+  "items": [
+    {
+      "block_index": 1,
+      "kind": "paragraph",
+      "lines": [
+        "\"The last game is 'Treasure Hunt'.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 2,
+      "kind": "paragraph",
+      "lines": [
+        "When she first heard it, Yoo Sangah recalled the memory of the day she joined Mino Soft."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 3,
+      "kind": "paragraph",
+      "lines": [
+        "The day she saw the legendary \"Quest Interview\" she had only heard about."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 4,
+      "kind": "paragraph",
+      "lines": [
+        "\"You're not doing that again, are you?\" asked the nervous HR employee."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 5,
+      "kind": "paragraph",
+      "lines": [
+        "\"I am indeed doing it.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 6,
+      "kind": "paragraph",
+      "lines": [
+        "\"Ha, that's ridiculous. It's the weekend.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 7,
+      "kind": "paragraph",
+      "lines": [
+        "\"Anyway, it's an in-house picnic.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 8,
+      "kind": "paragraph",
+      "lines": [
+        "Executive Director Kang, who was speaking through a megaphone, continued in a loud voice as if he had guessed the employees' feelings."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 9,
+      "kind": "paragraph",
+      "lines": [
+        "\"Now, each treasure is linked to the main quest, and there is a reward for those who complete all the quests.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 10,
+      "kind": "paragraph",
+      "lines": [
+        "\"What kind of reward, huh?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 11,
+      "kind": "paragraph",
+      "lines": [
+        "\"Well, I'll give you a tumbler again.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 12,
+      "kind": "paragraph",
+      "lines": [
+        "Complaints erupted from the employees' mouths."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 13,
+      "kind": "paragraph",
+      "lines": [
+        "On weekends when she could rest, Yoo Sangah couldn't have felt good because she was rushing out and hunting for treasure in the middle of the mountain."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 14,
+      "kind": "paragraph",
+      "lines": [
+        "Kang, who was also annoyed, continued."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 15,
+      "kind": "paragraph",
+      "lines": [
+        "\"This game will be reflected in next quarter's personnel review. Do you have any motivation now?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 16,
+      "kind": "paragraph",
+      "lines": [
+        "The hum of the employees changed from simple irritation to a more serious atmosphere. While some people asked what company in the world would give extra points for personnel evaluations as a quest, others muttered, \"Yes, this is how Mino Soft works.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 17,
+      "kind": "paragraph",
+      "lines": [
+        "And Yoo Sangah thought of a certain someone."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 18,
+      "kind": "paragraph",
+      "lines": [
+        "He would be good at this, she thought. Almost at the same time, phone vibrations echoed from all around."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 19,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah reflexively took out her smartphone. It was an announcement that an update was added to the in-house application."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 20,
+      "kind": "paragraph",
+      "lines": [
+        "\"Everyone's updated, right? Now, here we go.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 21,
+      "kind": "system_message",
+      "lines": [
+        "[MINO SOFT ver.4.24 has been updated.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 22,
+      "kind": "system_message",
+      "lines": [
+        "[Do you want to activate 'Treasure Hunt Mode'?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 24,
+      "kind": "paragraph",
+      "lines": [
+        "The app immediately loaded the camera screen once she approved GPS and camera integration. Just how many developers had they run ragged for an in-house picnic?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 25,
+      "kind": "paragraph",
+      "lines": [
+        "\"If you turn on the AR camera in the app and look around, you'll see things differently than usual. By the way, you can get your AR glasses from Manager Lee.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 26,
+      "kind": "paragraph",
+      "lines": [
+        "\"Uh, it's still a prototype, so handle it with care. Now, come grab yours one by one.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 27,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah also saw this product at the company's prototype exhibition."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 28,
+      "kind": "system_message",
+      "lines": [
+        "[MINO GLASS]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 29,
+      "kind": "paragraph",
+      "lines": [
+        "\"Wow, as expected of Mino Soft's class!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 30,
+      "kind": "paragraph",
+      "lines": [
+        "\"Are we making our own hardware now?\" People gathered in front of Manager Lee after receiving the glasses."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 31,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah also received one."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 32,
+      "kind": "paragraph",
+      "lines": [
+        "\"Be careful not to get hurt, and let's search hard for the treasures!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 33,
+      "kind": "paragraph",
+      "lines": [
+        "\"It's like Pokémon Go.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 34,
+      "kind": "paragraph",
+      "lines": [
+        "\"If you're running out of battery, grab one here.\" Yoo Sangah stared down at the portable batteries packed in a plastic box."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 35,
+      "kind": "paragraph",
+      "lines": [
+        "Staring at the portable batteries with the \"MINO\" logo neatly printed on them, she hesitated for a moment before taking two."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 36,
+      "kind": "system_message",
+      "lines": [
+        "[The screen connection is complete]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 37,
+      "kind": "system_message",
+      "lines": [
+        "[Let's start \"Treasure Hunt\"]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 39,
+      "kind": "paragraph",
+      "lines": [
+        "The augmented reality screen was linked to the smartphone screen when she wore the large AR glasses."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 40,
+      "kind": "paragraph",
+      "lines": [
+        "\"Wow, the development team must have had a hard time.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 41,
+      "kind": "paragraph",
+      "lines": [
+        "\"...Mine is a bit translucent.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 42,
+      "kind": "paragraph",
+      "lines": [
+        "\"Isn't it dangerous to see the surroundings so they made it transparent?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 43,
+      "kind": "paragraph",
+      "lines": [
+        "\"Oh, I'm getting motion sickness, so I'll just look at my smartphone screen instead. Can I?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 44,
+      "kind": "paragraph",
+      "lines": [
+        "They've been preparing for this outing for quite a while."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 45,
+      "kind": "paragraph",
+      "lines": [
+        "Moreover, the main event itself was quite something. \"...Didn't you just call us here to test a new product, not for an in-house outing?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 46,
+      "kind": "paragraph",
+      "lines": [
+        "The atmosphere was similar to the day they had huddled together in the company interview room."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 47,
+      "kind": "paragraph",
+      "lines": [
+        "With employees moving quickly while talking, it felt as though they were a QA team testing a new game."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 48,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah tapped the '!' icon on the app."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 49,
+      "kind": "paragraph",
+      "lines": [
+        "Then, as if waiting, the \"Treasure Hunt Rules\" popped up on the screen."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 50,
+      "kind": "paragraph",
+      "lines": [
+        "1. You can team up with any employee you want. However, when you form a team, your prize will be split in half."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 51,
+      "kind": "paragraph",
+      "lines": [
+        "2. There are three clues in total, and the person who finds all three clues can locate the treasure."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 52,
+      "kind": "paragraph",
+      "lines": [
+        "3. You can also take other players' clues according to the rules."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 53,
+      "kind": "paragraph",
+      "lines": [
+        "It seemed to reflect the CEO's fondness for survival games."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 54,
+      "kind": "paragraph",
+      "lines": [
+        "\"Let's hurry up and go and 'get' them.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 55,
+      "kind": "paragraph",
+      "lines": [
+        "Employees scattered as if they had promised."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 56,
+      "kind": "paragraph",
+      "lines": [
+        "Teams were already starting to form here and there."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 57,
+      "kind": "paragraph",
+      "lines": [
+        "\"Manager Lim, do you want to join us?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 58,
+      "kind": "paragraph",
+      "lines": [
+        "\"Mr. Cheon Myeongwoo?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 59,
+      "kind": "paragraph",
+      "lines": [
+        "\"You're in the QA team, right? Don't you know this system well?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 60,
+      "kind": "paragraph",
+      "lines": [
+        "The HR and finance team members were the most eager, as if they felt disadvantaged compared to the development departments."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 61,
+      "kind": "paragraph",
+      "lines": [
+        "\"Yoo Sangah, will you be on the team with me?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 62,
+      "kind": "paragraph",
+      "lines": [
+        "\"Oh, I was going to ask someone to join me first.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 63,
+      "kind": "paragraph",
+      "lines": [
+        "\"Come on, Sangah, let's do it together.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 64,
+      "kind": "paragraph",
+      "lines": [
+        "\"I'm sorry.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 65,
+      "kind": "paragraph",
+      "lines": [
+        "She had someone she wanted to partner with..."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 66,
+      "kind": "paragraph",
+      "lines": [
+        "People backed off, unable to push further against Yoo Sangah's apologetic, troubled smile."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 67,
+      "kind": "paragraph",
+      "lines": [
+        "Among them was Han Myeongoh, head of the finance team."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 68,
+      "kind": "paragraph",
+      "lines": [
+        "She heard murmurs behind her."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 69,
+      "kind": "paragraph",
+      "lines": [
+        "\"Already? With who?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 70,
+      "kind": "paragraph",
+      "lines": [
+        "\"She's probably just saying she doesn't want to, you know?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 71,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah pretended not to hear and slipped away."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 72,
+      "kind": "paragraph",
+      "lines": [
+        "The employees soon forgot about her and began teaming up among themselves."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 73,
+      "kind": "paragraph",
+      "lines": [
+        "She was used to this kind of company event, but it was just as tedious as it was familiar."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 74,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah minimized the company app and checked the text messages she had ignored earlier."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 75,
+      "kind": "paragraph",
+      "lines": [
+        "[When will you come home?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 77,
+      "kind": "paragraph",
+      "lines": [
+        "As she drafted and deleted replies repeatedly, employees passing by chatted about promotions."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 78,
+      "kind": "paragraph",
+      "lines": [
+        "If they received extra points on their performance review this time, their promotions next quarter would be guaranteed. It seemed only Mino Soft would do something like this."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 79,
+      "kind": "paragraph",
+      "lines": [
+        "Getting promoted would be nice."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 80,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah had worked hard in her own way, too."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 81,
+      "kind": "paragraph",
+      "lines": [
+        "No, it was a given. She organized her portfolio diligently every month and studied foreign languages."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 82,
+      "kind": "paragraph",
+      "lines": [
+        "Just in case, she worked on new certifications and studied coding in her spare time."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 83,
+      "kind": "paragraph",
+      "lines": [
+        "To present herself well to executives and clients, she kept up with fashion trends, jogged an hour every day, and did Pilates twice a week."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 84,
+      "kind": "paragraph",
+      "lines": [
+        "[If you're going to keep doing that, pretend you don't have parents]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 85,
+      "kind": "paragraph",
+      "lines": [
+        "[Sangah, your dad and brother...]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 87,
+      "kind": "paragraph",
+      "lines": [
+        "But if someone asked if all of this was truly for a promotion..."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 88,
+      "kind": "quote",
+      "lines": [
+        "「 You don't seem to like games very much. Why did you apply? 」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 89,
+      "kind": "paragraph",
+      "lines": [
+        "Mino Soft interview day."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 90,
+      "kind": "paragraph",
+      "lines": [
+        "She thought she had hidden it completely."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 91,
+      "kind": "paragraph",
+      "lines": [
+        "Furthermore, she hadn't expected to hear that from a fellow applicant, not even an interviewer."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 92,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah had snapped back, unlike her usual self."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 93,
+      "kind": "paragraph",
+      "lines": [
+        "\"Can't I make a living doing what I like?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 94,
+      "kind": "paragraph",
+      "lines": [
+        "Right after, she thought, 'Oh dear. That wasn't like me at all.'"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 95,
+      "kind": "paragraph",
+      "lines": [
+        "She had tried to smooth it over with a belated smile, but he replied first."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 96,
+      "kind": "paragraph",
+      "lines": [
+        "\"Is that so?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 97,
+      "kind": "paragraph",
+      "lines": [
+        "The man hadn't seemed particularly offended. He looked naive, yet kind."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 98,
+      "kind": "paragraph",
+      "lines": [
+        "Kim Dokja."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 99,
+      "kind": "paragraph",
+      "lines": [
+        "A man whose expressions she couldn't read."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 100,
+      "kind": "paragraph",
+      "lines": [
+        "\"That's true.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 101,
+      "kind": "paragraph",
+      "lines": [
+        "As if just trying to get by, Kim Dokja had answered in a half-hearted voice, scratching his cheek."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 102,
+      "kind": "paragraph",
+      "lines": [
+        "A cheap, rumpled suit and a tie with an awful, drab color. His hair was messy. His face was neat enough, but it was hard to give him a passing grade based on first impressions."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 103,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah had added another comment before she knew it."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 104,
+      "kind": "paragraph",
+      "lines": [
+        "\"You might want to fix your interview outfit.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 105,
+      "kind": "paragraph",
+      "lines": [
+        "She regretted it the moment it left her mouth. Realizing she shouldn't have said that, she smiled quickly and said she was joking."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 106,
+      "kind": "paragraph",
+      "lines": [
+        "\"I wore it exactly as the internet recommended.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 107,
+      "kind": "paragraph",
+      "lines": [
+        "Seeing the man look a bit depressed, Yoo Sangah had felt conflicted. Should she offer advice here, or just smile and walk away like a normal person? The hesitation didn't last long."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 108,
+      "kind": "paragraph",
+      "lines": [
+        "\"It would look better if you changed your tie.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 109,
+      "kind": "paragraph",
+      "lines": [
+        "\"I'll change it for my next interview. If you don't mind, can I give you a piece of advice?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 110,
+      "kind": "paragraph",
+      "lines": [
+        "\"What is it?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 111,
+      "kind": "paragraph",
+      "lines": [
+        "Kim Dokja pointed forward and said,"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 112,
+      "kind": "paragraph",
+      "lines": [
+        "\"Right now, choose the third option.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 113,
+      "kind": "paragraph",
+      "lines": [
+        "Just like that day, three options stood before Yoo Sangah's eyes now."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 114,
+      "kind": "system_message",
+      "lines": [
+        "[1. Treasure hunt main route]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 115,
+      "kind": "system_message",
+      "lines": [
+        "[2. Give up and eat hamburgers given by executive director Kang]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 116,
+      "kind": "system_message",
+      "lines": [
+        "[3. Treasure hunt hidden route]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 118,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah calmly scanned her surroundings."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 119,
+      "kind": "paragraph",
+      "lines": [
+        "Kim Dokja was nowhere to be seen near the QA team. She hadn't run into him in a while, but had he skipped the event entirely?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 120,
+      "kind": "paragraph",
+      "lines": [
+        "It would be just like him. She looked down at the portable battery in her hand. If the game had already started, she needed to hurry, too."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 121,
+      "kind": "system_message",
+      "lines": [
+        "[* The main route is the route for normal game progress. You can earn rewards upon completion, and you won't be eliminated even if you fall into a trap]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 122,
+      "kind": "system_message",
+      "lines": [
+        "[* Hidden routes are much more difficult and have a higher chance of elimination. You can get extra points]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 124,
+      "kind": "paragraph",
+      "lines": [
+        "Ultimately, after reading the descriptions, Yoo Sangah chose the third option just as she had back then."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 125,
+      "kind": "system_message",
+      "lines": [
+        "[You chose the hidden route]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 126,
+      "kind": "system_message",
+      "lines": [
+        "[Follow the marked path]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 128,
+      "kind": "paragraph",
+      "lines": [
+        "Immediately, an arrow icon appeared on the AR screen."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 129,
+      "kind": "paragraph",
+      "lines": [
+        "The other employees who chose the hidden route alongside Yoo Sangah immediately bolted in the direction of the arrow."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 130,
+      "kind": "paragraph",
+      "lines": [
+        "\"Oh, I'm leaving first.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 131,
+      "kind": "paragraph",
+      "lines": [
+        "\"Take your time.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 132,
+      "kind": "paragraph",
+      "lines": [
+        "\"What's going on? Is this hidden?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 133,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah didn't budge, watching the others rush off in a hurry."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 134,
+      "kind": "quote",
+      "lines": [
+        "「 If a path is labeled 'hidden' so openly, it's usually a trap. Who writes down secrets so blatantly? 」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 135,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah waited."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 136,
+      "kind": "paragraph",
+      "lines": [
+        "Ten seconds, twenty seconds, then a full minute passed."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 137,
+      "kind": "paragraph",
+      "lines": [
+        "Faint screams began to echo from ahead."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 138,
+      "kind": "paragraph",
+      "lines": [
+        "\"Whoa, what is this?!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 139,
+      "kind": "paragraph",
+      "lines": [
+        "And about ten seconds later, notifications of the eliminated employees began flashing at the top of the app."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 140,
+      "kind": "system_message",
+      "lines": [
+        "[Employee Byun Hyunjae is out]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 141,
+      "kind": "system_message",
+      "lines": [
+        "[Manager Lee Haneul is out]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 142,
+      "kind": "paragraph",
+      "lines": [
+        "(···)"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 143,
+      "kind": "paragraph",
+      "lines": [
+        "Just as she expected, it was exactly like back then."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 144,
+      "kind": "paragraph",
+      "lines": [
+        "\"How did you know that?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 145,
+      "kind": "paragraph",
+      "lines": [
+        "\"You just know when you see it. There was similar advice in a web... book I read. 'Be wary of secrets that are openly written as secrets.'\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 146,
+      "kind": "paragraph",
+      "lines": [
+        "It was a simple enough concept."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 147,
+      "kind": "paragraph",
+      "lines": [
+        "However, few people could put into practice what they only understood in theory."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 148,
+      "kind": "paragraph",
+      "lines": [
+        "What had she said in response? Had she asked him for the book's title?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 149,
+      "kind": "paragraph",
+      "lines": [
+        "It was time to move. Yoo Sangah tied her shoelaces tight and began to follow the arrow with light steps."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 150,
+      "kind": "paragraph",
+      "lines": [
+        "Bloody bodies lay scattered along the ridge. They weren't real people, of course—it was just the AR simulation."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 151,
+      "kind": "paragraph",
+      "lines": [
+        "The terrain was getting rough, so Yoo Sangah switched off the Mino Glass screen and began navigating down carefully, monitoring the surroundings through her phone."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 152,
+      "kind": "paragraph",
+      "lines": [
+        "Sometimes she saw items that seemed to be spilled by avatars."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 153,
+      "kind": "system_message",
+      "lines": [
+        "[Unusual item]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 154,
+      "kind": "system_message",
+      "lines": [
+        "[Secret diary of Manager Lee's dreams and hopes]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 155,
+      "kind": "system_message",
+      "lines": [
+        "[Suspicious, bloody traitor's USB]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 156,
+      "kind": "system_message",
+      "lines": [
+        "[CEO's secret book]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 157,
+      "kind": "paragraph",
+      "lines": [
+        "(···)"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 158,
+      "kind": "paragraph",
+      "lines": [
+        "At this point, she couldn't tell if this was a picnic or a beta test for a new game."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 159,
+      "kind": "paragraph",
+      "lines": [
+        "Perhaps the line between them was blurred. Or maybe, as Kim Dokja might have said, it was a secretly developed test of employee loyalty."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 160,
+      "kind": "paragraph",
+      "lines": [
+        "It felt as if Kim Dokja was right there saying, \"That item looks useful.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 161,
+      "kind": "paragraph",
+      "lines": [
+        "Surprised, Yoo Sangah spun around reflexively. A small figure right next to her fell to the ground with a grunt."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 162,
+      "kind": "paragraph",
+      "lines": [
+        "It was a woman wearing sunglasses, a mask, and a cap. The mask looked oversized on her small face. Yoo Sangah reflexively reached out to help."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 163,
+      "kind": "paragraph",
+      "lines": [
+        "\"I'm sorry.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 164,
+      "kind": "paragraph",
+      "lines": [
+        "\"I'm fine. Sorry, I was peeking at your phone.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 165,
+      "kind": "paragraph",
+      "lines": [
+        "\"Oh, yes.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 166,
+      "kind": "paragraph",
+      "lines": [
+        "\"Are those glasses AR devices? It's my first time seeing that model.\" Yoo Sangah blanked out for a moment. It had been a long time since she had dealt with someone who went so entirely at their own pace."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 167,
+      "kind": "paragraph",
+      "lines": [
+        "\"Oh, yes. Well, it's still a prototype.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 168,
+      "kind": "paragraph",
+      "lines": [
+        "She caught a glimpse of cat-like eyes behind the slightly lowered sunglasses. Looking at her petite stature and the absence of an employee lanyard, she didn't seem to work here."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 169,
+      "kind": "paragraph",
+      "lines": [
+        "The girl looked around and grumbled."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 170,
+      "kind": "paragraph",
+      "lines": [
+        "\"Why are there so many people today? Is there a company picnic or something?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 171,
+      "kind": "paragraph",
+      "lines": [
+        "\"And what kind of game is this? Is it getting officially released? An AR game?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 172,
+      "kind": "paragraph",
+      "lines": [
+        "\"Yes.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 173,
+      "kind": "paragraph",
+      "lines": [
+        "\"Then I'll get out of your way. I suppose you're testing it.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 174,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah stared at the girl's face for a while and smiled."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 175,
+      "kind": "paragraph",
+      "lines": [
+        "Then, she pulled down her mask, smiled, and put it back on."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 176,
+      "kind": "paragraph",
+      "lines": [
+        "\"Show me the game.\" The girl held out a cat-like hand. Yoo Sangah wasn't used to such bluntness and didn't know how to respond."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 177,
+      "kind": "paragraph",
+      "lines": [
+        "Moreover, although she didn't want to judge by age, the girl in front of her looked like a teenager no matter how she looked at her."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 178,
+      "kind": "paragraph",
+      "lines": [
+        "\"It's a company secret.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 179,
+      "kind": "paragraph",
+      "lines": [
+        "\"A secret? I love secrets. I won't tell anyone, so just give me a tiny hint.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 180,
+      "kind": "paragraph",
+      "lines": [
+        "As Yoo Sangah turned to walk away, the girl suddenly reached out and tapped the smartphone screen."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 181,
+      "kind": "paragraph",
+      "lines": [
+        "\"Go if you want, but pick that up before you leave. It's a must-have item.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 182,
+      "kind": "paragraph",
+      "lines": [
+        "\"What?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 183,
+      "kind": "paragraph",
+      "lines": [
+        "\"The CEO's secret book.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 184,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah picked up the item shown on the AR screen."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 185,
+      "kind": "system_message",
+      "lines": [
+        "[CEO's secret book]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 187,
+      "kind": "paragraph",
+      "lines": [
+        "Explanation: Literally, the CEO's secret book. When you fall into a trap, you can revive only once in exchange for the CEO's secret."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 188,
+      "kind": "paragraph",
+      "lines": [
+        "It was a really useful item."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 189,
+      "kind": "paragraph",
+      "lines": [
+        "\"...What do you do for a living?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 190,
+      "kind": "paragraph",
+      "lines": [
+        "\"Me? I'm a writer.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 191,
+      "kind": "paragraph",
+      "lines": [
+        "\"Are you a scenario writer for our company?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 192,
+      "kind": "paragraph",
+      "lines": [
+        "\"I don't work here. By the way, what company is this?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 193,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah decided to play along. Normally she wouldn't have, but she felt a bit more relaxed today. \"It's Mino Soft,\" she said."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 194,
+      "kind": "paragraph",
+      "lines": [
+        "\"Oh, that company that mass-produces pay-to-win gacha games. I know them.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 195,
+      "kind": "paragraph",
+      "lines": [
+        "\"Well—\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 196,
+      "kind": "paragraph",
+      "lines": [
+        "She was going to make an excuse, but it was true."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 197,
+      "kind": "paragraph",
+      "lines": [
+        "The self-proclaimed writer spoke animatedly."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 198,
+      "kind": "paragraph",
+      "lines": [
+        "\"Their recent mobile game had an insane monetization model. No matter how much people defend mobile games, they have no conscience.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 199,
+      "kind": "paragraph",
+      "lines": [
+        "\"It really is.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 200,
+      "kind": "paragraph",
+      "lines": [
+        "The girl shrugged, tapped something on her phone, and turned the screen toward Yoo Sangah."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 201,
+      "kind": "paragraph",
+      "lines": [
+        "\"I'm the top player.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 202,
+      "kind": "paragraph",
+      "lines": [
+        "[Rank 1: Genius Pretty Girl Writer (NEW)]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 204,
+      "kind": "paragraph",
+      "lines": [
+        "To maintain the number one spot on the server, she must have spent a fortune... Was she some third-generation chaebol? Yet, she didn't seem like the type."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 205,
+      "kind": "paragraph",
+      "lines": [
+        "\"You said you're a writer. What did you write?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 206,
+      "kind": "paragraph",
+      "lines": [
+        "\"Do you read novels?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 207,
+      "kind": "paragraph",
+      "lines": [
+        "\"A little bit.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 208,
+      "kind": "paragraph",
+      "lines": [
+        "\"What do you read?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 209,
+      "kind": "paragraph",
+      "lines": [
+        "\"Raymond Carver, Haruki Murakami, and...\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 210,
+      "kind": "paragraph",
+      "lines": [
+        "\"Alright, alright. I've heard enough.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 211,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah, slightly irked, narrowed her eyes."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 212,
+      "kind": "paragraph",
+      "lines": [
+        "\"...what did you write?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 213,
+      "kind": "paragraph",
+      "lines": [
+        "\"Hmm, well. Just know that it's very famous.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 214,
+      "kind": "paragraph",
+      "lines": [
+        "\"Did you write a novel that you can't say?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 215,
+      "kind": "paragraph",
+      "lines": [
+        "\"No, there's nothing I can't say.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 216,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah asked, tilting her head."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 217,
+      "kind": "paragraph",
+      "lines": [
+        "\"Is it an R-rated novel?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 218,
+      "kind": "paragraph",
+      "lines": [
+        "\"No.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 219,
+      "kind": "paragraph",
+      "lines": [
+        "\"Is it a web novel then?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 220,
+      "kind": "paragraph",
+      "lines": [
+        "\"Pretty much.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 221,
+      "kind": "paragraph",
+      "lines": [
+        "She couldn't see her eyes because she was wearing sunglasses, but she thought she knew what expression it was."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 222,
+      "kind": "paragraph",
+      "lines": [
+        "\"You're an interesting type. I sometimes write characters like you in my novels.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 223,
+      "kind": "paragraph",
+      "lines": [
+        "Why did Kim Dokja's smirk suddenly flash in her mind? Today was indeed a strange day. Yoo Sangah clenched her teeth to hide her annoyance and spoke."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 224,
+      "kind": "paragraph",
+      "lines": [
+        "\"And what type is that?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 225,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah smiled outwardly while grinding her teeth inside."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 226,
+      "kind": "paragraph",
+      "lines": [
+        "\"The type that suddenly changes when given the chance, striking the opponent's neck like this.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 227,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah remained expressionless for a moment, watching the girl who was holding her own neck with both hands in demonstration."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 228,
+      "kind": "paragraph",
+      "lines": [
+        "A few seconds later, Yoo Sangah smiled."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 229,
+      "kind": "paragraph",
+      "lines": [
+        "\"You wouldn't understand even if I told you.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 230,
+      "kind": "paragraph",
+      "lines": [
+        "The girl stared at Yoo Sangah like she was a rare specimen, letting out an involuntary chuckle."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 231,
+      "kind": "paragraph",
+      "lines": [
+        "\"Wow...\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 232,
+      "kind": "paragraph",
+      "lines": [
+        "\"What?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 233,
+      "kind": "paragraph",
+      "lines": [
+        "\"I was actually a little scared just now.\" Of course, she didn't look scared at all."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 234,
+      "kind": "paragraph",
+      "lines": [
+        "If anything, she looked thrilled. Muttering, \"A well-executed cliché always catches you off guard,\" she began typing on her phone's memo app."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 235,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah didn't know if the girl was actually a writer, but a quick glance showed the memo app was packed with text."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 236,
+      "kind": "paragraph",
+      "lines": [
+        "Checking the screen, Yoo Sangah realized she was walking up the mountain path side-by-side with the girl."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 237,
+      "kind": "paragraph",
+      "lines": [
+        "There were no fellow employees around. Everyone seemed to be scattered looking for clues."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 238,
+      "kind": "system_message",
+      "lines": [
+        "[The first clue is nearby]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 240,
+      "kind": "paragraph",
+      "lines": [
+        "And there's a good timing notification."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 241,
+      "kind": "paragraph",
+      "lines": [
+        "She hadn't intended to try this hard, but she was actually making progress."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 242,
+      "kind": "paragraph",
+      "lines": [
+        "The girl spoke to Yoo Sangah, who was searching for the treasure by panning her camera."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 243,
+      "kind": "paragraph",
+      "lines": [
+        "\"Do you mind if I watch?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 244,
+      "kind": "paragraph",
+      "lines": [
+        "\"You've already been watching.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 245,
+      "kind": "paragraph",
+      "lines": [
+        "\"Isn't that it?\" Where there had been a simple bush, a computer now stood tall on the AR screen."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 246,
+      "kind": "paragraph",
+      "lines": [
+        "It was a retro model from the 1990s, with a bulky CRT monitor and a horizontal desktop case—rendered in augmented reality."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 247,
+      "kind": "paragraph",
+      "lines": [
+        "She couldn't believe they even had such a device. Seeing that the acquisition button did not appear, the computer itself did not seem to be a clue."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 248,
+      "kind": "paragraph",
+      "lines": [
+        "When she pressed the screen and turned on the computer, a game soon appeared on the monitor."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 249,
+      "kind": "paragraph",
+      "lines": [
+        "The game logo, colorful illustrations, and the main character's lines began to cross from the monitor on the screen."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 250,
+      "kind": "quote",
+      "lines": [
+        "「 I'm not going back. 」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 251,
+      "kind": "paragraph",
+      "lines": [
+        "Perhaps because it was a prototype, the storytelling was rough. She couldn't tell what it was about, but it seemed rather aggressive, showing a shirtless man wielding a sword on screen."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 252,
+      "kind": "paragraph",
+      "lines": [
+        "\"...This is a bit like the novel I read.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 253,
+      "kind": "paragraph",
+      "lines": [
+        "\"A novel?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 254,
+      "kind": "paragraph",
+      "lines": [
+        "\"His novel hasn't even been gamified, yet someone turned it into a game? What kind of crazy bastard did this?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 255,
+      "kind": "paragraph",
+      "lines": [
+        "A memory surfaced in Yoo Sangah's mind."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 256,
+      "kind": "paragraph",
+      "lines": [
+        "The contractor from the QA team. A hazy memory of a pale face and an awkward smile. For some reason, he had once asked her for feedback on a game's setting."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 257,
+      "kind": "paragraph",
+      "lines": [
+        "The girl, growing impatient, tapped Yoo Sangah's screen without asking."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 258,
+      "kind": "paragraph",
+      "lines": [
+        "Then the intro skipped, and the game began."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 259,
+      "kind": "system_message",
+      "lines": [
+        "[Controlling Avatar to win the dance competition]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 260,
+      "kind": "system_message",
+      "lines": [
+        "[If you win the competition, you will be recognized as the \"true lord\" of Gorgon]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 261,
+      "kind": "paragraph",
+      "lines": [
+        "\"Is it a fighting game?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 262,
+      "kind": "paragraph",
+      "lines": [
+        "\"Do you know how to do it?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 263,
+      "kind": "paragraph",
+      "lines": [
+        "\"Not at all.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 264,
+      "kind": "paragraph",
+      "lines": [
+        "Fortunately, the controls were simple, making it easy even for a first-timer."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 265,
+      "kind": "paragraph",
+      "lines": [
+        "The two of them swept through the round of 16, the quarterfinals, and the semifinals, finally reaching the finals."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 266,
+      "kind": "paragraph",
+      "lines": [
+        "\"It's like an entrenching tool. Extremely cost-effective.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 267,
+      "kind": "paragraph",
+      "lines": [
+        "\"An entrenching tool?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 268,
+      "kind": "paragraph",
+      "lines": [
+        "\"A weapon specialized in thrusts. Just keep thrusting and you win. You don't even need other skills.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 269,
+      "kind": "paragraph",
+      "lines": [
+        "\"I think thrusting is the only option in the first place.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 270,
+      "kind": "paragraph",
+      "lines": [
+        "No matter what input she entered, the character only thrust. A quick thrust. A normal thrust. A heavy thrust. The skill names were incredibly lazy."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 271,
+      "kind": "paragraph",
+      "lines": [
+        "The two, who went to the round of 16, the quarterfinals, and the semifinals at once, are about to play in the finals."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 272,
+      "kind": "system_message",
+      "lines": [
+        "[The final round of the dance competition begins]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 273,
+      "kind": "system_message",
+      "lines": [
+        "[If you win the final round, you can get the first clue]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 275,
+      "kind": "paragraph",
+      "lines": [
+        "At that point, a cutscene suddenly appeared."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 276,
+      "kind": "paragraph",
+      "lines": [
+        "The woman in fairy clothes who appeared in the cutscene said,"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 277,
+      "kind": "system_message",
+      "lines": [
+        "[\"You came all the way up here. But it's a shame. The final match won't be as easy as you think.\"]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 278,
+      "kind": "paragraph",
+      "lines": [
+        "\"What's with that line?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 279,
+      "kind": "system_message",
+      "lines": [
+        "[\"The crowd here gathered to see if you really deserve to be a lord. In other words, it's not just your force that we're curious about.\"]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 280,
+      "kind": "paragraph",
+      "lines": [
+        "The girl grumbled at the lengthy cutscene."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 281,
+      "kind": "paragraph",
+      "lines": [
+        "\"...Is this a visual novel, not a fighting game?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 282,
+      "kind": "paragraph",
+      "lines": [
+        "The screen rippled. As the distortion cleared, a new scene appeared."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 283,
+      "kind": "system_message",
+      "lines": [
+        "[You're climbing a rugged mountain range with your colleague]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 285,
+      "kind": "paragraph",
+      "lines": [
+        "In a vast rocky landscape reminiscent of the Grand Canyon, the pitons securing the protagonist's rope to the rock face were beginning to pop out one by one."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 286,
+      "kind": "paragraph",
+      "lines": [
+        "With a scream, the last anchor gave way, leaving the party dangling in the air, suspended by a single rope. The cutscene was surprisingly tense, causing Yoo Sangah to clench her fists."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 287,
+      "kind": "system_message",
+      "lines": [
+        "[Leader! If this keeps up, we won't hold on much longer!]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 288,
+      "kind": "system_message",
+      "lines": [
+        "[You must choose. If you don't cut the rope below...!]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 289,
+      "kind": "paragraph",
+      "lines": [
+        "She suddenly knew what this was about."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 290,
+      "kind": "paragraph",
+      "lines": [
+        "Soon the screen stopped and options appeared."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 291,
+      "kind": "paragraph",
+      "lines": [
+        "1. \"More people need to live. Cut the rope and sacrifice one person.\" [Button A]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 292,
+      "kind": "paragraph",
+      "lines": [
+        "2. \"Life is all precious. Even if it is annihilated, it does not cut off anyone's rope.\" [Button B]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 293,
+      "kind": "system_message",
+      "lines": [
+        "[You must decide in 60 seconds.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 295,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah and the girl, checking the choices, murmured almost at the same time."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 296,
+      "kind": "paragraph",
+      "lines": [
+        "\"Trolley dilemma.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 297,
+      "kind": "paragraph",
+      "lines": [
+        "\"It's asking if you'll sacrifice the few to save the many.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 298,
+      "kind": "paragraph",
+      "lines": [
+        "If the game's premise was correct, the protagonist was participating in a dance competition to be recognized as the 'Lord.'"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 299,
+      "kind": "paragraph",
+      "lines": [
+        "And the person who created the game was 'Mino Soft,' and it was the general employee who played the game."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 300,
+      "kind": "system_message",
+      "lines": [
+        "[50 seconds left]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 302,
+      "kind": "paragraph",
+      "lines": [
+        "Then the answer was simple."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 303,
+      "kind": "paragraph",
+      "lines": [
+        "\"I think the answer is option 1, sacrifice the few,\" the girl said."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 304,
+      "kind": "paragraph",
+      "lines": [
+        "This was a game designed by a corporation. And corporations wanted leaders who would sacrifice the few for the sake of the organization. That was how corporate logic worked."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 305,
+      "kind": "paragraph",
+      "lines": [
+        "The logical choice, both inside and outside the game, was to ensure the survival of the majority."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 306,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah opened her mouth."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 307,
+      "kind": "paragraph",
+      "lines": [
+        "\"The person hanging at the bottom might be the most capable one.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 308,
+      "kind": "paragraph",
+      "lines": [
+        "\"But we can't all die together.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 309,
+      "kind": "paragraph",
+      "lines": [
+        "\"A company doesn't run on a one-man show. Maybe the answer lies in something beyond conventional logic.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 310,
+      "kind": "paragraph",
+      "lines": [
+        "\"Maybe. But honestly, if I were a corporate executive, I'd view anyone who chose option 2 as unfit.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 311,
+      "kind": "paragraph",
+      "lines": [
+        "She was right. From a corporate perspective, option 1 was correct. That was the girl's opinion, and Yoo Sangah agreed. But still..."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 312,
+      "kind": "paragraph",
+      "lines": [
+        "\"Isn't there a way for everyone to survive? I feel like I shouldn't pick either of those options.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 313,
+      "kind": "paragraph",
+      "lines": [
+        "Watching the timer tick down, Yoo Sangah's eyes wavered."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 314,
+      "kind": "system_message",
+      "lines": [
+        "[40 seconds left]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 316,
+      "kind": "paragraph",
+      "lines": [
+        "For a moment, a faint memory became clear."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 317,
+      "kind": "paragraph",
+      "lines": [
+        "There was no doubt that the person who made this..."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 318,
+      "kind": "paragraph",
+      "lines": [
+        "\"If it were Kim Dokja...\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 319,
+      "kind": "paragraph",
+      "lines": [
+        "\"What?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 320,
+      "kind": "paragraph",
+      "lines": [
+        "\"The developer. I remembered he was working on this.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 321,
+      "kind": "paragraph",
+      "lines": [
+        "The girl's finger froze. \"...What did you say his name was?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 322,
+      "kind": "paragraph",
+      "lines": [
+        "\"Kim Dokja. Do you know him?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 323,
+      "kind": "paragraph",
+      "lines": [
+        "The girl was captured through the AR screen."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 324,
+      "kind": "paragraph",
+      "lines": [
+        "*Bzzzt.* For a split second, something resembling sparks crackled over her sunglasses on the screen."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 325,
+      "kind": "paragraph",
+      "lines": [
+        "Surprised, Yoo Sangah lowered her glasses and looked at her directly. There were no sparks. Her cat-like eyes were simply staring back."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 326,
+      "kind": "paragraph",
+      "lines": [
+        "Was it an illusion? The prototype glasses might be malfunctioning."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 327,
+      "kind": "paragraph",
+      "lines": [
+        "\"I don't know him. It's a weird name. Just hurry up and choose.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 328,
+      "kind": "paragraph",
+      "lines": [
+        "Was it an illusion?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 329,
+      "kind": "system_message",
+      "lines": [
+        "[15 seconds left]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 330,
+      "kind": "paragraph",
+      "lines": [
+        "\"If you don't choose, I'll press it.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 331,
+      "kind": "system_message",
+      "lines": [
+        "[10 seconds left]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 333,
+      "kind": "paragraph",
+      "lines": [
+        "If she were Kim Dokja... With ten seconds remaining, Yoo Sangah racked her brain. It was a corporate quest, but Kim Dokja was the one who designed it."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 334,
+      "kind": "paragraph",
+      "lines": [
+        "Would Kim Dokja really set option 1 as the correct answer?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 335,
+      "kind": "quote",
+      "lines": [
+        "「 I'll attend the team dinner, but I have to leave by seven. 」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 336,
+      "kind": "paragraph",
+      "lines": [
+        "Or did he choose option 2, where everyone dies, as the answer?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 337,
+      "kind": "quote",
+      "lines": [
+        "「 I'm not going to the picnic. I hate hiking. 」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 338,
+      "kind": "paragraph",
+      "lines": [
+        "A smile played on Yoo Sangah's lips. Her finger moved toward the screen before she knew it."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 339,
+      "kind": "system_message",
+      "lines": [
+        "[5 seconds left]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 340,
+      "kind": "paragraph",
+      "lines": [
+        "\"Huh? Hey!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 341,
+      "kind": "paragraph",
+      "lines": [
+        "Her finger passed right by button A and button B, heading toward a completely empty spot."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 342,
+      "kind": "paragraph",
+      "lines": [
+        "It was a choice that made no sense, one that didn't even exist on the screen. She might be eliminated for this, but still..."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 343,
+      "kind": "system_message",
+      "lines": [
+        "[Button C has been entered]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 345,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah chose button C."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 346,
+      "kind": "paragraph",
+      "lines": [
+        "Then the cutscene came up."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 347,
+      "kind": "system_message",
+      "lines": [
+        "[\"I'll choose number 3\"]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 348,
+      "kind": "system_message",
+      "lines": [
+        "[\"What? That option doesn't exist.\"]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 349,
+      "kind": "system_message",
+      "lines": [
+        "[\"No. 3. It's a ridiculous setup. If the rock wall is the problem...\"]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 351,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah and the girl stared blankly at the cutscene. Intense wind pressure was forming in the main character's drama on the screen."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 352,
+      "kind": "system_message",
+      "lines": [
+        "[\"You can break the rock wall\"]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 354,
+      "kind": "paragraph",
+      "lines": [
+        "A cinematic showing the massive rock wall shattering from a single thrust played, followed by a grand subtitle."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 355,
+      "kind": "system_message",
+      "lines": [
+        "[\"The World After The Fall\" is coming to you soon]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 357,
+      "kind": "paragraph",
+      "lines": [
+        "Was it a game teaser video?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 358,
+      "kind": "paragraph",
+      "lines": [
+        "The girl murmured in disbelief."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 359,
+      "kind": "paragraph",
+      "lines": [
+        "\"No way, it was a scam like this?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 360,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah didn't reply, just staring blankly at the display."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 361,
+      "kind": "paragraph",
+      "lines": [
+        "The girl nudged Yoo Sangah's arm with her elbow."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 362,
+      "kind": "paragraph",
+      "lines": [
+        "\"How did you know that was the answer?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 363,
+      "kind": "paragraph",
+      "lines": [
+        "\"...I figured it would be something like this if he was the one who made it.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 364,
+      "kind": "system_message",
+      "lines": [
+        "[The first clue is 'Coordinate A'.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 365,
+      "kind": "paragraph",
+      "lines": [
+        "\"I get the gist of it. We collect three clues to find the coordinates of the final treasure.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 366,
+      "kind": "paragraph",
+      "lines": [
+        "Finding the first clue was a pleasant surprise, but they were now deep in the mountains. Why did they end up here when she had simply been following the arrow?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 367,
+      "kind": "paragraph",
+      "lines": [
+        "Was the GPS malfunctioning? The terrain had grown rugged enough that walking while looking at the AR screen was becoming dangerous."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 368,
+      "kind": "paragraph",
+      "lines": [
+        "She had made a choice completely unlike her usual self."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 369,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah wondered—what if she had been the protagonist from the cutscene, hanging on that rock wall with this girl?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 370,
+      "kind": "paragraph",
+      "lines": [
+        "\"I would have had to cut the rope.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 371,
+      "kind": "paragraph",
+      "lines": [
+        "\"What?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 372,
+      "kind": "paragraph",
+      "lines": [
+        "\"How long are you going to follow me?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 373,
+      "kind": "paragraph",
+      "lines": [
+        "\"Aren't we in the same party now? Come on, this way next.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 374,
+      "kind": "paragraph",
+      "lines": [
+        "Normally, she would have killed some time, exchanged pleasantries, and headed home. Tonight, she had a language lecture and Pilates scheduled."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 375,
+      "kind": "paragraph",
+      "lines": [
+        "She had a class to attend, and not much time to waste. But still..."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 376,
+      "kind": "quote",
+      "lines": [
+        "「 Can't I just live doing what I like? 」 <br> 「 It's just to make a living. 」"
+      ],
+      "expected_br_counts": [
+        1
+      ]
+    },
+    {
+      "block_index": 377,
+      "kind": "system_message",
+      "lines": [
+        "[The second clue is nearby]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 379,
+      "kind": "paragraph",
+      "lines": [
+        "As the AR environment shifted, the surrounding trees on the screen withered all at once."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 380,
+      "kind": "paragraph",
+      "lines": [
+        "The vitality of the trees gathered at the branch tips, and soon, golden fruits bloomed atop the virtual trees."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 381,
+      "kind": "system_message",
+      "lines": [
+        "[You have to collect the fruit of the fantasy tree]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 382,
+      "kind": "system_message",
+      "lines": [
+        "[Throw a stone and drop the fruit]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 383,
+      "kind": "system_message",
+      "lines": [
+        "[Number of fruits acquired: 0/30]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 385,
+      "kind": "paragraph",
+      "lines": [
+        "It really felt like a game based on a novel."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 386,
+      "kind": "paragraph",
+      "lines": [
+        "\"I guess we're supposed to throw this,\" the girl said, pointing to a small virtual stone at the bottom of the screen."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 387,
+      "kind": "paragraph",
+      "lines": [
+        "The rules were simple: throw the virtual stone, knock down the fruit, and collect them. It seemed too simple for a hidden route..."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 388,
+      "kind": "paragraph",
+      "lines": [
+        "\"This isn't working as well as I thought.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 389,
+      "kind": "paragraph",
+      "lines": [
+        "\"Let me try.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 390,
+      "kind": "paragraph",
+      "lines": [
+        "They threw the stones repeatedly, but couldn't hit a single fruit. The trajectories were all off. Even when dragging and releasing like a slingshot, the stones fell short. What was the trick?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 391,
+      "kind": "paragraph",
+      "lines": [
+        "\"Does it require special controls? That's not how you do it.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 392,
+      "kind": "paragraph",
+      "lines": [
+        "\"Whoa, you scared me!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 393,
+      "kind": "paragraph",
+      "lines": [
+        "Turning around, they saw a boy around ten years old. He wore white children's protective gear and held a large insect net. The girl stared at him in bewilderword."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 394,
+      "kind": "paragraph",
+      "lines": [
+        "\"What is this? Why is there a kid alone in the mountains?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 395,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah thought that was rich coming from her, but the question was valid."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 396,
+      "kind": "paragraph",
+      "lines": [
+        "Without a word, the boy gestured toward Yoo Sangah's screen."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 397,
+      "kind": "paragraph",
+      "lines": [
+        "\"Spin the stone first. Like this.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 398,
+      "kind": "paragraph",
+      "lines": [
+        "When she spun her finger and let go, the stone shot forward and knocked down a fruit."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 399,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah was impressed."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 400,
+      "kind": "paragraph",
+      "lines": [
+        "\"Oh, this is how you do it. Thank you.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 401,
+      "kind": "paragraph",
+      "lines": [
+        "\"Look at you, being polite to a kid,\" the girl teased."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 402,
+      "kind": "paragraph",
+      "lines": [
+        "The boy explained that the speed and direction of the spin determined the stone's trajectory."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 403,
+      "kind": "paragraph",
+      "lines": [
+        "The girl looked annoyed, but Yoo Sangah found the boy endearing."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 404,
+      "kind": "paragraph",
+      "lines": [
+        "\"Did you come all this way alone, little friend? Where are your parents?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 405,
+      "kind": "paragraph",
+      "lines": [
+        "The boy shook his head."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 406,
+      "kind": "paragraph",
+      "lines": [
+        "\"It's dangerous here since it's not a regular hiking trail.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 407,
+      "kind": "paragraph",
+      "lines": [
+        "She suggested he walk with them, and he nodded in agreement."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 408,
+      "kind": "paragraph",
+      "lines": [
+        "Collecting the fruits went quickly once they got the hang of it. Yoo Sangah and the girl bickered as they threw stones."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 409,
+      "kind": "paragraph",
+      "lines": [
+        "At one point, they looked ready to throw stones at each other, but their teamwork wasn't bad."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 410,
+      "kind": "system_message",
+      "lines": [
+        "[Number of fruits acquired: 29/30]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 412,
+      "kind": "paragraph",
+      "lines": [
+        "Finally, only the last fruit was left."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 413,
+      "kind": "paragraph",
+      "lines": [
+        "\"I hit it, but it's not falling,\" the girl grumbled, repeatedly throwing stones at the final fruit."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 414,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah also spun the stone and threw it."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 415,
+      "kind": "paragraph",
+      "lines": [
+        "However, no matter how many times she threw it, it didn't hit."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 416,
+      "kind": "paragraph",
+      "lines": [
+        "She thought something was wrong, so she lowered the AR screen."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 417,
+      "kind": "paragraph",
+      "lines": [
+        "\"It must be because of that. It's blocking the camera's sensor.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 418,
+      "kind": "paragraph",
+      "lines": [
+        "Indeed, a yellow, palm-sized fruit was hanging from a real branch, blocking the virtual one. It was a type of fruit she had never seen before."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 419,
+      "kind": "paragraph",
+      "lines": [
+        "\"The real fruit is blocking the virtual one. I'll just knock it down with a real stone.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 420,
+      "kind": "paragraph",
+      "lines": [
+        "\"Wait, don't—\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 421,
+      "kind": "paragraph",
+      "lines": [
+        "Before Yoo Sangah could stop her, the girl picked up a real stone and hurled it at the fruit."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 422,
+      "kind": "paragraph",
+      "lines": [
+        "The fruit fell with a snap, and an ominous buzzing rose from the trees."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 423,
+      "kind": "paragraph",
+      "lines": [
+        "\"I don't think that was a fruit.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 424,
+      "kind": "paragraph",
+      "lines": [
+        "But it was too late."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 425,
+      "kind": "paragraph",
+      "lines": [
+        "A swarm of insects poured out from a yellow, barrel-like nest. Wasps."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 426,
+      "kind": "paragraph",
+      "lines": [
+        "The girl's face paled, and Yoo Sangah's mind raced."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 427,
+      "kind": "paragraph",
+      "lines": [
+        "What were you supposed to do when you disturbed a nest? Conflicting advice crossed her mind: run in a straight line, jump into water, crouch low and back away."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 428,
+      "kind": "paragraph",
+      "lines": [
+        "She didn't know which was correct, or if some of it was just myths."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 429,
+      "kind": "paragraph",
+      "lines": [
+        "\"Don't move. I don't think they've noticed us yet.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 430,
+      "kind": "paragraph",
+      "lines": [
+        "It was the boy's voice."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 431,
+      "kind": "paragraph",
+      "lines": [
+        "\"When the guard bees approach, they make a distinct buzzing. Slowly back away, one step at a time, and focus on the sound. If we get about fifty steps back, they won't follow.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 432,
+      "kind": "paragraph",
+      "lines": [
+        "\"How do you know that?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 433,
+      "kind": "paragraph",
+      "lines": [
+        "The boy's eyes through his visor were calm. Fortunately, the swarm wasn't too large yet, as the nest had only been clipped."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 434,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah swallowed hard and took a step back. The girl next to her followed suit, looking nervous."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 435,
+      "kind": "paragraph",
+      "lines": [
+        "They had backed away enough."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 436,
+      "kind": "paragraph",
+      "lines": [
+        "But the boy took a step forward."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 437,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah watched in disbelief. Instead of backing away with them, the boy was stepping forward without looking back."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 438,
+      "kind": "paragraph",
+      "lines": [
+        "Her tension eased slightly as she watched his small, determined back. Holding his net steady, the boy calmly stepped forward and began trapping the wasps one by one."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 439,
+      "kind": "paragraph",
+      "lines": [
+        "It seemed to be a specialized insect net designed for wasps, not a standard one."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 440,
+      "kind": "paragraph",
+      "lines": [
+        "After he nudged the nest a few times, more wasps flew out. Then, with a swift motion, the boy struck the branch, and the nest fell right into his net."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 441,
+      "kind": "paragraph",
+      "lines": [
+        "He quickly twisted the net closed, trapping them inside. It was an incredibly professional display."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 442,
+      "kind": "paragraph",
+      "lines": [
+        "\"These are Asian giant hornets. They're invasive. A single hornet can kill hundreds of honeybees.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 443,
+      "kind": "paragraph",
+      "lines": [
+        "\"...What on earth are you? Do your parents live in the wild?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 444,
+      "kind": "paragraph",
+      "lines": [
+        "The boy stared up at the girl."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 445,
+      "kind": "paragraph",
+      "lines": [
+        "\"I don't have a mom or dad.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 446,
+      "kind": "paragraph",
+      "lines": [
+        "\"Uh, uh...\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 447,
+      "kind": "paragraph",
+      "lines": [
+        "The girl scratched her head, looking embarrassed. But the boy didn't seem bothered. If anything, he looked proud."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 448,
+      "kind": "paragraph",
+      "lines": [
+        "\"I came because I heard there was a hornet nest nearby.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 449,
+      "kind": "paragraph",
+      "lines": [
+        "\"What are you going to do with them?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 450,
+      "kind": "paragraph",
+      "lines": [
+        "\"I'm going to sell them to an insect shop owner I know.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 451,
+      "kind": "paragraph",
+      "lines": [
+        "\"Look at this kid,\" the girl muttered."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 452,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah let out a breath as she listened to the girl ramble about how she used to earn her own pocket money at that age."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 453,
+      "kind": "paragraph",
+      "lines": [
+        "Anyway, thanks to the boy, she successfully claimed the last fruit."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 454,
+      "kind": "system_message",
+      "lines": [
+        "[The second clue is \"Coordinate B\"]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 456,
+      "kind": "paragraph",
+      "lines": [
+        "Their party had suddenly grown to three."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 457,
+      "kind": "paragraph",
+      "lines": [
+        "What would the company people or Kim Dokja have said if they saw this?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 458,
+      "kind": "quote",
+      "lines": [
+        "「 The basics of a party are a tank, a healer, and a damage dealer. 」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 459,
+      "kind": "paragraph",
+      "lines": [
+        "\"Let's form a party.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 460,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah smiled, wondering what roles these two would play."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 461,
+      "kind": "paragraph",
+      "lines": [
+        "The sun was setting. A proper trail appeared in the distance. Seeing a few hikers, they seemed to be nearing the base of the mountain."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 462,
+      "kind": "paragraph",
+      "lines": [
+        "Looking back, the girl was muttering under her breath. \"Well, that was more of an adventure than I expected.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 463,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah felt a strange sense of bonding with them, despite not knowing their names."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 464,
+      "kind": "paragraph",
+      "lines": [
+        "Just like she said, it felt like a brief adventure had ended. She watched the sunset for a moment. Standing there with the bug-catching boy and the writer girl, Yoo Sangah spoke up."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 465,
+      "kind": "paragraph",
+      "lines": [
+        "\"I only came to kill time today.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 466,
+      "kind": "paragraph",
+      "lines": [
+        "\"I didn't come to hike either. I was just doing research for my novel,\" the girl said."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 467,
+      "kind": "paragraph",
+      "lines": [
+        "\"You didn't run away from home, did you?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 468,
+      "kind": "paragraph",
+      "lines": [
+        "\"Run away? How old do you think I am?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 469,
+      "kind": "paragraph",
+      "lines": [
+        "The girl, who looked far too young for her lack of hiking gear, smirked."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 470,
+      "kind": "paragraph",
+      "lines": [
+        "But still."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 471,
+      "kind": "paragraph",
+      "lines": [
+        "\"Well, there was a place I wanted to run away from.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 472,
+      "kind": "paragraph",
+      "lines": [
+        "She asked the quiet boy if he was planning to go back now. \"Did you really run away from home?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 473,
+      "kind": "paragraph",
+      "lines": [
+        "\"I just don't like being at home... I like catching bugs.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 474,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah gently patted the boy's head through his hood. The boy looked up at her through his safety goggles."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 475,
+      "kind": "paragraph",
+      "lines": [
+        "Looking into the child's eyes, Yoo Sangah spoke her mind without realizing it."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 476,
+      "kind": "paragraph",
+      "lines": [
+        "\"I actually ran away from home.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 477,
+      "kind": "paragraph",
+      "lines": [
+        "\"...You? But aren't you here for a company picnic?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 478,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah smiled instead of answering. She could have explained in detail. About her family background. About the expectations of her parents. About the blind date profiles of third-generation chaebols sent to her phone every day. But Yoo Sangah..."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 479,
+      "kind": "paragraph",
+      "lines": [
+        "She didn't say anything."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 480,
+      "kind": "paragraph",
+      "lines": [
+        "They were people she might never see again."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 481,
+      "kind": "paragraph",
+      "lines": [
+        "Their conversation was disjointed, and their backgrounds were entirely different. They hadn't spent enough time to form a real bond. Yet, why did she feel this way?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 482,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah felt like they were 'on her side.' Looking over at the girl, she saw her typing furiously on her phone's memo app."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 483,
+      "kind": "paragraph",
+      "lines": [
+        "\"Alright, I'll definitely write this into my novel later.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 484,
+      "kind": "paragraph",
+      "lines": [
+        "\"...You really are a writer, then?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 485,
+      "kind": "paragraph",
+      "lines": [
+        "\"I told you so.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 486,
+      "kind": "paragraph",
+      "lines": [
+        "\"So, what exactly did you write—\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 487,
+      "kind": "system_message",
+      "lines": [
+        "[There's a third clue nearby.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 489,
+      "kind": "paragraph",
+      "lines": [
+        "When she looked around with the AR screen, the ground beneath her feet began to shift."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 490,
+      "kind": "system_message",
+      "lines": [
+        "[\"Escape Track\" will be created]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 492,
+      "kind": "paragraph",
+      "lines": [
+        "It was a strange-looking track, as if it led to some unknown world. A path that seemed constructed from numbers and code."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 493,
+      "kind": "system_message",
+      "lines": [
+        "[Run the track and escape within the time limit]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 494,
+      "kind": "system_message",
+      "lines": [
+        "[Careful with stamina management]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 495,
+      "kind": "system_message",
+      "lines": [
+        "[The first person who runs the track gets the \"third clue\"]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 497,
+      "kind": "paragraph",
+      "lines": [
+        "She could see familiar faces running from afar. The lead group consisted of the QA team and the finance team."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 498,
+      "kind": "paragraph",
+      "lines": [
+        "[Yoo Sangah, did you get on the hidden route?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 499,
+      "kind": "paragraph",
+      "lines": [
+        "[Did you collect a lot of clues?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 500,
+      "kind": "paragraph",
+      "lines": [
+        "[Let's share it with us]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 501,
+      "kind": "paragraph",
+      "lines": [
+        "[Yoo Sangah, where are you?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 503,
+      "kind": "paragraph",
+      "lines": [
+        "When she opened the messages she had ignored earlier, she saw a flood of inquiries from other departments."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 504,
+      "kind": "paragraph",
+      "lines": [
+        "Han Myeongoh from the finance team had sent the most. That middle-aged man was currently leading the pack up ahead."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 505,
+      "kind": "paragraph",
+      "lines": [
+        "\"Yoo Sangah! Team up with us! With me, if you don't mind!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 506,
+      "kind": "paragraph",
+      "lines": [
+        "Collaborating with them was one option. And she could take other people's clues according to the rules."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 507,
+      "kind": "paragraph",
+      "lines": [
+        "As if reading the mood, the girl asked. \"You're trying to slip away, right?\" Yoo Sangah nodded, and the girl and the boy exchanged a glance."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 508,
+      "kind": "paragraph",
+      "lines": [
+        "It was at that moment that the boy handed the net containing the hornet nest to the girl, and the girl spoke up."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 509,
+      "kind": "paragraph",
+      "lines": [
+        "\"Stop right there! There's a giant hornet here! Don't come any closer!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 510,
+      "kind": "paragraph",
+      "lines": [
+        "The employees, spotting a wasp buzzing in the distance, froze in terror. The girl made a scene, swinging the net toward them."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 511,
+      "kind": "paragraph",
+      "lines": [
+        "\"My pet hornet hates strangers. And I don't like strangers either!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 512,
+      "kind": "paragraph",
+      "lines": [
+        "\"What the hell? Who is that girl? Sangah, come over here quickly, it's dangerous!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 513,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah watched the scene in shock. Only then did she realize the girl's intention."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 514,
+      "kind": "paragraph",
+      "lines": [
+        "But she didn't understand why. Why was this girl willing to act as a 'tank' in a quest that had nothing to do with her?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 515,
+      "kind": "paragraph",
+      "lines": [
+        "The boy next to her was also waving his net excitedly to provoke the wasps. Why? There was no point in asking."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 516,
+      "kind": "paragraph",
+      "lines": [
+        "So Yoo Sangah didn't ask for an explanation either."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 517,
+      "kind": "paragraph",
+      "lines": [
+        "The girl shouted, \"What are you doing? Hurry up and run! Go win this game!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 518,
+      "kind": "paragraph",
+      "lines": [
+        "\"You still haven't told me what book you wrote!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 519,
+      "kind": "paragraph",
+      "lines": [
+        "Her reply was drowned out by the buzzing of the wasps. A few wasps must have escaped, because the girl let out a yelp."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 520,
+      "kind": "paragraph",
+      "lines": [
+        "The boy waved his hand. She saw the girl's lips shape a final message, and for a split second, a spark seemed to dance across her face."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 521,
+      "kind": "paragraph",
+      "lines": [
+        "\"Let's meet again.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 522,
+      "kind": "paragraph",
+      "lines": [
+        "What? She wasn't sure if that was what she said. She just guessed the words."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 523,
+      "kind": "paragraph",
+      "lines": [
+        "Taking a breath, Yoo Sangah ran."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 524,
+      "kind": "paragraph",
+      "lines": [
+        "She looked back at the boy. Should she ask for his name or contact details? What was she doing? It wasn't a life-or-death situation. It was just a silly company event."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 525,
+      "kind": "paragraph",
+      "lines": [
+        "*Bzzzt.*"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 526,
+      "kind": "paragraph",
+      "lines": [
+        "A smile breaking through the static, and finally, the girl's face faded."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 527,
+      "kind": "paragraph",
+      "lines": [
+        "\"Hurry and go!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 528,
+      "kind": "paragraph",
+      "lines": [
+        "And Yoo Sangah ran. She didn't know she could run so fast. Beyond the AR screen, the digital track of numbers was fracturing."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 529,
+      "kind": "paragraph",
+      "lines": [
+        "She could run even faster. A strange sense of liberation rose within her along with her ragged breathing. She couldn't remember the last time she had run with all her might."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 530,
+      "kind": "system_message",
+      "lines": [
+        "[MINO GLASS' battery is low!]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 532,
+      "kind": "paragraph",
+      "lines": [
+        "Shouts from the pursuing employees echoed behind her. The heavy Mino Glass slipped on the bridge of her nose, the screen flickering and obscuring her vision."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 533,
+      "kind": "paragraph",
+      "lines": [
+        "Even if she reached the end of the track, her life wouldn't change. She would still wake up at the same time, brush her teeth, wash her face, and go to work. She would meet the same expectations and live the same routine. There would be stressful calls from home. There would be people who annoyed her, and others who criticized her for not showing any vulnerability. She would go on studying Spanish she had no interest in, collecting certificates, and doing Pilates. She would smile her way through life."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 534,
+      "kind": "paragraph",
+      "lines": [
+        "But what if she didn't want to live that way anymore?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 535,
+      "kind": "paragraph",
+      "lines": [
+        "Whether she cut the rope or not, she wanted to choose her own path now."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 536,
+      "kind": "paragraph",
+      "lines": [
+        "So Yoo Sangah ran. Tearing off the slipping glasses, she sprinted along the path where the arrow pointed. She ran faster than the wasps, more desperately than the climbers."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 537,
+      "kind": "paragraph",
+      "lines": [
+        "Until her lungs burned and her legs felt like lead. She ran and ran. How far had she run?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 538,
+      "kind": "paragraph",
+      "lines": [
+        "A notification popped up on her phone, which she looked down at reflexively."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 539,
+      "kind": "system_message",
+      "lines": [
+        "[You've exhausted all the stamina given]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 540,
+      "kind": "system_message",
+      "lines": [
+        "[Your avatar will die due to excessive exhaustion]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 542,
+      "kind": "paragraph",
+      "lines": [
+        "Huh?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 543,
+      "kind": "system_message",
+      "lines": [
+        "[Recovering the avatar's life in exchange for \"CEO's secret\"]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 544,
+      "kind": "system_message",
+      "lines": [
+        "[Stamina is all charged]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 546,
+      "kind": "paragraph",
+      "lines": [
+        "She looked up and saw the end of the track."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 547,
+      "kind": "system_message",
+      "lines": [
+        "[You've completed the track]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 548,
+      "kind": "system_message",
+      "lines": [
+        "[You got the third clue, \"Coordinate C\"]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 550,
+      "kind": "paragraph",
+      "lines": [
+        "Bending over with her hands on her knees, Yoo Sangah panted heavily as she read the notification."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 551,
+      "kind": "paragraph",
+      "lines": [
+        "Her phone vibrated. It was a text message from the HR manager."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 552,
+      "kind": "paragraph",
+      "lines": [
+        "[Yoo Sangah. Are you still on a treasure hunt? I'm almost done organizing here, so don't come back up and go down the mountain.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 554,
+      "kind": "paragraph",
+      "lines": [
+        "That was the end of the adventure. Yoo Sangah didn't head back to the picnic site."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 555,
+      "kind": "paragraph",
+      "lines": [
+        "Normally she would have returned to secure her performance points and help clean up, but she didn't feel like it today."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 556,
+      "kind": "paragraph",
+      "lines": [
+        "So what was the treasure? She had only received three coordinates. Tapping them, a 'Combine' option appeared."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 557,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah immediately combined the three coordinates."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 558,
+      "kind": "system_message",
+      "lines": [
+        "[The location of the treasure is displayed]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 560,
+      "kind": "paragraph",
+      "lines": [
+        "A familiar map interface popped up. The destination wasn't far, so she rented a public bicycle nearby. Riding through the cool night air, she reflected on the day."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 561,
+      "kind": "paragraph",
+      "lines": [
+        "It had been a day full of anomalies. She had met a self-proclaimed writer and a boy who commanded insects."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 562,
+      "kind": "paragraph",
+      "lines": [
+        "She had poured her heart into a treasure hunt, something she wouldn't have taken seriously even as a child. She had run with everything she had."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 563,
+      "kind": "system_message",
+      "lines": [
+        "[Arrived at the destination]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 565,
+      "kind": "paragraph",
+      "lines": [
+        "She parked the bicycle outside a large bookstore nearby. The interior was brightly lit, with a bit of time left before closing. Yoo Sangah hesitated for a moment before stepping inside."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 566,
+      "kind": "paragraph",
+      "lines": [
+        "If the coordinates were correct, this was the place. She activated the AR camera and looked around, but nothing stood out."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 567,
+      "kind": "paragraph",
+      "lines": [
+        "As she walked down the aisles, she saw new releases."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 568,
+      "kind": "paragraph",
+      "lines": [
+        "(···)"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 569,
+      "kind": "paragraph",
+      "lines": [
+        "Among them was the novel she had seen in the game."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 570,
+      "kind": "paragraph",
+      "lines": [
+        "It was a real, published novel."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 571,
+      "kind": "paragraph",
+      "lines": [
+        "Don't tell me the novel itself was the treasure. On the display stand, the printed copy of the web novel was drawing the most attention."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 572,
+      "kind": "paragraph",
+      "lines": [
+        "\"...We still can't contact the author? Hurry up and find her!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 573,
+      "kind": "paragraph",
+      "lines": [
+        "Wondering what the commotion was about, she noticed a small event set up in a corner. A sign stood next to it."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 574,
+      "kind": "paragraph",
+      "lines": [
+        "A fan signing event for the author."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 575,
+      "kind": "paragraph",
+      "lines": [
+        "The title was *SSSSS-Class Infinite Reincarnator*—a name she felt she had heard before."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 576,
+      "kind": "paragraph",
+      "lines": [
+        "\"Should we cancel the event?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 577,
+      "kind": "paragraph",
+      "lines": [
+        "\"I told you we needed a written confirmation. She said she hated doing signing events.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 578,
+      "kind": "paragraph",
+      "lines": [
+        "The bookstore staff were running around frantically, phones pressed to their ears."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 579,
+      "kind": "system_message",
+      "lines": [
+        "[Only 1% of battery left]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 581,
+      "kind": "paragraph",
+      "lines": [
+        "Oh dear. Her phone was about to die. She needed to find the treasure quickly. But nothing was showing up on the screen."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 582,
+      "kind": "paragraph",
+      "lines": [
+        "Through the camera, she saw only a few people browsing the shelves. One reader in particular was staring intently at a book, his eyes practically glowing."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 583,
+      "kind": "paragraph",
+      "lines": [
+        "\"How did she even plagiarize this part?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 584,
+      "kind": "paragraph",
+      "lines": [
+        "He put down the book and began searching for something on his phone."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 585,
+      "kind": "paragraph",
+      "lines": [
+        "\"Yeah, that's it. Chapter 41...\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 586,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah walked toward him, feeling a sudden wave of familiarity."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 587,
+      "kind": "paragraph",
+      "lines": [
+        "\"Chapter 41 is... Huh? This is weird.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 588,
+      "kind": "paragraph",
+      "lines": [
+        "His pale face, his murmuring... and then, as if by magic, her phone screen went black. As she lowered the device, a familiar face appeared before her."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 589,
+      "kind": "paragraph",
+      "lines": [
+        "\"......Mr. Kim Dokja?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 591,
+      "kind": "paragraph",
+      "lines": [
+        "They walked down the street, one holding an iced chocolate and the other an Americano. Yoo Sangah spoke first."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 592,
+      "kind": "paragraph",
+      "lines": [
+        "\"As expected, you're a reader.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 593,
+      "kind": "paragraph",
+      "lines": [
+        "\"What?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 594,
+      "kind": "paragraph",
+      "lines": [
+        "\"You've already found all the treasures. That's why you're here.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 595,
+      "kind": "paragraph",
+      "lines": [
+        "She hadn't seen him at the picnic, but knowing Kim Dokja, he probably found a quiet spot nearby and cleared it. It was typical of him."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 596,
+      "kind": "paragraph",
+      "lines": [
+        "\"Oh, the treasure?\" Kim Dokja said, sipping his iced chocolate. \"I didn't participate.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 597,
+      "kind": "paragraph",
+      "lines": [
+        "\"What? Then how—\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 598,
+      "kind": "paragraph",
+      "lines": [
+        "\"I just knew. Honestly, I didn't think anyone would actually clear the hidden route.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 599,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah listened as Kim Dokja explained why he was here. The \"Treasure Hunt\" update was originally assigned to the development team."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 600,
+      "kind": "paragraph",
+      "lines": [
+        "But due to a lack of hands, they had pulled staff from other departments, including Kim Dokja."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 601,
+      "kind": "paragraph",
+      "lines": [
+        "When the project expanded and caught the CEO's attention, the CEO personally ordered Kim Dokja—who, as a contractor, had no stake in promotions—to be the main designer of the task force."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 602,
+      "kind": "paragraph",
+      "lines": [
+        "\"So you made it all.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 603,
+      "kind": "paragraph",
+      "lines": [
+        "\"Not all of it. Just a little bit of the hidden route part.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 604,
+      "kind": "paragraph",
+      "lines": [
+        "Kim Dokja scratched his cheek, looking embarrassed. Since she had never seen him make such an expression, Yoo Sangah felt a sudden urge to tease him."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 605,
+      "kind": "paragraph",
+      "lines": [
+        "\"I think you caught the CEO's eye, considering he gave you the assignment personally.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 606,
+      "kind": "paragraph",
+      "lines": [
+        "\"He was a bit unusual.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 607,
+      "kind": "paragraph",
+      "lines": [
+        "\"Did you meet him in person?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 608,
+      "kind": "paragraph",
+      "lines": [
+        "\"Yes.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 609,
+      "kind": "paragraph",
+      "lines": [
+        "That was a bit surprising."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 610,
+      "kind": "paragraph",
+      "lines": [
+        "Rumors had circulated that the company's president had changed recently, and not even the high-ranking executives had seen the new president's face. The mysterious Mino Soft CEO was behind all the bizarre events like the \"quest interview,\" yet he had only appeared before a contractor."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 611,
+      "kind": "paragraph",
+      "lines": [
+        "\"I don't think he's quite human.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 612,
+      "kind": "paragraph",
+      "lines": [
+        "\"Is he that bad?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 613,
+      "kind": "paragraph",
+      "lines": [
+        "\"Oh, I don't mean it like that.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 614,
+      "kind": "paragraph",
+      "lines": [
+        "Kim Dokja smiled, so Yoo Sangah smiled too."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 615,
+      "kind": "paragraph",
+      "lines": [
+        "\"His outfit was cool. He wore a fedora and a trench coat, looking like a classic gentleman.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 616,
+      "kind": "paragraph",
+      "lines": [
+        "\"Wow. I don't know if I'll ever see him either.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 617,
+      "kind": "paragraph",
+      "lines": [
+        "\"Yoo Sangah, of course...\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 618,
+      "kind": "paragraph",
+      "lines": [
+        "\"So, was the final objective just waiting at the bookstore?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 619,
+      "kind": "paragraph",
+      "lines": [
+        "\"Well, according to the design, finding all the hidden coordinates would lead you to claim the 'treasure' at the bookstore.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 620,
+      "kind": "paragraph",
+      "lines": [
+        "\"And that's what you're giving me?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 621,
+      "kind": "paragraph",
+      "lines": [
+        "\"Yes, that was the plan.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 622,
+      "kind": "paragraph",
+      "lines": [
+        "That message had indeed appeared on the app."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 623,
+      "kind": "system_message",
+      "lines": [
+        "[You succeeded in \"Treasure Hunt\"]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 624,
+      "kind": "system_message",
+      "lines": [
+        "[You earned 2 extra points for promotion and will be reflected in the next quarter's HR review]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 625,
+      "kind": "system_message",
+      "lines": [
+        "[You finished \"Treasure Hunt\" through the hidden route. Please receive the special product from the promised coordinates.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 627,
+      "kind": "paragraph",
+      "lines": [
+        "\"I haven't heard back from the CEO since yesterday. So it's not the official prize, but I thought I'd at least buy you a book with my own money.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 628,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah looked down at her dead phone."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 629,
+      "kind": "paragraph",
+      "lines": [
+        "\"I wish you'd joined me.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 630,
+      "kind": "paragraph",
+      "lines": [
+        "\"What?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 631,
+      "kind": "paragraph",
+      "lines": [
+        "\"I had a lot of fun today. I met a strange writer, a boy in protective gear who catches bugs, and for the first time, I ran with everything I had without worrying about how I looked to others.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 632,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah recounted the brief, novel-like adventure to Kim Dokja."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 633,
+      "kind": "paragraph",
+      "lines": [
+        "\"But I don't have any actual treasure to give you. You went through all that trouble.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 634,
+      "kind": "paragraph",
+      "lines": [
+        "\"It's okay. I've already found it.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 635,
+      "kind": "paragraph",
+      "lines": [
+        "\"What?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 636,
+      "kind": "paragraph",
+      "lines": [
+        "\"Do you want one?\" Yoo Sangah pulled one of the portable batteries from her bag. Kim Dokja's eyes went wide."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 637,
+      "kind": "paragraph",
+      "lines": [
+        "\"Oh, this...\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 638,
+      "kind": "paragraph",
+      "lines": [
+        "\"You're always running out of battery. I figured you could use one.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 639,
+      "kind": "paragraph",
+      "lines": [
+        "Kim Dokja's expression shifted through a flurry of emotions. \"Can I really keep this?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 640,
+      "kind": "paragraph",
+      "lines": [
+        "\"Yes, I have another one for myself. It's yours.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 641,
+      "kind": "paragraph",
+      "lines": [
+        "\"Ah, thank you. I really needed one.\" Kim Dokja immediately plugged it in to charge. With a soft beep, the battery status appeared on his screen."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 642,
+      "kind": "paragraph",
+      "lines": [
+        "[Charging 1%]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 644,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah didn't know what that 1% meant to Kim Dokja. To her, a portable battery was just a mundane corporate giveaway, and she had no affection for the company logo printed on it."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 645,
+      "kind": "paragraph",
+      "lines": [
+        "Yet, at that moment, unwrapping the battery pack alongside Kim Dokja made her feel lighthearted."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 646,
+      "kind": "paragraph",
+      "lines": [
+        "\"It's lighter than I thought. It's easy to carry around.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 647,
+      "kind": "paragraph",
+      "lines": [
+        "\"Right?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 648,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah plugged her phone in as well. The screen lit up, displaying the charging icon at 1%."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 649,
+      "kind": "paragraph",
+      "lines": [
+        "[Charging 1%]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 651,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah played with the \"MINO\" logo on the battery. If she turned on the AR glasses now, would she see something different?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 652,
+      "kind": "paragraph",
+      "lines": [
+        "Looking at Kim Dokja, who held his phone and battery as if they were a lifeline, Yoo Sangah hesitated before letting go of the power button. Instead of looking through a lens, she looked up at the sky with her own eyes. There, she saw something unexpected in the night sky of Seoul."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 653,
+      "kind": "paragraph",
+      "lines": [
+        "\"...I didn't know there were so many stars in Seoul.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 654,
+      "kind": "paragraph",
+      "lines": [
+        "The city sky, which usually seemed pitch-black, was exceptionally clear tonight. Countless stars shone above. Watching the starlight flow, Yoo Sangah felt as though she was moving toward somewhere new. Just as she had when she left home and joined the company. Just as she was now, walking home."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 655,
+      "kind": "paragraph",
+      "lines": [
+        "Kim Dokja had also stopped, gazing up at the stars."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 656,
+      "kind": "paragraph",
+      "lines": [
+        "\"Mr. Dokja.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 657,
+      "kind": "paragraph",
+      "lines": [
+        "\"Yes?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 658,
+      "kind": "paragraph",
+      "lines": [
+        "Maybe there was no such thing as a hidden treasure."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 659,
+      "kind": "paragraph",
+      "lines": [
+        "\"I should head home.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 660,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah walked half a step ahead, letting the cool night breeze brush past her. She knew this feeling might not last. It might just be a fleeting sentiment that would fade by tomorrow."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 661,
+      "kind": "paragraph",
+      "lines": [
+        "Kim Dokja, after staring at the sky a bit longer, nodded and began reading something on his phone again."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 662,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah still didn't know anything about the story Kim Dokja was reading."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 663,
+      "kind": "paragraph",
+      "lines": [
+        "Instead, she thought about the treasure hunt."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 664,
+      "kind": "paragraph",
+      "lines": [
+        "A treasure hunt with Yoo Sangah, a writer, and a young boy. And maybe Kim Dokja, too. Along with managers and strangers she had never met. Under a sky filled with stars."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 665,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Sangah imagined a grand adventure of walking, laughing, and talking under the stars in search of treasure. And for the first time, she began to realize what she truly wanted to do."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 667,
+      "kind": "paragraph",
+      "lines": [
+        "[Side Story 1 - End]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    }
+  ],
+  "token_estimate": {
+    "source_chars": 44295,
+    "estimated_input_tokens": 12530,
+    "estimated_output_tokens_ru": 22148,
+    "estimated_total_tokens": 34678
+  }
+}

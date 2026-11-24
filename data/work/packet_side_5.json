@@ -1,0 +1,5071 @@
+{
+  "schema_version": 1,
+  "chapter_number": 5,
+  "title": "Story 5 — Apocalypse",
+  "instructions": "Переведите `title` и `lines` каждого элемента в `items` на русский язык. Не меняйте `block_index`, не добавляйте и не удаляйте строки в `lines`, сохраняйте точное количество тегов <br> внутри каждой строки.",
+  "expected_output_format": {
+    "chapter_number": 5,
+    "title": "<переведённый заголовок>",
+    "items": [
+      {
+        "block_index": 0,
+        "lines": [
+          "<переведённая строка>"
+        ]
+      }
+    ]
+  },
+  "rules": {
+    "honorifics": "Сохранять ключевые корейские обращения в русской транскрипции: -сси, аджосси, хён, нуна, онни, оппа, -ним (там, где они передают дистанцию, вежливость или близость персонажей).",
+    "profanity_and_tone": "Не смягчать резкие реплики, грубость и ругательства; сохранять живой эмоциональный накал сцен.",
+    "story_fable_tale": "Системные и лорные понятия Story / Fable / Tale (с заглавной буквы как сущность Звёздного Потока) унифицировать как «История» (или «Гигантская История»). Обычные бытовые значения переводить по контексту («рассказ», «история», «сказка»).",
+    "fear_concept": "Понятие Fear (сущность/феномен Царства Страха, с заглавной буквы) переводить как «Страх» (с большой буквы в терминологическом смысле); обычную эмоцию — со строчной.",
+    "brackets_and_quotes": "Строго сохранять типографику ORV: [...] — системные сообщения и навыки, 「...」 — цитаты и внутренний голос, 【...】 — речь Внешних Богов, <...> — Туманности и корпорации.",
+    "jang_hayoung_pronouns": "Чан Хаён: когда о ней/нём говорят посторонние — мужской род (он/его); когда говорит о себе сам(а) или с близкими — женский род (она/её), строго по контексту сцены.",
+    "weapons_41st_yjh": "Оружие Ю Джунхёка 41-й регрессии — большое копьё («Копьё Тёмной Небесной Луны»), не меч и не алебарда.",
+    "sneaky_vs_secretive": "Secretive Plotter («Скрытный Интриган») и Sneaky Schemer («Коварный Интриган») — две РАЗНЫЕ сущности. Категорически запрещено подменять одну другой.",
+    "korean_name_declension": "Мужские корейские имена склонять естественно по нормам русского языка (Ким Докча -> Ким Докчи/Докчу, Ю Джунхёк -> Ю Джунхёка), а женские имена, оканчивающиеся на согласный, оставлять несклоняемыми (Хан Суён, Чон Хивон, Син Юсон, Ли Джихё, Кён Сэин)."
+  },
+  "glossary": [
+    {
+      "source": "Kim Dokja",
+      "target": "Ким Докча",
+      "category": "characters",
+      "notes": "Главный герой; игра слов с «докча» (читатель / единственный ребёнок).",
+      "aliases": [
+        "Докча"
+      ],
+      "forbidden": [
+        "Ким Докжа",
+        "Ким Докчжа"
+      ]
+    },
+    {
+      "source": "Yoo Joonghyuk",
+      "target": "Ю Джунхёк",
+      "category": "characters",
+      "notes": "Регрессор, протагонист «Путей выживания».",
+      "aliases": [
+        "Джунхёк"
+      ],
+      "forbidden": [
+        "Ю Чонхёк",
+        "Ю Джонхёк",
+        "Ю Чунхёк"
+      ]
+    },
+    {
+      "source": "Han Sooyoung",
+      "target": "Хан Суён",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Суён"
+      ],
+      "forbidden": [
+        "Хан Суёнг"
+      ]
+    },
+    {
+      "source": "Anna Croft",
+      "target": "Анна Крофт",
+      "category": "characters",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Lee Jihye",
+      "target": "Ли Джихё",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Джихё"
+      ],
+      "forbidden": [
+        "Ли Чжихё"
+      ]
+    },
+    {
+      "source": "Lee Gilyoung",
+      "target": "Ли Гильён",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Гильён"
+      ],
+      "forbidden": [
+        "Ли Кильён"
+      ]
+    },
+    {
+      "source": "Yoo Mia",
+      "target": "Ю Миа",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Миа"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Biyoo",
+      "target": "Бию",
+      "category": "characters",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Abyssal Black Flame Dragon",
+      "target": "Чёрный Огненный Дракон Бездны",
+      "category": "constellations",
+      "notes": "",
+      "aliases": [
+        "Черный Огненный Дракон Бездны",
+        "Чёрный Пламенный Дракон Бездны"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Black Flame Dragon",
+      "target": "Чёрный Огненный Дракон",
+      "category": "constellations",
+      "notes": "",
+      "aliases": [
+        "Черный Огненный Дракон",
+        "Чёрный Пламенный Дракон"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Star Stream",
+      "target": "Звёздный Поток",
+      "category": "nebulae",
+      "notes": "",
+      "aliases": [
+        "Звездный Поток"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Black Cloud",
+      "target": "Чёрное Облако",
+      "category": "nebulae",
+      "notes": "",
+      "aliases": [
+        "Черное Облако"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Constellation",
+      "target": "Созвездие",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Outer God",
+      "target": "Внешний Бог",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Nebula",
+      "target": "Туманность",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Dokkaebi",
+      "target": "Токкэби",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": [
+        "Доккаэби",
+        "Доккаби"
+      ]
+    },
+    {
+      "source": "Incarnation",
+      "target": "Воплощение",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Transcendent",
+      "target": "Трансцендентный",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Probability",
+      "target": "Вероятность",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": [
+        "Правдоподобие"
+      ]
+    },
+    {
+      "source": "Scenario",
+      "target": "Сценарий",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Ways of Survival",
+      "target": "Пути выживания",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "[Black Flame]",
+      "target": "[Чёрное Пламя]",
+      "category": "skills",
+      "notes": "",
+      "aliases": [
+        "[Черное Пламя]"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "[Breaking the Sky Swordsmanship]",
+      "target": "[Искусство Меча, Рассекающего Небеса]",
+      "category": "skills",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Final Wall",
+      "target": "Последняя Стена",
+      "category": "locations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "First Murim",
+      "target": "Первый Мурим",
+      "category": "locations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    }
+  ],
+  "items": [
+    {
+      "block_index": 1,
+      "kind": "paragraph",
+      "lines": [
+        "Countless stars fell every night."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 2,
+      "kind": "paragraph",
+      "lines": [
+        "Not every falling star was a constellation. Most were planets that merely appeared to be stars — or perhaps not even planets, but stellar debris."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 3,
+      "kind": "paragraph",
+      "lines": [
+        "But Yoo Joonghyuk patiently gazed at the meteor shower. He wondered if, among so many fragments, there might be just one he missed."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 4,
+      "kind": "paragraph",
+      "lines": [
+        "“Just now.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 5,
+      "kind": "constellation",
+      "lines": [
+        "[No, that wasn’t him.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 6,
+      "kind": "paragraph",
+      "lines": [
+        "Biyoo shook her head, but he insisted firmly."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 7,
+      "kind": "paragraph",
+      "lines": [
+        "“No, I’m certain of it.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 8,
+      "kind": "paragraph",
+      "lines": [
+        "It was just a fleeting glimmer of starlight — an impossibly faint ray of light from a single streaking meteor."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 9,
+      "kind": "constellation",
+      "lines": [
+        "[I’m telling you it wasn’t, Captain.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 10,
+      "kind": "paragraph",
+      "lines": [
+        "Biyoo, floating inside the small spaceship, sighed deeply."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 11,
+      "kind": "constellation",
+      "lines": [
+        "[I know what ahjussi’s presence feels like. And that wasn’t it.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 12,
+      "kind": "paragraph",
+      "lines": [
+        "The two of them had been wandering the universe together for a long time now."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 13,
+      "kind": "paragraph",
+      "lines": [
+        "Staring into Yoo Joonghyuk's eyes, which had lost their light, Biyoo thought that some timespans were long enough to drive a person mad."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 14,
+      "kind": "paragraph",
+      "lines": [
+        "“I am right.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 15,
+      "kind": "paragraph",
+      "lines": [
+        "Then again, how could a man searching for a single star for so long ever be sane?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 16,
+      "kind": "paragraph",
+      "lines": [
+        "“It was him.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 17,
+      "kind": "paragraph",
+      "lines": [
+        "Perhaps it was because he had lingered too long in the empty void of space. At some point, Yoo Joonghyuk had become plagued by frequent hallucinations, his old stories malfunctioning as time accelerated the corruption of his soul."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 18,
+      "kind": "paragraph",
+      "lines": [
+        "He had only made it this far by reading Han Sooyoung’s novel, clinging to the stories which felt as fragile as fading starlight."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 19,
+      "kind": "constellation",
+      "lines": [
+        "[Captain.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 20,
+      "kind": "paragraph",
+      "lines": [
+        "Biyoo also knew it was time to stop their journey. The system’s power was weakening, the [Cloud System] that transmitted Han Sooyoung’s manuscripts often malfunctioned, and finding a world line to transmit the manuscripts to was becoming just as difficult."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 21,
+      "kind": "paragraph",
+      "lines": [
+        "“Biyoo, this is the last time.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 22,
+      "kind": "paragraph",
+      "lines": [
+        "Biyoo wavered at his words."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 23,
+      "kind": "paragraph",
+      "lines": [
+        "The last time."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 24,
+      "kind": "constellation",
+      "lines": [
+        "[If this isn’t ahjussi, we stop for good. Understood?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 25,
+      "kind": "paragraph",
+      "lines": [
+        "When Yoo Joonghyuk nodded, Biyoo piloted the spaceship in pursuit of the vanished meteor shower."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 26,
+      "kind": "paragraph",
+      "lines": [
+        "The scattered lights of the universe trailed along the cockpit, and soon enough, the tail of the meteor Yoo Joonghyuk had pointed out came into view."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 27,
+      "kind": "paragraph",
+      "lines": [
+        "“There.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 28,
+      "kind": "paragraph",
+      "lines": [
+        "The spaceship entered a pursuit trajectory. Biyoo opened her mouth slightly."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 29,
+      "kind": "constellation",
+      "lines": [
+        "[Ah.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 30,
+      "kind": "paragraph",
+      "lines": [
+        "Astonishingly, it did look like a fragment of Kim Dokja."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 31,
+      "kind": "constellation",
+      "lines": [
+        "[What the—? It's actually real. Like a fragment of him that hasn’t reincarnated yet—]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 32,
+      "kind": "paragraph",
+      "lines": [
+        "The moment she said that, the spaceship shook. It felt like it had collided with something soft, like a barrier. The surroundings trembled, and a vast light spread before their eyes."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 33,
+      "kind": "outer_god",
+      "lines": [
+        "【Yo u  can no t  en ter  t his  pl ace.】"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 34,
+      "kind": "paragraph",
+      "lines": [
+        "A terrifying chant from far away pierced their minds. It was the chant of an outer god."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 35,
+      "kind": "paragraph",
+      "lines": [
+        "The great being overseeing the dimensional realm was warning them."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 36,
+      "kind": "paragraph",
+      "lines": [
+        "They could not cross this 'wall’."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 37,
+      "kind": "constellation",
+      "lines": [
+        "[What’s that supposed to mean? We’ve crossed the Final Wall! There’s no wall we can’t overcome!]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 38,
+      "kind": "paragraph",
+      "lines": [
+        "But the spaceship was stuck, as if mired in a swamp."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 39,
+      "kind": "paragraph",
+      "lines": [
+        "It was then that Yoo Joonghyuk flung open the cockpit."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 40,
+      "kind": "constellation",
+      "lines": [
+        "[Captain?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 41,
+      "kind": "paragraph",
+      "lines": [
+        "It happened in an instant."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 42,
+      "kind": "paragraph",
+      "lines": [
+        "A fierce aura of [Breaking the Sky Swordsmanship] surged from Yoo Joonghyuk’s Black Heavenly Demon Sword."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 43,
+      "kind": "paragraph",
+      "lines": [
+        "A strike delivered with his entire soul. Yoo Joonghyuk’s blade struck the surface of the wall. Astonishingly, a tiny crack appeared."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 44,
+      "kind": "constellation",
+      "lines": [
+        "[Wait! Stop!]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 45,
+      "kind": "paragraph",
+      "lines": [
+        "Biyoo reached out desperately, but her short arms couldn’t reach Yoo Joonghyuk."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 46,
+      "kind": "paragraph",
+      "lines": [
+        "The surroundings swirled, and Yoo Joonghyuk’s incarnation body was pulled by an immense gravitational force. The dimension tore apart, and his body was flung about chaotically."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 47,
+      "kind": "paragraph",
+      "lines": [
+        "It felt like every bone in his body had shattered. He could barely breathe, and moving even a finger was a struggle."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 48,
+      "kind": "paragraph",
+      "lines": [
+        "Slowly rising, Yoo Joonghyuk recalled the moments before he lost consciousness."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 49,
+      "kind": "paragraph",
+      "lines": [
+        "He remembered squeezing through the crack in the wall, reaching for the fleeing fragment of Kim Dokja. The moment he thought he’d touched the fragment’s edge, he recalled hearing the outer god’s chant."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 50,
+      "kind": "outer_god",
+      "lines": [
+        "【Every thing  is  al read y  writ ten  an d  at  t he  sa me  ti me  i t's  be ing  writ ten.】"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 51,
+      "kind": "paragraph",
+      "lines": [
+        "“Where. . . Biyoo.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 52,
+      "kind": "paragraph",
+      "lines": [
+        "Leaning against a cold wall, the surrounding scenery came into view."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 53,
+      "kind": "paragraph",
+      "lines": [
+        "An unrealistically bright midday sun."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 54,
+      "kind": "paragraph",
+      "lines": [
+        "Familiar architectural styles. Graffiti smeared across the walls, and an old neon sign flickered, as if its owner forgot to turn it off."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 55,
+      "kind": "paragraph",
+      "lines": [
+        "People glanced at him as they passed through the alley. A wave of dizziness brought back an old memory."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 56,
+      "kind": "quote",
+      "lines": [
+        "「“Obabeoni.”」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 57,
+      "kind": "paragraph",
+      "lines": [
+        "The voice of Mia calling him. A world that was endlessly cold and cruel to him, who had neither parents nor relatives. A memory of his youth, devoid of scenarios, dokkaebi, or constellations."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 58,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk couldn’t understand why this memory surfaced now. Perhaps it was because this alley, this atmosphere, resembled a scene from his childhood."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 59,
+      "kind": "paragraph",
+      "lines": [
+        "His breathing grew labored. Uncomfortable memories floated endlessly in his mind."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 60,
+      "kind": "paragraph",
+      "lines": [
+        "“Ahjussi, are you okay?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 61,
+      "kind": "paragraph",
+      "lines": [
+        "When had it started? A presence with an unsettling aura, like a neon sign in broad daylight, stood before him."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 62,
+      "kind": "paragraph",
+      "lines": [
+        "“Are you hurt?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 63,
+      "kind": "paragraph",
+      "lines": [
+        "A small girl, barely ten years old."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 64,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk stared at the girl’s face, feeling an odd sense of déjà vu. The girl looked up at him, too. As if sensing something in their exchanged gazes, she pulled something from her pocket."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 65,
+      "kind": "paragraph",
+      "lines": [
+        "“Want this?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 66,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk blankly stared at the chocolate the girl offered. Did she mistake him for a beggar based on his appearance?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 67,
+      "kind": "paragraph",
+      "lines": [
+        "He was about to say he didn’t eat such things when someone called the girl from afar."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 68,
+      "kind": "paragraph",
+      "lines": [
+        "“Ahgassi! You shouldn’t go that way!”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 69,
+      "kind": "paragraph",
+      "lines": [
+        "“Okay, I’m coming.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 70,
+      "kind": "paragraph",
+      "lines": [
+        "This was a world where the scenario hadn’t yet begun."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 71,
+      "kind": "paragraph",
+      "lines": [
+        "Watching the girl’s retreating figure, Yoo Joonghyuk wondered if this was all a cruel dream he’d conjured."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 75,
+      "kind": "paragraph",
+      "lines": [
+        "Half a day after entering this worldline, Yoo Joonghyuk gathered basic information about it."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 76,
+      "kind": "paragraph",
+      "lines": [
+        "First, this world was Earth before the 'scenario' began."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 77,
+      "kind": "paragraph",
+      "lines": [
+        "After roughing up and interrogating a couple of street thugs, he confirmed this worldline was indeed Planet 8612, as he remembered."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 78,
+      "kind": "paragraph",
+      "lines": [
+        "Second, the 'system' operated faintly here."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 79,
+      "kind": "paragraph",
+      "lines": [
+        "There was no trace of the scenario, but the system’s power wasn’t entirely absent. The proof was Biyoo's intermittent voice."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 80,
+      "kind": "paragraph",
+      "lines": [
+        "—Captain, can you hear me?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 81,
+      "kind": "paragraph",
+      "lines": [
+        "In a world where the system was completely blocked, even such communication would have been impossible."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 82,
+      "kind": "paragraph",
+      "lines": [
+        "—This place is protected by special probability. Your abilities won’t work fully here."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 83,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk felt it too."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 84,
+      "kind": "paragraph",
+      "lines": [
+        "The moment he entered this planet, all the powers he’d awakened as a transcendent were thoroughly sealed. He couldn’t use the power of his stories either."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 85,
+      "kind": "paragraph",
+      "lines": [
+        "This world likely didn’t permit his strength."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 86,
+      "kind": "paragraph",
+      "lines": [
+        "But that wasn’t the only issue."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 87,
+      "kind": "paragraph",
+      "lines": [
+        "Thud."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 88,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk tapped the transparent barrier before him."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 89,
+      "kind": "paragraph",
+      "lines": [
+        "“It seems I’m trapped.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 90,
+      "kind": "paragraph",
+      "lines": [
+        "No matter which direction he walked — left, right, forward, or backward — it was the same. After about two kilometers, he’d encounter this transparent wall. All he could do was circle the same spot, like an insect trapped in a jar."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 91,
+      "kind": "paragraph",
+      "lines": [
+        "—Can you break it?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 92,
+      "kind": "paragraph",
+      "lines": [
+        "“Not with my current abilities.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 93,
+      "kind": "paragraph",
+      "lines": [
+        "This wall was designed to confine only him. The proof was the crowds passing through it without restriction."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 94,
+      "kind": "paragraph",
+      "lines": [
+        "—Hang in there. I’ll find a way to get you out. If I can analyze this story barrier…"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 95,
+      "kind": "paragraph",
+      "lines": [
+        "That was the last of Biyoo's voice."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 96,
+      "kind": "paragraph",
+      "lines": [
+        "“Biyoo?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 97,
+      "kind": "paragraph",
+      "lines": [
+        "He called out several times, but there was no response."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 98,
+      "kind": "paragraph",
+      "lines": [
+        "Watching the setting sun, Yoo Joonghyuk muttered, “This is troublesome.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 99,
+      "kind": "paragraph",
+      "lines": [
+        "Hunger was creeping in. After reaching transcendence, he could suppress hunger through the cycle of stories, but that was impossible here."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 100,
+      "kind": "paragraph",
+      "lines": [
+        "A crisis, huh."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 101,
+      "kind": "paragraph",
+      "lines": [
+        "It would’ve been nice if there was something to hunt, but in a world without scenarios, there were no monsters."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 102,
+      "kind": "paragraph",
+      "lines": [
+        "Stealing food from a convenience store wasn’t an option either. Aside from lacking money, his incarnation body had a quirk — it would reject food not prepared by his own hands."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 103,
+      "kind": "paragraph",
+      "lines": [
+        "Facing starvation in the middle of a city, someone approached him."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 104,
+      "kind": "paragraph",
+      "lines": [
+        "“Hey…”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 105,
+      "kind": "paragraph",
+      "lines": [
+        "And it wasn’t just one person."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 106,
+      "kind": "paragraph",
+      "lines": [
+        "“Can I get your number?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 107,
+      "kind": "paragraph",
+      "lines": [
+        "“I don’t have a phone.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 108,
+      "kind": "paragraph",
+      "lines": [
+        "“Come on, don’t be like that.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 109,
+      "kind": "paragraph",
+      "lines": [
+        "Looking at the people amiably asking for his number, Yoo Joonghyuk recalled a conversation with Lee Jihye long ago."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 110,
+      "kind": "quote",
+      "lines": [
+        "「“You lived starving before the scenario started? Really?”」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 111,
+      "kind": "quote",
+      "lines": [
+        "「“Yes.”」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 112,
+      "kind": "quote",
+      "lines": [
+        "「“Why? With your face, you could just sit still, and someone would feed and clothe you.”」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 113,
+      "kind": "paragraph",
+      "lines": [
+        "What had he said back then? Had he scolded her, saying the world wasn’t so easy?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 114,
+      "kind": "paragraph",
+      "lines": [
+        "“If I give you this, will you give me your number?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 115,
+      "kind": "paragraph",
+      "lines": [
+        "Looking at the cookie offered by the woman, Yoo Joonghyuk frowned. “I don’t eat food made by others.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 116,
+      "kind": "paragraph",
+      "lines": [
+        "The women, amused by his reaction, giggled among themselves and soon left. Feeling oddly hollow, Yoo Joonghyuk stared at the cookie in his hand."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 117,
+      "kind": "paragraph",
+      "lines": [
+        "Could he have solved meals this easily?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 118,
+      "kind": "paragraph",
+      "lines": [
+        "Then what were all the hardships he endured as a child?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 119,
+      "kind": "paragraph",
+      "lines": [
+        "Perhaps all his misfortunes stemmed from Han Sooyoung arbitrarily crafting his past."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 120,
+      "kind": "paragraph",
+      "lines": [
+        "“Damn it.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 121,
+      "kind": "paragraph",
+      "lines": [
+        "The cookie crumbled in his hand and fell to the ground."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 122,
+      "kind": "paragraph",
+      "lines": [
+        "Hunger grew stronger."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 123,
+      "kind": "paragraph",
+      "lines": [
+        "He could last a day or two, but without Biyoo's help, he’d starve on the streets. He needed calories. Energy to maintain his muscles and keep breathing. He needed food he cooked himself. He had to find a place to make that food legally within this two-kilometer world. And so, Yoo Joonghyuk…"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 124,
+      "kind": "paragraph",
+      "lines": [
+        "—Housekeeper wanted"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 125,
+      "kind": "paragraph",
+      "lines": [
+        ".…finally saw that flyer."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 129,
+      "kind": "paragraph",
+      "lines": [
+        "“You’re here for the interview?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 130,
+      "kind": "paragraph",
+      "lines": [
+        "In tattered clothes, unable to use [Clean Body], his face unwashed, Yoo Joonghyuk somehow managed to meet the interviewer. The interviewer was a neatly dressed secretary in a semi-formal suit."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 131,
+      "kind": "paragraph",
+      "lines": [
+        "Sitting in the reception room, Yoo Joonghyuk calmly surveyed the house. From the ashtray on the table to the paintings on the walls, everything was visibly expensive."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 132,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk was sitting in the reception room of a wealthy household, interviewing for a housekeeper position. If Kim Dokja knew of this, he’d never let him live it down."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 133,
+      "kind": "paragraph",
+      "lines": [
+        "“So, your name is.....”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 134,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk tried to say his name, but for some reason, his lips wouldn’t move. It felt as if a great will was controlling his tongue."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 135,
+      "kind": "paragraph",
+      "lines": [
+        "This world seemed to reject the name ‘Yoo Joonghyuk.’"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 136,
+      "kind": "paragraph",
+      "lines": [
+        "As if that name hadn’t yet been born in this world — or wasn’t allowed to exist."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 137,
+      "kind": "paragraph",
+      "lines": [
+        "After a moment’s thought, he said, “Yoo Joonhyun.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 138,
+      "kind": "paragraph",
+      "lines": [
+        "“Joonhyun-ssi.” The secretary nodded, eyeing his attire, then said, “Well, the thing is, we’re only hiring women for the housekeeper role.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 139,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk frowned. If that was the case, why had they let him into the reception room?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 140,
+      "kind": "paragraph",
+      "lines": [
+        "“But you could apply for the facility maintenance team. We recently had an opening.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 141,
+      "kind": "paragraph",
+      "lines": [
+        "A large house like this would indeed need such staff."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 142,
+      "kind": "paragraph",
+      "lines": [
+        "“Can the maintenance team use the kitchen?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 143,
+      "kind": "paragraph",
+      "lines": [
+        "“Well, no, the maintenance team handles the garden or security…”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 144,
+      "kind": "paragraph",
+      "lines": [
+        "“I want to be a housekeeper.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 145,
+      "kind": "paragraph",
+      "lines": [
+        "The secretary looked troubled."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 146,
+      "kind": "paragraph",
+      "lines": [
+        "He’d somewhat expected this. A wealthy household wouldn’t hire an adult man of unknown origin as a housekeeper."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 147,
+      "kind": "paragraph",
+      "lines": [
+        "Still, Yoo Joonghyuk didn’t give up. Not until he figured out why the fragment of Kim Dokja had come to this place."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 148,
+      "kind": "paragraph",
+      "lines": [
+        "After some thought, he said, \"I can use martial arts exclusive to women.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 149,
+      "kind": "paragraph",
+      "lines": [
+        "The secretary paused, as if processing his words, then signaled to the security guards."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 150,
+      "kind": "paragraph",
+      "lines": [
+        "“I’ll show you now.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 151,
+      "kind": "paragraph",
+      "lines": [
+        "“Could we see some ID first?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 152,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk stood abruptly and began performing [Breaking the Sky Swordsmanship]. Without a sword, his martial arts were expressed solely through hand movements."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 153,
+      "kind": "paragraph",
+      "lines": [
+        "As the secretary stepped back in surprise at his fist slicing through the air, someone opened the reception room door."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 154,
+      "kind": "paragraph",
+      "lines": [
+        "“What’s this? Are we hiring a taekwondo instructor too?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 155,
+      "kind": "paragraph",
+      "lines": [
+        "“Ahgassi.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 156,
+      "kind": "paragraph",
+      "lines": [
+        "The secretary waved in relief."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 157,
+      "kind": "paragraph",
+      "lines": [
+        "“Who’s this?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 158,
+      "kind": "paragraph",
+      "lines": [
+        "The secretary introduced Yoo Joonghyuk to the approaching child, who nodded."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 159,
+      "kind": "paragraph",
+      "lines": [
+        "“Oh, the new ahjussi?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 160,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk recognized her. She was the girl who had given him chocolate when he first arrived in this world."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 161,
+      "kind": "paragraph",
+      "lines": [
+        "The child, extending her small hand with an oddly mischievous smile, said, “I’m Han Sooyoung.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 162,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk looked at her for a moment before shaking her hand."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 163,
+      "kind": "paragraph",
+      "lines": [
+        "“Yoo Joonhyun.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 164,
+      "kind": "paragraph",
+      "lines": [
+        "“Can you cook?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 165,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk nodded."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 166,
+      "kind": "paragraph",
+      "lines": [
+        "“Cook me some ramen.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 167,
+      "kind": "paragraph",
+      "lines": [
+        "Without complaint, Yoo Joonghyuk stood before a pot. Taking a deep breath, he lit the stove, and intense heat began to tickle the pot’s base."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 168,
+      "kind": "paragraph",
+      "lines": [
+        "Crackle!"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 169,
+      "kind": "paragraph",
+      "lines": [
+        "He tossed thinly sliced green onions into the pot with olive oil, stirring the ingredients evenly as if using a wok."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 170,
+      "kind": "paragraph",
+      "lines": [
+        "Soon, the savory aroma of sizzling onions filled the air. When the measured water boiled, he tore open the ramen packet. The scent of powdered broth spread softly, and the noodles slowly sank into the water."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 171,
+      "kind": "paragraph",
+      "lines": [
+        "Like a master tempering a fine blade, Yoo Joonghyuk lifted the noodles into the air several times, adjusting the temperature."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 172,
+      "kind": "paragraph",
+      "lines": [
+        "“Whoa.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 173,
+      "kind": "paragraph",
+      "lines": [
+        "As everyone watched the cooking process, transfixed, Yoo Joonghyuk’s chopsticks moved. His precise movements checked the texture of each noodle strand."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 174,
+      "kind": "paragraph",
+      "lines": [
+        "When the egg yolk coated the springy noodles, the prepared bowl shyly made its appearance. The ramen was complete."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 175,
+      "kind": "paragraph",
+      "lines": [
+        "“Eat.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 176,
+      "kind": "paragraph",
+      "lines": [
+        "Han Sooyoung stared blankly at the ramen before picking up her chopsticks. The sound of slurping echoed quietly."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 177,
+      "kind": "paragraph",
+      "lines": [
+        "After finishing the entire bowl, broth included, Han Sooyoung asked with an impressed expression, “Do you clean well too?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 178,
+      "kind": "paragraph",
+      "lines": [
+        "Instead of answering, Yoo Joonghyuk grabbed a brush from the bathroom and began cleaning. The reception room was spacious, but compared to the training grounds of the Breaking the Sky Sword School, which he swept and polished daily in the First Murim, it was nothing."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 179,
+      "kind": "paragraph",
+      "lines": [
+        "Ten minutes later, Han Sooyoung, inspecting the gleaming reception room, said to the secretary, “He’s hired.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 183,
+      "kind": "paragraph",
+      "lines": [
+        "If Kim Dokja were here, he’d probably have something to say."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 184,
+      "kind": "quote",
+      "lines": [
+        "「“Something’s off. No matter how you look at it, a rich household wouldn’t hire you. An adult man with no ID using weird martial arts? This isn’t some ‘Cold-Hearted Handsome Housekeeper’ story.”」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 185,
+      "kind": "paragraph",
+      "lines": [
+        "As much as it annoyed him, Yoo Joonghyuk would agree. He wasn’t thrilled that, aside from cooking for himself, he had to cook for Han Sooyoung as well."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 186,
+      "kind": "paragraph",
+      "lines": [
+        "Right now, though, he wasn’t in a position to be picky. Whoever he cooked for, surviving in this world was the priority."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 187,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk scanned the house and asked, “Where are your parents?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 188,
+      "kind": "paragraph",
+      "lines": [
+        "“I live alone.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 189,
+      "kind": "paragraph",
+      "lines": [
+        "He recalled a conversation where Han Sooyoung had mentioned her childhood. He hadn’t asked for it, but during a chat about pre-scenario days, he’d overheard her talking with the group."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 190,
+      "kind": "quote",
+      "lines": [
+        "「“You all know I was a writer before the scenario, right? Wanna hear about when I was even younger?”<br>Han Sooyoung had smirked and added, “I just grew up alone.”」"
+      ],
+      "expected_br_counts": [
+        1
+      ]
+    },
+    {
+      "block_index": 191,
+      "kind": "paragraph",
+      "lines": [
+        "“I grew up alone,” she’d said, as if she knew what it meant to be truly alone."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 192,
+      "kind": "paragraph",
+      "lines": [
+        "But now, being here, he realized her words weren’t entirely untrue."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 193,
+      "kind": "paragraph",
+      "lines": [
+        "The next day, Han Sooyoung, carrying a backpack as big as herself, said in a clear voice, “I’m off to school. If you’re planning to steal valuables and run, check the bottom drawer of the desk in the study first.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 194,
+      "kind": "paragraph",
+      "lines": [
+        "“I don’t have such thoughts.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 195,
+      "kind": "paragraph",
+      "lines": [
+        "After Han Sooyoung left, Yoo Joonghyuk began the housework. As expected of a wealthy household, the place was equipped with art appliances. Observing them, he quietly washed dishes (he didn’t trust dishwashers), swept and cleaned every room (he didn’t trust vacuum cleaners), and hand-washed laundry after checking each tag (naturally, he didn’t trust washing machines)."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 196,
+      "kind": "paragraph",
+      "lines": [
+        "After finishing the chores, he cooked for himself and practiced [Hundred Steps Godly Fist], hoping his strength might return. After about ten thousand punches, Han Sooyoung returned."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 197,
+      "kind": "paragraph",
+      "lines": [
+        "“You didn’t run away?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 198,
+      "kind": "paragraph",
+      "lines": [
+        "“Disappointed?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 199,
+      "kind": "paragraph",
+      "lines": [
+        "“A little?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 200,
+      "kind": "paragraph",
+      "lines": [
+        "All Han Sooyoung did was lock herself in her room to read or sit by a dimly lit window, staring at the sky between buildings."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 201,
+      "kind": "paragraph",
+      "lines": [
+        "At first, he let it be, but after watching her for a week, Yoo Joonghyuk felt uneasy."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 202,
+      "kind": "paragraph",
+      "lines": [
+        "“Don’t you exercise? Like going for a walk?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 203,
+      "kind": "paragraph",
+      "lines": [
+        "“I hate exercise.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 204,
+      "kind": "paragraph",
+      "lines": [
+        "“I’ll teach you military calisthenics.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 205,
+      "kind": "paragraph",
+      "lines": [
+        "“One, two, three, four — that? I saw you doing it before.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 206,
+      "kind": "paragraph",
+      "lines": [
+        "What did a person need to have a proper childhood?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 207,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk didn’t know."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 208,
+      "kind": "paragraph",
+      "lines": [
+        "He’d grown up without knowing either."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 209,
+      "kind": "paragraph",
+      "lines": [
+        "But even he knew that military calisthenics weren’t what Han Sooyoung needed now."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 210,
+      "kind": "paragraph",
+      "lines": [
+        "“You stay inside too much.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 211,
+      "kind": "paragraph",
+      "lines": [
+        "“Everything I need is here.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 212,
+      "kind": "paragraph",
+      "lines": [
+        "“Kids grow up running around.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 213,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk flinched as he said that. Those were words Han Sooyoung often said to Lee Gilyoung and Shin Yooseung."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 214,
+      "kind": "paragraph",
+      "lines": [
+        "“That’s for normal kids. My house is a bit special.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 215,
+      "kind": "paragraph",
+      "lines": [
+        "He’d heard the gist of it. He’d even signed a strange confidentiality agreement (though he wasn’t sure if it had any effect)."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 216,
+      "kind": "paragraph",
+      "lines": [
+        "Han Sooyoung’s father was a three-term congressman whereas her mother was an actress. And Han Sooyoung was their hidden child, unknown to the public."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 217,
+      "kind": "paragraph",
+      "lines": [
+        "“Feels like a drama, right?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 218,
+      "kind": "paragraph",
+      "lines": [
+        "“I don’t watch dramas.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 219,
+      "kind": "paragraph",
+      "lines": [
+        "“Figured as much.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 220,
+      "kind": "paragraph",
+      "lines": [
+        "As he was about to ask what she meant, her phone rang. Han Sooyoung’s expression darkened as she checked the caller."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 221,
+      "kind": "paragraph",
+      "lines": [
+        "“Hold on.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 222,
+      "kind": "paragraph",
+      "lines": [
+        "She ran to her room to take the call. Even with the door closed, Yoo Joonghyuk could hear everything."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 223,
+      "kind": "paragraph",
+      "lines": [
+        "“Yeah, I didn’t go out. I didn’t, I swear.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 224,
+      "kind": "paragraph",
+      "lines": [
+        "He didn’t know why, but someone was scolding her. Her voice grew quieter."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 225,
+      "kind": "paragraph",
+      "lines": [
+        "“Last time..... Yeah. If I need anything, I’ll tell ahjumma. Now there’s ahjussi too. Yeah. Okay.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 226,
+      "kind": "paragraph",
+      "lines": [
+        "Listening to her shrinking voice, Yoo Joonghyuk turned on the vacuum cleaner in the living room for no reason. Hearing its lackluster hum, he muttered, “Pathetic.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 230,
+      "kind": "paragraph",
+      "lines": [
+        "Even though he could guess why Han Sooyoung couldn’t go outside, Yoo Joonghyuk didn’t comfort or console the young girl."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 231,
+      "kind": "paragraph",
+      "lines": [
+        "This world’s history was already set, and there was little he could do to intervene. If he meddled carelessly and disrupted the future, that would be a problem in itself."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 232,
+      "kind": "paragraph",
+      "lines": [
+        "Instead, he focused on what he could do. He cleaned the house thoroughly, tended the garden, organized deliveries, and occasionally shopped at the nearby market."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 233,
+      "kind": "paragraph",
+      "lines": [
+        "He cooked for Han Sooyoung. The food was delicious, but the portions were often too much for her alone."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 234,
+      "kind": "paragraph",
+      "lines": [
+        "“Ahjussi.” Watching Yoo Joonghyuk devour a meal meant for eight, Han Sooyoung asked, “Did you get this job just to eat?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 235,
+      "kind": "paragraph",
+      "lines": [
+        "“Isn't the same for everyone?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 236,
+      "kind": "paragraph",
+      "lines": [
+        "“Sure. But not everyone needs eight servings.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 237,
+      "kind": "paragraph",
+      "lines": [
+        "Without the system’s blessing, Yoo Joonghyuk had to eat heavily to maintain his high muscle mass."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 238,
+      "kind": "paragraph",
+      "lines": [
+        "“If you’ve got a problem, dock my pay.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 239,
+      "kind": "paragraph",
+      "lines": [
+        "“Nah, I can afford it. So, you’re not doing anything weird today?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 240,
+      "kind": "paragraph",
+      "lines": [
+        "Finishing his meal, Yoo Joonghyuk started washing dishes. Watching him swiftly clean, Han Sooyoung asked in disbelief, “Why don’t you use the perfectly good dishwasher?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 241,
+      "kind": "paragraph",
+      "lines": [
+        "“Relying on such things won’t make you stronger.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 242,
+      "kind": "paragraph",
+      "lines": [
+        "“I saw you hand-washing laundry too.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 243,
+      "kind": "paragraph",
+      "lines": [
+        "“The tags said to hand-wash.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 244,
+      "kind": "paragraph",
+      "lines": [
+        "“A gentle cycle is just as good.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 245,
+      "kind": "paragraph",
+      "lines": [
+        "“Your mental discipline is lacking. Do you think appliances exist in a ruined world?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 246,
+      "kind": "paragraph",
+      "lines": [
+        "“The world’s fine, and so are my appliances. They’ll stay that way.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 247,
+      "kind": "paragraph",
+      "lines": [
+        "After finishing the dishes and wiping down the sink, Yoo Joonghyuk brought Han Sooyoung to the living room."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 248,
+      "kind": "paragraph",
+      "lines": [
+        "“Since you’re female, [Breaking the Sky Swordsmanship] would suit you best, but I don’t teach it to outsiders. I’ll teach you [Hundred Steps Godly Fist] instead.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 249,
+      "kind": "paragraph",
+      "lines": [
+        "“Wow, so that's today’s weird thing.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 250,
+      "kind": "paragraph",
+      "lines": [
+        "“Start with ten thousand punches.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 251,
+      "kind": "paragraph",
+      "lines": [
+        "Thinking it was some fun event, Han Sooyoung made 'whoosh' sounds as she threw punches. After about a hundred, her face scrunched in pain."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 252,
+      "kind": "paragraph",
+      "lines": [
+        "“Do I have to do ten thousand?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 253,
+      "kind": "paragraph",
+      "lines": [
+        "“Get serious. You’ll regret it when the apocalypse comes.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 254,
+      "kind": "paragraph",
+      "lines": [
+        "“The apocalypse?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 255,
+      "kind": "paragraph",
+      "lines": [
+        "“It’ll come in handy someday.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 256,
+      "kind": "paragraph",
+      "lines": [
+        "“Why not become a celebrity, ahjussi? With your face, you could live off commercials. Want me to talk to Mom?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 257,
+      "kind": "paragraph",
+      "lines": [
+        "“Looks are useless.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 258,
+      "kind": "paragraph",
+      "lines": [
+        "“Says the guy with that face.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 259,
+      "kind": "paragraph",
+      "lines": [
+        "“A new world needs new rules.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 260,
+      "kind": "paragraph",
+      "lines": [
+        "“Oh… new rules?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 261,
+      "kind": "paragraph",
+      "lines": [
+        "Liking the sound of that, Han Sooyoung scribbled something in a small, tattered notebook."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 262,
+      "kind": "paragraph",
+      "lines": [
+        "“Don’t peek!”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 263,
+      "kind": "paragraph",
+      "lines": [
+        "“I’m not.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 264,
+      "kind": "paragraph",
+      "lines": [
+        "Looking at her crooked notes, Yoo Joonghyuk’s thoughts grew complicated."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 265,
+      "kind": "quote",
+      "lines": [
+        "「One day, Han Sooyoung will write ‘Ways of Survival’.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 266,
+      "kind": "paragraph",
+      "lines": [
+        "Carrying the sleeping Han Sooyoung, who’d practiced [Hundred Steps Godly Fist] until she collapsed on the couch, to her room, Yoo Joonghyuk thought about the scenarios he’d lived through."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 267,
+      "kind": "paragraph",
+      "lines": [
+        "He felt something odd then. Turning his gaze outside, he locked eyes on the rooftop of the opposite building."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 268,
+      "kind": "paragraph",
+      "lines": [
+        "A man was watching him."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 269,
+      "kind": "paragraph",
+      "lines": [
+        "When their eyes met, the man flinched and vanished."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 270,
+      "kind": "paragraph",
+      "lines": [
+        "As the lonely sunset painted the skyline, Yoo Joonghyuk, listening to Han Sooyoung’s soft breathing, stared at the spot where the man disappeared."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 271,
+      "kind": "paragraph",
+      "lines": [
+        "Perhaps he wasn’t the only one trapped in this world."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 275,
+      "kind": "paragraph",
+      "lines": [
+        "Even for Yoo Joonghyuk, cooking food that everyone enjoyed wasn’t always possible. Especially for a picky eater like this kid."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 276,
+      "kind": "paragraph",
+      "lines": [
+        "“Ugh, I don’t wanna eat this.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 277,
+      "kind": "paragraph",
+      "lines": [
+        "“Eat.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 278,
+      "kind": "paragraph",
+      "lines": [
+        "Part of Yoo Joonghyuk’s duties as a housekeeper was to fix Han Sooyoung’s picky eating habits. If he failed, his qualifications would be questioned. Then he wouldn’t be able to cook and eat eight meals a day, and without those, he’d starve before Biyoo could rescue him."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 279,
+      "kind": "paragraph",
+      "lines": [
+        "“I said I don’t wanna eat!”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 280,
+      "kind": "paragraph",
+      "lines": [
+        "“Eat.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 281,
+      "kind": "paragraph",
+      "lines": [
+        "“I’m the employer here!”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 282,
+      "kind": "paragraph",
+      "lines": [
+        "“Eat.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 283,
+      "kind": "paragraph",
+      "lines": [
+        "“Argh, I’m not eating! I said I’m not!”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 284,
+      "kind": "paragraph",
+      "lines": [
+        "So Yoo Joonghyuk had to pull out a trump card he’d used to fix Yoo Mia’s picky eating."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 285,
+      "kind": "paragraph",
+      "lines": [
+        "“Eat, and I’ll grant you one wish.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 286,
+      "kind": "paragraph",
+      "lines": [
+        "“For real? Then tell me that story again!”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 287,
+      "kind": "paragraph",
+      "lines": [
+        "“That story?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 288,
+      "kind": "paragraph",
+      "lines": [
+        "“The one with the constellations!”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 289,
+      "kind": "paragraph",
+      "lines": [
+        "“Eat first.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 290,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk wasn’t sure if he should tell her that story. It could drastically alter the future. But he also thought,"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 291,
+      "kind": "quote",
+      "lines": [
+        "「What if Kim Dokja arranged for me to come here?」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 292,
+      "kind": "paragraph",
+      "lines": [
+        "If there was a reason he had to be here, a story he had to tell Han Sooyoung."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 293,
+      "kind": "paragraph",
+      "lines": [
+        "He began the story."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 294,
+      "kind": "paragraph",
+      "lines": [
+        "“What’s the Abyssal Black Flame Dragon?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 295,
+      "kind": "paragraph",
+      "lines": [
+        "“The Abyssal Black Flame Dragon is an evil constellation. It commands the <Black Cloud> nebula and imposes its deranged ideology on its incarnations.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 296,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk continued calmly."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 297,
+      "kind": "paragraph",
+      "lines": [
+        "Watching Han Sooyoung listen with rapt attention, sometimes it felt like everything he’d experienced was a lie."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 298,
+      "kind": "paragraph",
+      "lines": [
+        "“You talk like it really happened.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 299,
+      "kind": "paragraph",
+      "lines": [
+        "“It did.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 300,
+      "kind": "paragraph",
+      "lines": [
+        "“No way.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 301,
+      "kind": "paragraph",
+      "lines": [
+        "“It’s true.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 302,
+      "kind": "paragraph",
+      "lines": [
+        "“What did you do before, ahjussi?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 303,
+      "kind": "paragraph",
+      "lines": [
+        "“I…”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 304,
+      "kind": "paragraph",
+      "lines": [
+        "The phone rang. Han Sooyoung’s face paled, as if receiving a scenario message, and she answered. “Hello.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 305,
+      "kind": "paragraph",
+      "lines": [
+        "From her voice alone, he could guess the caller."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 306,
+      "kind": "paragraph",
+      "lines": [
+        "“No, I didn’t go out. I swear…”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 307,
+      "kind": "paragraph",
+      "lines": [
+        "Going to school, locking herself in to read, training in strange martial arts (her words), teasing Yoo Joonghyuk, and taking phone calls — that was young Han Sooyoung’s entire day."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 308,
+      "kind": "paragraph",
+      "lines": [
+        "Two weeks later, the system’s power began to return faintly, around the time Yoo Joonghyuk grew accustomed to Han Sooyoung’s odd routine."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 309,
+      "kind": "paragraph",
+      "lines": [
+        "Han Sooyoung, whose picky eating had noticeably improved, said, “Your cooking’s getting better, ahjussi.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 310,
+      "kind": "paragraph",
+      "lines": [
+        "It wasn’t just the cooking. Recently, faint mana had begun to infuse his [Hundred Steps Godly Fist]."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 311,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk knew instinctively. The reason he had to come to this world, following Kim Dokja’s fragment— the probability that brought him here was slowly fading. The special probability that allowed him into this world was now preparing to expel him."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 312,
+      "kind": "paragraph",
+      "lines": [
+        "—Captain, I found a way out!"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 313,
+      "kind": "paragraph",
+      "lines": [
+        "Biyoo's long-awaited message arrived."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 314,
+      "kind": "paragraph",
+      "lines": [
+        "—The wall opens again at dawn tomorrow. I’ve set things up, so you have to come out then. Don’t be late, got it?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 315,
+      "kind": "paragraph",
+      "lines": [
+        "Waiting for Han Sooyoung to return from school, Yoo Joonghyuk realized this would be his last day with her."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 316,
+      "kind": "paragraph",
+      "lines": [
+        "The time spent with Han Sooyoung was barely a month. So short that young Han Sooyoung might not even remember it clearly. This world probably wouldn’t allow it."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 317,
+      "kind": "system_message",
+      "lines": [
+        "[You can no longer remain in this worldline.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 318,
+      "kind": "paragraph",
+      "lines": [
+        "If it wouldn’t be remembered, why had he come here now? The answer to that question came from beyond the front door."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 319,
+      "kind": "paragraph",
+      "lines": [
+        "“Ahjussi.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 320,
+      "kind": "paragraph",
+      "lines": [
+        "What had happened on her way home? Han Sooyoung looked up at him and said something strange."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 321,
+      "kind": "paragraph",
+      "lines": [
+        "“Have you ever kidnapped anyone?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 325,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk didn’t know what to say. Not even Nirvana’s mental attacks or Anna Croft’s schemes had left him this stunned."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 326,
+      "kind": "paragraph",
+      "lines": [
+        "“Kidnap me.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 327,
+      "kind": "paragraph",
+      "lines": [
+        "Looking at Han Sooyoung, gripping his sleeve tightly, Yoo Joonghyuk felt his long-held balance waver."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 328,
+      "kind": "paragraph",
+      "lines": [
+        "His instincts warned him. This event greatly violated this world’s probability."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 329,
+      "kind": "paragraph",
+      "lines": [
+        "“You’re out of your mind.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 330,
+      "kind": "paragraph",
+      "lines": [
+        "“Let’s go to your house, ahjussi.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 331,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk shook his head. “I don’t have a home.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 332,
+      "kind": "paragraph",
+      "lines": [
+        "“Then let’s go somewhere far. To the Abyssal Black Flame Dragon’s place.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 333,
+      "kind": "paragraph",
+      "lines": [
+        "“You can’t go there. Nothing good comes from it.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 334,
+      "kind": "paragraph",
+      "lines": [
+        "“Why not?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 335,
+      "kind": "paragraph",
+      "lines": [
+        "“…”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 336,
+      "kind": "paragraph",
+      "lines": [
+        "“It was all a lie, wasn’t it?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 337,
+      "kind": "paragraph",
+      "lines": [
+        "When he didn’t answer, Han Sooyoung’s head drooped. Looking at her small head, Yoo Joonghyuk believed this was the right choice. Gently shaking off her hand, he went to the living room and pulled out a large bag. He packed a kimbap he’d prepared and enough food for eight meals."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 338,
+      "kind": "paragraph",
+      "lines": [
+        "Watching him, Han Sooyoung asked, “What’s that?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 339,
+      "kind": "paragraph",
+      "lines": [
+        "“Let’s go.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 340,
+      "kind": "paragraph",
+      "lines": [
+        "“For real?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 341,
+      "kind": "paragraph",
+      "lines": [
+        "“I’ll say it again, nothing good comes from the Abyssal Black Flame Dragon.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 342,
+      "kind": "paragraph",
+      "lines": [
+        "“But we’re going, right?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 343,
+      "kind": "paragraph",
+      "lines": [
+        "“Yeah.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 344,
+      "kind": "paragraph",
+      "lines": [
+        "Did he know she could make that expression? Han Sooyoung jumped excitedly, shouting, “Let’s go! Right now!”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 345,
+      "kind": "paragraph",
+      "lines": [
+        "Pushed by her, Yoo Joonghyuk stepped outside. The sun had set, and the night was dark. He saw security guards lingering at the entrance. Among them was the man who’d been watching from the opposite building. As expected, that man was monitoring Han Sooyoung."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 346,
+      "kind": "paragraph",
+      "lines": [
+        "“Get on.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 347,
+      "kind": "paragraph",
+      "lines": [
+        "Carrying Han Sooyoung lightly on his back and gripping the bag, Yoo Joonghyuk sprinted and leaped over the four-meter wall effortlessly."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 348,
+      "kind": "paragraph",
+      "lines": [
+        "“You’re a thief, aren’t you?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 349,
+      "kind": "paragraph",
+      "lines": [
+        "“No.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 350,
+      "kind": "paragraph",
+      "lines": [
+        "“Be honest.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 351,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk said honestly, “I’ve stolen before.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 352,
+      "kind": "paragraph",
+      "lines": [
+        "“When?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 353,
+      "kind": "paragraph",
+      "lines": [
+        "“Now.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 354,
+      "kind": "paragraph",
+      "lines": [
+        "About a hundred meters from the house, Han Sooyoung hopped off his back."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 355,
+      "kind": "paragraph",
+      "lines": [
+        "“This is my first time out at this hour.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 356,
+      "kind": "paragraph",
+      "lines": [
+        "Her face was flushed with excitement. But despite her expression, her small body trembled. Her steps were cautious, like a small animal’s. Yoo Joonghyuk walked slowly so she could keep up. There was no need to rush this journey."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 357,
+      "kind": "quote",
+      "lines": [
+        "「His world is limited to two kilometers, no matter where he goes.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 358,
+      "kind": "paragraph",
+      "lines": [
+        "A journey with a clear end. So Yoo Joonghyuk deliberately took the long way. So the girl could walk and keep walking in this small world."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 359,
+      "kind": "paragraph",
+      "lines": [
+        "“Wow, I’ve never been here.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 360,
+      "kind": "paragraph",
+      "lines": [
+        "Sneaking over a neighbor’s fence, peeking into another’s doghouse, lingering suspiciously outside a closed restaurant, stepping on the light of an old neon sign, reading graffiti on dark walls."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 361,
+      "kind": "paragraph",
+      "lines": [
+        "“It’s like a different world at night.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 362,
+      "kind": "paragraph",
+      "lines": [
+        "“It is a different world.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 363,
+      "kind": "paragraph",
+      "lines": [
+        "“Really?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 364,
+      "kind": "paragraph",
+      "lines": [
+        "“Some constellations only move at night.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 365,
+      "kind": "paragraph",
+      "lines": [
+        "The world he could show this girl was only two kilometers wide. Yet within it, Han Sooyoung smiled brightly."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 366,
+      "kind": "paragraph",
+      "lines": [
+        "“Tell me that story again.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 367,
+      "kind": "paragraph",
+      "lines": [
+        "“The Abyssal Black Flame Dragon?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 368,
+      "kind": "paragraph",
+      "lines": [
+        "“Yeah!”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 369,
+      "kind": "paragraph",
+      "lines": [
+        "Wondering why she loved the Abyssal Black Flame Dragon so much, Yoo Joonghyuk spoke about it. About its soul, [Black Flame]. Arrogant by nature, it looked down on its incarnations but would sacrifice itself for a story it cherished. About the star that became the ‘Final Dragon of Revelation’, a disaster that destroyed the <Star Stream>."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 370,
+      "kind": "paragraph",
+      "lines": [
+        "As she listened, Han Sooyoung either smiled brightly or wore a sad expression. How long did the story continue? A deep night arrived."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 371,
+      "kind": "paragraph",
+      "lines": [
+        "“And then? What happened next?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 372,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk felt the chilly night air and said, “Your parents must be worried.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 373,
+      "kind": "paragraph",
+      "lines": [
+        "Looking at the ground, Han Sooyoung replied in a darker tone, “If this were a drama, maybe.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 374,
+      "kind": "paragraph",
+      "lines": [
+        "“You seem to think everything is a drama.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 375,
+      "kind": "paragraph",
+      "lines": [
+        "“Wanna hear something really drama-like?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 376,
+      "kind": "paragraph",
+      "lines": [
+        "Han Sooyoung paused, silent. In the quiet darkness, their long and short shadows flickered under the streetlights."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 377,
+      "kind": "paragraph",
+      "lines": [
+        "“I got in a fight at school.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 378,
+      "kind": "paragraph",
+      "lines": [
+        "So something had happened.Yoo Joonghyuk waited for her to continue without pressing."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 379,
+      "kind": "paragraph",
+      "lines": [
+        "“During the fight, I told them who my parents are. I wasn’t supposed to, but I blurted it out in anger. By now, everyone probably knows.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 380,
+      "kind": "paragraph",
+      "lines": [
+        "Her parents kept their identities strictly secret."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 381,
+      "kind": "paragraph",
+      "lines": [
+        "“They’ll be mad, right?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 382,
+      "kind": "paragraph",
+      "lines": [
+        "“Probably.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 383,
+      "kind": "paragraph",
+      "lines": [
+        "“The house must be in chaos by now.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 384,
+      "kind": "paragraph",
+      "lines": [
+        "“Because you’ve been kidnapped.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 385,
+      "kind": "paragraph",
+      "lines": [
+        "Han Sooyoung grinned, finding that amusing."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 386,
+      "kind": "paragraph",
+      "lines": [
+        "“They’re probably happy I’m gone. They wish I’d disappear forever.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 387,
+      "kind": "paragraph",
+      "lines": [
+        "“Why do you think that?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 388,
+      "kind": "paragraph",
+      "lines": [
+        "“Because they want to erase me from the world.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 389,
+      "kind": "paragraph",
+      "lines": [
+        "“If that’s true, they’re not normal.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 390,
+      "kind": "paragraph",
+      "lines": [
+        "“Normal parents wouldn’t hire someone like you as a housekeeper.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 391,
+      "kind": "paragraph",
+      "lines": [
+        "He was speechless. She was right."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 392,
+      "kind": "paragraph",
+      "lines": [
+        "“Do you have parents, ahjussi?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 393,
+      "kind": "paragraph",
+      "lines": [
+        "“I do.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 394,
+      "kind": "paragraph",
+      "lines": [
+        "“What are they like?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 395,
+      "kind": "paragraph",
+      "lines": [
+        "He could’ve been honest. He didn’t know their names or faces."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 396,
+      "kind": "paragraph",
+      "lines": [
+        "“My parents…”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 397,
+      "kind": "paragraph",
+      "lines": [
+        "But looking at Han Sooyoung’s sparkling eyes, Yoo Joonghyuk chose a different story."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 398,
+      "kind": "paragraph",
+      "lines": [
+        "“My parent is a fool who loves novels.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 399,
+      "kind": "paragraph",
+      "lines": [
+        "“Who calls their parent a fool?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 400,
+      "kind": "paragraph",
+      "lines": [
+        "“It’s fine for him.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 401,
+      "kind": "paragraph",
+      "lines": [
+        "“How unfilial.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 402,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk continued talking. He talked about someone who wrote a single novel for over a decade and the people who read it."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 403,
+      "kind": "paragraph",
+      "lines": [
+        "Young Han Sooyoung listened quietly, then smiled. “I love novels too.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 404,
+      "kind": "paragraph",
+      "lines": [
+        "“…”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 405,
+      "kind": "paragraph",
+      "lines": [
+        "“I’m jealous of you, ahjussi.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 406,
+      "kind": "paragraph",
+      "lines": [
+        "Hearing her voice, Yoo Joonghyuk had a realization. Perhaps the reason Kim Dokja brought him to this world…"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 407,
+      "kind": "paragraph",
+      "lines": [
+        "“Han Sooyoung.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 408,
+      "kind": "paragraph",
+      "lines": [
+        "“Yeah?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 409,
+      "kind": "paragraph",
+      "lines": [
+        "“The apocalypse is coming.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 410,
+      "kind": "paragraph",
+      "lines": [
+        "Despite his tiresome apocalypse talk, Han Sooyoung smiled. As if waiting for Christmas."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 411,
+      "kind": "paragraph",
+      "lines": [
+        "“I hope it comes soon.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 412,
+      "kind": "paragraph",
+      "lines": [
+        "Seeing her smile, Yoo Joonghyuk couldn’t speak. He couldn’t tell her that when that day came, they’d face horrific stories and lose precious things. Because, in this moment, that apocalypse was her salvation."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 413,
+      "kind": "paragraph",
+      "lines": [
+        "Flashlights blinked in the distance. Security guards shouted, “Ahgassi! Sooyoung-ahgassi! Where are you?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 414,
+      "kind": "paragraph",
+      "lines": [
+        "“Ahjussi.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 415,
+      "kind": "paragraph",
+      "lines": [
+        "Their eyes met, and they nodded. Han Sooyoung’s small hand grabbed his. Holding it tightly, as if it might break, Yoo Joonghyuk ran."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 416,
+      "kind": "paragraph",
+      "lines": [
+        "“Faster! Go faster!”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 417,
+      "kind": "paragraph",
+      "lines": [
+        "Running through the darkness, he thought about the days Han Sooyoung would live. Thunder rumbled, and lightning struck. A storm where screams wouldn’t be heard. Biyoo was likely at work. Lightning illuminated Yoo Joonghyuk’s face in the dark. In the flashing light, he felt the end of this world approaching."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 418,
+      "kind": "quote",
+      "lines": [
+        "「This was the end of the story he could share with Han Sooyoung.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 419,
+      "kind": "paragraph",
+      "lines": [
+        "Knowing that, he thought,"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 420,
+      "kind": "paragraph",
+      "lines": [
+        "Maybe I can cross it. Even one step. If I can escape this cramped world and reach beyond the story—"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 421,
+      "kind": "paragraph",
+      "lines": [
+        "Thud."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 422,
+      "kind": "paragraph",
+      "lines": [
+        "Betraying his hopes, something blocked him. A soft but unyielding wall. Yoo Joonghyuk stopped."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 423,
+      "kind": "paragraph",
+      "lines": [
+        "“Ahjussi?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 424,
+      "kind": "paragraph",
+      "lines": [
+        "Han Sooyoung looked at him as rain began to fall. Staring ahead in the rain, she spoke again, “Ahjussi.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 425,
+      "kind": "paragraph",
+      "lines": [
+        "Lifting her head slowly, she asked, “The apocalypse isn’t coming, is it?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 426,
+      "kind": "paragraph",
+      "lines": [
+        "Her voice suggested she already understood everything."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 427,
+      "kind": "paragraph",
+      "lines": [
+        "She knew. He had never intended to take her far. Their margin was a mere two-kilometer radius."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 428,
+      "kind": "paragraph",
+      "lines": [
+        "In a world born of limited imagination, all Yoo Joonghyuk could do was meet her gaze."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 429,
+      "kind": "paragraph",
+      "lines": [
+        "If it were Kim Dokja, what would he have done? That guy might have tricked this clever kid well. Spun her around this small world, making it feel vast."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 430,
+      "kind": "paragraph",
+      "lines": [
+        "Kim Dokja might have managed. But he was not Kim Dokja."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 431,
+      "kind": "paragraph",
+      "lines": [
+        "He was neither a writer nor a reader, just a powerless character, speaking as the writer dictated, and interpreted as the reader wanted."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 432,
+      "kind": "paragraph",
+      "lines": [
+        "“Run, ahjussi.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 433,
+      "kind": "paragraph",
+      "lines": [
+        "The girl who would one day become a writer spoke to that character."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 434,
+      "kind": "paragraph",
+      "lines": [
+        "“If they catch you, you’ll be in trouble. I’ll stall them as long as I can.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 435,
+      "kind": "paragraph",
+      "lines": [
+        "With an imagination beyond an ordinary child’s, she’d prepared for what was to come."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 436,
+      "kind": "paragraph",
+      "lines": [
+        "“Ahjussi, hurry. If you don’t go now—”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 437,
+      "kind": "paragraph",
+      "lines": [
+        "Looking at the desperate girl, Yoo Joonghyuk thought of the Han Sooyoung he knew."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 438,
+      "kind": "quote",
+      "lines": [
+        "「“A writer’s imagination is limited. No matter how new they try to be, it’s just a variation of what they’ve experienced.”」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 439,
+      "kind": "paragraph",
+      "lines": [
+        "Perhaps his childhood was so unhappy because the life of the writer who wrote his story was unhappy."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 440,
+      "kind": "quote",
+      "lines": [
+        "「“I’m sorry. I’m not a good writer.”」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 441,
+      "kind": "paragraph",
+      "lines": [
+        "Approaching flashlights. Booming thunder. The shout of a woman."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 442,
+      "kind": "paragraph",
+      "lines": [
+        "Seeing her rain-soaked face, Yoo Joonghyuk stood before the wall separating them."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 443,
+      "kind": "paragraph",
+      "lines": [
+        "One day, Han Sooyoung would escape this world on her own. No matter what he did now, her future was set. She’d break free from the world she hated and find freedom."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 444,
+      "kind": "paragraph",
+      "lines": [
+        "She’d become a writer who wrote stories for one person."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 445,
+      "kind": "paragraph",
+      "lines": [
+        "“Han Sooyoung.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 446,
+      "kind": "paragraph",
+      "lines": [
+        "He was written by that writer’s hand and had lived that story to reach here."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 447,
+      "kind": "paragraph",
+      "lines": [
+        "“The apocalypse will come.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 448,
+      "kind": "paragraph",
+      "lines": [
+        "Didn’t he have at least this much right?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 449,
+      "kind": "paragraph",
+      "lines": [
+        "His story surged, and a backlash of probability roared. As the system’s power returned momentarily, the condensed force of [Breaking the Sky Sword Aura] erupted. He threw [Hundred Steps Godly Fist] toward the sky."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 450,
+      "kind": "system_message",
+      "lines": [
+        "[You have critically violated the probability of this worldline!]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 451,
+      "kind": "paragraph",
+      "lines": [
+        "A storm of mana burst brightly in the darkness. With a shattering sound, his mana pierced the barrier."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 452,
+      "kind": "paragraph",
+      "lines": [
+        "His mana, ascending through the broken sky, resembled a black dragon."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 453,
+      "kind": "paragraph",
+      "lines": [
+        "Han Sooyoung stared up at the scene, mouth agape. With a brilliant spark, Yoo Joonghyuk’s incarnation body turned to light."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 454,
+      "kind": "paragraph",
+      "lines": [
+        "“No matter what happens, don’t give up.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 455,
+      "kind": "paragraph",
+      "lines": [
+        "“Ahjussi?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 456,
+      "kind": "paragraph",
+      "lines": [
+        "Startled, Han Sooyoung looked around, but Yoo Joonghyuk was gone."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 457,
+      "kind": "paragraph",
+      "lines": [
+        "“Ahgassi!”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 458,
+      "kind": "paragraph",
+      "lines": [
+        "Security guards rushed to her, surrounding her protectively. In their arms, Han Sooyoung murmured, “It was real.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 459,
+      "kind": "paragraph",
+      "lines": [
+        "“What?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 460,
+      "kind": "paragraph",
+      "lines": [
+        "“It was real. The Black Flame Dragon.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 461,
+      "kind": "paragraph",
+      "lines": [
+        "Beyond the sky where the dragon ascended, a faint meteor shower flickered briefly and vanished."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 462,
+      "kind": "paragraph",
+      "lines": [
+        "On her way home, Han Sooyoung kept looking up at that sky."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 466,
+      "kind": "paragraph",
+      "lines": [
+        "When Yoo Joonghyuk opened his eyes with a gasp, he was in the spaceship’s cockpit. Blinking in a daze, he saw the desolate universe beyond the cockpit."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 467,
+      "kind": "paragraph",
+      "lines": [
+        "What had happened?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 468,
+      "kind": "paragraph",
+      "lines": [
+        "Had he fallen asleep?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 469,
+      "kind": "paragraph",
+      "lines": [
+        "Was it all a dream?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 470,
+      "kind": "constellation",
+      "lines": [
+        "[No, Captain! Are you insane? Using a skill there? Do you know how hard it was to handle the probability backlash?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 471,
+      "kind": "paragraph",
+      "lines": [
+        "Hearing Biyoo's scolding from the void, Yoo Joonghyuk let out a relieved sigh."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 472,
+      "kind": "paragraph",
+      "lines": [
+        "It wasn’t a dream."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 473,
+      "kind": "paragraph",
+      "lines": [
+        "Reaching into his pocket, he felt a cold metallic touch."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 474,
+      "kind": "constellation",
+      "lines": [
+        "[If I’d been a second late… Wait, what’s that? Did you bring it from that worldline?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 475,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk looked at the golden necklace in his hand. A delicate pen-shaped pendant — it was from the drawer in Han Sooyoung’s study, as she’d mentioned."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 476,
+      "kind": "paragraph",
+      "lines": [
+        "“His fragment was in here.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 477,
+      "kind": "constellation",
+      "lines": [
+        "[Ahjussi was in there?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 478,
+      "kind": "paragraph",
+      "lines": [
+        "“It lost its power while escaping the worldline, but…”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 479,
+      "kind": "paragraph",
+      "lines": [
+        "As if its purpose was to bring Yoo Joonghyuk to that world, the necklace dimmed the moment they left."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 480,
+      "kind": "paragraph",
+      "lines": [
+        "“I brought it just in case. It might help find Kim Dokja. By the way… are there any new messages from Han Sooyoung?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 481,
+      "kind": "constellation",
+      "lines": [
+        "[She left something in the manuscript during the last Cloud update.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 482,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk checked the [Cloud System]. Sure enough, there was a message from Han Sooyoung."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 483,
+      "kind": "paragraph",
+      "lines": [
+        "‘Idiot. Why aren’t you answering? Hurry up and deliver the manuscript!’"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 484,
+      "kind": "paragraph",
+      "lines": [
+        "Thankfully, his impulsive actions hadn’t greatly affected the future Han Sooyoung."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 485,
+      "kind": "paragraph",
+      "lines": [
+        "Perhaps that was natural. The moment he left, the world’s probability likely erased her memories. Even if she remembered, she wouldn’t recall such a distant childhood clearly."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 486,
+      "kind": "paragraph",
+      "lines": [
+        "Biyoo, steering the spaceship, asked."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 487,
+      "kind": "constellation",
+      "lines": [
+        "[So, Captain, what did you do there? A place where you couldn’t use skills or stories must’ve been tough to survive in…]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 488,
+      "kind": "paragraph",
+      "lines": [
+        "“I worked.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 489,
+      "kind": "constellation",
+      "lines": [
+        "[You worked? Doing what?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 490,
+      "kind": "paragraph",
+      "lines": [
+        "“Cleaning, laundry, cooking, looking after a kid.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 491,
+      "kind": "constellation",
+      "lines": [
+        "[You did?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 492,
+      "kind": "paragraph",
+      "lines": [
+        "“Yeah.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 493,
+      "kind": "constellation",
+      "lines": [
+        "[Are you writing a novel now with your awakened writer attribute?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 494,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk gave a bitter smile. If such a story could be a novel, who would even read it?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 495,
+      "kind": "system_message",
+      "lines": [
+        "[The Cloud System has been updated.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 496,
+      "kind": "paragraph",
+      "lines": [
+        "Checking it, he saw a blinking light in the [Ideas] folder. Thinking Han Sooyoung had written another draft, he opened it and found an unfamiliar file."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 497,
+      "kind": "quote",
+      "lines": [
+        "「‘Picked Up a Cold-Hearted Handsome Housekeeper’」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 498,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk stared at the title for a long time before slowly turning his head. Outside the window, another meteor shower was falling."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 499,
+      "kind": "paragraph",
+      "lines": [
+        "“Let’s go, Biyoo.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 500,
+      "kind": "paragraph",
+      "lines": [
+        "He’d tell Han Sooyoung to change the title of her new side story once they returned."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    }
+  ],
+  "token_estimate": {
+    "source_chars": 34633,
+    "estimated_input_tokens": 10143,
+    "estimated_output_tokens_ru": 17317,
+    "estimated_total_tokens": 27460
+  }
+}
