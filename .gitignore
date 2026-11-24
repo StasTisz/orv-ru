@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+dist/
+build/
+
+# Copyrighted source/translated novel content & generated artifacts
+data/
+output/
+site/
+*.epub
+reference-orv-reader/
+
+# Secrets & OS
+.env
+.env.*
+.DS_Store

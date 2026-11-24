@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}}</title>
+    <meta name="description" content="{{WORD_COUNT_LABEL}} · ~{{READ_TIME}} мин чтения | {{STORY_TITLE}}">
+    <link rel="manifest" href="../../../assets/manifest.json">
+    <link rel="shortcut icon" href="../../../assets/media/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../../assets/css/reader.css">
+    <link rel="stylesheet" href="../../../assets/css/rich-text.css">
+</head>
+<body>
+    <nav class="menu" id="menu-bar" aria-label="Панель чтения">
+        <a href="../index.html" title="К оглавлению" aria-label="Назад к оглавлению">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+        </a>
+        <button type="button" class="nav-btn" id="open-chapters-btn" title="Список глав" aria-label="Список глав">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true"><path d="M280-600v-80h560v80H280Zm0 160v-80h560v80H280Zm0 160v-80h560v80H280ZM160-600q-17 0-28.5-11.5T120-640q0-17 11.5-28.5T160-680q17 0 28.5 11.5T200-640q0 17-11.5 28.5T160-600Zm0 160q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440Zm0 160q-17 0-28.5-11.5T120-320q0-17 11.5-28.5T160-360q17 0 28.5 11.5T200-320q0 17-11.5 28.5T160-280Z"/></svg>
+        </button>
+        <button type="button" class="nav-btn" id="open-download-btn" title="Скачать / Печать" aria-label="Скачать или распечатать">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
+        </button>
+        <button type="button" class="nav-btn" id="fullscreen-btn" title="На весь экран" aria-label="Полноэкранный режим">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true"><path d="M120-120v-200h80v120h120v80H120Zm520 0v-80h120v-120h80v200H640ZM120-640v-200h200v80H200v120h-80Zm640 0v-120H640v-80h200v200h-80Z"/></svg>
+        </button>
+        <button type="button" class="nav-btn" id="open-settings-btn" title="Настройки чтения" aria-label="Настройки чтения">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true"><path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Z"/></svg>
+        </button>
+    </nav>
+
+    <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+
+    <aside class="drawer chapters" id="chapters-drawer" aria-label="Главы">
+        <div class="drawer-header">
+            <button type="button" class="close-drawer-btn" data-close="chapters-drawer" aria-label="Закрыть">×</button>
+            <span class="drawer-title">Список глав</span>
+        </div>
+        <input type="search" id="find-chapter" placeholder="Поиск по главам...">
+        <div class="search_result" id="chapter-search-result"></div>
+    </aside>
+
+    <aside class="drawer settings" id="settings-drawer" aria-label="Настройки">
+        <div class="drawer-header">
+            <button type="button" class="close-drawer-btn" data-close="settings-drawer" aria-label="Закрыть">×</button>
+            <button class="setting_reset" type="reset" form="settings-form">Сбросить всё</button>
+        </div>
+        <form class="setting_items" id="settings-form">
+            <div class="setting_item">
+                <label for="set-theme">Тема</label>
+                <select id="set-theme">
+                    <option value="dark" selected>Тёмная</option>
+                    <option value="light">Светлая</option>
+                    <option value="sepia">Сепия</option>
+                    <option value="pastel">Пастель</option>
+                    <option value="midnight">Полночь (OLED)</option>
+                    <option value="forest">Лес</option>
+                    <option value="paper">Бумага</option>
+                    <option value="lavender">Лаванда</option>
+                    <option value="dark-sepia">Тёмная сепия</option>
+                    <option value="dark-pastel">Тёмная пастель</option>
+                    <option value="dark-forest">Тёмный лес</option>
+                    <option value="dark-paper">Тёмная бумага</option>
+                    <option value="dark-lavender">Тёмная лаванда</option>
+                </select>
+            </div>
+            <div class="setting_item">
+                <label for="set-font">Шрифт</label>
+                <select id="set-font">
+                    <option value="system-ui" style="font-family: system-ui;">Системный</option>
+                    <option value="Verdana" style="font-family: Verdana;" selected>Verdana</option>
+                    <option value="Arial" style="font-family: Arial;">Arial</option>
+                    <option value="Georgia" style="font-family: Georgia;">Georgia</option>
+                    <option value="'Times New Roman'" style="font-family: 'Times New Roman';">Times New Roman</option>
+                    <option value="'Trebuchet MS'" style="font-family: 'Trebuchet MS';">Trebuchet MS</option>
+                    <option value="'Courier New'" style="font-family: 'Courier New';">Courier New</option>
+                    <option value="Tahoma" style="font-family: Tahoma;">Tahoma</option>
+                    <option value="'Lucida Sans Unicode'" style="font-family: 'Lucida Sans Unicode';">Lucida Sans Unicode</option>
+                    <option value="'Arial Black'" style="font-family: 'Arial Black';">Arial Black</option>
+                    <option value="Impact" style="font-family: Impact;">Impact</option>
+                </select>
+            </div>
+            <div class="setting_item">
+                <label for="set-font-size">Размер текста</label>
+                <input type="number" min="30" max="100" value="51" id="set-font-size">
+            </div>
+            <div class="setting_item">
+                <label for="set-line-height">Межстрочный интервал</label>
+                <input type="number" min="1" max="100" value="49" id="set-line-height">
+            </div>
+            <div class="setting_item">
+                <label for="set-font-weight">Начертание</label>
+                <select id="set-font-weight">
+                    <option value="normal" style="font-weight: normal;" selected>Обычный</option>
+                    <option value="lighter" style="font-weight: lighter;">Тонкий</option>
+                    <option value="bold" style="font-weight: bold;">Жирный</option>
+                    <option value="bolder" style="font-weight: bolder;">Очень жирный</option>
+                </select>
+            </div>
+            <hr>
+            <div class="setting_item">
+                <label for="set-rich-text-toggle">Rich Text эффекты</label>
+                <input type="checkbox" id="set-rich-text-toggle" checked>
+            </div>
+            <div class="setting_item">
+                <label for="set-rich-system-msg">Системные сообщения</label>
+                <select id="set-rich-system-msg">
+                    <option value="theme1">Отключено</option>
+                    <option value="theme2">Скобки</option>
+                    <option value="theme3">Голограмма</option>
+                    <option value="theme4">Рамка</option>
+                    <option value="theme5" selected>Полоса (Alert)</option>
+                </select>
+            </div>
+            <div class="setting_item">
+                <label for="set-rich-system-window">Системные окна</label>
+                <select id="set-rich-system-window">
+                    <option value="theme1">Отключено</option>
+                    <option value="theme2">Скобки</option>
+                    <option value="theme3" selected>Голограмма</option>
+                    <option value="theme4">Рамка</option>
+                    <option value="theme5">Полоса (Alert)</option>
+                </select>
+            </div>
+            <div class="setting_item">
+                <label for="set-rich-const">Речь Созвездий</label>
+                <select id="set-rich-const">
+                    <option value="theme1">Отключено</option>
+                    <option value="theme2" selected>Скобки</option>
+                    <option value="theme3">Полоса (Alert)</option>
+                </select>
+            </div>
+            <div class="setting_item">
+                <label for="set-rich-outer">Речь Внешних Богов</label>
+                <select id="set-rich-outer">
+                    <option value="theme1">Отключено</option>
+                    <option value="theme2" selected>Выделение</option>
+                    <option value="theme3">Полоса (Alert)</option>
+                </select>
+            </div>
+            <div class="setting_item">
+                <label for="set-rich-quote">Цитаты</label>
+                <select id="set-rich-quote">
+                    <option value="theme1">Отключено</option>
+                    <option value="theme2" selected>Уголки</option>
+                    <option value="theme3">Полоса (Alert)</option>
+                </select>
+            </div>
+            <div class="setting_item">
+                <label for="set-rich-notice">Примечания</label>
+                <select id="set-rich-notice">
+                    <option value="theme1">Обычный текст</option>
+                    <option value="theme2" selected>Подсветка</option>
+                    <option value="theme3">Полоса (Alert)</option>
+                </select>
+            </div>
+            <div class="setting_item">
+                <label for="set-rich-box">Обычные рамки</label>
+                <select id="set-rich-box">
+                    <option value="theme1">Отключено</option>
+                    <option value="theme2" selected>Рамка</option>
+                </select>
+            </div>
+        </form>
+    </aside>
+
+    <aside class="drawer download" id="download-drawer" aria-label="Скачивание и печать">
+        <div class="drawer-header">
+            <button type="button" class="close-drawer-btn" data-close="download-drawer" aria-label="Закрыть">×</button>
+            <span class="drawer-title">Экспорт</span>
+        </div>
+        <div class="drawer-actions">
+            <hr>
+            <a href="../../../download.html"><button type="button">Скачать полный EPUB</button></a>
+            <hr>
+            <button type="button" id="print-page-btn">Распечатать главу</button>
+            <hr>
+        </div>
+    </aside>
+
+    <main class="main">
+        {{COVER}}
+        <div class="title_mobile"><img src="../../../assets/media/od-stigma.webp" alt="Эмблема ORV"></div>
+        <article class="orv_main">
+            {{CONTENT}}
+        </article>
+        <nav class="change-ch" aria-label="Навигация по главам">
+            <a id="prev-chapter-link" href="{{PREV_HREF}}">{{PREV_SVG}}<span>{{PREV_LABEL}}</span></a>
+            <a id="next-chapter-link" href="{{NEXT_HREF}}"><span>{{NEXT_LABEL}}</span>{{NEXT_SVG}}</a>
+        </nav>
+    </main>
+
+    <script id="reader-app"
+            data-slug="{{STORY_SLUG}}"
+            data-number="{{CHAPTER_NUMBER}}"
+            data-titles="../../../meta/{{STORY_SLUG}}.json"
+            src="../../../assets/js/storage.js"></script>
+    <script src="../../../assets/js/reader.js"></script>
+</body>
+</html>

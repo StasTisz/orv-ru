@@ -1,0 +1,389 @@
+.orv_main {
+    line-height: var(--line-space);
+    color: var(--text-primary);
+}
+
+.orv_line {
+    margin-left: 0.8em;
+    margin-right: auto;
+    margin-top: var(--paragraph-space);
+}
+
+.orv_list {
+    margin-top: var(--paragraph-space);
+    margin-left: 2em;
+}
+
+hr {
+    margin-top: var(--line-space);
+    border: none;
+    border-top: 1px solid currentColor;
+    opacity: 0.35;
+}
+
+/* System Messages & Windows base */
+.orv_system,
+.orv_window {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: var(--paragraph-space);
+}
+
+.orv_system {
+    text-align: center;
+    width: min(600px, 85%);
+}
+
+.orv_window {
+    width: min(400px, 90%);
+}
+
+.orv_window .orv_window_title {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+/* theme1: Disabled / Plain */
+.orv_system.theme1,
+.orv_window.theme1,
+.orv_constellation.theme1,
+.orv_outergod.theme1,
+.orv_quote.theme1 {
+    margin-left: 0.8em;
+    text-align: left;
+    width: 100%;
+    font-family: var(--default-font);
+    margin-top: var(--paragraph-space);
+}
+
+.orv_window.theme1 .orv_window_title {
+    font-size: 1em;
+    font-weight: normal;
+    text-align: left;
+    margin-bottom: 0.25em;
+}
+
+.orv_window.theme1::before,
+.orv_window.theme1::after {
+    content: "+";
+    display: block;
+}
+
+/* theme2: Symmetric Brackets (System, Window, Constellation) */
+.orv_system.theme2,
+.orv_window.theme2,
+.orv_constellation.theme2 {
+    margin-top: var(--paragraph-space);
+    padding: 0.75em 1.5em;
+    position: relative;
+}
+
+.orv_constellation.theme2 {
+    width: min(640px, 94%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.orv_system.theme2 p,
+.orv_constellation.theme2 p {
+    text-align: center;
+}
+
+.orv_system.theme2::before,
+.orv_system.theme2::after,
+.orv_window.theme2::before,
+.orv_window.theme2::after,
+.orv_constellation.theme2::before,
+.orv_constellation.theme2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1em;
+    border: 0.2em solid var(--text-primary);
+    border-radius: 0.25em;
+}
+
+.orv_system.theme2::before,
+.orv_window.theme2::before,
+.orv_constellation.theme2::before {
+    left: 1em;
+    border-right: none;
+}
+
+.orv_system.theme2::after,
+.orv_window.theme2::after,
+.orv_constellation.theme2::after {
+    right: 1em;
+    border-left: none;
+}
+
+/* theme3: Hologram (Signature Blue ORV Double-Bordered Window) */
+.orv_window.theme3,
+.orv_system.theme3 {
+    position: relative;
+    width: min(400px, 90%);
+    padding: 22px 24px;
+    background: linear-gradient(135deg, #2676d8, #255ab6);
+    border-radius: 10px;
+    border: 2px solid #000000;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    text-align: left;
+    margin-top: var(--paragraph-space);
+}
+
+.orv_system.theme3 {
+    width: 90%;
+    text-align: center;
+}
+
+.orv_window.theme3::before,
+.orv_window.theme3::after,
+.orv_system.theme3::before,
+.orv_system.theme3::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.orv_window.theme3::after,
+.orv_system.theme3::after {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-color: #dddddd;
+}
+
+.orv_window.theme3 p.orv_window_title,
+.orv_window.theme3 h3.orv_window_title {
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.264);
+    border-radius: 0.2em;
+    padding: 0.3em 0.45em;
+    margin-top: 0;
+    font-size: 1.3em;
+    letter-spacing: 0.5px;
+    text-align: center;
+    border-bottom: 0.2em solid #dddddd;
+}
+
+/* theme4: Box */
+.orv_system.theme4,
+.orv_window.theme4 {
+    margin-top: var(--paragraph-space);
+    border: 0.05em solid var(--text-primary);
+    width: min(600px, 92%);
+}
+
+.orv_system.theme4 p,
+.orv_window.theme4 p {
+    padding: 0.6em;
+}
+
+/* theme5: Left Alert Bar */
+.orv_system.theme5,
+.orv_window.theme5 {
+    margin-top: var(--line-space);
+    margin-left: 0.8em;
+    text-align: left;
+    padding: 0.8em 0.5em;
+    border-left: 3px solid #1f6feb;
+    border-radius: 0.3em;
+    width: min(640px, 92%);
+}
+
+.orv_window.theme5 {
+    border-left: 3px solid #804fe0;
+}
+
+.orv_system.theme5 p,
+.orv_window.theme5 p {
+    padding-left: 0.5em;
+}
+
+.orv_window.theme5 .orv_window_title {
+    text-align: left;
+    font-size: 1em;
+    padding-left: 0.5em;
+}
+
+/* Constellation Alert */
+.orv_constellation.theme3 {
+    margin-top: var(--line-space);
+    margin-left: 0.8em;
+    border-radius: 0.3em;
+    text-align: left;
+    padding: 0.5em 0.25em;
+    border-left: 3px solid #0f7e2a;
+    width: min(640px, 92%);
+}
+
+.orv_constellation.theme3 p {
+    padding-left: 0.5em;
+}
+
+/* Quotes */
+.orv_quote.theme2 {
+    position: relative;
+    border: none;
+    margin: var(--paragraph-space) auto 0;
+    padding: 0.5em 1.2em;
+    text-align: center;
+    width: min(640px, 94%);
+}
+
+.orv_quote.theme2 p {
+    padding: 0.4em;
+}
+
+.orv_quote.theme2::before,
+.orv_quote.theme2::after {
+    position: absolute;
+    content: "";
+    width: 2em;
+    height: 1em;
+}
+
+.orv_quote.theme2::before {
+    left: 0;
+    top: 0;
+    border-left: 0.12em solid var(--text-primary);
+    border-top: 0.12em solid var(--text-primary);
+}
+
+.orv_quote.theme2::after {
+    right: 0;
+    bottom: 0;
+    border-right: 0.12em solid var(--text-primary);
+    border-bottom: 0.12em solid var(--text-primary);
+}
+
+.orv_quote.theme3 {
+    margin-top: var(--line-space);
+    margin-left: 0.8em;
+    border-radius: 0.3em;
+    text-align: left;
+    padding: 0.5em 0.25em;
+    border-left: 3px solid #ffa200;
+    width: min(640px, 92%);
+}
+
+.orv_quote.theme3 p {
+    padding-left: 0.5em;
+}
+
+/* Outer God */
+.orv_outergod.theme2 {
+    margin: var(--paragraph-space) auto 0;
+    width: min(560px, 92%);
+    background-color: var(--text-secondary);
+}
+
+.orv_outergod.theme2 p {
+    padding: 0.5em 1em;
+    border-radius: 15px;
+    background-color: var(--primary);
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.orv_outergod.theme3 {
+    margin-top: var(--line-space);
+    margin-left: 0.8em;
+    border-radius: 0.3em;
+    text-align: left;
+    padding: 0.5em 0.25em;
+    border-left: 3px solid #e91e2b;
+    width: min(640px, 92%);
+}
+
+.orv_outergod.theme3 p {
+    padding-left: 0.5em;
+}
+
+/* Notices / Footnotes */
+.orv_notice p {
+    font-size: smaller;
+    font-style: italic;
+}
+
+.orv_notice.theme1 {
+    margin-left: 0.8em;
+    margin-top: var(--paragraph-space);
+}
+
+.orv_notice.theme1 p::before {
+    content: "(Прим.: ";
+}
+
+.orv_notice.theme1 p::after {
+    content: ")";
+}
+
+.orv_notice.theme2 {
+    margin-left: 0.8em;
+    margin-top: var(--paragraph-space);
+}
+
+.orv_notice.theme2 p::before,
+.orv_notice.theme3 p::before {
+    color: #3b82f6;
+    font-weight: bold;
+    content: "ⓘ Примечание: ";
+}
+
+.orv_notice.theme2 p {
+    opacity: 0.82;
+}
+
+.orv_notice.theme3 {
+    margin-top: var(--line-space);
+    margin-left: 0.8em;
+    border-radius: 0.3em;
+    text-align: left;
+    padding: 0.5em 0.25em;
+    border-left: 3px solid #e91eb3;
+    width: min(640px, 92%);
+    opacity: 0.86;
+}
+
+.orv_notice.theme3 p {
+    padding-left: 0.5em;
+}
+
+/* Generic Box */
+.orv_box.theme1 {
+    margin-top: var(--paragraph-space);
+}
+
+.orv_box.theme1 p {
+    margin: 0.4em 0 0.4em 0.8em;
+}
+
+.orv_box.theme1::before,
+.orv_box.theme1::after {
+    content: "++";
+    margin-left: 0.8em;
+    display: block;
+}
+
+.orv_box.theme2 {
+    margin-top: var(--paragraph-space);
+    border: 0.1em solid var(--text-secondary);
+    padding: 0.6em 1em;
+}
+
+.orv_box.theme2 p {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}

@@ -1,0 +1,20 @@
+[story]
+slug = "cont"
+title = "Точка зрения всеведущего читателя: Побочная история"
+original_title = "Omniscient Reader's Viewpoint Sequel (Ch 553+)"
+author = "Sing Shong"
+language = "ru"
+status = "Онгоинг"
+
+[paths]
+source_chapters = "../reference-orv-reader/chapters/cont"
+translated_chapters = "data/chapters/cont"
+assets_images = "../reference-orv-reader/website/assets/images"
+assets_branding = "../reference-orv-reader/website/assets"
+glossary = "glossary/orv_glossary.toml"
+site_output = "output/site"
+epub_output = "output/epub"
+
+[reader]
+words_per_minute = 250
+default_theme = "dark"

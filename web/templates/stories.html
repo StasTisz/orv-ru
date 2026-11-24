@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="../assets/manifest.json">
+    <link rel="shortcut icon" href="../assets/media/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/stories.css">
+    <title>Истории — ORV-RU</title>
+    <meta name="description" content="Выбор истории для чтения на русском языке">
+</head>
+<body>
+    <div class="background" aria-hidden="true"></div>
+    <div class="content-wrapper">
+        <a href="../index.html" class="back" aria-label="На главную">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 -960 960 960" fill="#e3e3e3" aria-hidden="true"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+        </a>
+
+        <div class="cards">
+            <a href="{{STORY_SLUG}}/index.html" class="card">
+                <img src="../assets/media/covers/{{STORY_SLUG}}.webp" alt="Обложка: {{STORY_TITLE}}">
+                <p>{{STORY_TITLE}}</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

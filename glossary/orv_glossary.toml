@@ -1,0 +1,1123 @@
+# ==============================================================================
+# Канонический глоссарий «Точка зрения всеведущего читателя: Побочная история»
+# База: официальное печатное издание (Росмэн / O2 Young Adult) + канон манхвы
+# ==============================================================================
+
+[rules]
+honorifics = "Сохранять ключевые корейские обращения в русской транскрипции: -сси, аджосси, хён, нуна, онни, оппа, -ним (там, где они передают дистанцию, вежливость или близость персонажей)."
+profanity_and_tone = "Не смягчать резкие реплики, грубость и ругательства; сохранять живой эмоциональный накал сцен."
+story_fable_tale = "Системные и лорные понятия Story / Fable / Tale (с заглавной буквы как сущность Звёздного Потока) унифицировать как «История» (или «Гигантская История»). Обычные бытовые значения переводить по контексту («рассказ», «история», «сказка»)."
+fear_concept = "Понятие Fear (сущность/феномен Царства Страха, с заглавной буквы) переводить как «Страх» (с большой буквы в терминологическом смысле); обычную эмоцию — со строчной."
+brackets_and_quotes = "Строго сохранять типографику ORV: [...] — системные сообщения и навыки, 「...」 — цитаты и внутренний голос, 【...】 — речь Внешних Богов, <...> — Туманности и корпорации."
+jang_hayoung_pronouns = "Чан Хаён: когда о ней/нём говорят посторонние — мужской род (он/его); когда говорит о себе сам(а) или с близкими — женский род (она/её), строго по контексту сцены."
+weapons_41st_yjh = "Оружие Ю Джунхёка 41-й регрессии — большое копьё («Копьё Тёмной Небесной Луны»), не меч и не алебарда."
+sneaky_vs_secretive = "Secretive Plotter («Скрытный Интриган») и Sneaky Schemer («Коварный Интриган») — две РАЗНЫЕ сущности. Категорически запрещено подменять одну другой."
+korean_name_declension = "Мужские корейские имена склонять естественно по нормам русского языка (Ким Докча -> Ким Докчи/Докчу, Ю Джунхёк -> Ю Джунхёка), а женские имена, оканчивающиеся на согласный, оставлять несклоняемыми (Хан Суён, Чон Хивон, Син Юсон, Ли Джихё, Кён Сэин)."
+
+# ==============================================================================
+# Персонажи основной истории (канон Росмэн / манхва)
+# ==============================================================================
+
+[[characters]]
+source = "Kim Dokja"
+target = "Ким Докча"
+aliases = ["Докча"]
+forbidden = ["Ким Докжа", "Ким Докчжа"]
+notes = "Главный герой; игра слов с «докча» (читатель / единственный ребёнок)."
+
+[[characters]]
+source = "Yoo Joonghyuk"
+target = "Ю Джунхёк"
+aliases = ["Джунхёк"]
+forbidden = ["Ю Чонхёк", "Ю Джонхёк", "Ю Чунхёк"]
+notes = "Регрессор, протагонист «Путей выживания»."
+
+[[characters]]
+source = "Jung Heewon"
+target = "Чон Хивон"
+aliases = ["Хивон"]
+forbidden = ["Джун Хивон"]
+
+[[characters]]
+source = "Han Sooyoung"
+target = "Хан Суён"
+aliases = ["Суён"]
+forbidden = ["Хан Суёнг"]
+
+[[characters]]
+source = "Shin Yoosung"
+target = "Син Юсон"
+aliases = ["Юсон"]
+forbidden = ["Шин Юсунг", "Син Юсун"]
+
+[[characters]]
+source = "Anna Croft"
+target = "Анна Крофт"
+
+[[characters]]
+source = "Lee Jihye"
+target = "Ли Джихё"
+aliases = ["Джихё"]
+forbidden = ["Ли Чжихё"]
+
+[[characters]]
+source = "Lee Hyunsung"
+target = "Ли Хёнсон"
+aliases = ["Хёнсон"]
+forbidden = ["Ли Хёнсунг"]
+
+[[characters]]
+source = "Lee Gilyoung"
+target = "Ли Гильён"
+aliases = ["Гильён"]
+forbidden = ["Ли Кильён"]
+
+[[characters]]
+source = "Yoo Sangah"
+target = "Ю Сана"
+aliases = ["Сана"]
+forbidden = ["Ю Сангах"]
+
+[[characters]]
+source = "Kim Namwoon"
+target = "Ким Намун"
+aliases = ["Намун"]
+forbidden = ["Ким Намвун"]
+
+[[characters]]
+source = "Lee Seolhwa"
+target = "Ли Сольхва"
+aliases = ["Сольхва"]
+
+[[characters]]
+source = "Gong Pildu"
+target = "Кон Пильду"
+aliases = ["Пильду"]
+forbidden = ["Гон Пильду"]
+
+[[characters]]
+source = "Jang Hayoung"
+target = "Чан Хаён"
+aliases = ["Хаён"]
+forbidden = ["Джан Хаён"]
+
+[[characters]]
+source = "Selena Kim"
+target = "Селена Ким"
+
+[[characters]]
+source = "Yoo Mia"
+target = "Ю Миа"
+aliases = ["Миа"]
+
+[[characters]]
+source = "Han Myungoh"
+target = "Хан Мёно"
+aliases = ["Мёно"]
+
+[[characters]]
+source = "Lee Sookyung"
+target = "Ли Сугён"
+aliases = ["Сугён"]
+
+[[characters]]
+source = "Bihyung"
+target = "Бихён"
+forbidden = ["Бихеон"]
+
+[[characters]]
+source = "Biyoo"
+target = "Бию"
+
+[[characters]]
+source = "Breaking the Sky Sword Saint"
+target = "Святая Меча, Рассекающего Небеса"
+aliases = ["Святая Меча"]
+
+[[characters]]
+source = "Sky Sword Saint"
+target = "Святая Небесного Меча"
+aliases = ["Святая Меча"]
+notes = "Сокращённое именование Намгун Минён в тексте побочной истории."
+
+[[characters]]
+source = "Namgung Minyoung"
+target = "Намгун Минён"
+
+[[characters]]
+source = "Kyrgios"
+target = "Киргиос"
+aliases = ["Киргиос Родграйм"]
+
+[[characters]]
+source = "Cheok Jungyeong"
+target = "Чхок Джунгён"
+aliases = ["Джунгён"]
+
+[[characters]]
+source = "Blood Demon"
+target = "Кровавый Демон"
+
+[[characters]]
+source = "Mad Sword Emperor"
+target = "Безумный Император Меча"
+
+# ==============================================================================
+# Персонажи побочной истории (cont) и кроссовера «Мир после падения»
+# ==============================================================================
+
+[[side_characters]]
+source = "Lee Hakhyun"
+target = "Ли Хакхён"
+aliases = ["Хакхён"]
+forbidden = ["Ли Хакхюн"]
+notes = "Протагонист побочной истории, автор ORV из другой мировой линии."
+
+[[side_characters]]
+source = "Cheon Inho"
+target = "Чхон Инхо"
+aliases = ["Инхо"]
+
+[[side_characters]]
+source = "Kyung Sein"
+target = "Кён Сэин"
+aliases = ["Сэин"]
+
+[[side_characters]]
+source = "Killer King"
+target = "Киллер Кинг"
+aliases = ["Король-Убийца"]
+notes = "Сетевой псевдоним читателя Кан Ильхуна; в речи и никнейме предпочтительна калька «Киллер Кинг»."
+
+[[side_characters]]
+source = "Kang Ilhun"
+target = "Кан Ильхун"
+aliases = ["Ильхун"]
+
+[[side_characters]]
+source = "Ye Hyunwoo"
+target = "Ё Хёну"
+aliases = ["Хёну"]
+
+[[side_characters]]
+source = "Ji Eunyu"
+target = "Чи Ыню"
+aliases = ["Ыню"]
+
+[[side_characters]]
+source = "Cha Yerin"
+target = "Чха Ерин"
+aliases = ["Ерин"]
+
+[[side_characters]]
+source = "Lee Dansu"
+target = "Ли Дансу"
+aliases = ["Дансу"]
+
+[[side_characters]]
+source = "Lee Dansoo"
+target = "Ли Дансу"
+aliases = ["Дансу"]
+notes = "Вариант транскрипции имени Ли Дансу в английском переводе; унифицировать."
+
+[[side_characters]]
+source = "Dansu"
+target = "Дансу"
+
+[[side_characters]]
+source = "Dansoo"
+target = "Дансу"
+
+[[side_characters]]
+source = "Goo Seonah"
+target = "Ку Сона"
+aliases = ["Сона"]
+
+[[side_characters]]
+source = "Namgung Myung"
+target = "Намгун Мён"
+
+[[side_characters]]
+source = "Cha Seongwoo"
+target = "Чха Сону"
+aliases = ["Сону"]
+
+[[side_characters]]
+source = "Bang Cheolsoo"
+target = "Пан Чхольсу"
+aliases = ["Чхольсу"]
+
+[[side_characters]]
+source = "Jung Eunho"
+target = "Чон Ынхо"
+aliases = ["Ынхо"]
+
+[[side_characters]]
+source = "Kim Anna"
+target = "Ким Анна"
+
+[[side_characters]]
+source = "Kim Cheolyang"
+target = "Ким Чхольян"
+aliases = ["Чхольян"]
+
+[[side_characters]]
+source = "Jung Jaewoo"
+target = "Чон Джэу"
+aliases = ["Джэу"]
+
+[[side_characters]]
+source = "Kim Kyungsik"
+target = "Ким Кёнсик"
+aliases = ["Кёнсик"]
+
+[[side_characters]]
+source = "Literature Girl"
+target = "Литературная Девочка"
+aliases = ["Девочка-Литератор"]
+notes = "Прозвище/никнейм читательницы Чха Ерин."
+
+[[side_characters]]
+source = "Snowfield Kim Dokja"
+target = "Снежный Ким Докча"
+aliases = ["Ким Докча из Снежного Поля", "Ким Докча Снежного Поля"]
+
+[[side_characters]]
+source = "Jaehwan"
+target = "Джэхван"
+notes = "Главный герой романа «Мир после падения»."
+
+[[side_characters]]
+source = "Jeahwan"
+target = "Джэхван"
+notes = "Опечатка в английском тексте имени Джэхвана; унифицировать как «Джэхван»."
+
+[[side_characters]]
+source = "Chunghuh"
+target = "Чхонхо"
+notes = "Персонаж «Мира после падения» (Бог Отчаяния)."
+
+[[side_characters]]
+source = "Ryunard"
+target = "Рюнард"
+
+[[side_characters]]
+source = "Karlton"
+target = "Карлтон"
+
+[[side_characters]]
+source = "Heo Poong"
+target = "Хо Пун"
+
+# ==============================================================================
+# Созвездия, модификаторы, архангелы, короли демонов и Внешние Боги
+# ==============================================================================
+
+[[constellations]]
+source = "Demon King of Salvation"
+target = "Король Демонов Спасения"
+
+[[constellations]]
+source = "Oldest Dream"
+target = "Древнейшая Мечта"
+forbidden = ["Самый древний сон", "Древний сон"]
+notes = "Всегда переводить как «Древнейшая Мечта» (или «Древнейшие Мечты» во мн. ч.)."
+
+[[constellations]]
+source = "Secretive Plotter"
+target = "Скрытный Интриган"
+forbidden = ["Скрытый Проектировщик", "Коварный Интриган"]
+notes = "НЕ путать со Sneaky Schemer!"
+
+[[constellations]]
+source = "Sneaky Schemer"
+target = "Коварный Интриган"
+forbidden = ["Скрытный Интриган", "Скрытый Проектировщик"]
+notes = "Отдельная сущность (야비한 모략가), не заменять на «Скрытного Интригана»."
+
+[[constellations]]
+source = "Demon-like Judge of Fire"
+target = "Демоноподобный Огненный Судья"
+aliases = ["Огненный Судья, подобный демону"]
+
+[[constellations]]
+source = "Uriel"
+target = "Уриэль"
+
+[[constellations]]
+source = "Abyssal Black Flame Dragon"
+target = "Чёрный Огненный Дракон Бездны"
+aliases = ["Черный Огненный Дракон Бездны", "Чёрный Пламенный Дракон Бездны"]
+
+[[constellations]]
+source = "Black Flame Dragon"
+target = "Чёрный Огненный Дракон"
+aliases = ["Черный Огненный Дракон", "Чёрный Пламенный Дракон"]
+
+[[constellations]]
+source = "Prisoner of the Golden Headband"
+target = "Узник Золотого Обруча"
+
+[[constellations]]
+source = "Handsome Monkey King"
+target = "Прекрасный Царь Обезьян"
+
+[[constellations]]
+source = "Bald General of Justice"
+target = "Лысый Генерал Справедливости"
+
+[[constellations]]
+source = "Maritime War God"
+target = "Морской Бог Войны"
+
+[[constellations]]
+source = "Mass Production Maker"
+target = "Мастер Массового Производства"
+
+[[constellations]]
+source = "Monarch of the Small Fries"
+target = "Владыка Мелкой Сошки"
+aliases = ["Монарх Мелкой Сошки"]
+
+[[constellations]]
+source = "Tiger Eating Rice Cakes"
+target = "Тигр, Поедающий Рисовые Пирожки"
+aliases = ["Тигр, поедающий рисовые лепёшки"]
+
+[[constellations]]
+source = "Nail-Eating Rat"
+target = "Крыса, Грызущая Ногти"
+
+[[constellations]]
+source = "Evil Sophist"
+target = "Злобный Софист"
+
+[[constellations]]
+source = "Heir of the Eternal Name"
+target = "Наследник Вечного Имени"
+
+[[constellations]]
+source = "Heir to the Eternal Name"
+target = "Наследник Вечного Имени"
+
+[[constellations]]
+source = "Unchanging One"
+target = "Неизменный"
+
+[[constellations]]
+source = "King of Fear"
+target = "Король Страха"
+
+[[constellations]]
+source = "Founder of the Absolute Throne"
+target = "Основатель Абсолютного Трона"
+
+[[constellations]]
+source = "Wolf That Swallowed a God"
+target = "Волк, Проглотивший Бога"
+
+[[constellations]]
+source = "World Serpent"
+target = "Мировой Змей"
+
+[[constellations]]
+source = "Apocalypse Dragon"
+target = "Дракон Апокалипсиса"
+
+[[constellations]]
+source = "Dream Eater"
+target = "Пожиратель Снов"
+
+[[constellations]]
+source = "Nameless Things"
+target = "Безымянные Сущности"
+aliases = ["Безымянные"]
+
+[[constellations]]
+source = "Supreme King"
+target = "Верховный Король"
+
+[[constellations]]
+source = "Wenny King"
+target = "Король Венни"
+aliases = ["Король Домовых"]
+
+[[constellations]]
+source = "Asmodeus"
+target = "Асмодей"
+
+[[constellations]]
+source = "Poseidon"
+target = "Посейдон"
+
+[[constellations]]
+source = "Odin"
+target = "Один"
+
+[[constellations]]
+source = "Apollo"
+target = "Аполлон"
+
+[[constellations]]
+source = "Zeus"
+target = "Зевс"
+
+[[constellations]]
+source = "Surya"
+target = "Сурья"
+
+[[constellations]]
+source = "Dionysus"
+target = "Дионис"
+
+[[constellations]]
+source = "Hermes"
+target = "Гермес"
+
+[[constellations]]
+source = "Metatron"
+target = "Метатрон"
+
+[[constellations]]
+source = "Jophiel"
+target = "Иофиил"
+aliases = ["Джофиэль"]
+
+[[constellations]]
+source = "Athena"
+target = "Афина"
+
+[[constellations]]
+source = "Indra"
+target = "Индра"
+
+[[constellations]]
+source = "Thor"
+target = "Тор"
+
+[[constellations]]
+source = "Abaddon"
+target = "Абаддон"
+
+[[constellations]]
+source = "Michael"
+target = "Михаил"
+
+[[constellations]]
+source = "Raphael"
+target = "Рафаил"
+
+[[constellations]]
+source = "Gabriel"
+target = "Гавриил"
+
+[[constellations]]
+source = "Heimdall"
+target = "Хеймдалль"
+
+[[constellations]]
+source = "Fenrir"
+target = "Фенрир"
+
+[[constellations]]
+source = "Hades"
+target = "Аид"
+
+[[constellations]]
+source = "Agares"
+target = "Агарес"
+
+[[constellations]]
+source = "Loki"
+target = "Локи"
+
+[[constellations]]
+source = "Persephone"
+target = "Персефона"
+
+# ==============================================================================
+# Туманности, корпорации и организации (<...>)
+# ==============================================================================
+
+[[nebulae]]
+source = "Star Stream"
+target = "Звёздный Поток"
+aliases = ["Звездный Поток"]
+
+[[nebulae]]
+source = "Kim Dokja Company"
+target = "Компания Ким Докчи"
+
+[[nebulae]]
+source = "Kim Dokja's Company"
+target = "Компания Ким Докчи"
+
+[[nebulae]]
+source = "Kim Dokja’s Company"
+target = "Компания Ким Докчи"
+
+[[nebulae]]
+source = "Olympus"
+target = "Олимп"
+
+[[nebulae]]
+source = "Olympus Technology"
+target = "Олимп Текнолоджи"
+aliases = ["Технологии Олимпа"]
+
+[[nebulae]]
+source = "Asgard"
+target = "Асгард"
+
+[[nebulae]]
+source = "Vedas"
+target = "Веды"
+
+[[nebulae]]
+source = "Veda"
+target = "Веды"
+
+[[nebulae]]
+source = "Vedas Biotech"
+target = "Ведас Биотех"
+
+[[nebulae]]
+source = "Eden"
+target = "Эдем"
+
+[[nebulae]]
+source = "Twelve Zodiac Signs"
+target = "Двенадцать Знаков Зодиака"
+
+[[nebulae]]
+source = "Zodiac"
+target = "Зодиак"
+
+[[nebulae]]
+source = "Underworld"
+target = "Подземный Мир"
+
+[[nebulae]]
+source = "Tamra Heavy Industries"
+target = "Тамра Хэви Индастриз"
+aliases = ["Тяжёлая промышленность Тамра"]
+
+[[nebulae]]
+source = "Tamra"
+target = "Тамра"
+
+[[nebulae]]
+source = "Papyrus"
+target = "Папирус"
+
+[[nebulae]]
+source = "Black Cloud Foundation"
+target = "Фонд Чёрного Облака"
+aliases = ["Фонд Черного Облака"]
+
+[[nebulae]]
+source = "Black Cloud"
+target = "Чёрное Облако"
+aliases = ["Черное Облако"]
+
+[[nebulae]]
+source = "Hongik"
+target = "Хонгик"
+
+[[nebulae]]
+source = "Management Bureau"
+target = "Бюро Управления"
+aliases = ["Административное Бюро"]
+
+[[nebulae]]
+source = "Transcendent Alliance"
+target = "Альянс Трансцендентных"
+
+[[nebulae]]
+source = "Misreading Association"
+target = "Ассоциация Ошибочного Прочтения"
+aliases = ["Ассоциация Искажённого Прочтения"]
+
+[[nebulae]]
+source = "Beggar Sect"
+target = "Секта Нищих"
+
+[[nebulae]]
+source = "Ten Evils"
+target = "Десять Злодеев"
+aliases = ["Десятка Зол"]
+
+[[nebulae]]
+source = "Round Table"
+target = "Круглый Стол"
+
+[[nebulae]]
+source = "Zarathustra"
+target = "Заратустра"
+
+[[nebulae]]
+source = "Recorders of Fear"
+target = "Летописцы Страха"
+
+[[nebulae]]
+source = "Recorder of Fear"
+target = "Летописец Страха"
+
+[[nebulae]]
+source = "Han Sooyoung Corporation"
+target = "Корпорация Хан Суён"
+
+# ==============================================================================
+# Ключевые термины, ранги, статусы и произведения
+# ==============================================================================
+
+[[terms]]
+source = "Constellation"
+target = "Созвездие"
+
+[[terms]]
+source = "Demon King"
+target = "Король Демонов"
+
+[[terms]]
+source = "Outer God"
+target = "Внешний Бог"
+
+[[terms]]
+source = "Giant Nebula"
+target = "Гигантская Туманность"
+
+[[terms]]
+source = "Nebula"
+target = "Туманность"
+
+[[terms]]
+source = "Dokkaebi"
+target = "Токкэби"
+forbidden = ["Доккаэби", "Доккаби"]
+
+[[terms]]
+source = "Wenny"
+target = "Венни"
+aliases = ["Домовой"]
+notes = "Раса венни / «люди-венни» (Wenny people)."
+
+[[terms]]
+source = "Incarnation"
+target = "Воплощение"
+
+[[terms]]
+source = "Transcendent"
+target = "Трансцендентный"
+
+[[terms]]
+source = "Archangel"
+target = "Архангел"
+
+[[terms]]
+source = "Regressor"
+target = "Регрессор"
+
+[[terms]]
+source = "Returnee"
+target = "Возвращенец"
+
+[[terms]]
+source = "Reincarnator"
+target = "Реинкарнатор"
+aliases = ["Перерожденец"]
+
+[[terms]]
+source = "Myth-grade"
+target = "Мифического ранга"
+aliases = ["Мифический ранг", "мифического класса"]
+
+[[terms]]
+source = "Narrative-grade"
+target = "Легендарного ранга"
+aliases = ["Нарративного ранга", "легендарного класса"]
+
+[[terms]]
+source = "Fable-grade"
+target = "Сказательного ранга"
+aliases = ["легендарного ранга"]
+
+[[terms]]
+source = "Historical-grade"
+target = "Исторического ранга"
+aliases = ["исторического класса"]
+
+[[terms]]
+source = "Giant Story"
+target = "Гигантская История"
+
+[[terms]]
+source = "Giant Tale"
+target = "Гигантская История"
+
+[[terms]]
+source = "Probability"
+target = "Вероятность"
+forbidden = ["Правдоподобие"]
+
+[[terms]]
+source = "Stigma"
+target = "Стигма"
+
+[[terms]]
+source = "Staging"
+target = "Инсценировка"
+aliases = ["Воспроизведение сцены"]
+
+[[terms]]
+source = "Main Scenario"
+target = "Основной Сценарий"
+
+[[terms]]
+source = "Sub Scenario"
+target = "Побочный Сценарий"
+
+[[terms]]
+source = "Hidden Scenario"
+target = "Скрытый Сценарий"
+
+[[terms]]
+source = "Scenario"
+target = "Сценарий"
+
+[[terms]]
+source = "[Fate]"
+target = "[Судьба]"
+
+[[terms]]
+source = "Eternal Name"
+target = "Вечное Имя"
+
+[[terms]]
+source = "Natural Disaster"
+target = "Стихийное Бедствие"
+
+[[terms]]
+source = "Great Disaster"
+target = "Великое Бедствие"
+
+[[terms]]
+source = "Three Ways to Survive in a Ruined World"
+target = "Три способа выжить в разрушенном мире"
+
+[[terms]]
+source = "Ways of Survival"
+target = "Пути выживания"
+
+[[terms]]
+source = "Omniscient Reader's Viewpoint"
+target = "Точка зрения всеведущего читателя"
+
+[[terms]]
+source = "World After the Fall"
+target = "Мир после падения"
+
+[[terms]]
+source = "Kim Dokja fragments"
+target = "фрагменты Ким Докчи"
+aliases = ["осколки Ким Докчи"]
+
+# ==============================================================================
+# Навыки и системные способности
+# ==============================================================================
+
+[[skills]]
+source = "[Incite]"
+target = "[Подстрекательство]"
+
+[[skills]]
+source = "[Fourth Wall]"
+target = "[Четвёртая Стена]"
+aliases = ["[Четвертая Стена]"]
+
+[[skills]]
+source = "[The Fourth Wall]"
+target = "[Четвёртая Стена]"
+aliases = ["[Четвертая Стена]"]
+
+[[skills]]
+source = "Fourth Wall"
+target = "Четвёртая Стена"
+aliases = ["Четвертая Стена"]
+
+[[skills]]
+source = "[Way of the Wind]"
+target = "[Путь Ветра]"
+
+[[skills]]
+source = "[Avatar]"
+target = "[Аватар]"
+
+[[skills]]
+source = "[Future Sight]"
+target = "[Предвидение]"
+aliases = ["[Взгляд в будущее]"]
+
+[[skills]]
+source = "[Lie Detection]"
+target = "[Распознавание Лжи]"
+aliases = ["[Детектор Лжи]"]
+
+[[skills]]
+source = "Lie Detection"
+target = "Распознавание Лжи"
+aliases = ["Детектор Лжи"]
+
+[[skills]]
+source = "[Bookmark]"
+target = "[Закладка]"
+
+[[skills]]
+source = "[Deceased Summoning]"
+target = "[Призыв Усопших]"
+
+[[skills]]
+source = "[Black Flame]"
+target = "[Чёрное Пламя]"
+aliases = ["[Черное Пламя]"]
+
+[[skills]]
+source = "[Breaking the Sky Swordsmanship]"
+target = "[Искусство Меча, Рассекающего Небеса]"
+
+[[skills]]
+source = "[Time of Judgment]"
+target = "[Час Правосудия]"
+aliases = ["[Время Суда]"]
+
+[[skills]]
+source = "[Character List]"
+target = "[Список Персонажей]"
+
+[[skills]]
+source = "[Character Summary]"
+target = "[Сводка Персонажа]"
+aliases = ["[Окно Персонажа]"]
+
+[[skills]]
+source = "[Baekcheong-ganggi]"
+target = "[Бело-Синяя Аура Меча]"
+aliases = ["[Пэкчхон-ганги]"]
+
+[[skills]]
+source = "[White and Blue Steel]"
+target = "[Бело-Синяя Сталь]"
+
+[[skills]]
+source = "[Predictive Plagiarism]"
+target = "[Упреждающий Плагиат]"
+
+[[skills]]
+source = "[Past Sight]"
+target = "[Взгляд в Прошлое]"
+
+[[skills]]
+source = "[Transmission]"
+target = "[Передача]"
+aliases = ["[Телепатия]"]
+
+[[skills]]
+source = "[Armed Zone]"
+target = "[Вооружённая Зона]"
+aliases = ["[Вооруженная Зона]"]
+
+[[skills]]
+source = "[Hellfire]"
+target = "[Адское Пламя]"
+
+[[skills]]
+source = "[Electrification]"
+target = "[Электрификация]"
+
+[[skills]]
+source = "[Full Electrification]"
+target = "[Полная Электрификация]"
+
+[[skills]]
+source = "[Red Phoenix Shunpo]"
+target = "[Поступь Красного Феникса]"
+
+[[skills]]
+source = "[Hundred Steps Godly Fists]"
+target = "[Божественные Кулаки Ста Шагов]"
+
+[[skills]]
+source = "[Midday Tryst]"
+target = "[Полуденная Встреча]"
+aliases = ["[Полуденное Свидание]"]
+
+[[skills]]
+source = "[Sentence Enhancement]"
+target = "[Усиление Фраз]"
+
+[[skills]]
+source = "[Readers' Comments List]"
+target = "[Список Комментариев Читателей]"
+
+[[skills]]
+source = "[Diverse Communication]"
+target = "[Разностороннее Общение]"
+
+[[skills]]
+source = "[Purest Sword Force]"
+target = "[Чистейшая Сила Меча]"
+
+[[skills]]
+source = "[Eye of Sin]"
+target = "[Око Греха]"
+
+[[skills]]
+source = "[Sage's Eyes]"
+target = "[Очи Мудреца]"
+
+[[skills]]
+source = "[Mental Barrier]"
+target = "[Ментальный Барьер]"
+
+[[skills]]
+source = "[Instant Kill]"
+target = "[Мгновенное Убийство]"
+
+[[skills]]
+source = "[Unidentified Wall]"
+target = "[Неопознанная Стена]"
+
+[[skills]]
+source = "[Intent-Formed Sword]"
+target = "[Меч Намерения]"
+
+# ==============================================================================
+# Предметы, оружие и артефакты
+# ==============================================================================
+
+[[items]]
+source = "Unbreakable Faith"
+target = "Несокрушимая Вера"
+
+[[items]]
+source = "Broken Faith"
+target = "Сломанная Вера"
+
+[[items]]
+source = "Blade of Faith"
+target = "Клинок Веры"
+
+[[items]]
+source = "Absolute Throne"
+target = "Абсолютный Трон"
+
+[[items]]
+source = "Dark Heavenly Moon Spear"
+target = "Копьё Тёмной Небесной Луны"
+aliases = ["Копье Темной Небесной Луны"]
+
+[[items]]
+source = "Unrealized Thought"
+target = "Невоплощённая Мысль"
+aliases = ["Невоплощенная Мысль"]
+forbidden = ["Невоплощённые Мысли"]
+notes = "Использовать строго в единственном числе."
+
+[[items]]
+source = "Thoughts of Almost Everything"
+target = "Мысли Обо Всём"
+aliases = ["Мысли обо всем"]
+
+# ==============================================================================
+# Локации и ключевые места побочной истории и основного сюжета
+# ==============================================================================
+
+[[locations]]
+source = "Snowfield"
+target = "Снежное Поле"
+
+[[locations]]
+source = "Fear Realm"
+target = "Царство Страха"
+
+[[locations]]
+source = "Recycling Center"
+target = "Центр Переработки"
+
+[[locations]]
+source = "Time Fault"
+target = "Разлом Времени"
+
+[[locations]]
+source = "Geumho Station"
+target = "Станция Кымхо"
+
+[[locations]]
+source = "Chungmuro"
+target = "Чхунмуро"
+
+[[locations]]
+source = "Seoul Station"
+target = "Станция Сеул"
+
+[[locations]]
+source = "Gwanghwamun"
+target = "Кванхвамун"
+
+[[locations]]
+source = "Valhalla Hall"
+target = "Зал Вальхаллы"
+
+[[locations]]
+source = "Washington Dome"
+target = "Купол Вашингтона"
+
+[[locations]]
+source = "Big House"
+target = "Большой Дом"
+
+[[locations]]
+source = "Final Wall"
+target = "Последняя Стена"
+
+[[locations]]
+source = "Great Hall"
+target = "Великий Зал"
+
+[[locations]]
+source = "New Murim District"
+target = "Новый Район Мурима"
+
+[[locations]]
+source = "First Murim"
+target = "Первый Мурим"
+
+[[locations]]
+source = "Murim"
+target = "Мурим"
+
+[[locations]]
+source = "Ginnungagap"
+target = "Гиннунгагап"
+
+[[locations]]
+source = "Theater Dungeon"
+target = "Подземелье Кинотеатра"
+
+[[locations]]
+source = "Star Ladder"
+target = "Звёздная Лестница"
+aliases = ["Звездная Лестница"]
+
+[[locations]]
+source = "Dark Castle"
+target = "Тёмный Замок"
+aliases = ["Темный Замок"]
+
+[[locations]]
+source = "Industrial Complex"
+target = "Промышленный Комплекс"
+
+[[locations]]
+source = "73rd Demon Realm"
+target = "73-й Мир Демонов"
