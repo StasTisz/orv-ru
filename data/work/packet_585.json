@@ -1,0 +1,2729 @@
+{
+  "schema_version": 1,
+  "chapter_number": 585,
+  "title": "585 Episode 6. Star Relic (2)",
+  "instructions": "Переведите `title` и `lines` каждого элемента в `items` на русский язык. Не меняйте `block_index`, не добавляйте и не удаляйте строки в `lines`, сохраняйте точное количество тегов <br> внутри каждой строки.",
+  "expected_output_format": {
+    "chapter_number": 585,
+    "title": "<переведённый заголовок>",
+    "items": [
+      {
+        "block_index": 0,
+        "lines": [
+          "<переведённая строка>"
+        ]
+      }
+    ]
+  },
+  "rules": {
+    "honorifics": "Сохранять ключевые корейские обращения в русской транскрипции: -сси, аджосси, хён, нуна, онни, оппа, -ним (там, где они передают дистанцию, вежливость или близость персонажей).",
+    "profanity_and_tone": "Не смягчать резкие реплики, грубость и ругательства; сохранять живой эмоциональный накал сцен.",
+    "story_fable_tale": "Системные и лорные понятия Story / Fable / Tale (с заглавной буквы как сущность Звёздного Потока) унифицировать как «История» (или «Гигантская История»). Обычные бытовые значения переводить по контексту («рассказ», «история», «сказка»).",
+    "fear_concept": "Понятие Fear (сущность/феномен Царства Страха, с заглавной буквы) переводить как «Страх» (с большой буквы в терминологическом смысле); обычную эмоцию — со строчной.",
+    "brackets_and_quotes": "Строго сохранять типографику ORV: [...] — системные сообщения и навыки, 「...」 — цитаты и внутренний голос, 【...】 — речь Внешних Богов, <...> — Туманности и корпорации.",
+    "jang_hayoung_pronouns": "Чан Хаён: когда о ней/нём говорят посторонние — мужской род (он/его); когда говорит о себе сам(а) или с близкими — женский род (она/её), строго по контексту сцены.",
+    "weapons_41st_yjh": "Оружие Ю Джунхёка 41-й регрессии — большое копьё («Копьё Тёмной Небесной Луны»), не меч и не алебарда.",
+    "sneaky_vs_secretive": "Secretive Plotter («Скрытный Интриган») и Sneaky Schemer («Коварный Интриган») — две РАЗНЫЕ сущности. Категорически запрещено подменять одну другой.",
+    "korean_name_declension": "Мужские корейские имена склонять естественно по нормам русского языка (Ким Докча -> Ким Докчи/Докчу, Ю Джунхёк -> Ю Джунхёка), а женские имена, оканчивающиеся на согласный, оставлять несклоняемыми (Хан Суён, Чон Хивон, Син Юсон, Ли Джихё, Кён Сэин)."
+  },
+  "glossary": [
+    {
+      "source": "Kim Dokja",
+      "target": "Ким Докча",
+      "category": "characters",
+      "notes": "Главный герой; игра слов с «докча» (читатель / единственный ребёнок).",
+      "aliases": [
+        "Докча"
+      ],
+      "forbidden": [
+        "Ким Докжа",
+        "Ким Докчжа"
+      ]
+    },
+    {
+      "source": "Yoo Joonghyuk",
+      "target": "Ю Джунхёк",
+      "category": "characters",
+      "notes": "Регрессор, протагонист «Путей выживания».",
+      "aliases": [
+        "Джунхёк"
+      ],
+      "forbidden": [
+        "Ю Чонхёк",
+        "Ю Джонхёк",
+        "Ю Чунхёк"
+      ]
+    },
+    {
+      "source": "Jung Heewon",
+      "target": "Чон Хивон",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Хивон"
+      ],
+      "forbidden": [
+        "Джун Хивон"
+      ]
+    },
+    {
+      "source": "Gong Pildu",
+      "target": "Кон Пильду",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Пильду"
+      ],
+      "forbidden": [
+        "Гон Пильду"
+      ]
+    },
+    {
+      "source": "Biyoo",
+      "target": "Бию",
+      "category": "characters",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Cheon Inho",
+      "target": "Чхон Инхо",
+      "category": "side_characters",
+      "notes": "",
+      "aliases": [
+        "Инхо"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Kyung Sein",
+      "target": "Кён Сэин",
+      "category": "side_characters",
+      "notes": "",
+      "aliases": [
+        "Сэин"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Killer King",
+      "target": "Киллер Кинг",
+      "category": "side_characters",
+      "notes": "Сетевой псевдоним читателя Кан Ильхуна; в речи и никнейме предпочтительна калька «Киллер Кинг».",
+      "aliases": [
+        "Король-Убийца"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Dansoo",
+      "target": "Дансу",
+      "category": "side_characters",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Bang Cheolsoo",
+      "target": "Пан Чхольсу",
+      "category": "side_characters",
+      "notes": "",
+      "aliases": [
+        "Чхольсу"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Demon King of Salvation",
+      "target": "Король Демонов Спасения",
+      "category": "constellations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Demon-like Judge of Fire",
+      "target": "Демоноподобный Огненный Судья",
+      "category": "constellations",
+      "notes": "",
+      "aliases": [
+        "Огненный Судья, подобный демону"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Abyssal Black Flame Dragon",
+      "target": "Чёрный Огненный Дракон Бездны",
+      "category": "constellations",
+      "notes": "",
+      "aliases": [
+        "Черный Огненный Дракон Бездны",
+        "Чёрный Пламенный Дракон Бездны"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Monarch of the Small Fries",
+      "target": "Владыка Мелкой Сошки",
+      "category": "constellations",
+      "notes": "",
+      "aliases": [
+        "Монарх Мелкой Сошки"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Nail-Eating Rat",
+      "target": "Крыса, Грызущая Ногти",
+      "category": "constellations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Gabriel",
+      "target": "Гавриил",
+      "category": "constellations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Eden",
+      "target": "Эдем",
+      "category": "nebulae",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Misreading Association",
+      "target": "Ассоциация Ошибочного Прочтения",
+      "category": "nebulae",
+      "notes": "",
+      "aliases": [
+        "Ассоциация Искажённого Прочтения"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Constellation",
+      "target": "Созвездие",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Incarnation",
+      "target": "Воплощение",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Archangel",
+      "target": "Архангел",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Main Scenario",
+      "target": "Основной Сценарий",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Sub Scenario",
+      "target": "Побочный Сценарий",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Scenario",
+      "target": "Сценарий",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Ways of Survival",
+      "target": "Пути выживания",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "[Diverse Communication]",
+      "target": "[Разностороннее Общение]",
+      "category": "skills",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Thoughts of Almost Everything",
+      "target": "Мысли Обо Всём",
+      "category": "items",
+      "notes": "",
+      "aliases": [
+        "Мысли обо всем"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Geumho Station",
+      "target": "Станция Кымхо",
+      "category": "locations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Chungmuro",
+      "target": "Чхунмуро",
+      "category": "locations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    }
+  ],
+  "items": [
+    {
+      "block_index": 0,
+      "kind": "paragraph",
+      "lines": [
+        "\"Demon King of Salvation-nim! Watcher of Light and Darkness-nim! Please!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 1,
+      "kind": "paragraph",
+      "lines": [
+        "As Kyung Sein prayed, light exploded from the box."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 2,
+      "kind": "paragraph",
+      "lines": [
+        "And."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 3,
+      "kind": "system_message",
+      "lines": [
+        "[An item of unknown origin was placed inside the box.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 4,
+      "kind": "system_message",
+      "lines": [
+        "[The box contained a lock of someone's hair.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 5,
+      "kind": "paragraph",
+      "lines": [
+        "Hair?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 6,
+      "kind": "paragraph",
+      "lines": [
+        "No, wait."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 7,
+      "kind": "paragraph",
+      "lines": [
+        "Was there a foreign substance mixed in?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 8,
+      "kind": "system_message",
+      "lines": [
+        "[The item is causing a strange transformation!]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 9,
+      "kind": "system_message",
+      "lines": [
+        "[The origin of the sacrificed item is confirmed.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 10,
+      "kind": "system_message",
+      "lines": [
+        "[A top-rated item has appeared!]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 11,
+      "kind": "system_message",
+      "lines": [
+        "[The number of available random item boxes is 0.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 12,
+      "kind": "paragraph",
+      "lines": [
+        "After a while, the glow subsided."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 13,
+      "kind": "paragraph",
+      "lines": [
+        "Kyung Sein, Dansoo ahjussi, and I looked at each other, swallowed hard, and opened the box at the same time."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 14,
+      "kind": "paragraph",
+      "lines": [
+        "Inside the box was a vibrant, light-blue colored slime, about the size of an adult male's fist."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 15,
+      "kind": "paragraph",
+      "lines": [
+        "Kyung Sein frowned."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 16,
+      "kind": "paragraph",
+      "lines": [
+        "\"It's changed color? It's like Biyoo's poop.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 17,
+      "kind": "paragraph",
+      "lines": [
+        "\"Let's check it out.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 18,
+      "kind": "paragraph",
+      "lines": [
+        "I went straight for the slime. But just before I reached for it, the slime squirmed and dodged my hand."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 19,
+      "kind": "paragraph",
+      "lines": [
+        "Upon closer inspection, the slime had eyes. Narrowed eyes."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 20,
+      "kind": "paragraph",
+      "lines": [
+        "\"Giw—me.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 21,
+      "kind": "paragraph",
+      "lines": [
+        "It even had a tiny mouth."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 22,
+      "kind": "paragraph",
+      "lines": [
+        "I wondered if it looked like me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 23,
+      "kind": "paragraph",
+      "lines": [
+        "\"Giw—me. Giw—me.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 24,
+      "kind": "paragraph",
+      "lines": [
+        "Kyung Sein tilted her head."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 25,
+      "kind": "paragraph",
+      "lines": [
+        "\"Is it swearing?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 26,
+      "kind": "paragraph",
+      "lines": [
+        "\"No, I think it's saying, 'give me'. I think it's asking for food.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 27,
+      "kind": "paragraph",
+      "lines": [
+        "\"How do you know?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 28,
+      "kind": "paragraph",
+      "lines": [
+        "\"Because it's similar to the way Jiyoon used to babble...\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 29,
+      "kind": "paragraph",
+      "lines": [
+        "After a moment's hesitation, Dansoo ahjussi hesitantly handed over the leftover ground rat meat."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 30,
+      "kind": "paragraph",
+      "lines": [
+        "The slime looked at it, and then jumped at his hand. It didn't eat the ground rat meat, but rather went for the bracelet he was wearing."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 31,
+      "kind": "paragraph",
+      "lines": [
+        "Dansoo ahjussi startled and jumped back."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 32,
+      "kind": "paragraph",
+      "lines": [
+        "\"Wilson!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 33,
+      "kind": "paragraph",
+      "lines": [
+        "Apparently, he had named the bracelet."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 34,
+      "kind": "paragraph",
+      "lines": [
+        "The slime quickly realized the bracelet was tasteless, spat it out, and curled up with a squeak."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 35,
+      "kind": "paragraph",
+      "lines": [
+        "And the next moment."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 36,
+      "kind": "paragraph",
+      "lines": [
+        "\"Huh?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 37,
+      "kind": "paragraph",
+      "lines": [
+        "The slime had turned into a bracelet."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 41,
+      "kind": "paragraph",
+      "lines": [
+        "After we finished organizing our items, we made our escape from the 'Edge of Darkness'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 42,
+      "kind": "paragraph",
+      "lines": [
+        "Luckily, ahjussi had a cockroach in his pocket, so it wasn't hard to find our way out."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 43,
+      "kind": "paragraph",
+      "lines": [
+        "But... why did the back of my head keep itching?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 44,
+      "kind": "paragraph",
+      "lines": [
+        "\"Inho-ssi, is there something wrong?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 45,
+      "kind": "paragraph",
+      "lines": [
+        "\"No, it's just...\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 46,
+      "kind": "paragraph",
+      "lines": [
+        "I muttered, peering into the pitch-black 'Edge of Darkness'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 47,
+      "kind": "paragraph",
+      "lines": [
+        "\"It's just that I feel like someone keeps looking at me.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 48,
+      "kind": "paragraph",
+      "lines": [
+        "\"Oh, it's just your imagination.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 49,
+      "kind": "paragraph",
+      "lines": [
+        "\"Even the bugs say there's nothing there.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 50,
+      "kind": "paragraph",
+      "lines": [
+        "If ahjussi says there's nothing there, there's nothing there."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 51,
+      "kind": "paragraph",
+      "lines": [
+        "At this point, the only person he couldn't detect with his [Diverse Communication] was Killer King."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 52,
+      "kind": "paragraph",
+      "lines": [
+        "By now, he must be holding the empty box, his eyes burning with murderous intent as he repeatedly muttered 'Cheon Inho'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 53,
+      "kind": "paragraph",
+      "lines": [
+        "Well... at least I didn't leave him completely empty-handed, so I guess it was fine."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 54,
+      "kind": "paragraph",
+      "lines": [
+        "If he made good use of the notes I put inside the box, he would still get a decent haul."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 55,
+      "kind": "paragraph",
+      "lines": [
+        "Of course, whatever he got would be worth less than the bracelet on my wrist."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 56,
+      "kind": "system_window",
+      "lines": [
+        "[Item Information]",
+        "Name: Thoughts of Almost Everything",
+        "Rating: Star Relic (遺物)",
+        "Description: A mysterious slime born from a constellation's obsession with studying 'almost everything'.",
+        "When worn, it increases Agility and Magic Power levels by 1 each.",
+        "* 'Idea' can use 'mimicry'."
+      ],
+      "expected_br_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "block_index": 57,
+      "kind": "paragraph",
+      "lines": [
+        "Formed Idea (意態)."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 58,
+      "kind": "paragraph",
+      "lines": [
+        "'Thoughts of Almost Everything' can mimic an item by touching it."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 59,
+      "kind": "paragraph",
+      "lines": [
+        "Since it was a high-grade item, it couldn't mimic others simply by touching them, but only after certain conditions were met."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 60,
+      "kind": "paragraph",
+      "lines": [
+        "Once successfully mimicked, the item could be used continuously until the mimicked form was destroyed."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 61,
+      "kind": "paragraph",
+      "lines": [
+        "However, the 'Thoughts of Almost Everything' could refuse to obey its owner's 'mimicry command'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 62,
+      "kind": "paragraph",
+      "lines": [
+        "As one could tell from the description, this was a cheat item. In theory, it could be almost anything."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 63,
+      "kind": "paragraph",
+      "lines": [
+        "However, the 'Thoughts of Almost Everything' had two fatal flaws."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 64,
+      "kind": "paragraph",
+      "lines": [
+        "First, it couldn't be used if you didn't meet the 'mimicry' conditions."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 65,
+      "kind": "paragraph",
+      "lines": [
+        "Second, the 'idea' itself could refuse the owner's commands."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 66,
+      "kind": "paragraph",
+      "lines": [
+        "So, perhaps it wasn't such a cheat item after all."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 67,
+      "kind": "paragraph",
+      "lines": [
+        "Kyung Sein, who was walking beside me, looked at my bracelet with envy."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 68,
+      "kind": "paragraph",
+      "lines": [
+        "\"Sein-ssi, I'll get you a nice star relic as well.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 69,
+      "kind": "paragraph",
+      "lines": [
+        "\"Really? N-No need.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 70,
+      "kind": "paragraph",
+      "lines": [
+        "\"What would you like to have?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 71,
+      "kind": "paragraph",
+      "lines": [
+        "\"Heracles' Shield.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 72,
+      "kind": "paragraph",
+      "lines": [
+        "What?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 73,
+      "kind": "paragraph",
+      "lines": [
+        "As we walked along, making small talk, we arrived at the platform of Geumho Station."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 74,
+      "kind": "paragraph",
+      "lines": [
+        "However, Jung Heewon was nowhere to be found."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 75,
+      "kind": "paragraph",
+      "lines": [
+        "\"Heewon-ssi...?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 76,
+      "kind": "paragraph",
+      "lines": [
+        "\"Oh, she woke up thirty minutes ago and went to get food with some people earlier.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 77,
+      "kind": "paragraph",
+      "lines": [
+        "Something to eat."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 78,
+      "kind": "paragraph",
+      "lines": [
+        "It was time to worry about that."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 79,
+      "kind": "paragraph",
+      "lines": [
+        "I asked Bang Cheolsoo what had happened."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 80,
+      "kind": "paragraph",
+      "lines": [
+        "\"Did anything happen?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 81,
+      "kind": "paragraph",
+      "lines": [
+        "Judging by the strange looks on their faces, something had happened."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 82,
+      "kind": "paragraph",
+      "lines": [
+        "Bang Cheolsoo began his report in a slightly nervous voice."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 83,
+      "kind": "paragraph",
+      "lines": [
+        "\"A few things happened.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 84,
+      "kind": "paragraph",
+      "lines": [
+        "The first report was about monstrous creatures roaming around Geumho Station."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 85,
+      "kind": "paragraph",
+      "lines": [
+        "\"Well, they didn't look like monsters, but they weren't human either...\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 86,
+      "kind": "paragraph",
+      "lines": [
+        "According to Bang Cheolsoo, the creatures had started lingering around a few hours ago."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 87,
+      "kind": "paragraph",
+      "lines": [
+        "My mind raced."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 88,
+      "kind": "paragraph",
+      "lines": [
+        "\"Do they look like rats?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 89,
+      "kind": "paragraph",
+      "lines": [
+        "\"Some looked like rats, some looked like lizards.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 90,
+      "kind": "paragraph",
+      "lines": [
+        "I had a vague idea of who they were. Probably incarnations under the command of the Misreading Association."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 91,
+      "kind": "paragraph",
+      "lines": [
+        "\"Anything else?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 92,
+      "kind": "paragraph",
+      "lines": [
+        "\"A scenario penalty has been added.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 93,
+      "kind": "paragraph",
+      "lines": [
+        "Scenario. Sure enough, I got a message too."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 94,
+      "kind": "paragraph",
+      "lines": [
+        "I hit notifications, and they popped up one after the other."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 95,
+      "kind": "system_message",
+      "lines": [
+        "[A scenario penalty has been added.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 96,
+      "kind": "system_message",
+      "lines": [
+        "[From now on, food stockpiling is limited.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 97,
+      "kind": "system_message",
+      "lines": [
+        "[All existing stockpiled food has disappeared.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 98,
+      "kind": "system_message",
+      "lines": [
+        "[The 'survival cost' clause has been added.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 99,
+      "kind": "system_message",
+      "lines": [
+        "[From now on, 100 coins will be deducted every night for the 'survival cost'. If you can't pay the 'survival cost', you will die.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 100,
+      "kind": "system_message",
+      "lines": [
+        "[The 'survival cost' penalty will be maintained until the second main scenario is cleared.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 101,
+      "kind": "paragraph",
+      "lines": [
+        "A food stockpiling ban and a survival cost penalty."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 102,
+      "kind": "paragraph",
+      "lines": [
+        "No wonder Jung Heewon went to get food."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 103,
+      "kind": "paragraph",
+      "lines": [
+        "\"Let's gather the people for a moment.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 104,
+      "kind": "paragraph",
+      "lines": [
+        "Despite all the stockpiled food disappearing, the group didn't seem to be in despair."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 105,
+      "kind": "paragraph",
+      "lines": [
+        "Perhaps it was because this group had a different starting point than the one in the 3rd turn."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 106,
+      "kind": "paragraph",
+      "lines": [
+        "They shared their food and stuck together in the face of crisis."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 107,
+      "kind": "paragraph",
+      "lines": [
+        "\"Gather round! The boss is looking for you!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 108,
+      "kind": "paragraph",
+      "lines": [
+        "\"Come on quickly!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 109,
+      "kind": "paragraph",
+      "lines": [
+        "The scattered, hungry people began to gather one by one."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 110,
+      "kind": "paragraph",
+      "lines": [
+        "\"Inho ahjussi!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 111,
+      "kind": "paragraph",
+      "lines": [
+        "Dayoung, who was riding on Bang Cheolsoo's shoulders, waved at me. As I gently held her hand, I suddenly remembered Yoo Joonghyuk."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 112,
+      "kind": "paragraph",
+      "lines": [
+        "He had come to Geumho Station the day I was eaten by the ichthyosaur."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 113,
+      "kind": "quote",
+      "lines": [
+        "「\"Cheon Inho is already dead. The marginalized group can come out in peace. I'll show you how to get food from now on.\"」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 114,
+      "kind": "paragraph",
+      "lines": [
+        "At that time, Yoo Joonghyuk wasn't trying to kill people. Rather, he had come here to save them."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 115,
+      "kind": "paragraph",
+      "lines": [
+        "Now that I thought about it, it didn't make sense."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 116,
+      "kind": "paragraph",
+      "lines": [
+        "This was the 41st turn."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 117,
+      "kind": "paragraph",
+      "lines": [
+        "A world where Yoo Joonghyuk was the most ruthless man in all of 'Ways of Survival'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 118,
+      "kind": "paragraph",
+      "lines": [
+        "And yet, he was trying to save these people."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 119,
+      "kind": "paragraph",
+      "lines": [
+        "\"Inho-ssi?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 120,
+      "kind": "paragraph",
+      "lines": [
+        "\"Ah, yes. Is everyone here?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 121,
+      "kind": "paragraph",
+      "lines": [
+        "Looking around, there were around 80 people."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 122,
+      "kind": "paragraph",
+      "lines": [
+        "Judging from the decrease in number, some had left for other areas, excluding those who had followed Jung Heewon to get food."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 123,
+      "kind": "paragraph",
+      "lines": [
+        "I started talking."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 124,
+      "kind": "paragraph",
+      "lines": [
+        "\"I'm guessing you all received a 'survival cost' penalty.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 125,
+      "kind": "paragraph",
+      "lines": [
+        "A few people reacted to the words survival cost."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 126,
+      "kind": "paragraph",
+      "lines": [
+        "\"That's right, suddenly we have to pay something every night.......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 127,
+      "kind": "paragraph",
+      "lines": [
+        "\"How are we supposed to earn coins?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 128,
+      "kind": "paragraph",
+      "lines": [
+        "I calmly explained."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 129,
+      "kind": "paragraph",
+      "lines": [
+        "\"Coins can be earned from the sponsorship of the constellations or by completing scenarios.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 130,
+      "kind": "paragraph",
+      "lines": [
+        "\"Scenarios...... That's the one we did at the beginning, right?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 131,
+      "kind": "paragraph",
+      "lines": [
+        "\"Do I have to kill people again?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 132,
+      "kind": "paragraph",
+      "lines": [
+        "People's eyes filled with fear again."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 133,
+      "kind": "paragraph",
+      "lines": [
+        "Most of the people here had already killed in the first scenario. But few of them killed for the sake of killing."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 135,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Abyssal Black Flame Dragon' despises the weakness of the incarnations.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 136,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Nail-Eating Rat' says that children who can't control themselves should be abandoned.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 137,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Monarch of the Small Fries' advises against wasting time on the wrong things.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 138,
+      "kind": "paragraph",
+      "lines": [
+        "The constellations weren't wrong."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 139,
+      "kind": "paragraph",
+      "lines": [
+        "However, if we train them in such a harsh way, most of them will not survive."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 140,
+      "kind": "paragraph",
+      "lines": [
+        "People like Dayoung, who was pulling Bang Cheolsoo's ear, and Dayoung's mother, who was scolding her, wouldn't have survived."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 141,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Dog Who Threw Himself Into the Flames' understands your intentions.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 142,
+      "kind": "system_message",
+      "lines": [
+        "[A constellation who hasn't revealed their modifier pays attention to your choice.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 143,
+      "kind": "paragraph",
+      "lines": [
+        "So, this decision was the least I could do for the extras who had died without any chance in the original story."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 144,
+      "kind": "paragraph",
+      "lines": [
+        "\"You could kill other people and take their coins, but I don't recommend that. Frankly, I don't think anyone here wants to resort to that anyway.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 145,
+      "kind": "paragraph",
+      "lines": [
+        "\"I-Is there any other way to earn coins?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 146,
+      "kind": "paragraph",
+      "lines": [
+        "I nodded and looked toward the tunnel."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 147,
+      "kind": "paragraph",
+      "lines": [
+        "\"Well, we're running out of food... and that's actually a good thing.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 148,
+      "kind": "paragraph",
+      "lines": [
+        "\"What? Why would you say that...\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 149,
+      "kind": "paragraph",
+      "lines": [
+        "Just then, Jung Heewon and the others returned from the tunnel, dragging the corpse of a ground rat."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 150,
+      "kind": "paragraph",
+      "lines": [
+        "\"Ah, Inho-ssi!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 151,
+      "kind": "paragraph",
+      "lines": [
+        "Jung Heewon waved happily, and I waved back."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 155,
+      "kind": "paragraph",
+      "lines": [
+        "\"No matter how hard I looked, there was no food. The surface is covered in poisonous fog, so we can't go up... So I brought this back, thinking we might be able to eat it...\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 156,
+      "kind": "paragraph",
+      "lines": [
+        "\"Well done.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 157,
+      "kind": "paragraph",
+      "lines": [
+        "I instructed the Cheoldoo Group to carry the ground rat carcass onto the platform."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 158,
+      "kind": "paragraph",
+      "lines": [
+        "A few people stumbled back in surprise."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 159,
+      "kind": "paragraph",
+      "lines": [
+        "\"From now on, this is your food.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 160,
+      "kind": "paragraph",
+      "lines": [
+        "\"What, we're eating this? Do you know what this is.......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 161,
+      "kind": "paragraph",
+      "lines": [
+        "\"It's the same meat. Just a different recipe.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 162,
+      "kind": "paragraph",
+      "lines": [
+        "I proclaimed myself a 'professional butcher' and began to carve the meat from the carcass."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 163,
+      "kind": "paragraph",
+      "lines": [
+        "Jung Heewon, Kyung Sein, and Dansoo ahjussi helped me without hesitation, probably because they had seen it before."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 164,
+      "kind": "paragraph",
+      "lines": [
+        "\"Take turns!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 165,
+      "kind": "paragraph",
+      "lines": [
+        "Jeong Heewon handed each one a piece of meat."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 166,
+      "kind": "paragraph",
+      "lines": [
+        "Once everyone had received a piece, I pulled out the Magic Power Stove I had obtained from the Edge of Darkness."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 167,
+      "kind": "paragraph",
+      "lines": [
+        "\"This is an item called a 'Magic Power Stove'.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 168,
+      "kind": "paragraph",
+      "lines": [
+        "I placed the meat on the Magic Power Stove. I increased the power of the stove, and the meat was deliciously roasted in less than a dozen seconds."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 169,
+      "kind": "paragraph",
+      "lines": [
+        "Dayoung muttered happily."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 170,
+      "kind": "paragraph",
+      "lines": [
+        "\"Mom, it smells delicious...\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 171,
+      "kind": "paragraph",
+      "lines": [
+        "As I took a bite to demonstrate, the crowd rushed toward the stove, having waited for this moment."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 172,
+      "kind": "paragraph",
+      "lines": [
+        "After rolling up their sleeves, Bang Cheolsoo and the Cheoldoo Group took over and grilled the meat for them."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 173,
+      "kind": "paragraph",
+      "lines": [
+        "\"Does anyone have salt?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 174,
+      "kind": "paragraph",
+      "lines": [
+        "\"Hyung-ssi, there's no salt here, just eat it!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 175,
+      "kind": "paragraph",
+      "lines": [
+        "Groans of satisfaction echoed through the platform. After all, they hadn't tasted meat in three days."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 176,
+      "kind": "paragraph",
+      "lines": [
+        "But my true purpose wasn't just to feed everyone."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 177,
+      "kind": "system_message",
+      "lines": [
+        "[The sub scenario 'Food Acquisition' has been completed early.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 178,
+      "kind": "system_message",
+      "lines": [
+        "[500 coins have been earned.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 179,
+      "kind": "paragraph",
+      "lines": [
+        "The sub scenario 'Food Acquisition' can only be completed by cooking a 'self-hunted monster'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 180,
+      "kind": "paragraph",
+      "lines": [
+        "The carcasses that Jung Heewon brought back this time were the ones that Kyung Sein, Dansoo ahjussi, and I hunted."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 181,
+      "kind": "paragraph",
+      "lines": [
+        "Presumably, the others did not receive the rewards we did."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 182,
+      "kind": "paragraph",
+      "lines": [
+        "\"From now on, all food must be obtained by hunting monsters.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 183,
+      "kind": "paragraph",
+      "lines": [
+        "At the mention of hunting, the faces of those picking at the meat stiffened."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 184,
+      "kind": "paragraph",
+      "lines": [
+        "\"For now, my companions and I have provided this meat, but we cannot continue this way indefinitely. You must learn to hunt for yourselves if you want to survive.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 185,
+      "kind": "paragraph",
+      "lines": [
+        "My words were no different from those of Yoo Joonghyuk, who had come here not long before."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 186,
+      "kind": "paragraph",
+      "lines": [
+        "He was right, and he was trying to give these people what they needed."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 187,
+      "kind": "paragraph",
+      "lines": [
+        "They just weren't ready to receive it."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 188,
+      "kind": "paragraph",
+      "lines": [
+        "\"As you can see in the scenario window, you earn coins by hunting and cooking ground rats. If you're short on coins, you can earn 500 coins by hunting one today.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 189,
+      "kind": "paragraph",
+      "lines": [
+        "Those who checked the scenario window at my words said."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 190,
+      "kind": "paragraph",
+      "lines": [
+        "\"It's true, it says it will give us coins.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 191,
+      "kind": "paragraph",
+      "lines": [
+        "\"But how are we supposed to catch a monster like this?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 192,
+      "kind": "paragraph",
+      "lines": [
+        "\"Everyone, don't be scared. I caught one, and so did this ahjussi.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 193,
+      "kind": "paragraph",
+      "lines": [
+        "Kyung Sein and Dansoo ahjussi stepped up to my side to support my words, and I could see a few people shaking their heads at them."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 194,
+      "kind": "paragraph",
+      "lines": [
+        "I quickly added before anyone could complain."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 195,
+      "kind": "paragraph",
+      "lines": [
+        "\"We'll show you how to catch them.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 199,
+      "kind": "paragraph",
+      "lines": [
+        "Dansoo ahjussi, Kyung Sein, Jung Heewon, and I taught the people step-by-step how to hunt ground rats."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 200,
+      "kind": "paragraph",
+      "lines": [
+        "It was valuable information we had to learn through blood, sweat, and tears—something that never appeared in the text of Omniscient Reader."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 201,
+      "kind": "paragraph",
+      "lines": [
+        "Kyung Sein, who still had bite marks all over her body, squared her shoulders and said."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 202,
+      "kind": "paragraph",
+      "lines": [
+        "\"Their patterns are very simple. As long as you stay calm, you can easily catch them!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 203,
+      "kind": "paragraph",
+      "lines": [
+        "Though they certainly bit us a lot despite that simple pattern."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 204,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Commander of the Red Cosmos' is pleased with your actions.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 205,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Commander of the Red Cosmos' announces your good deeds.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 206,
+      "kind": "system_message",
+      "lines": [
+        "[The constellations of the 'absolute good' system approve of your actions.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 207,
+      "kind": "system_message",
+      "lines": [
+        "[1,200 coins have been sponsored.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 208,
+      "kind": "paragraph",
+      "lines": [
+        "In this world, good deeds become coins."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 209,
+      "kind": "paragraph",
+      "lines": [
+        "No matter what you do, the results of your actions are directly related to coins."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 210,
+      "kind": "paragraph",
+      "lines": [
+        "I wonder if Kim Dokja felt the same way."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 211,
+      "kind": "paragraph",
+      "lines": [
+        "However, I didn't have time to ponder for long. We were still too weak and unprepared for the upcoming scenarios."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 212,
+      "kind": "paragraph",
+      "lines": [
+        "I could understand why Kim Dokja was so obsessed with coins. Having plenty of coins didn't mean one could do everything, but it certainly opened up more options."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 213,
+      "kind": "paragraph",
+      "lines": [
+        "Next stop, Chungmuro."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 214,
+      "kind": "paragraph",
+      "lines": [
+        "If I wanted to deal with the bald man at Chungmuro, I had to start saving up coins now."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 215,
+      "kind": "paragraph",
+      "lines": [
+        "The Ten Evil of Chungmuro Station."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 216,
+      "kind": "paragraph",
+      "lines": [
+        "Armed Fortress Master Gong Pildu."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 217,
+      "kind": "paragraph",
+      "lines": [
+        "Although he was a character with as much presence as hair in the original story, Gong Pildu was a terrifying villain in the early scenarios."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 218,
+      "kind": "system_message",
+      "lines": [
+        "[Coins Possessed: 11,800 C]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 219,
+      "kind": "paragraph",
+      "lines": [
+        "This was a world where even early skills like the [Woryeong Sword Technique] cost 8,000 coins."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 220,
+      "kind": "paragraph",
+      "lines": [
+        "With the coins I had now, I didn't even have enough to raise my stats, let alone take care of my companions."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 221,
+      "kind": "paragraph",
+      "lines": [
+        "I wished coins would fall from the sky. Kim Dokja really had it easy, earning coins just by breathing."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 222,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Lily Blooming in Aquarius' has entered the channel.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 223,
+      "kind": "paragraph",
+      "lines": [
+        "I looked up at the channel entry notification."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 224,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Lily Blooming in Aquarius' snoops around Geumho Station.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 225,
+      "kind": "paragraph",
+      "lines": [
+        "Lily Blooming in Aquarius."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 226,
+      "kind": "paragraph",
+      "lines": [
+        "Gabriel, the archangel of <Eden>, had entered the channel."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 227,
+      "kind": "paragraph",
+      "lines": [
+        "I wondered what brought her to this obscure channel, but her gaze soon settled on a specific spot."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 228,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Lily Blooming in Aquarius' looks at incarnation 'Kyung Sein'.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 229,
+      "kind": "paragraph",
+      "lines": [
+        "\"No, hold the sword like this.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 230,
+      "kind": "paragraph",
+      "lines": [
+        "\"Like this?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 231,
+      "kind": "paragraph",
+      "lines": [
+        "\"Stay still. I'll show you.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 232,
+      "kind": "paragraph",
+      "lines": [
+        "Jung Heewon was fixing the frozen Kyung Sein's posture."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 233,
+      "kind": "paragraph",
+      "lines": [
+        "Even from a distance, I could see that Kyung Sein's earlobes had turned bright red."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 234,
+      "kind": "paragraph",
+      "lines": [
+        "I had forgotten for a moment."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 235,
+      "kind": "paragraph",
+      "lines": [
+        "I had forgotten that her future attribute was the [Judge of Destruction]."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 236,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Lily Blooming in Aquarius' tilts her head.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 237,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Lily Blooming in Aquarius' makes a trial sponsorship of 100 coins to the incarnation 'Kyung Sein'.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 238,
+      "kind": "paragraph",
+      "lines": [
+        "After receiving the coins, Kyung Sein's shoulders shook as if wondering what she was thinking."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 239,
+      "kind": "paragraph",
+      "lines": [
+        "\"L-Like this? Is it okay?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 240,
+      "kind": "paragraph",
+      "lines": [
+        "\"Stretch your arm more, like this.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 241,
+      "kind": "paragraph",
+      "lines": [
+        "It was a sight that brought blood tears to my eyes, as I had sold my conscience and innocence to earn coins."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 242,
+      "kind": "paragraph",
+      "lines": [
+        "Holy constellation Gabriel."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 243,
+      "kind": "paragraph",
+      "lines": [
+        "The person you just sponsored is actually a muscular man. You're being deceived."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 244,
+      "kind": "paragraph",
+      "lines": [
+        "I stood up from my seat, thinking that I should tell my companions to go to Chungmuro."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 245,
+      "kind": "paragraph",
+      "lines": [
+        "And the next moment."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 246,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Lily Blooming in Aquarius' calls her companion.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 247,
+      "kind": "paragraph",
+      "lines": [
+        "My eyes widened at the sight of the name of the constellation entering the channel."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 248,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Demon-like Judge of Fire' has entered the channel.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 252,
+      "kind": "paragraph",
+      "lines": [
+        "Author's Note"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 253,
+      "kind": "paragraph",
+      "lines": [
+        "Hakhyun, do something"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    }
+  ],
+  "token_estimate": {
+    "source_chars": 15061,
+    "estimated_input_tokens": 5070,
+    "estimated_output_tokens_ru": 7530,
+    "estimated_total_tokens": 12600
+  }
+}

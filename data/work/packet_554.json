@@ -1,0 +1,2125 @@
+{
+  "schema_version": 1,
+  "chapter_number": 554,
+  "title": "554 Episode 1. The World After The End (1)",
+  "instructions": "Переведите `title` и `lines` каждого элемента в `items` на русский язык. Не меняйте `block_index`, не добавляйте и не удаляйте строки в `lines`, сохраняйте точное количество тегов <br> внутри каждой строки.",
+  "expected_output_format": {
+    "chapter_number": 554,
+    "title": "<переведённый заголовок>",
+    "items": [
+      {
+        "block_index": 0,
+        "lines": [
+          "<переведённая строка>"
+        ]
+      }
+    ]
+  },
+  "rules": {
+    "honorifics": "Сохранять ключевые корейские обращения в русской транскрипции: -сси, аджосси, хён, нуна, онни, оппа, -ним (там, где они передают дистанцию, вежливость или близость персонажей).",
+    "profanity_and_tone": "Не смягчать резкие реплики, грубость и ругательства; сохранять живой эмоциональный накал сцен.",
+    "story_fable_tale": "Системные и лорные понятия Story / Fable / Tale (с заглавной буквы как сущность Звёздного Потока) унифицировать как «История» (или «Гигантская История»). Обычные бытовые значения переводить по контексту («рассказ», «история», «сказка»).",
+    "fear_concept": "Понятие Fear (сущность/феномен Царства Страха, с заглавной буквы) переводить как «Страх» (с большой буквы в терминологическом смысле); обычную эмоцию — со строчной.",
+    "brackets_and_quotes": "Строго сохранять типографику ORV: [...] — системные сообщения и навыки, 「...」 — цитаты и внутренний голос, 【...】 — речь Внешних Богов, <...> — Туманности и корпорации.",
+    "jang_hayoung_pronouns": "Чан Хаён: когда о ней/нём говорят посторонние — мужской род (он/его); когда говорит о себе сам(а) или с близкими — женский род (она/её), строго по контексту сцены.",
+    "weapons_41st_yjh": "Оружие Ю Джунхёка 41-й регрессии — большое копьё («Копьё Тёмной Небесной Луны»), не меч и не алебарда.",
+    "sneaky_vs_secretive": "Secretive Plotter («Скрытный Интриган») и Sneaky Schemer («Коварный Интриган») — две РАЗНЫЕ сущности. Категорически запрещено подменять одну другой.",
+    "korean_name_declension": "Мужские корейские имена склонять естественно по нормам русского языка (Ким Докча -> Ким Докчи/Докчу, Ю Джунхёк -> Ю Джунхёка), а женские имена, оканчивающиеся на согласный, оставлять несклоняемыми (Хан Суён, Чон Хивон, Син Юсон, Ли Джихё, Кён Сэин)."
+  },
+  "glossary": [
+    {
+      "source": "Kim Dokja",
+      "target": "Ким Докча",
+      "category": "characters",
+      "notes": "Главный герой; игра слов с «докча» (читатель / единственный ребёнок).",
+      "aliases": [
+        "Докча"
+      ],
+      "forbidden": [
+        "Ким Докжа",
+        "Ким Докчжа"
+      ]
+    },
+    {
+      "source": "Yoo Joonghyuk",
+      "target": "Ю Джунхёк",
+      "category": "characters",
+      "notes": "Регрессор, протагонист «Путей выживания».",
+      "aliases": [
+        "Джунхёк"
+      ],
+      "forbidden": [
+        "Ю Чонхёк",
+        "Ю Джонхёк",
+        "Ю Чунхёк"
+      ]
+    },
+    {
+      "source": "Jung Heewon",
+      "target": "Чон Хивон",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Хивон"
+      ],
+      "forbidden": [
+        "Джун Хивон"
+      ]
+    },
+    {
+      "source": "Han Sooyoung",
+      "target": "Хан Суён",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Суён"
+      ],
+      "forbidden": [
+        "Хан Суёнг"
+      ]
+    },
+    {
+      "source": "Shin Yoosung",
+      "target": "Син Юсон",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Юсон"
+      ],
+      "forbidden": [
+        "Шин Юсунг",
+        "Син Юсун"
+      ]
+    },
+    {
+      "source": "Lee Hyunsung",
+      "target": "Ли Хёнсон",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Хёнсон"
+      ],
+      "forbidden": [
+        "Ли Хёнсунг"
+      ]
+    },
+    {
+      "source": "Lee Gilyoung",
+      "target": "Ли Гильён",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Гильён"
+      ],
+      "forbidden": [
+        "Ли Кильён"
+      ]
+    },
+    {
+      "source": "Yoo Sangah",
+      "target": "Ю Сана",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Сана"
+      ],
+      "forbidden": [
+        "Ю Сангах"
+      ]
+    },
+    {
+      "source": "Kim Namwoon",
+      "target": "Ким Намун",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Намун"
+      ],
+      "forbidden": [
+        "Ким Намвун"
+      ]
+    },
+    {
+      "source": "Lee Seolhwa",
+      "target": "Ли Сольхва",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Сольхва"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Gong Pildu",
+      "target": "Кон Пильду",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Пильду"
+      ],
+      "forbidden": [
+        "Гон Пильду"
+      ]
+    },
+    {
+      "source": "Jang Hayoung",
+      "target": "Чан Хаён",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Хаён"
+      ],
+      "forbidden": [
+        "Джан Хаён"
+      ]
+    },
+    {
+      "source": "Han Myungoh",
+      "target": "Хан Мёно",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Мёно"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Cheon Inho",
+      "target": "Чхон Инхо",
+      "category": "side_characters",
+      "notes": "",
+      "aliases": [
+        "Инхо"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Ji Eunyu",
+      "target": "Чи Ыню",
+      "category": "side_characters",
+      "notes": "",
+      "aliases": [
+        "Ыню"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Demon King of Salvation",
+      "target": "Король Демонов Спасения",
+      "category": "constellations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Uriel",
+      "target": "Уриэль",
+      "category": "constellations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Supreme King",
+      "target": "Верховный Король",
+      "category": "constellations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Omniscient Reader's Viewpoint",
+      "target": "Точка зрения всеведущего читателя",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "[Fourth Wall]",
+      "target": "[Четвёртая Стена]",
+      "category": "skills",
+      "notes": "",
+      "aliases": [
+        "[Четвертая Стена]"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Fourth Wall",
+      "target": "Четвёртая Стена",
+      "category": "skills",
+      "notes": "",
+      "aliases": [
+        "Четвертая Стена"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Chungmuro",
+      "target": "Чхунмуро",
+      "category": "locations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    }
+  ],
+  "items": [
+    {
+      "block_index": 0,
+      "kind": "quote",
+      "lines": [
+        "「This is a story about despair that was not read.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 2,
+      "kind": "paragraph",
+      "lines": [
+        "After receiving that interesting message yesterday, something surprising happened to me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 3,
+      "kind": "paragraph",
+      "lines": [
+        "I wrote the first sentence of the side story."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 4,
+      "kind": "paragraph",
+      "lines": [
+        "I can’t tell you what the first sentence is. It’s a spoiler, and it’s not really a great sentence."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 5,
+      "kind": "paragraph",
+      "lines": [
+        "But it might have a pretty good meaning someday. It was the same when I wrote the first sentence of ORV."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 6,
+      "kind": "paragraph",
+      "lines": [
+        "The whole story starts with Ji Eunyu’s sudden visit around lunchtime today."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 7,
+      "kind": "paragraph",
+      "lines": [
+        "“Author-nim, let’s go somewhere together.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 8,
+      "kind": "paragraph",
+      "lines": [
+        "I was grabbed by the scruff of my neck and got into a taxi, and it didn’t take even an hour to get to our destination."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 9,
+      "kind": "paragraph",
+      "lines": [
+        "The place we finally arrived at was in front of a theater in Chungmuro. It was a place that had once been used as the background for “ORV.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 13,
+      "kind": "paragraph",
+      "lines": [
+        "I stared at the placard posted at the entrance of the theater. Judging by the name, it was definitely an event related to “ORV.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 14,
+      "kind": "paragraph",
+      "lines": [
+        "I suddenly remembered the message I received from “RepresentativeKimDokja” yesterday."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 15,
+      "kind": "paragraph",
+      "lines": [
+        "―There will be a small fan event tomorrow at 7 PM. If you have time, please come and enjoy it."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 16,
+      "kind": "paragraph",
+      "lines": [
+        "Could this be the one from yesterday?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 17,
+      "kind": "paragraph",
+      "lines": [
+        "I asked Ji Eunyu."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 18,
+      "kind": "paragraph",
+      "lines": [
+        "“How did you know about this?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 19,
+      "kind": "paragraph",
+      "lines": [
+        "“The event organizer contacted us. He said he wanted to hold a paid event and wanted permission. Instead, he said he would donate all the admission fees to an orphanage under Kim Dokja’s name. I came just to keep an eye on it.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 20,
+      "kind": "paragraph",
+      "lines": [
+        "That’s what the paid admission fee meant."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 21,
+      "kind": "paragraph",
+      "lines": [
+        "I nodded exaggeratedly and said."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 22,
+      "kind": "paragraph",
+      "lines": [
+        "“That’s good. But why am I—”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 23,
+      "kind": "paragraph",
+      "lines": [
+        "“Readers. You asked where they were.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 24,
+      "kind": "paragraph",
+      "lines": [
+        "I belatedly remembered the phone call I had with Ji Eunyu yesterday. Ji Eunyu said that there were readers waiting for my novel, and I asked where they were."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 25,
+      "kind": "paragraph",
+      "lines": [
+        "I turned my head again and looked at the theater."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 26,
+      "kind": "paragraph",
+      "lines": [
+        "In that place, there were the readers Ji Eunyu had mentioned."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 27,
+      "kind": "paragraph",
+      "lines": [
+        "Suddenly, I felt blood rushing to my head and my heart started pounding."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 28,
+      "kind": "paragraph",
+      "lines": [
+        "“But is it okay for me to go in?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 29,
+      "kind": "paragraph",
+      "lines": [
+        "Ji Eunyu tilted her head at my hesitation."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 30,
+      "kind": "paragraph",
+      "lines": [
+        "“Why?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 31,
+      "kind": "paragraph",
+      "lines": [
+        "“I’m the writer.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 32,
+      "kind": "paragraph",
+      "lines": [
+        "“It’s okay, Han Sooyoung wrote it.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 33,
+      "kind": "paragraph",
+      "lines": [
+        "Seeing Ji Eunyu playfully respond, I also ended up laughing bitterly."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 34,
+      "kind": "paragraph",
+      "lines": [
+        "“That’s right.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 35,
+      "kind": "paragraph",
+      "lines": [
+        "Well, what kind of writer is a writer who hasn’t written anything for three years?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 36,
+      "kind": "paragraph",
+      "lines": [
+        "Today, I wanted to pass all my burdens on to Han Sooyoung, whom I had never even seen. The reason I couldn’t write the side story was because Han Sooyoung didn’t write the manuscript in that distant universe, and Yoo Joonghyuk didn’t deliver it."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 37,
+      "kind": "paragraph",
+      "lines": [
+        "I wanted to believe that."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 38,
+      "kind": "paragraph",
+      "lines": [
+        "At the entrance of the theater, life-sized figures of ORV characters were on display. Judging from the design, they seemed to be drawn based on the style of the webtoon version that was once serialized. The quality was so great that I was amazed."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 39,
+      "kind": "paragraph",
+      "lines": [
+        "I admired the drawings while recalling the names of each character."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 40,
+      "kind": "paragraph",
+      "lines": [
+        "The Demon King of Salvation Kim Dokja, Supreme King Yoo Joonghyuk, Black Flames Empress Han Sooyoung, Moonlight Empress Yoo Sangah, Judge of Destruction Jung Heewon, Steel Sword Emperor Lee Hyunsung, Beast Lord Shin Yoosung, Insect Lord Lee Gilyoung, and the Delusion Demon Kim Namwoon… Even the supporting characters with small screen time, such as the bald Gong Pildu, the doctor Lee Seolhwa, and the fake protagonist Jang Hayoung…"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 41,
+      "kind": "paragraph",
+      "lines": [
+        "“Honestly, it’s better than what we made.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 42,
+      "kind": "paragraph",
+      "lines": [
+        "Even Ji Eunyu answered like that."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 43,
+      "kind": "paragraph",
+      "lines": [
+        "Not only was the quality good, but the fact that they put so much effort into it was impressive in itself."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 44,
+      "kind": "paragraph",
+      "lines": [
+        "I also smiled bitterly and added,"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 45,
+      "kind": "paragraph",
+      "lines": [
+        "“I would believe it even if the real webtoon artists drew it.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 46,
+      "kind": "paragraph",
+      "lines": [
+        "“Isn’t this actually drawn by them?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 47,
+      "kind": "paragraph",
+      "lines": [
+        "“No way. They all left after that incident.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 48,
+      "kind": "paragraph",
+      "lines": [
+        "There was a time when “Omniscient Reader’s Viewpoint” was also made into a webtoon."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 49,
+      "kind": "paragraph",
+      "lines": [
+        "It started off well. Great writers took charge of the composition and animation."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 50,
+      "kind": "paragraph",
+      "lines": [
+        "But unfortunately, before the 10th chapter was even serialized, a lightning strike struck the studio and a large fire broke out, and the company, unable to handle the aftermath, went bankrupt. On top of that, the management’s financial difficulties combined to make the “Omniscient Reader’s Viewpoint” webtoon disappear from the world after 11 chapters."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 51,
+      "kind": "paragraph",
+      "lines": [
+        "“We don’t know yet, author-nim. If the side story goes well, the webtoon could be rebooted.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 52,
+      "kind": "paragraph",
+      "lines": [
+        "It’s like Ji Eunyu to still be able to say such optimistic things."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 53,
+      "kind": "paragraph",
+      "lines": [
+        "“I gave up on those expectations a long time ago.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 54,
+      "kind": "paragraph",
+      "lines": [
+        "After the webtoon failed, some kind of bad luck befell me, and strange things happened to all kinds of secondary works related to “Omniscient Reader’s Viewpoint.” When a movie contract was signed, the production company went bankrupt, and when a figure or goods were produced, the factory went bankrupt."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 55,
+      "kind": "paragraph",
+      "lines": [
+        "After repeating this several times, there were no more offers coming in."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 56,
+      "kind": "paragraph",
+      "lines": [
+        "I paused for a moment and said,"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 57,
+      "kind": "paragraph",
+      "lines": [
+        "“There must be a worldline somewhere where ORV didn’t fail.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 58,
+      "kind": "paragraph",
+      "lines": [
+        "In that worldline, the webtoon would have been a hit, and there would have been a movie, a drama, and maybe even an anime. It’s not this worldline, but I still sometimes have dreams like that."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 59,
+      "kind": "paragraph",
+      "lines": [
+        "“I told you we haven’t failed yet.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 60,
+      "kind": "paragraph",
+      "lines": [
+        "I looked around the remaining life-sized figures with Ji Eunyu, who was grumbling. The line of life-sized figures was quite long, and it had characters from Uriel and the Great Sage Heaven's Equal to somewhat non-mainstream figures like Han Myungoh on display."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 61,
+      "kind": "paragraph",
+      "lines": [
+        "But at the end of the life-sized figures, there was an unfamiliar figure standing."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 62,
+      "kind": "paragraph",
+      "lines": [
+        "Who is this?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 63,
+      "kind": "paragraph",
+      "lines": [
+        "It was a man with squinted eyes, but I couldn’t guess who he was."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 64,
+      "kind": "paragraph",
+      "lines": [
+        "Did a narrow-eyed character appear in ORV?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 65,
+      "kind": "paragraph",
+      "lines": [
+        "If only the name was written down so I could know…"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 66,
+      "kind": "paragraph",
+      "lines": [
+        "I thought about asking Ji Eunyu, but then stopped."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 67,
+      "kind": "paragraph",
+      "lines": [
+        "The writer has his own pride."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 68,
+      "kind": "paragraph",
+      "lines": [
+        "“Two people.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 69,
+      "kind": "paragraph",
+      "lines": [
+        "“Please write your nickname on this name tag and attach it to your left chest.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 70,
+      "kind": "paragraph",
+      "lines": [
+        "We received the name tags from the guide and entered the theater."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 71,
+      "kind": "paragraph",
+      "lines": [
+        "Fortunately, no one recognized that I was ORV’s writer. That was natural, it wasn’t written that I was ORV’s writer on the name tag. I looked at Ji Eunyu’s name tag."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 72,
+      "kind": "system_message",
+      "lines": [
+        "[Genius Editor]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 73,
+      "kind": "paragraph",
+      "lines": [
+        "“Ji Eunyu-ssi.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 74,
+      "kind": "paragraph",
+      "lines": [
+        "I sat down in the back with Ji Eunyu, who pretended not to hear me. I could see the backs of the heads of the fans who had sat down here and there in front of us."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 75,
+      "kind": "paragraph",
+      "lines": [
+        "I was surprised again. All those people are our readers. In fact, aren’t they people Ji Eunyu bought?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 76,
+      "kind": "paragraph",
+      "lines": [
+        "When I looked to the side, Ji Eunyu’s eyes were wide open."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 77,
+      "kind": "paragraph",
+      "lines": [
+        "“If I count roughly, there are more than thirty people?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 78,
+      "kind": "paragraph",
+      "lines": [
+        "Thirty. It seems like a small number, but it meant that the number of core fans who took the time to come here was thirty."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 79,
+      "kind": "paragraph",
+      "lines": [
+        "I nodded, suppressing the emotion welling up in me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 80,
+      "kind": "paragraph",
+      "lines": [
+        "Kim Dokja, you’re so great."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 81,
+      "kind": "paragraph",
+      "lines": [
+        "Since the event hadn’t started yet, I could hear the voices of readers chatting away in front of me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 82,
+      "kind": "paragraph",
+      "lines": [
+        "“Do you have an ‘NEP’? It’s really hard to get one these days.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 83,
+      "kind": "paragraph",
+      "lines": [
+        "“Oh, I have that.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 84,
+      "kind": "paragraph",
+      "lines": [
+        "“Awesome. What about the ‘BE’?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 85,
+      "kind": "paragraph",
+      "lines": [
+        "“I bought it right away.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 86,
+      "kind": "paragraph",
+      "lines": [
+        "“Then, do you have a ‘DF’ too?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 87,
+      "kind": "paragraph",
+      "lines": [
+        "“I do have it… but strangely, my ‘DF’ is starting to lose its mind.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 88,
+      "kind": "notice",
+      "lines": [
+        "NEP = New Employee Package; BE = Black Edition; DF = Dokja Figure (독자 피규어, which can also translate to Reader Figure)"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 89,
+      "kind": "paragraph",
+      "lines": [
+        "I couldn’t understand what they were talking about. It seems like they are exchanging slang only the veterans have."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 90,
+      "kind": "paragraph",
+      "lines": [
+        "We sat side by side and eavesdropped on the veterans’ talk."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 91,
+      "kind": "paragraph",
+      "lines": [
+        "“It’s already the twelfth time.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 92,
+      "kind": "paragraph",
+      "lines": [
+        "“Didn’t the host say today is the last?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 93,
+      "kind": "paragraph",
+      "lines": [
+        "“Yes.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 94,
+      "kind": "paragraph",
+      "lines": [
+        "“There were really a lot of people before. It’s gotten much smaller.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 95,
+      "kind": "paragraph",
+      "lines": [
+        "“That’s right. Everyone is leaving one by one.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 96,
+      "kind": "paragraph",
+      "lines": [
+        "It seems that this unidentified Kim Dokja’s banquet is already hosted for the twelfth time. They say there were even more people before."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 97,
+      "kind": "paragraph",
+      "lines": [
+        "I thought there were already enough people now…"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 98,
+      "kind": "paragraph",
+      "lines": [
+        "“Excuse me, can I sit here?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 99,
+      "kind": "paragraph",
+      "lines": [
+        "I turned my head at the sudden question. A large man like Lee Hyunsung was standing shyly, pointing to the seat next to me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 100,
+      "kind": "paragraph",
+      "lines": [
+        "I nodded."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 101,
+      "kind": "paragraph",
+      "lines": [
+        "“Oh, yes. Please sit down.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 102,
+      "kind": "paragraph",
+      "lines": [
+        "“Thank you…”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 103,
+      "kind": "paragraph",
+      "lines": [
+        "As expected, the man who bowed his head had a name tag pinned to his chest."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 104,
+      "kind": "system_message",
+      "lines": [
+        "[Judge Heewon]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 105,
+      "kind": "paragraph",
+      "lines": [
+        "He must have been a fan of Judge of Destruction Jung Heewon."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 106,
+      "kind": "paragraph",
+      "lines": [
+        "Since it had been a long time since I had last sat next to a stranger, I felt a bit nervous."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 107,
+      "kind": "paragraph",
+      "lines": [
+        "Ji Eunyu, who must have noticed the awkward atmosphere, spoke first."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 108,
+      "kind": "paragraph",
+      "lines": [
+        "“I guess you’re a fan of Jung Heewon.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 109,
+      "kind": "paragraph",
+      "lines": [
+        "Judge Heewon nodded slightly."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 110,
+      "kind": "paragraph",
+      "lines": [
+        "“Yes…”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 111,
+      "kind": "paragraph",
+      "lines": [
+        "And then the silence continued."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 112,
+      "kind": "paragraph",
+      "lines": [
+        "Ji Eunyu poked my arm as if to tell me to talk about something. Usually, she would bring up a topic at such times. Since it had been so long since I had talked to a stranger, I couldn’t think of anything to say."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 113,
+      "kind": "paragraph",
+      "lines": [
+        "I opened my mouth as I thought about what Kim Dokja would talk about here."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 114,
+      "kind": "paragraph",
+      "lines": [
+        "“I like Heewon.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 115,
+      "kind": "paragraph",
+      "lines": [
+        "“Oh, yes!”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 116,
+      "kind": "paragraph",
+      "lines": [
+        "It was nothing special, but as I looked at the man smiling brightly, I felt like we had already formed an important bond. We nodded our heads repeatedly like men who had become sworn brothers and thought about Jung Heewon together."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 117,
+      "kind": "notice",
+      "lines": [
+        "Peach Garden Oath (도원결의): A legendary oath of brotherhood from the Romance of the Three Kingdoms, symbolizing fraternal loyalty."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 118,
+      "kind": "paragraph",
+      "lines": [
+        "Jung Heewon. What a good character. I made it."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 119,
+      "kind": "paragraph",
+      "lines": [
+        "Judge Heewon looked at the nickname on my name tag for a long time and asked."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 120,
+      "kind": "paragraph",
+      "lines": [
+        "“You, your nickname is interesting.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 121,
+      "kind": "paragraph",
+      "lines": [
+        "“Thank you.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 122,
+      "kind": "paragraph",
+      "lines": [
+        "“Do you have a favorite…”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 123,
+      "kind": "paragraph",
+      "lines": [
+        "“Um, I…”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 124,
+      "kind": "paragraph",
+      "lines": [
+        "I thought about it for a moment, but it was hard to choose one person."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 125,
+      "kind": "paragraph",
+      "lines": [
+        "As the silence grew longer, Judge Heewon thought he had made a mistake and quickly added."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 126,
+      "kind": "paragraph",
+      "lines": [
+        "“Oh, you could be all-chara, but I made a mistake…”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 127,
+      "kind": "notice",
+      "lines": [
+        "All-chara (올캐러): A slang term for fans who love all characters (\"all\" + \"character\")."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 128,
+      "kind": "paragraph",
+      "lines": [
+        "I don’t know exactly what all-chara means, but I had a rough idea."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 129,
+      "kind": "paragraph",
+      "lines": [
+        "I nodded lightly and answered."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 130,
+      "kind": "paragraph",
+      "lines": [
+        "“Everyone is good, except for guys like Cheon Inho.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 131,
+      "kind": "paragraph",
+      "lines": [
+        "In case you forgot, Cheon Inho is the name of the extra villain who dies in the beginning of ORV."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 132,
+      "kind": "paragraph",
+      "lines": [
+        "Judge Heewon also lowered his voice with a dark expression, as if he knew Cheon Inho."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 133,
+      "kind": "paragraph",
+      "lines": [
+        "“Cheon Inho, that bad guy.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 134,
+      "kind": "paragraph",
+      "lines": [
+        "“He’s a bad guy.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 135,
+      "kind": "paragraph",
+      "lines": [
+        "“That bastard should be torn to pieces.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 136,
+      "kind": "paragraph",
+      "lines": [
+        "“Uh… right?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 137,
+      "kind": "paragraph",
+      "lines": [
+        "“That bastard should be burned to death in hellfire.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 138,
+      "kind": "paragraph",
+      "lines": [
+        "That was the end of our conversation."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 139,
+      "kind": "paragraph",
+      "lines": [
+        "The host appeared on the stage of the theater. He was wearing a black suit and a white coat."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 140,
+      "kind": "paragraph",
+      "lines": [
+        "“Hello, I’m Kim Dokja, the host.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 141,
+      "kind": "paragraph",
+      "lines": [
+        "A light cheer rose from the audience. Although he covered his eyes with sunglasses, his outfit was quite similar to Kim Dokja’s."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 142,
+      "kind": "paragraph",
+      "lines": [
+        "Is it handmade? That’s also quite high quality."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 143,
+      "kind": "paragraph",
+      "lines": [
+        "Soon, the theater screen lit up, and the event began."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 144,
+      "kind": "paragraph",
+      "lines": [
+        "Soft background music played, followed by the font of the [Fourth Wall]."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 145,
+      "kind": "quote",
+      "lines": [
+        "「And on the Fourth Wall, it was all written down.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 146,
+      "kind": "paragraph",
+      "lines": [
+        "And slowly, the comments left by readers began to appear on the screen."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 147,
+      "kind": "paragraph",
+      "lines": [
+        "From the prologue to chapter 551, the comments left by readers themselves."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 148,
+      "kind": "paragraph",
+      "lines": [
+        "“Gasp, I wrote that!”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 149,
+      "kind": "paragraph",
+      "lines": [
+        "A girl fan sitting in the front row spoke softly. Everyone in the theater was looking at the comments together."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 150,
+      "kind": "paragraph",
+      "lines": [
+        "There were comments that received a lot of “likes,” and some that were funny or novel. There were also comments that contained touching sentiments."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 151,
+      "kind": "paragraph",
+      "lines": [
+        "“That was when Kim Dokja first died, right?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 152,
+      "kind": "paragraph",
+      "lines": [
+        "“Ugh, don’t look at my comments! Take them down quickly!”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 153,
+      "kind": "paragraph",
+      "lines": [
+        "“This is stuffed with dark history.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 154,
+      "kind": "paragraph",
+      "lines": [
+        "My heart also fluttered as I read the old comments."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 155,
+      "kind": "paragraph",
+      "lines": [
+        "ORV was serialized for two years, and three years had passed since its conclusion."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 156,
+      "kind": "paragraph",
+      "lines": [
+        "The history that the readers of this world had built up over the course of five years."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 157,
+      "kind": "paragraph",
+      "lines": [
+        "I watched it a long time, speechless."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 158,
+      "kind": "paragraph",
+      "lines": [
+        "It was like a story from a distant myth being told by someone."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 159,
+      "kind": "paragraph",
+      "lines": [
+        "Photos from exhibitions planned by fans and subway advertisements celebrating the characters’ birthdays came to mind one after another."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 160,
+      "kind": "paragraph",
+      "lines": [
+        "Someone muttered quietly while looking at an illustration of Kim Dokja that caught their eye."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 161,
+      "kind": "paragraph",
+      "lines": [
+        "“It’s Kim Dokja’s birthday.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 162,
+      "kind": "paragraph",
+      "lines": [
+        "“It really snowed in Seoul that day.”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 163,
+      "kind": "paragraph",
+      "lines": [
+        "On the pure white screen, the readers’ comments piled up. Between the lines, I could see the footprints of me and them walking together."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 164,
+      "kind": "paragraph",
+      "lines": [
+        "“You’re glad you came, right?”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 165,
+      "kind": "paragraph",
+      "lines": [
+        "At Ji Eunyu’s words, I nodded without realizing it."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 166,
+      "kind": "quote",
+      "lines": [
+        "「Perhaps I wrote so many sentences just to see this scenery.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 167,
+      "kind": "paragraph",
+      "lines": [
+        "My heart raced again."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 168,
+      "kind": "paragraph",
+      "lines": [
+        "If I had the qualifications, I wanted to say something to these people. I wanted to write sentences for them without running away or giving up."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 169,
+      "kind": "paragraph",
+      "lines": [
+        "I wanted to challenge this story again."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 170,
+      "kind": "quote",
+      "lines": [
+        "「But can I do it?」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 171,
+      "kind": "paragraph",
+      "lines": [
+        "That was when I heard the host’s voice."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 172,
+      "kind": "paragraph",
+      "lines": [
+        "“Now, here’s a word from author-nim who joined us for this event!”"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 173,
+      "kind": "paragraph",
+      "lines": [
+        "The readers in the audience looked at each other and murmured."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 174,
+      "kind": "paragraph",
+      "lines": [
+        "I was dazed for a moment then came to my senses."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 175,
+      "kind": "paragraph",
+      "lines": [
+        "“Author-nim?” Ji Eunyu whispered to me in surprise."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 176,
+      "kind": "paragraph",
+      "lines": [
+        "For a moment, my mind became complicated."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 177,
+      "kind": "paragraph",
+      "lines": [
+        "Could it be that Ji Eunyu had secretly planned a fan meeting?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 178,
+      "kind": "paragraph",
+      "lines": [
+        "However, the look in Ji Eunyu’s eyes showed she had no idea this would happen."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 179,
+      "kind": "paragraph",
+      "lines": [
+        "When I looked at the stage, the host was smiling and looking this way."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 180,
+      "kind": "paragraph",
+      "lines": [
+        "Should I get up first?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 181,
+      "kind": "paragraph",
+      "lines": [
+        "The moment I pretended to cough in vain and got up with the feeling that “I can’t help it,” a person’s face suddenly appeared on the screen."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 182,
+      "kind": "paragraph",
+      "lines": [
+        "―Ah, ah."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 183,
+      "kind": "paragraph",
+      "lines": [
+        "A tear mole on white skin. Jet-black bob hair tied back."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 184,
+      "kind": "paragraph",
+      "lines": [
+        "Even without explaining who she was, there was no one here who didn’t know her."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 185,
+      "kind": "paragraph",
+      "lines": [
+        "The real author of 『Omniscient Reader’s Viewpoint』 was there."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 189,
+      "kind": "paragraph",
+      "lines": [
+        "Author's Note"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 190,
+      "kind": "paragraph",
+      "lines": [
+        "Hello, this is Singsong."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 191,
+      "kind": "paragraph",
+      "lines": [
+        "I'm glad to be able to greet you again."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    }
+  ],
+  "token_estimate": {
+    "source_chars": 12908,
+    "estimated_input_tokens": 4396,
+    "estimated_output_tokens_ru": 6454,
+    "estimated_total_tokens": 10850
+  }
+}

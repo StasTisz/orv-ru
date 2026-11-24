@@ -1,0 +1,1895 @@
+{
+  "schema_version": 1,
+  "chapter_number": 556,
+  "title": "556 Episode 2. Rewrite (1)",
+  "instructions": "Переведите `title` и `lines` каждого элемента в `items` на русский язык. Не меняйте `block_index`, не добавляйте и не удаляйте строки в `lines`, сохраняйте точное количество тегов <br> внутри каждой строки.",
+  "expected_output_format": {
+    "chapter_number": 556,
+    "title": "<переведённый заголовок>",
+    "items": [
+      {
+        "block_index": 0,
+        "lines": [
+          "<переведённая строка>"
+        ]
+      }
+    ]
+  },
+  "rules": {
+    "honorifics": "Сохранять ключевые корейские обращения в русской транскрипции: -сси, аджосси, хён, нуна, онни, оппа, -ним (там, где они передают дистанцию, вежливость или близость персонажей).",
+    "profanity_and_tone": "Не смягчать резкие реплики, грубость и ругательства; сохранять живой эмоциональный накал сцен.",
+    "story_fable_tale": "Системные и лорные понятия Story / Fable / Tale (с заглавной буквы как сущность Звёздного Потока) унифицировать как «История» (или «Гигантская История»). Обычные бытовые значения переводить по контексту («рассказ», «история», «сказка»).",
+    "fear_concept": "Понятие Fear (сущность/феномен Царства Страха, с заглавной буквы) переводить как «Страх» (с большой буквы в терминологическом смысле); обычную эмоцию — со строчной.",
+    "brackets_and_quotes": "Строго сохранять типографику ORV: [...] — системные сообщения и навыки, 「...」 — цитаты и внутренний голос, 【...】 — речь Внешних Богов, <...> — Туманности и корпорации.",
+    "jang_hayoung_pronouns": "Чан Хаён: когда о ней/нём говорят посторонние — мужской род (он/его); когда говорит о себе сам(а) или с близкими — женский род (она/её), строго по контексту сцены.",
+    "weapons_41st_yjh": "Оружие Ю Джунхёка 41-й регрессии — большое копьё («Копьё Тёмной Небесной Луны»), не меч и не алебарда.",
+    "sneaky_vs_secretive": "Secretive Plotter («Скрытный Интриган») и Sneaky Schemer («Коварный Интриган») — две РАЗНЫЕ сущности. Категорически запрещено подменять одну другой.",
+    "korean_name_declension": "Мужские корейские имена склонять естественно по нормам русского языка (Ким Докча -> Ким Докчи/Докчу, Ю Джунхёк -> Ю Джунхёка), а женские имена, оканчивающиеся на согласный, оставлять несклоняемыми (Хан Суён, Чон Хивон, Син Юсон, Ли Джихё, Кён Сэин)."
+  },
+  "glossary": [
+    {
+      "source": "Kim Dokja",
+      "target": "Ким Докча",
+      "category": "characters",
+      "notes": "Главный герой; игра слов с «докча» (читатель / единственный ребёнок).",
+      "aliases": [
+        "Докча"
+      ],
+      "forbidden": [
+        "Ким Докжа",
+        "Ким Докчжа"
+      ]
+    },
+    {
+      "source": "Yoo Joonghyuk",
+      "target": "Ю Джунхёк",
+      "category": "characters",
+      "notes": "Регрессор, протагонист «Путей выживания».",
+      "aliases": [
+        "Джунхёк"
+      ],
+      "forbidden": [
+        "Ю Чонхёк",
+        "Ю Джонхёк",
+        "Ю Чунхёк"
+      ]
+    },
+    {
+      "source": "Han Sooyoung",
+      "target": "Хан Суён",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Суён"
+      ],
+      "forbidden": [
+        "Хан Суёнг"
+      ]
+    },
+    {
+      "source": "Lee Gilyoung",
+      "target": "Ли Гильён",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Гильён"
+      ],
+      "forbidden": [
+        "Ли Кильён"
+      ]
+    },
+    {
+      "source": "Bihyung",
+      "target": "Бихён",
+      "category": "characters",
+      "notes": "",
+      "aliases": [],
+      "forbidden": [
+        "Бихеон"
+      ]
+    },
+    {
+      "source": "Lee Hakhyun",
+      "target": "Ли Хакхён",
+      "category": "side_characters",
+      "notes": "Протагонист побочной истории, автор ORV из другой мировой линии.",
+      "aliases": [
+        "Хакхён"
+      ],
+      "forbidden": [
+        "Ли Хакхюн"
+      ]
+    },
+    {
+      "source": "Ji Eunyu",
+      "target": "Чи Ыню",
+      "category": "side_characters",
+      "notes": "",
+      "aliases": [
+        "Ыню"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Dokkaebi",
+      "target": "Токкэби",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": [
+        "Доккаэби",
+        "Доккаби"
+      ]
+    },
+    {
+      "source": "Probability",
+      "target": "Вероятность",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": [
+        "Правдоподобие"
+      ]
+    },
+    {
+      "source": "Main Scenario",
+      "target": "Основной Сценарий",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Scenario",
+      "target": "Сценарий",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Omniscient Reader's Viewpoint",
+      "target": "Точка зрения всеведущего читателя",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "[Fourth Wall]",
+      "target": "[Четвёртая Стена]",
+      "category": "skills",
+      "notes": "",
+      "aliases": [
+        "[Четвертая Стена]"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Fourth Wall",
+      "target": "Четвёртая Стена",
+      "category": "skills",
+      "notes": "",
+      "aliases": [
+        "Четвертая Стена"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "[Avatar]",
+      "target": "[Аватар]",
+      "category": "skills",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Geumho Station",
+      "target": "Станция Кымхо",
+      "category": "locations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    }
+  ],
+  "items": [
+    {
+      "block_index": 0,
+      "kind": "paragraph",
+      "lines": [
+        "\"Do you know what a living thing is, author-nim?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 1,
+      "kind": "paragraph",
+      "lines": [
+        "ㅡComment from chapter 6 of Omniscient Reader's Viewpoint."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 3,
+      "kind": "paragraph",
+      "lines": [
+        "I once shared such a joke with Ji Eunyu. I asked her if we would survive if we were to fall into the first scenario of Omniscient Reader."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 4,
+      "kind": "paragraph",
+      "lines": [
+        "Ji Eunyu answered me like this."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 5,
+      "kind": "paragraph",
+      "lines": [
+        "ㅡHonestly, I'm not confident, but what about you, author-nim?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 6,
+      "kind": "paragraph",
+      "lines": [
+        "What did I say? I don't remember."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 7,
+      "kind": "paragraph",
+      "lines": [
+        "What I do know is that the joke was now real."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 8,
+      "kind": "quote",
+      "lines": [
+        "「Oh my God.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 9,
+      "kind": "paragraph",
+      "lines": [
+        "This was such an extraordinary situation that I couldn't help but use the punctuation."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 10,
+      "kind": "paragraph",
+      "lines": [
+        "I touched my face in the reflection of the screen door several times. It wasn't because I was handsome. It wasn't that there was something weird on the screen door."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 11,
+      "kind": "paragraph",
+      "lines": [
+        "My face had literally changed."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 12,
+      "kind": "paragraph",
+      "lines": [
+        "\"What the.......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 13,
+      "kind": "paragraph",
+      "lines": [
+        "Crooked smiling eyes, thin lips with a subtle hint of meanness."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 14,
+      "kind": "paragraph",
+      "lines": [
+        "I realized where I'd seen this face before."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 15,
+      "kind": "paragraph",
+      "lines": [
+        "Sure enough, there was a life-size figure standing at the entrance to the theater with the same face."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 16,
+      "kind": "paragraph",
+      "lines": [
+        "But I couldn't remember who he was."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 17,
+      "kind": "paragraph",
+      "lines": [
+        "Was he an undescribed extra?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 18,
+      "kind": "system_message",
+      "lines": [
+        "[The free service of planetary system 8612 has ended.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 19,
+      "kind": "system_message",
+      "lines": [
+        "[The main scenario has started.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 20,
+      "kind": "paragraph",
+      "lines": [
+        "Throughout the subway station, citizens voiced their confusion."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 21,
+      "kind": "paragraph",
+      "lines": [
+        "\"What is this?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 23,
+      "kind": "paragraph",
+      "lines": [
+        "\"I'm not the only one seeing this, right?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 24,
+      "kind": "paragraph",
+      "lines": [
+        "\"There's something here. Hey, can you feel it? There's something like a wall here.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 25,
+      "kind": "paragraph",
+      "lines": [
+        "A certain radius of the station was surrounded by a transparent wall. It was a wall I knew well."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 26,
+      "kind": "paragraph",
+      "lines": [
+        "The scenario device that makes it impossible to get out until certain conditions are met."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 27,
+      "kind": "paragraph",
+      "lines": [
+        "\"No, where are the subway employees? Aren't they making announcements?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 28,
+      "kind": "paragraph",
+      "lines": [
+        "\"Someone will come. Let's wait.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 29,
+      "kind": "paragraph",
+      "lines": [
+        "Now there was no doubt."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 30,
+      "kind": "quote",
+      "lines": [
+        "「I had possessed someone from 'Omniscient Reader'.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 31,
+      "kind": "paragraph",
+      "lines": [
+        "A slow shiver ran up my spine."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 32,
+      "kind": "quote",
+      "lines": [
+        "「An extra character I don't know.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 33,
+      "kind": "paragraph",
+      "lines": [
+        "It was a common trope in web novels, but I couldn't think of any reason why I should be possessing someone."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 34,
+      "kind": "paragraph",
+      "lines": [
+        "Why me? Did I earn someone's grudge? Did one of the characters put me in here?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 35,
+      "kind": "paragraph",
+      "lines": [
+        "The Han Sooyoung from the event theater was real?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 36,
+      "kind": "paragraph",
+      "lines": [
+        "Then was it Han Sooyoung?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 37,
+      "kind": "paragraph",
+      "lines": [
+        "It could be. Han Sooyoung, who didn't want me to pretend to be Omniscient Reader's author, had put me here."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 38,
+      "kind": "paragraph",
+      "lines": [
+        "It could also be Yoo Joonghyuk. The way I described all the misery he went through was enough to make him hold a grudge against me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 39,
+      "kind": "paragraph",
+      "lines": [
+        "Maybe it was Kim Dokja, who wanted to take revenge on me for revealing the protagonist's secret tastes to the entire universe. Or maybe he did it for no reason at all, he just has a bad personality."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 40,
+      "kind": "paragraph",
+      "lines": [
+        "Shit, I don't know. There's no point in thinking about it now."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 41,
+      "kind": "paragraph",
+      "lines": [
+        "I pushed the uncertainty out of my head, leaving only the certainty."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 42,
+      "kind": "paragraph",
+      "lines": [
+        "One, I was in an 'Omniscient Reader'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 43,
+      "kind": "paragraph",
+      "lines": [
+        "Two, I'm possessing someone else."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 44,
+      "kind": "paragraph",
+      "lines": [
+        "Three, the scenarios were about to begin."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 45,
+      "kind": "paragraph",
+      "lines": [
+        "I quickly scanned my surroundings. If the first scenario is about to begin, I need to figure out what I can use to my advantage."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 46,
+      "kind": "paragraph",
+      "lines": [
+        "First, I'm in a subway station."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 47,
+      "kind": "paragraph",
+      "lines": [
+        "The station is from the orange line, so it's line 3, and the station name is......."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 48,
+      "kind": "quote",
+      "lines": [
+        "「Geumho. 」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 49,
+      "kind": "paragraph",
+      "lines": [
+        "I slowly frowned."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 50,
+      "kind": "paragraph",
+      "lines": [
+        "In my head, I recalled some information about Geumho Station. It was the first base of the main character, Kim Dokja, and the place where the massacre took place."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 51,
+      "kind": "paragraph",
+      "lines": [
+        "Of course, that was in the second half of the first volume, and fortunately, I hadn't gotten to that point yet...... In a sense, it could have been more dangerous now."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 52,
+      "kind": "constellation",
+      "lines": [
+        "[Ah, aah. ^&@@#%.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 53,
+      "kind": "paragraph",
+      "lines": [
+        "I felt like I was being dragged down into the cold depths by my ankles."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 54,
+      "kind": "paragraph",
+      "lines": [
+        "I never thought the day would come when I'd be able to see a Dokkaebi with my own eyes. Two little horns. A creature with fluffy fur wearing a small straw mat."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 55,
+      "kind": "paragraph",
+      "lines": [
+        "I remember. He had this kind of role at first."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 56,
+      "kind": "constellation",
+      "lines": [
+        "[Can you hear me?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 57,
+      "kind": "paragraph",
+      "lines": [
+        "Kim Dokja's streaming contract partner, the Dokkaebi Bihyung."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 58,
+      "kind": "constellation",
+      "lines": [
+        "[Uh-oh, at least it's quieter here than on other places, huh.......]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 59,
+      "kind": "paragraph",
+      "lines": [
+        "Bihyung looked back at the moment and our eyes met. I lowered my head in surprise. It's only in the second half of the story that Bihyung becomes sympathetic to Kim Dokja, while the earlier Bihyung is a crazy monster who breaks the heads of incarnations for fun."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 60,
+      "kind": "paragraph",
+      "lines": [
+        "Fortunately, I didn't see any humans getting their heads cracked off while arguing with Bihyung like in the main story."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 61,
+      "kind": "paragraph",
+      "lines": [
+        "Especially that big guy over there."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 62,
+      "kind": "constellation",
+      "lines": [
+        "[Okay, I'm going to explain what's going on, so listen up.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 63,
+      "kind": "paragraph",
+      "lines": [
+        "I knew full well what Bihyung was going to say next. I've written dozens of manuscripts where I've seen that line."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 64,
+      "kind": "paragraph",
+      "lines": [
+        "He's probably running a similar script simultaneously in the scenario area he controls."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 65,
+      "kind": "constellation",
+      "lines": [
+        "[You have been living too long for free. Isn't life too generous? You were born and paid no price for breathing,eating, shitting, and reproducing at will without paying anything in return! Ha! What a world you've been living in!]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 66,
+      "kind": "paragraph",
+      "lines": [
+        "As I listened to him, I wondered if this is what it would have been like if a 'Omniscient Reader's movie had come out."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 67,
+      "kind": "paragraph",
+      "lines": [
+        "The problem is that I'm now an extra in that movie."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 68,
+      "kind": "constellation",
+      "lines": [
+        "[The stars watched over your planet with great generosity, but that's only until today, and the time has come for you to repay them for all the kindness they've shown you. It's better for you to see what's going on than to hear me ramble on about it, right?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 69,
+      "kind": "paragraph",
+      "lines": [
+        "As if he couldn't be bothered to recite the boring lines, Bihyung snapped his fingers."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 70,
+      "kind": "system_message",
+      "lines": [
+        "[#BI-7623 channel opened.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 71,
+      "kind": "system_message",
+      "lines": [
+        "[Constellations have entered.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 72,
+      "kind": "paragraph",
+      "lines": [
+        "A small window floated upwards above those who raised their heads in confusion."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 73,
+      "kind": "system_message",
+      "lines": [
+        "[The main scenario has arrived!]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 74,
+      "kind": "system_window",
+      "lines": [
+        "<Main Scenario #1 - Proof of Value>",
+        "Category: Main",
+        "Difficulty: F",
+        "Clear Conditions: Kill one or more creatures.",
+        "Time Limit: 30 minutes",
+        "Reward: 300 coins",
+        "Failure: Death"
+      ],
+      "expected_br_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "block_index": 75,
+      "kind": "paragraph",
+      "lines": [
+        "The Dokkaebi's transparent body slowly faded away, giving us a vague smile."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 76,
+      "kind": "constellation",
+      "lines": [
+        "[Then, good luck everyone. Please show me an interesting story.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 77,
+      "kind": "paragraph",
+      "lines": [
+        "As the scenario window popped up in front of me, it really hit home."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 78,
+      "kind": "paragraph",
+      "lines": [
+        "The time limit reducing in real time."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 79,
+      "kind": "paragraph",
+      "lines": [
+        "Right now it says 30 minutes, but as the time goes on, the penalties will start to kick in."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 80,
+      "kind": "paragraph",
+      "lines": [
+        "\"What does this mean?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 81,
+      "kind": "paragraph",
+      "lines": [
+        "Unsure of what's going on, people started talking to each other and calling out to each other. In the distance, I could see people scratching and hitting the transparent wall."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 82,
+      "kind": "paragraph",
+      "lines": [
+        "I took a light, deep breath and muttered to myself."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 83,
+      "kind": "paragraph",
+      "lines": [
+        "'Attribute Window.'"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 84,
+      "kind": "system_message",
+      "lines": [
+        "[Currently, due to a system error, the Attribute Window cannot be activated.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 85,
+      "kind": "paragraph",
+      "lines": [
+        "I squinted my eyes."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 86,
+      "kind": "paragraph",
+      "lines": [
+        "This wasn't working?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 87,
+      "kind": "paragraph",
+      "lines": [
+        "'Fourth Wall.'"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 88,
+      "kind": "paragraph",
+      "lines": [
+        "I called it out, just in case."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 89,
+      "kind": "paragraph",
+      "lines": [
+        "Kim Dokja had the [Fourth Wall] skill since the beginning, and as a penalty of that skill, he was restricted from viewing the Attribute Window."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 90,
+      "kind": "paragraph",
+      "lines": [
+        "So, if I also have the [Fourth Wall.]......"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 91,
+      "kind": "paragraph",
+      "lines": [
+        "'Fourth Wall.'"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 92,
+      "kind": "paragraph",
+      "lines": [
+        "......."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 93,
+      "kind": "paragraph",
+      "lines": [
+        "I don't."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 94,
+      "kind": "paragraph",
+      "lines": [
+        "So why doesn't it open?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 95,
+      "kind": "paragraph",
+      "lines": [
+        "I don't know."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 96,
+      "kind": "paragraph",
+      "lines": [
+        "It's a novel I wrote, dammit."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 97,
+      "kind": "paragraph",
+      "lines": [
+        "First of all, I'm a writer, not a reader, so I should have the [Writer]'s skills... Maybe I have [Avatar]."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 98,
+      "kind": "paragraph",
+      "lines": [
+        "I concentrated and tried to use [Avatar] and other writer-only skills. But there was no noticeable change, except for the strain on my sphincter."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 99,
+      "kind": "system_message",
+      "lines": [
+        "[The remaining time has decreased.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 100,
+      "kind": "system_message",
+      "lines": [
+        "[There are 28 minutes remaining.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 101,
+      "kind": "paragraph",
+      "lines": [
+        "While I struggled in vain, the crowd in the station split into two groups."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 102,
+      "kind": "paragraph",
+      "lines": [
+        "One was a group of people wearing sweatshirts with the same logo."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 103,
+      "kind": "paragraph",
+      "lines": [
+        "\"Everyone, please don't panic and gather this way!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 104,
+      "kind": "paragraph",
+      "lines": [
+        "\"Let's go to the deacon's side!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 105,
+      "kind": "paragraph",
+      "lines": [
+        "They were clutching tissues with the church's name on them; they seemed to be from the same church."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 106,
+      "kind": "paragraph",
+      "lines": [
+        "On the other side of the room, a large man with a tattoo on his forearm was gathering people."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 107,
+      "kind": "paragraph",
+      "lines": [
+        "\"Hey, everybody, come over here and help!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 108,
+      "kind": "paragraph",
+      "lines": [
+        "This was the same guy who was worried about getting his head cracked by Bihyung earlier. The big guy pushed against the transparent wall with both hands and shouted at the other people."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 109,
+      "kind": "paragraph",
+      "lines": [
+        "\"Everyone push this together! We might be able to get out!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 110,
+      "kind": "paragraph",
+      "lines": [
+        "Obviously, it's safer to struggle against a wall than to attack a Dokkaebi."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 111,
+      "kind": "paragraph",
+      "lines": [
+        "But some people didn't think so."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 112,
+      "kind": "paragraph",
+      "lines": [
+        "\"What if we do something weird and that monster does something to us?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 113,
+      "kind": "paragraph",
+      "lines": [
+        "\"Then what? If you're not going to help, go away. Push! Harder! Harder!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 114,
+      "kind": "paragraph",
+      "lines": [
+        "At this point, some of the other people who had been hesitating joined in and started pushing"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 115,
+      "kind": "paragraph",
+      "lines": [
+        "against the wall. The sound of cha, cha, cha, cha echoed around the room, and the people in the church who had been watching got involved."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 116,
+      "kind": "paragraph",
+      "lines": [
+        "\"Everyone, let's help him!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 117,
+      "kind": "paragraph",
+      "lines": [
+        "At the deacon's signal, the congregation rushed in and pushed against the wall. It was quite a sight to see, dozens of people clinging to the transparent wall like a pantomime."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 118,
+      "kind": "paragraph",
+      "lines": [
+        "I slowly made my way to the edge of the station as people struggled with the wall. A few steps away, I caught my reflection in the screen door."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 119,
+      "kind": "paragraph",
+      "lines": [
+        "First, I think I'm possessing a bad character."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 120,
+      "kind": "paragraph",
+      "lines": [
+        "A body whose average stats does not seem to exceed 1."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 121,
+      "kind": "paragraph",
+      "lines": [
+        "This is why I wasn't sure I could win a fight against a bare-chested Kim Dokja."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 122,
+      "kind": "paragraph",
+      "lines": [
+        "Kim Dokja."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 123,
+      "kind": "paragraph",
+      "lines": [
+        "I have to meet him somehow."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 124,
+      "kind": "paragraph",
+      "lines": [
+        "I don't know what caused me to possess this man, but considering what's normal in web novels, I should be able to return to reality the moment I see the end of the scenarios."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 125,
+      "kind": "paragraph",
+      "lines": [
+        "So I needed to meet the main character of 'Omniscient Reader', who dies and comes back to life for the sake of his colleagues, and win his favor. It's the only way to increase your chances of survival in this cruel world."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 126,
+      "kind": "paragraph",
+      "lines": [
+        "By the way, I'll have to survive here before you can meet Kim Dokja or anyone else."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 127,
+      "kind": "quote",
+      "lines": [
+        "「The first scenario requires you to kill 'one or more living things'.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 128,
+      "kind": "paragraph",
+      "lines": [
+        "Kim Dokja cleared the first scenario by crushing the grasshoppers and grasshopper eggs collected by Lee Gilyoung."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 129,
+      "kind": "paragraph",
+      "lines": [
+        "But since he's the main character, he's lucky, and since I'm an extra character, I'm not so lucky."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 130,
+      "kind": "paragraph",
+      "lines": [
+        "As an extra character, I can't be that lucky."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 131,
+      "kind": "quote",
+      "lines": [
+        "「So this is what I came up with.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 132,
+      "kind": "paragraph",
+      "lines": [
+        "I glared at the soda machine in front of me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 133,
+      "kind": "paragraph",
+      "lines": [
+        "If you didn't end up in the same train car as Kim Dokja, you'd be lucky to land in a subway station."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 134,
+      "kind": "paragraph",
+      "lines": [
+        "At least here, this vending machine was my 'insect catcher'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 135,
+      "kind": "paragraph",
+      "lines": [
+        "\"Push! Harder!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 136,
+      "kind": "paragraph",
+      "lines": [
+        "\"Aaaahhh.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 137,
+      "kind": "paragraph",
+      "lines": [
+        "I gently shook the vending machine in time with the chants of the wall pushers."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 138,
+      "kind": "quote",
+      "lines": [
+        "「A lot of bugs live in subway vending machines with refrigeration and freezers.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 139,
+      "kind": "paragraph",
+      "lines": [
+        "I had seen an article like that when I wrote about 200 chapters for Omniscient Reader."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 140,
+      "kind": "paragraph",
+      "lines": [
+        "I wonder how many times I shook it like that."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 141,
+      "kind": "paragraph",
+      "lines": [
+        "Something made a thud sound, and a nameless bug crawled out from under the vending machine."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 142,
+      "kind": "paragraph",
+      "lines": [
+        "I quickly clasped my hands together and trapped the fleeing bug."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 143,
+      "kind": "paragraph",
+      "lines": [
+        "Lucky for me, I'll survive the first scenario."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 144,
+      "kind": "paragraph",
+      "lines": [
+        "I immediately tried to crush the bug in my hand."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 145,
+      "kind": "quote",
+      "lines": [
+        "「Maybe it's a pregnant bug.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 146,
+      "kind": "paragraph",
+      "lines": [
+        "My hesitation wasn't because I was philosophizing about the bug's right to life."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 147,
+      "kind": "paragraph",
+      "lines": [
+        "I hesitated because I remembered a line from 'Omniscient Reader'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 148,
+      "kind": "quote",
+      "lines": [
+        "「An 'egg' is a living thing.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 149,
+      "kind": "paragraph",
+      "lines": [
+        "In the scenario, bugs' eggs are recognized as living beings, and Kim Dokja's solution was to crack hundreds of eggs to gain an advantage in the scenario."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 150,
+      "kind": "paragraph",
+      "lines": [
+        "But what would have happened if Kim Dokja had given the bug's eggs to everyone on the subway?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 151,
+      "kind": "paragraph",
+      "lines": [
+        "I glanced over and saw people banging on the transparent wall."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 152,
+      "kind": "paragraph",
+      "lines": [
+        "People knocking on the wall to live."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 153,
+      "kind": "paragraph",
+      "lines": [
+        "I knew who the people in Geumho Station were. People who could casually take the lives of others for their own survival."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 154,
+      "kind": "paragraph",
+      "lines": [
+        "For a moment, I felt like Kim Dokja."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 155,
+      "kind": "quote",
+      "lines": [
+        "「What would Kim Dokja do if he returned to the first scenario?」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 156,
+      "kind": "paragraph",
+      "lines": [
+        "Suddenly, a tsuchuchut rang out and I almost missed the bug."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 157,
+      "kind": "paragraph",
+      "lines": [
+        "It wasn't a probability spark."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 158,
+      "kind": "paragraph",
+      "lines": [
+        "The cell phone in my pocket was ringing."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 159,
+      "kind": "paragraph",
+      "lines": [
+        "I hesitated for a moment, then slipped the bug in my fist into my coat pocket and zipped it up tight."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 160,
+      "kind": "paragraph",
+      "lines": [
+        "I opened my phone and a message popped up."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 161,
+      "kind": "system_message",
+      "lines": [
+        "[You have one new message.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 162,
+      "kind": "paragraph",
+      "lines": [
+        "A message?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 163,
+      "kind": "paragraph",
+      "lines": [
+        "ㅡSender: RepresentativeKimDokja"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 164,
+      "kind": "paragraph",
+      "lines": [
+        "ㅡAuthor-nim. Congratulations on your new side story series."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 165,
+      "kind": "paragraph",
+      "lines": [
+        "I looked at the message with suspicion in my eyes."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 166,
+      "kind": "paragraph",
+      "lines": [
+        "ㅡWe're sending you a small gift in anticipation for your series."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 170,
+      "kind": "paragraph",
+      "lines": [
+        "Author's Note"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 171,
+      "kind": "paragraph",
+      "lines": [
+        "Sing: I am not Lee Hakhyun. ^^;;"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 172,
+      "kind": "paragraph",
+      "lines": [
+        "Shong: I'm not Lee Hakhyun either. ^^;"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    }
+  ],
+  "token_estimate": {
+    "source_chars": 11522,
+    "estimated_input_tokens": 4010,
+    "estimated_output_tokens_ru": 5761,
+    "estimated_total_tokens": 9771
+  }
+}

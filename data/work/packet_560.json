@@ -1,0 +1,1819 @@
+{
+  "schema_version": 1,
+  "chapter_number": 560,
+  "title": "560 Episode 2. Rewrite (5)",
+  "instructions": "Переведите `title` и `lines` каждого элемента в `items` на русский язык. Не меняйте `block_index`, не добавляйте и не удаляйте строки в `lines`, сохраняйте точное количество тегов <br> внутри каждой строки.",
+  "expected_output_format": {
+    "chapter_number": 560,
+    "title": "<переведённый заголовок>",
+    "items": [
+      {
+        "block_index": 0,
+        "lines": [
+          "<переведённая строка>"
+        ]
+      }
+    ]
+  },
+  "rules": {
+    "honorifics": "Сохранять ключевые корейские обращения в русской транскрипции: -сси, аджосси, хён, нуна, онни, оппа, -ним (там, где они передают дистанцию, вежливость или близость персонажей).",
+    "profanity_and_tone": "Не смягчать резкие реплики, грубость и ругательства; сохранять живой эмоциональный накал сцен.",
+    "story_fable_tale": "Системные и лорные понятия Story / Fable / Tale (с заглавной буквы как сущность Звёздного Потока) унифицировать как «История» (или «Гигантская История»). Обычные бытовые значения переводить по контексту («рассказ», «история», «сказка»).",
+    "fear_concept": "Понятие Fear (сущность/феномен Царства Страха, с заглавной буквы) переводить как «Страх» (с большой буквы в терминологическом смысле); обычную эмоцию — со строчной.",
+    "brackets_and_quotes": "Строго сохранять типографику ORV: [...] — системные сообщения и навыки, 「...」 — цитаты и внутренний голос, 【...】 — речь Внешних Богов, <...> — Туманности и корпорации.",
+    "jang_hayoung_pronouns": "Чан Хаён: когда о ней/нём говорят посторонние — мужской род (он/его); когда говорит о себе сам(а) или с близкими — женский род (она/её), строго по контексту сцены.",
+    "weapons_41st_yjh": "Оружие Ю Джунхёка 41-й регрессии — большое копьё («Копьё Тёмной Небесной Луны»), не меч и не алебарда.",
+    "sneaky_vs_secretive": "Secretive Plotter («Скрытный Интриган») и Sneaky Schemer («Коварный Интриган») — две РАЗНЫЕ сущности. Категорически запрещено подменять одну другой.",
+    "korean_name_declension": "Мужские корейские имена склонять естественно по нормам русского языка (Ким Докча -> Ким Докчи/Докчу, Ю Джунхёк -> Ю Джунхёка), а женские имена, оканчивающиеся на согласный, оставлять несклоняемыми (Хан Суён, Чон Хивон, Син Юсон, Ли Джихё, Кён Сэин)."
+  },
+  "glossary": [
+    {
+      "source": "Kim Dokja",
+      "target": "Ким Докча",
+      "category": "characters",
+      "notes": "Главный герой; игра слов с «докча» (читатель / единственный ребёнок).",
+      "aliases": [
+        "Докча"
+      ],
+      "forbidden": [
+        "Ким Докжа",
+        "Ким Докчжа"
+      ]
+    },
+    {
+      "source": "Yoo Joonghyuk",
+      "target": "Ю Джунхёк",
+      "category": "characters",
+      "notes": "Регрессор, протагонист «Путей выживания».",
+      "aliases": [
+        "Джунхёк"
+      ],
+      "forbidden": [
+        "Ю Чонхёк",
+        "Ю Джонхёк",
+        "Ю Чунхёк"
+      ]
+    },
+    {
+      "source": "Bihyung",
+      "target": "Бихён",
+      "category": "characters",
+      "notes": "",
+      "aliases": [],
+      "forbidden": [
+        "Бихеон"
+      ]
+    },
+    {
+      "source": "Kim Cheolyang",
+      "target": "Ким Чхольян",
+      "category": "side_characters",
+      "notes": "",
+      "aliases": [
+        "Чхольян"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Monarch of the Small Fries",
+      "target": "Владыка Мелкой Сошки",
+      "category": "constellations",
+      "notes": "",
+      "aliases": [
+        "Монарх Мелкой Сошки"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Constellation",
+      "target": "Созвездие",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Dokkaebi",
+      "target": "Токкэби",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": [
+        "Доккаэби",
+        "Доккаби"
+      ]
+    },
+    {
+      "source": "Scenario",
+      "target": "Сценарий",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Geumho Station",
+      "target": "Станция Кымхо",
+      "category": "locations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    }
+  ],
+  "items": [
+    {
+      "block_index": 0,
+      "kind": "paragraph",
+      "lines": [
+        "The people who watched the prime minister die in real time lost their minds and ran toward the transparent wall they had pushed against earlier."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 1,
+      "kind": "paragraph",
+      "lines": [
+        "\"We have to get out of here now! Break this wall!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 2,
+      "kind": "paragraph",
+      "lines": [
+        "\"Push it again, it might get pushed back!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 3,
+      "kind": "system_message",
+      "lines": [
+        "[Until the scenario in the area is completed, any kind of entry or exit is restricted.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 4,
+      "kind": "paragraph",
+      "lines": [
+        "Panicked people clung to the transparent wall. They reminded me of a swarm of insects in a mosquito net."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 5,
+      "kind": "paragraph",
+      "lines": [
+        "I took a short, deep breath and shouted in a loud voice."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 6,
+      "kind": "paragraph",
+      "lines": [
+        "\"Everyone, pull yourself together. There's still plenty of time.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 7,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Monarch of the Small Fries' is looking at you with a strange look in his eyes.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 8,
+      "kind": "system_message",
+      "lines": [
+        "[A few constellations are surprised by your calmness.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 9,
+      "kind": "paragraph",
+      "lines": [
+        "\"It was the lawmakers who died, not us.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 10,
+      "kind": "paragraph",
+      "lines": [
+        "The people look up at you with dazed faces."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 11,
+      "kind": "system_message",
+      "lines": [
+        "[Some incarnations begin to rely on you.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 12,
+      "kind": "system_message",
+      "lines": [
+        "[Your influence in the scenario area has exceeded a threshold.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 13,
+      "kind": "paragraph",
+      "lines": [
+        "Now that their reason was paralyzed by fear, I had an opportunity."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 14,
+      "kind": "paragraph",
+      "lines": [
+        "\"We can still choose how to survive.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 15,
+      "kind": "paragraph",
+      "lines": [
+        "Our way to survive."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 16,
+      "kind": "paragraph",
+      "lines": [
+        "One by one, the people cowering nearby stood up, looking at me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 17,
+      "kind": "paragraph",
+      "lines": [
+        "\"B-but. But they're all dead! The president, the prime minister―\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 18,
+      "kind": "paragraph",
+      "lines": [
+        "\"They were just ordinary people too, who happened to wear those titles.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 19,
+      "kind": "paragraph",
+      "lines": [
+        "I heard someone hiccup."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 20,
+      "kind": "paragraph",
+      "lines": [
+        "\"Get a grip. If you lose your mind here, you'll be left with only one option.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 21,
+      "kind": "paragraph",
+      "lines": [
+        "\".......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 22,
+      "kind": "paragraph",
+      "lines": [
+        "\"And that's going to kill most of us here. Of course, some of us will survive, but they'll be few.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 23,
+      "kind": "paragraph",
+      "lines": [
+        "I glanced toward the big guy as I said that, and he growled and glared at me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 24,
+      "kind": "paragraph",
+      "lines": [
+        "But that was his mistake. One by one, the people nearby swarmed toward me, wary of the man."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 25,
+      "kind": "paragraph",
+      "lines": [
+        "\"What the hell, you guys.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 26,
+      "kind": "paragraph",
+      "lines": [
+        "They realized. How the weak survive in a predatory ecosystem where laws and rules are broken."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 27,
+      "kind": "paragraph",
+      "lines": [
+        "I continued speaking."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 28,
+      "kind": "paragraph",
+      "lines": [
+        "\"No one has to die. The strong, the weak, everyone can survive, and there's no need to be disappointed that the bugs failed, it was just the 'first way'.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 29,
+      "kind": "paragraph",
+      "lines": [
+        "One by one, people's faces changed. Among them, the one whose expression changed dramatically was the deacon's, Kim Cheolyang, who had made the mistake of saying 'pretty well' earlier."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 30,
+      "kind": "system_message",
+      "lines": [
+        "[The character 'Kim Cheolyang' is convinced by your words.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 31,
+      "kind": "system_message",
+      "lines": [
+        "[Character 'Kim Cheolyang' feels a strong sense of trust in you.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 32,
+      "kind": "paragraph",
+      "lines": [
+        "\"Is there another way? Besides bugs or people...... What else could we kill.......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 33,
+      "kind": "paragraph",
+      "lines": [
+        "While people were confused, I thought and thought and thought."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 34,
+      "kind": "paragraph",
+      "lines": [
+        "If we couldn't use 'bugs' anymore, now I had to find a new answer."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 35,
+      "kind": "paragraph",
+      "lines": [
+        "The first thing I did was to open my phone and check the comments on the 'first episode' of Omniscient Reader."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 36,
+      "kind": "paragraph",
+      "lines": [
+        "—If a bug works out, what about bacterias? Bacterias are living things."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 37,
+      "kind": "paragraph",
+      "lines": [
+        "This is a story I didn't write."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 38,
+      "kind": "paragraph",
+      "lines": [
+        "—Doesn't stomach acid kill bacteria even if you don't move? Doesn't that mean you can survive without doing anything?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 39,
+      "kind": "paragraph",
+      "lines": [
+        "—Ah, that's ridiculous."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 40,
+      "kind": "paragraph",
+      "lines": [
+        "A world line that exists only as a possibility, imagined by the collective intelligence of readers."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 41,
+      "kind": "paragraph",
+      "lines": [
+        "—What's the principle of hand sanitizer? Doesn't it kill germs?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 42,
+      "kind": "paragraph",
+      "lines": [
+        "—Wouldn't using a hand sanitizer on your palm save your life?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 43,
+      "kind": "paragraph",
+      "lines": [
+        "—There's a lot of germs everywhere."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 44,
+      "kind": "paragraph",
+      "lines": [
+        "......"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 45,
+      "kind": "paragraph",
+      "lines": [
+        "—What happens if you kill yourself?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 46,
+      "kind": "paragraph",
+      "lines": [
+        "\"I'm going to tell you the 'second way.'\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 47,
+      "kind": "system_window",
+      "lines": [
+        "rlaehrwk37: But does that really work?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 48,
+      "kind": "system_message",
+      "lines": [
+        "[There are 16 minutes remaining.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 49,
+      "kind": "paragraph",
+      "lines": [
+        "\"Here's a lighter.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 50,
+      "kind": "paragraph",
+      "lines": [
+        "\"Clothes are made of fabric, so they'll burn fast, right?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 51,
+      "kind": "paragraph",
+      "lines": [
+        "\"It doesn't matter what it is, they're germs, they'll stick to it.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 52,
+      "kind": "paragraph",
+      "lines": [
+        "To execute the 'second way', people quickly obtained the supplies I asked for."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 53,
+      "kind": "paragraph",
+      "lines": [
+        "\"Are you sure this will work?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 54,
+      "kind": "paragraph",
+      "lines": [
+        "I nodded gently and began stacking the bundles of old clothes people had collected in the center of the station."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 55,
+      "kind": "paragraph",
+      "lines": [
+        "Our plan was simple. If the bugs didn't work, we'd kill something else. Something too small to see that existed everywhere."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 56,
+      "kind": "paragraph",
+      "lines": [
+        "Deacon Kim Cheolyang asked with concern."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 57,
+      "kind": "paragraph",
+      "lines": [
+        "\"But do germs count? Aren't germs invisible?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 58,
+      "kind": "paragraph",
+      "lines": [
+        "\"God is also invisible, isn't he?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 59,
+      "kind": "paragraph",
+      "lines": [
+        "Kim Cheolyang seemed to get a little angry at my words."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 60,
+      "kind": "paragraph",
+      "lines": [
+        "Wondering if I had gone too far with the joke, I quickly added."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 61,
+      "kind": "paragraph",
+      "lines": [
+        "\"In biology class, we learn that bacteria are also living things. Even if you can't see it, it's still a living thing.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 62,
+      "kind": "paragraph",
+      "lines": [
+        "I could tell he wasn't convinced, so I explained a little more."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 63,
+      "kind": "paragraph",
+      "lines": [
+        "\"Think of it like aliens. There must be life on planets in the far universe, but we can't see them.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 64,
+      "kind": "paragraph",
+      "lines": [
+        "\"Brother, there are no aliens. Only pseudo-religions believe in that.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 65,
+      "kind": "paragraph",
+      "lines": [
+        "\"Anyway, I'm just giving you an example.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 66,
+      "kind": "paragraph",
+      "lines": [
+        "\"I see, so you're saying they're living things even if we can't see them.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 67,
+      "kind": "paragraph",
+      "lines": [
+        "I nodded, but even I wasn't 100 percent convinced by this strategy."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 68,
+      "kind": "paragraph",
+      "lines": [
+        "Does killing an invisible creature work to clear the scenario?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 69,
+      "kind": "paragraph",
+      "lines": [
+        "In fact, there is no clear answer to that even if you read the whole novel."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 70,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Monarch of the Small Fries' is interested in your strategy.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 71,
+      "kind": "system_message",
+      "lines": [
+        "[A few constellations wonder what you're trying to do.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 72,
+      "kind": "paragraph",
+      "lines": [
+        "However, there is a commonly accepted 'answer' in all scenarios."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 73,
+      "kind": "quote",
+      "lines": [
+        "「The one that will be interesting and convincing to the constellations.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 74,
+      "kind": "paragraph",
+      "lines": [
+        "I mutter to myself, staring at the ceiling."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 75,
+      "kind": "paragraph",
+      "lines": [
+        "\"Maybe it doesn't matter so much what you kill, but how it makes the person who observes it feel.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 76,
+      "kind": "paragraph",
+      "lines": [
+        "\"What?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 77,
+      "kind": "paragraph",
+      "lines": [
+        "\"Maybe what we're killing is one of these germs.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 78,
+      "kind": "paragraph",
+      "lines": [
+        "I opened my phone and showed him a list of the germs we were likely to kill and what they looked like."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 79,
+      "kind": "paragraph",
+      "lines": [
+        "Germs that are always present in subway stations, but we've never actually seen."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 80,
+      "kind": "paragraph",
+      "lines": [
+        "Organisms you can't see with the naked eye, so you wouldn't normally care."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 81,
+      "kind": "paragraph",
+      "lines": [
+        "Now people had to kill them to survive."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 82,
+      "kind": "paragraph",
+      "lines": [
+        "\"I looked it up, and germs are actually living things.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 83,
+      "kind": "paragraph",
+      "lines": [
+        "\"This time we'll succeed, right?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 84,
+      "kind": "paragraph",
+      "lines": [
+        "Still, people's faces lit up a bit at the thought of a new breakthrough."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 85,
+      "kind": "paragraph",
+      "lines": [
+        "Not everyone, of course."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 86,
+      "kind": "paragraph",
+      "lines": [
+        "\"You've all lost your minds.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 87,
+      "kind": "paragraph",
+      "lines": [
+        "The big guy grumbled, glaring at me and the others as if he didn't like the situation."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 88,
+      "kind": "paragraph",
+      "lines": [
+        "But then he glanced away, and he opened his phone and began to surreptitiously search for something."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 89,
+      "kind": "paragraph",
+      "lines": [
+        "I peeked my head out to see what he was searching for."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 90,
+      "kind": "paragraph",
+      "lines": [
+        "—bacteria life"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 91,
+      "kind": "paragraph",
+      "lines": [
+        "—insect life"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 92,
+      "kind": "paragraph",
+      "lines": [
+        "—life"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 93,
+      "kind": "paragraph",
+      "lines": [
+        "—athlete's foot"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 94,
+      "kind": "paragraph",
+      "lines": [
+        "—propecia side effects"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 95,
+      "kind": "paragraph",
+      "lines": [
+        "As he was excitedly perusing the list of search terms, reader ahjussi next to me whispered."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 96,
+      "kind": "paragraph",
+      "lines": [
+        "\"Will this work? We won't be able to identify the germs we kill.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 97,
+      "kind": "paragraph",
+      "lines": [
+        "\"Well, we'll do what we can. Just because you can't find the bodies of the people you kill with"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 98,
+      "kind": "paragraph",
+      "lines": [
+        "missiles doesn't mean you didn't kill them.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 99,
+      "kind": "paragraph",
+      "lines": [
+        "If we had an electron microscope, it would be possible to confirm the death of the bacteria directly, but we didn't."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 100,
+      "kind": "paragraph",
+      "lines": [
+        "So for now, we had to do whatever we could."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 101,
+      "kind": "paragraph",
+      "lines": [
+        "If we can't see the bacteria, we have to at least do something that makes it clear that we intend to kill them."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 102,
+      "kind": "paragraph",
+      "lines": [
+        "That way, the constellations would understand what we were trying to do."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 103,
+      "kind": "paragraph",
+      "lines": [
+        "\"Will burning really kill the germs? What if they don't die?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 104,
+      "kind": "paragraph",
+      "lines": [
+        "\"They're going to die. Why do you boil water? Because it sterilizes everything.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 105,
+      "kind": "paragraph",
+      "lines": [
+        "\"Is that so?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 106,
+      "kind": "paragraph",
+      "lines": [
+        "\"Brothers, didn't you look it up earlier? You should know exactly how to kill them.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 107,
+      "kind": "paragraph",
+      "lines": [
+        "\"Oh, deacon. We're old and don't know what you mean.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 108,
+      "kind": "paragraph",
+      "lines": [
+        "Kim Cheolyang explained to them in frustration."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 109,
+      "kind": "paragraph",
+      "lines": [
+        "\"Ah, germs die because their proteins are denatured when they're heated, right?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 110,
+      "kind": "paragraph",
+      "lines": [
+        "I glanced at Kim Cheolyang with a questioning glance, and he nodded wordlessly."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 111,
+      "kind": "paragraph",
+      "lines": [
+        "A moment later, a small campfire blazed in the center of Geumho Station."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 112,
+      "kind": "system_window",
+      "lines": [
+        "—rlaehrwk99: But by that logic, shouldn't you live because the bacteria in your stomach will die even if you stay still?",
+        "—rlaehrwk24: The stomach is an involuntary muscle, so it's hard to say there was an intention to kill.",
+        "—rlaehrwk99: Isn't it possible to kill by controlling the stomach with force?",
+        "—rlaehrwk24: The involuntary muscle is....",
+        "—rlaehrwk37: Yoo Joonghyuk would be able to control his stomach with force."
+      ],
+      "expected_br_counts": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "block_index": 113,
+      "kind": "paragraph",
+      "lines": [
+        "People threw the bodies of dead bugs and other miscellaneous items they had into the fire."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 114,
+      "kind": "paragraph",
+      "lines": [
+        "Kim Cheolyang threw his cell phone case into the fire, and reader ahjussi tore receipts from his wallet."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 115,
+      "kind": "paragraph",
+      "lines": [
+        "Others threw their shoes into the fire or pulled out their hair."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 116,
+      "kind": "paragraph",
+      "lines": [
+        "The big guy, who was wary of people, secretly took off his socks and threw them into the fire."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 117,
+      "kind": "paragraph",
+      "lines": [
+        "\"My sock.......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 118,
+      "kind": "paragraph",
+      "lines": [
+        "No one brought up the last words of the big guy."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 119,
+      "kind": "paragraph",
+      "lines": [
+        "10, 20......"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 120,
+      "kind": "paragraph",
+      "lines": [
+        "The people stood still and watched the bonfire burn."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 121,
+      "kind": "paragraph",
+      "lines": [
+        "Sitting around the campfire with such a serious look in their eyes, it felt like we were at a religious retreat."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 122,
+      "kind": "paragraph",
+      "lines": [
+        "They were praying to an invisible god, thinking about invisible germs."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 123,
+      "kind": "paragraph",
+      "lines": [
+        "I did the same."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 124,
+      "kind": "paragraph",
+      "lines": [
+        "The invisible bacteria burned in the sacred flame."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 125,
+      "kind": "paragraph",
+      "lines": [
+        "They were burning."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 126,
+      "kind": "paragraph",
+      "lines": [
+        "I believed they were burning."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 127,
+      "kind": "paragraph",
+      "lines": [
+        "However, imagining the death of unknown germs was as difficult as imagining the faces of nameless readers."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 128,
+      "kind": "paragraph",
+      "lines": [
+        "What happened to them?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 129,
+      "kind": "paragraph",
+      "lines": [
+        "Like the reader ahjussi with his hands clasped together, muttering something, others must be alive somewhere in this world."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 130,
+      "kind": "paragraph",
+      "lines": [
+        "Judge Heewon who sat next to me in the theater, the girl who wondered if Kim Dokja was alive or dead, the reader who knew the secret of 1,863, and the reader who memorized the number of ■......."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 131,
+      "kind": "paragraph",
+      "lines": [
+        "I closed my eyes and imagined them safely completing the first scenario."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 132,
+      "kind": "paragraph",
+      "lines": [
+        "\"Did anyone get a message or anything?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 133,
+      "kind": "paragraph",
+      "lines": [
+        "I said, and they looked at each other. Eyes nervous, like worshippers waiting for a message from God."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 134,
+      "kind": "paragraph",
+      "lines": [
+        "\"Oh, there's something in front of me.......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 135,
+      "kind": "paragraph",
+      "lines": [
+        "At that moment, God's message appeared in front of everyone."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 136,
+      "kind": "system_message",
+      "lines": [
+        "[Due to excessive modifications to the current scenario, there is an error with system message display and payment compensation.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 137,
+      "kind": "system_message",
+      "lines": [
+        "[Scenario clear messages will be automatically delivered after the time limit has elapsed.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 138,
+      "kind": "paragraph",
+      "lines": [
+        "Someone muttered in surprise."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 139,
+      "kind": "paragraph",
+      "lines": [
+        "\"What the hell is this.......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 140,
+      "kind": "paragraph",
+      "lines": [
+        "No need to ask, the message was simple."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 141,
+      "kind": "paragraph",
+      "lines": [
+        "No matter what we do next, we won't know if the scenario is cleared until 'the end of the scenario'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 142,
+      "kind": "paragraph",
+      "lines": [
+        "I was stunned."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 143,
+      "kind": "paragraph",
+      "lines": [
+        "No way, I didn't expect this from the administration."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 144,
+      "kind": "paragraph",
+      "lines": [
+        "It was at that moment that a tsuchuchut went off in my head."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 145,
+      "kind": "constellation",
+      "lines": [
+        "[What the hell are you thinking?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 146,
+      "kind": "paragraph",
+      "lines": [
+        "With a tired face, Bihyung appeared."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 147,
+      "kind": "constellation",
+      "lines": [
+        "[This season has been really weird. What is wrong with all of you? If you couldn't kill insects, now it's bacteria... Because of you all, there's an error in the scenario system. Since the message display isn't working, I can't look at the results in advance!]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 148,
+      "kind": "paragraph",
+      "lines": [
+        "Judging by what Bihyung said, the situation was not intended by the Bureau."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 149,
+      "kind": "paragraph",
+      "lines": [
+        "Meanwhile, people were also getting annoyed."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 150,
+      "kind": "paragraph",
+      "lines": [
+        "\"What's up with that? We can't know if we've passed this or not.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 151,
+      "kind": "paragraph",
+      "lines": [
+        "\"Hey, did we solve our scenario?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 152,
+      "kind": "paragraph",
+      "lines": [
+        "\"Bacterias are living things, right? Please answer me!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 153,
+      "kind": "paragraph",
+      "lines": [
+        "Bihyung frowned at the people."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 154,
+      "kind": "constellation",
+      "lines": [
+        "[That's.......]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 155,
+      "kind": "paragraph",
+      "lines": [
+        "The moment Bihyung opened his mouth, sparks flew in the air once again."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 156,
+      "kind": "system_message",
+      "lines": [
+        "[The constellations of the 'absolute evil' system warn the dokkaebi 'Bihyung'.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 157,
+      "kind": "system_message",
+      "lines": [
+        "[The constellations of the 'absolute good' system warn the dokkaebi 'Bihyung'.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 158,
+      "kind": "system_message",
+      "lines": [
+        "[The constellations watching the scenario do not want the dokkaebi to intervene in the scenario.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 159,
+      "kind": "paragraph",
+      "lines": [
+        "Something doesn't feel right about this."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 160,
+      "kind": "constellation",
+      "lines": [
+        "[Hmm...... If the constellations say so.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 161,
+      "kind": "paragraph",
+      "lines": [
+        "Bihyung looked around at the incarnations with a frosty gaze."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 162,
+      "kind": "constellation",
+      "lines": [
+        "[Finding the solution is also part of the scenario, so I cannot tell you the answer. But as a special service, I'll let you know what happens if you fail the scenario.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 163,
+      "kind": "paragraph",
+      "lines": [
+        "The moment I heard that, I checked the timer."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 164,
+      "kind": "system_message",
+      "lines": [
+        "[There are 10 minutes remaining.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 165,
+      "kind": "paragraph",
+      "lines": [
+        "It was time for 'that' to show up."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 169,
+      "kind": "paragraph",
+      "lines": [
+        "Author's Note"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 170,
+      "kind": "paragraph",
+      "lines": [
+        "Thank you. There is one more."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    }
+  ],
+  "token_estimate": {
+    "source_chars": 11007,
+    "estimated_input_tokens": 3808,
+    "estimated_output_tokens_ru": 5504,
+    "estimated_total_tokens": 9312
+  }
+}

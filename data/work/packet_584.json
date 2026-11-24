@@ -1,0 +1,1958 @@
+{
+  "schema_version": 1,
+  "chapter_number": 584,
+  "title": "584 Episode 6. Star Relic (1)",
+  "instructions": "Переведите `title` и `lines` каждого элемента в `items` на русский язык. Не меняйте `block_index`, не добавляйте и не удаляйте строки в `lines`, сохраняйте точное количество тегов <br> внутри каждой строки.",
+  "expected_output_format": {
+    "chapter_number": 584,
+    "title": "<переведённый заголовок>",
+    "items": [
+      {
+        "block_index": 0,
+        "lines": [
+          "<переведённая строка>"
+        ]
+      }
+    ]
+  },
+  "rules": {
+    "honorifics": "Сохранять ключевые корейские обращения в русской транскрипции: -сси, аджосси, хён, нуна, онни, оппа, -ним (там, где они передают дистанцию, вежливость или близость персонажей).",
+    "profanity_and_tone": "Не смягчать резкие реплики, грубость и ругательства; сохранять живой эмоциональный накал сцен.",
+    "story_fable_tale": "Системные и лорные понятия Story / Fable / Tale (с заглавной буквы как сущность Звёздного Потока) унифицировать как «История» (или «Гигантская История»). Обычные бытовые значения переводить по контексту («рассказ», «история», «сказка»).",
+    "fear_concept": "Понятие Fear (сущность/феномен Царства Страха, с заглавной буквы) переводить как «Страх» (с большой буквы в терминологическом смысле); обычную эмоцию — со строчной.",
+    "brackets_and_quotes": "Строго сохранять типографику ORV: [...] — системные сообщения и навыки, 「...」 — цитаты и внутренний голос, 【...】 — речь Внешних Богов, <...> — Туманности и корпорации.",
+    "jang_hayoung_pronouns": "Чан Хаён: когда о ней/нём говорят посторонние — мужской род (он/его); когда говорит о себе сам(а) или с близкими — женский род (она/её), строго по контексту сцены.",
+    "weapons_41st_yjh": "Оружие Ю Джунхёка 41-й регрессии — большое копьё («Копьё Тёмной Небесной Луны»), не меч и не алебарда.",
+    "sneaky_vs_secretive": "Secretive Plotter («Скрытный Интриган») и Sneaky Schemer («Коварный Интриган») — две РАЗНЫЕ сущности. Категорически запрещено подменять одну другой.",
+    "korean_name_declension": "Мужские корейские имена склонять естественно по нормам русского языка (Ким Докча -> Ким Докчи/Докчу, Ю Джунхёк -> Ю Джунхёка), а женские имена, оканчивающиеся на согласный, оставлять несклоняемыми (Хан Суён, Чон Хивон, Син Юсон, Ли Джихё, Кён Сэин)."
+  },
+  "glossary": [
+    {
+      "source": "Kim Dokja",
+      "target": "Ким Докча",
+      "category": "characters",
+      "notes": "Главный герой; игра слов с «докча» (читатель / единственный ребёнок).",
+      "aliases": [
+        "Докча"
+      ],
+      "forbidden": [
+        "Ким Докжа",
+        "Ким Докчжа"
+      ]
+    },
+    {
+      "source": "Han Sooyoung",
+      "target": "Хан Суён",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Суён"
+      ],
+      "forbidden": [
+        "Хан Суёнг"
+      ]
+    },
+    {
+      "source": "Bihyung",
+      "target": "Бихён",
+      "category": "characters",
+      "notes": "",
+      "aliases": [],
+      "forbidden": [
+        "Бихеон"
+      ]
+    },
+    {
+      "source": "Kyung Sein",
+      "target": "Кён Сэин",
+      "category": "side_characters",
+      "notes": "",
+      "aliases": [
+        "Сэин"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Ji Eunyu",
+      "target": "Чи Ыню",
+      "category": "side_characters",
+      "notes": "",
+      "aliases": [
+        "Ыню"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Dansoo",
+      "target": "Дансу",
+      "category": "side_characters",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Demon King of Salvation",
+      "target": "Король Демонов Спасения",
+      "category": "constellations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Sneaky Schemer",
+      "target": "Коварный Интриган",
+      "category": "constellations",
+      "notes": "Отдельная сущность (야비한 모략가), не заменять на «Скрытного Интригана».",
+      "aliases": [],
+      "forbidden": [
+        "Скрытный Интриган",
+        "Скрытый Проектировщик"
+      ]
+    },
+    {
+      "source": "Prisoner of the Golden Headband",
+      "target": "Узник Золотого Обруча",
+      "category": "constellations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Tiger Eating Rice Cakes",
+      "target": "Тигр, Поедающий Рисовые Пирожки",
+      "category": "constellations",
+      "notes": "",
+      "aliases": [
+        "Тигр, поедающий рисовые лепёшки"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Nail-Eating Rat",
+      "target": "Крыса, Грызущая Ногти",
+      "category": "constellations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Kim Dokja's Company",
+      "target": "Компания Ким Докчи",
+      "category": "nebulae",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Zodiac",
+      "target": "Зодиак",
+      "category": "nebulae",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Misreading Association",
+      "target": "Ассоциация Ошибочного Прочтения",
+      "category": "nebulae",
+      "notes": "",
+      "aliases": [
+        "Ассоциация Искажённого Прочтения"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Constellation",
+      "target": "Созвездие",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Demon King",
+      "target": "Король Демонов",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Nebula",
+      "target": "Туманность",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Dokkaebi",
+      "target": "Токкэби",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": [
+        "Доккаэби",
+        "Доккаби"
+      ]
+    },
+    {
+      "source": "Incarnation",
+      "target": "Воплощение",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Probability",
+      "target": "Вероятность",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": [
+        "Правдоподобие"
+      ]
+    },
+    {
+      "source": "Scenario",
+      "target": "Сценарий",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Ways of Survival",
+      "target": "Пути выживания",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Broken Faith",
+      "target": "Сломанная Вера",
+      "category": "items",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Unrealized Thought",
+      "target": "Невоплощённая Мысль",
+      "category": "items",
+      "notes": "Использовать строго в единственном числе.",
+      "aliases": [
+        "Невоплощенная Мысль"
+      ],
+      "forbidden": [
+        "Невоплощённые Мысли"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "block_index": 0,
+      "kind": "paragraph",
+      "lines": [
+        "Back when I didn't know much about web novels, I briefly attended a web novel academy on Ji Eunyu's recommendation."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 1,
+      "kind": "paragraph",
+      "lines": [
+        "The instructor was a writer who had defined a generation of genre literature."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 2,
+      "kind": "paragraph",
+      "lines": [
+        "He had a quiet, nervous voice and spoke so slowly that I dozed off through the entire class."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 3,
+      "kind": "paragraph",
+      "lines": [
+        "However, one thing he said stayed with me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 4,
+      "kind": "paragraph",
+      "lines": [
+        "\"Don't hesitate to include chances, the more the merrier. Give them to the main character.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 5,
+      "kind": "paragraph",
+      "lines": [
+        "The instructor who used to live by those words disappeared from my life. I often imagined that maybe he transmigrated to the novel he wrote."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 6,
+      "kind": "paragraph",
+      "lines": [
+        "Just like me now."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 7,
+      "kind": "paragraph",
+      "lines": [
+        "\"I-I-it's real! Inho-ssi! It's real!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 8,
+      "kind": "paragraph",
+      "lines": [
+        "\"It is.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 9,
+      "kind": "paragraph",
+      "lines": [
+        "Who would have thought that I would be the one to retrieve a hidden piece."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 10,
+      "kind": "paragraph",
+      "lines": [
+        "Kyung Sein let out a scream of delight, shaking the box and turning it over several times."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 11,
+      "kind": "paragraph",
+      "lines": [
+        "\"How did you know? It doesn't say anything about this in Omniscient Reader!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 12,
+      "kind": "paragraph",
+      "lines": [
+        "To be honest, I was just as confused."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 13,
+      "kind": "paragraph",
+      "lines": [
+        "This box was an item from the rough draft of Chapter 23 of Omniscient Reader."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 14,
+      "kind": "quote",
+      "lines": [
+        "「An item described in the manuscript that was cut in the second draft.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 15,
+      "kind": "paragraph",
+      "lines": [
+        "Anyway, the settings existed, so I looked it up just in case, and the item was indeed there."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 16,
+      "kind": "paragraph",
+      "lines": [
+        "Here's the question."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 17,
+      "kind": "paragraph",
+      "lines": [
+        "If this was a setting from 'Ways of Survival', then of course Kim Dokja would have used this box in the original novel."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 18,
+      "kind": "paragraph",
+      "lines": [
+        "However, since Kim Dokja didn't use it, it meant that this 'box' was never mentioned in the text of 'Ways of Survival'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 19,
+      "kind": "paragraph",
+      "lines": [
+        "So, since when had this setting existed?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 20,
+      "kind": "paragraph",
+      "lines": [
+        "From the moment I conceived it? Or from the moment Han Sooyoung handed me the manuscript?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 21,
+      "kind": "paragraph",
+      "lines": [
+        "The more I thought about it, the more my head spun."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 22,
+      "kind": "paragraph",
+      "lines": [
+        "Is this really the '41st turn' of Ways of Survival that I know?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 23,
+      "kind": "paragraph",
+      "lines": [
+        "I didn't know."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 24,
+      "kind": "paragraph",
+      "lines": [
+        "For now, we had the item, so I decided to focus on that."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 25,
+      "kind": "paragraph",
+      "lines": [
+        "I replied to Kyung Sein."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 26,
+      "kind": "paragraph",
+      "lines": [
+        "\"It just occurred to me that this box was originally an item made by a dokkaebi and then discarded.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 27,
+      "kind": "paragraph",
+      "lines": [
+        "The box, which was dangerous enough to unbalance the scenario, was once an item in the Bureau designed by a mad dokkaebi."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 28,
+      "kind": "paragraph",
+      "lines": [
+        "\"Uh...... that's right?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 29,
+      "kind": "paragraph",
+      "lines": [
+        "\"But did they really just dump that one item...... only one in the same place?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 30,
+      "kind": "paragraph",
+      "lines": [
+        "\"Wow, really. Wow.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 31,
+      "kind": "paragraph",
+      "lines": [
+        "After hearing my explanation, Kyung Sein and Dansoo ahjussi each grabbed their knifes and"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 32,
+      "kind": "paragraph",
+      "lines": [
+        "started poking around the floor."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 33,
+      "kind": "paragraph",
+      "lines": [
+        "Of course, they wouldn't find another box."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 34,
+      "kind": "paragraph",
+      "lines": [
+        "There were only two of these boxes."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 35,
+      "kind": "system_message",
+      "lines": [
+        "[Some constellations are shocked to discover the existence of the item.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 36,
+      "kind": "system_message",
+      "lines": [
+        "[A few constellations protest, asking when they released such an item.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 37,
+      "kind": "system_message",
+      "lines": [
+        "[A very small number of constellations start to point out the probability problem.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 38,
+      "kind": "paragraph",
+      "lines": [
+        "A few constellations started to protest, but Bihyung didn't seem to have noticed yet."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 39,
+      "kind": "paragraph",
+      "lines": [
+        "I had wondered if he would close the channel and run away like in the original story, but I was glad he didn't."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 40,
+      "kind": "paragraph",
+      "lines": [
+        "I needed to see the reactions of the constellations."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 41,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Prisoner of the Golden Headband' is interested in your luck.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 42,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Tiger Eating Rice Cakes' asks if that box is real.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 43,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Nail-Eating Rat' widens its eyes in disbelief.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 44,
+      "kind": "paragraph",
+      "lines": [
+        "In this world, there were countless 'readers', including myself."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 45,
+      "kind": "paragraph",
+      "lines": [
+        "Based on what I learned from the encounter with the Misreading Association, readers were possessing not only incarnations, but also constellations."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 46,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Primordial Cow' taps its chin with its forefoot.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 47,
+      "kind": "paragraph",
+      "lines": [
+        "I looked carefully at the indirect messages from the constellations."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 48,
+      "kind": "paragraph",
+      "lines": [
+        "If any of them were readers, they would surely drop clues without realizing it."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 49,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Pig in a Brick House' piles up bricks.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 50,
+      "kind": "system_message",
+      "lines": [
+        "[A constellation who hasn't revealed their modifier tells you to enter the box.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 51,
+      "kind": "paragraph",
+      "lines": [
+        "I observed each subsequent message, trying to figure out who they were."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 52,
+      "kind": "paragraph",
+      "lines": [
+        "Some looked like normal constellations."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 53,
+      "kind": "paragraph",
+      "lines": [
+        "Some looked like they were possessed by readers."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 54,
+      "kind": "paragraph",
+      "lines": [
+        "Some were hard to tell apart."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 55,
+      "kind": "paragraph",
+      "lines": [
+        "Some were possessed by readers but remained true to their constellation concepts."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 56,
+      "kind": "paragraph",
+      "lines": [
+        "Some were possessed by readers who didn't understand the concept of constellations at all."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 57,
+      "kind": "paragraph",
+      "lines": [
+        "Some were just plain weird."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 58,
+      "kind": "paragraph",
+      "lines": [
+        "Of course, this was all speculation on my part."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 59,
+      "kind": "paragraph",
+      "lines": [
+        "After all, what could you really tell from a single line of an indirect message?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 60,
+      "kind": "paragraph",
+      "lines": [
+        "But since they had all read Omniscient Reader, it wouldn't take much for them to act like proper constellations."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 61,
+      "kind": "paragraph",
+      "lines": [
+        "By the way... where was Sneaky Schemer?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 62,
+      "kind": "paragraph",
+      "lines": [
+        "I was most curious about that guy's reaction."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 63,
+      "kind": "paragraph",
+      "lines": [
+        "\"I guess that's the only box, I can't find anything else.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 64,
+      "kind": "paragraph",
+      "lines": [
+        "Apparently, Kyung Sein and Dansoo ahjussi were still digging."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 65,
+      "kind": "paragraph",
+      "lines": [
+        "\"Ugh...... well, we have one. It's too bad we don't have a Broken Faith, because that's all we need for Unbroken Faith!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 66,
+      "kind": "paragraph",
+      "lines": [
+        "As Kyung Sein said, we would only need that, but I couldn't get my hands on a Broken Faith right away."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 67,
+      "kind": "paragraph",
+      "lines": [
+        "So I made a decision."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 68,
+      "kind": "paragraph",
+      "lines": [
+        "\"I've been thinking about it, and since we're at this point, why don't we try something different?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 69,
+      "kind": "paragraph",
+      "lines": [
+        "\"Something different?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 70,
+      "kind": "paragraph",
+      "lines": [
+        "I pulled out an item I had just gotten from near the box."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 71,
+      "kind": "system_window",
+      "lines": [
+        "[Item information]",
+        "Name: Unrealized Thought",
+        "Rating: D",
+        "Description: A shapeless weapon of the past. It could have been anything, but ultimately became nothing."
+      ],
+      "expected_br_counts": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "block_index": 72,
+      "kind": "paragraph",
+      "lines": [
+        "An item that looked like spoiled jelly at first glance."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 73,
+      "kind": "paragraph",
+      "lines": [
+        "\"If you guys don't mind, I'd like to put this item in.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 74,
+      "kind": "paragraph",
+      "lines": [
+        "\"This is... didn't this item not appear in Omniscient Reader?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 75,
+      "kind": "paragraph",
+      "lines": [
+        "Right. It probably wasn't used in Ways of Survival either."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 76,
+      "kind": "paragraph",
+      "lines": [
+        "Kim Dokja wasn't particularly interested in this item, either."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 77,
+      "kind": "paragraph",
+      "lines": [
+        "Kyung Sein glanced at the Unrealized Thought and replied,"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 78,
+      "kind": "paragraph",
+      "lines": [
+        "\"Well, we wouldn't have found the box if it weren't for you, Inho-ssi, so it's up to you.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 79,
+      "kind": "paragraph",
+      "lines": [
+        "Dansoo ahjussi nodded."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 80,
+      "kind": "paragraph",
+      "lines": [
+        "\"I think so too.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 81,
+      "kind": "paragraph",
+      "lines": [
+        "\"Wow, we're becoming a bit like <Kim Dokja's Company>, aren't we?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 82,
+      "kind": "paragraph",
+      "lines": [
+        "\"Haha, I guess so.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 83,
+      "kind": "paragraph",
+      "lines": [
+        "The two of them conceded so readily, I almost felt rather sorry."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 84,
+      "kind": "paragraph",
+      "lines": [
+        "\"Thank you then.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 85,
+      "kind": "paragraph",
+      "lines": [
+        "Without further ado, I put 'Unrealized Thought' into the 'random item box'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 86,
+      "kind": "system_message",
+      "lines": [
+        "[A constellation who hasn't revealed their modifier says it's a risky choice.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 87,
+      "kind": "paragraph",
+      "lines": [
+        "I knew it was a risky choice."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 88,
+      "kind": "paragraph",
+      "lines": [
+        "But in the first place, there was a chance of failure no matter what I put in."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 89,
+      "kind": "paragraph",
+      "lines": [
+        "\"Now we just need the catalyst...\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 90,
+      "kind": "paragraph",
+      "lines": [
+        "\"The core of a demonic species, right?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 91,
+      "kind": "paragraph",
+      "lines": [
+        "\"Yes.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 92,
+      "kind": "paragraph",
+      "lines": [
+        "To use the box like in the original story, we need to put the target item and the demonic species' core inside."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 93,
+      "kind": "paragraph",
+      "lines": [
+        "Unfortunately, we failed to hunt the Dark Keeper, a 7th-grade demonic species."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 94,
+      "kind": "paragraph",
+      "lines": [
+        "For now, it's best to buy one from the auction... though I don't know what kind of madman would risk a Demon King's curse to hunt a demonic species this early."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 95,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Tiger Eating Rice Cakes' asks if you need a 'Demonic Species Core'.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 96,
+      "kind": "paragraph",
+      "lines": [
+        "We looked up in surprise."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 97,
+      "kind": "paragraph",
+      "lines": [
+        "What was even more surprising was its next words."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 98,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Tiger Eating Rice Cakes' says that it can give you the 'Demonic Species Core'.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 99,
+      "kind": "paragraph",
+      "lines": [
+        "Kyung Sein, who was looking up at the air with us, asked in a thoughtful voice,"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 100,
+      "kind": "paragraph",
+      "lines": [
+        "\"Tiger Eating Rice Cakes is the one from the traditional fairy tale, right? 'The Sun and the Moon'.......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 101,
+      "kind": "paragraph",
+      "lines": [
+        "I nodded."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 102,
+      "kind": "paragraph",
+      "lines": [
+        "Because that's the only fairy tale that comes to mind when I think of Korean 'Tiger Eating Rice Cakess'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 103,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Tiger Eating Rice Cakes' says it's him.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 104,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Prisoner of the Golden Headband' picks his nose and asks if he's a famous constellation.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 105,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Tiger Eating Rice Cakes' timidly replies that he is a bit famous on the Korean Peninsula.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 106,
+      "kind": "paragraph",
+      "lines": [
+        "To get an item sponsored by a constellation this early. Even Kim Dokja had never received such a sponsorship at this stage."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 107,
+      "kind": "paragraph",
+      "lines": [
+        "If he was sponsoring an item so early on, he had to have a reason."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 108,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Tiger Eating Rice Cakes' says he has a favor to ask in exchange for the 'Demonic Species Core'.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 109,
+      "kind": "paragraph",
+      "lines": [
+        "As I said."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 110,
+      "kind": "paragraph",
+      "lines": [
+        "\"I appreciate the offer, but.......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 111,
+      "kind": "paragraph",
+      "lines": [
+        "Normally, this kind of deal would be followed by a ridiculous request."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 112,
+      "kind": "paragraph",
+      "lines": [
+        "That's Kim Dokja's proverb."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 113,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Tiger Eating Rice Cakes' says he only needs you to attend one 'Twelve Zodiacs Ball' later.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 114,
+      "kind": "paragraph",
+      "lines": [
+        "Twelve Zodiacs Ball?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 115,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Tiger Eating Rice Cakes' says it's just a twelve zodiacs social event.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 116,
+      "kind": "paragraph",
+      "lines": [
+        "This was another unexpected suggestion."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 117,
+      "kind": "paragraph",
+      "lines": [
+        "Twelve Zodiacs Ball."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 118,
+      "kind": "paragraph",
+      "lines": [
+        "It was probably the zodiac version of the 'Constellation Banquet' or the 'Gourmet Association'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 119,
+      "kind": "paragraph",
+      "lines": [
+        "As they listened to the message, Kyung Sein and ahjussi whispered."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 120,
+      "kind": "paragraph",
+      "lines": [
+        "\"Wow, it's the <Twelve Zodiacs>.......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 121,
+      "kind": "paragraph",
+      "lines": [
+        "\"They're the rat, cow, tiger, rabbit, dragon, snake, horse, sheep, monkey, chicken, dog, and pig. Right?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 122,
+      "kind": "paragraph",
+      "lines": [
+        "\"That's...... right.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 123,
+      "kind": "paragraph",
+      "lines": [
+        "\"When I was young, there was a cartoon movie with twelve zodiacs as the main characters.......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 124,
+      "kind": "paragraph",
+      "lines": [
+        "In the original story, the constellations of the <Twelve Zodiacs> nebula were Kim Dokja's enemies."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 125,
+      "kind": "paragraph",
+      "lines": [
+        "But this time, the situation was a little different."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 126,
+      "kind": "paragraph",
+      "lines": [
+        "Was it because I was a villain?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 127,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Tiger Eating Rice Cakes' says there's no need to feel pressured.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 128,
+      "kind": "paragraph",
+      "lines": [
+        "I've made my decision."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 129,
+      "kind": "paragraph",
+      "lines": [
+        "\"I'll attend the Twelve Zodiacs Ball. Is that really all I have to do?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 130,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Tiger Eating Rice Cakes' says that's really it.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 131,
+      "kind": "paragraph",
+      "lines": [
+        "\"Okay, then.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 132,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Tiger Eating Rice Cakes' is greatly pleased.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 133,
+      "kind": "system_message",
+      "lines": [
+        "[A '7th-grade Demonic Species Core' has been sponsored.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 134,
+      "kind": "paragraph",
+      "lines": [
+        "It was a very cool sponsorship."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 135,
+      "kind": "paragraph",
+      "lines": [
+        "A pitch-black orb then appeared from thin air."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 136,
+      "kind": "paragraph",
+      "lines": [
+        "'7th-grade Demonic Species Core'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 137,
+      "kind": "paragraph",
+      "lines": [
+        "It was even superior in color."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 138,
+      "kind": "paragraph",
+      "lines": [
+        "Tsuchuchuchut."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 139,
+      "kind": "paragraph",
+      "lines": [
+        "Judging by the faint sparks, it seemed that the 'Tiger Eating Rice Cakes' had used up quite a bit of Probability."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 140,
+      "kind": "paragraph",
+      "lines": [
+        "What was he up to, showing such sincerity to me when I wasn't even his incarnation?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 141,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Primordial Cow' is sharing the Probability of 'Tiger Eating Rice Cakes'.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 142,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Pig in a Brick House' is sharing the Probability of 'Tiger Eating Rice Cakes'.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 143,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Dog Who Threw Himself Into the Flames' is sharing the Probability of 'Tiger Eating Rice Cakes'.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 144,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Prisoner of the Golden Headband' claps his hands at the animal brothers.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 145,
+      "kind": "paragraph",
+      "lines": [
+        "Anyway, thanks to my animal friends, I had gathered all the ingredients."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 146,
+      "kind": "paragraph",
+      "lines": [
+        "Looking at the glowing core, Kyung Sein said excitedly."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 147,
+      "kind": "paragraph",
+      "lines": [
+        "\"Oh, go ahead and put it in, Inho-ssi!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 148,
+      "kind": "paragraph",
+      "lines": [
+        "\"Why don't the three of us close it together?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 149,
+      "kind": "paragraph",
+      "lines": [
+        "\"Okay.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 150,
+      "kind": "paragraph",
+      "lines": [
+        "We closed the box."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 151,
+      "kind": "paragraph",
+      "lines": [
+        "Kyung Sein chanted."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 152,
+      "kind": "paragraph",
+      "lines": [
+        "\"God! Buddha! Demon King of Salvation! Please!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 153,
+      "kind": "paragraph",
+      "lines": [
+        "A moment later, a bright light emanated from the box."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 157,
+      "kind": "paragraph",
+      "lines": [
+        "A place dozens of steps away from the core of the 'Edge of Darkness'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 158,
+      "kind": "paragraph",
+      "lines": [
+        "In the center of the deep, black ether of the 'Dark Root', a woman in a white coat stood."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 159,
+      "kind": "paragraph",
+      "lines": [
+        "\"Wow.......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 160,
+      "kind": "paragraph",
+      "lines": [
+        "She frowned at the 'random item box' glowing in the distance."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 161,
+      "kind": "paragraph",
+      "lines": [
+        "\"Even the box was taken? From me? Is that even possible?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 162,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Sneaky Schemer' asks why didn't you move faster.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 163,
+      "kind": "paragraph",
+      "lines": [
+        "\"Who's that guy?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 164,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Sneaky Schemer' says he seems to be a reader from another world line.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 165,
+      "kind": "paragraph",
+      "lines": [
+        "\"A reader?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 166,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Sneaky Schemer' says yes.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 167,
+      "kind": "paragraph",
+      "lines": [
+        "The woman tilted her head at that, then smiled, baring her fangs."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 168,
+      "kind": "paragraph",
+      "lines": [
+        "\"Is that so?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 169,
+      "kind": "paragraph",
+      "lines": [
+        "In her hand was Broken Faith, which no reader in this world should have been able to get."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 173,
+      "kind": "paragraph",
+      "lines": [
+        "Author's Note"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 174,
+      "kind": "paragraph",
+      "lines": [
+        "You know everything now, right?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    }
+  ],
+  "token_estimate": {
+    "source_chars": 10682,
+    "estimated_input_tokens": 3867,
+    "estimated_output_tokens_ru": 5341,
+    "estimated_total_tokens": 9208
+  }
+}

@@ -1,0 +1,1912 @@
+{
+  "schema_version": 1,
+  "chapter_number": 564,
+  "title": "564 Episode 3. Protagonist(?) (1)",
+  "instructions": "Переведите `title` и `lines` каждого элемента в `items` на русский язык. Не меняйте `block_index`, не добавляйте и не удаляйте строки в `lines`, сохраняйте точное количество тегов <br> внутри каждой строки.",
+  "expected_output_format": {
+    "chapter_number": 564,
+    "title": "<переведённый заголовок>",
+    "items": [
+      {
+        "block_index": 0,
+        "lines": [
+          "<переведённая строка>"
+        ]
+      }
+    ]
+  },
+  "rules": {
+    "honorifics": "Сохранять ключевые корейские обращения в русской транскрипции: -сси, аджосси, хён, нуна, онни, оппа, -ним (там, где они передают дистанцию, вежливость или близость персонажей).",
+    "profanity_and_tone": "Не смягчать резкие реплики, грубость и ругательства; сохранять живой эмоциональный накал сцен.",
+    "story_fable_tale": "Системные и лорные понятия Story / Fable / Tale (с заглавной буквы как сущность Звёздного Потока) унифицировать как «История» (или «Гигантская История»). Обычные бытовые значения переводить по контексту («рассказ», «история», «сказка»).",
+    "fear_concept": "Понятие Fear (сущность/феномен Царства Страха, с заглавной буквы) переводить как «Страх» (с большой буквы в терминологическом смысле); обычную эмоцию — со строчной.",
+    "brackets_and_quotes": "Строго сохранять типографику ORV: [...] — системные сообщения и навыки, 「...」 — цитаты и внутренний голос, 【...】 — речь Внешних Богов, <...> — Туманности и корпорации.",
+    "jang_hayoung_pronouns": "Чан Хаён: когда о ней/нём говорят посторонние — мужской род (он/его); когда говорит о себе сам(а) или с близкими — женский род (она/её), строго по контексту сцены.",
+    "weapons_41st_yjh": "Оружие Ю Джунхёка 41-й регрессии — большое копьё («Копьё Тёмной Небесной Луны»), не меч и не алебарда.",
+    "sneaky_vs_secretive": "Secretive Plotter («Скрытный Интриган») и Sneaky Schemer («Коварный Интриган») — две РАЗНЫЕ сущности. Категорически запрещено подменять одну другой.",
+    "korean_name_declension": "Мужские корейские имена склонять естественно по нормам русского языка (Ким Докча -> Ким Докчи/Докчу, Ю Джунхёк -> Ю Джунхёка), а женские имена, оканчивающиеся на согласный, оставлять несклоняемыми (Хан Суён, Чон Хивон, Син Юсон, Ли Джихё, Кён Сэин)."
+  },
+  "glossary": [
+    {
+      "source": "Kim Dokja",
+      "target": "Ким Докча",
+      "category": "characters",
+      "notes": "Главный герой; игра слов с «докча» (читатель / единственный ребёнок).",
+      "aliases": [
+        "Докча"
+      ],
+      "forbidden": [
+        "Ким Докжа",
+        "Ким Докчжа"
+      ]
+    },
+    {
+      "source": "Bihyung",
+      "target": "Бихён",
+      "category": "characters",
+      "notes": "",
+      "aliases": [],
+      "forbidden": [
+        "Бихеон"
+      ]
+    },
+    {
+      "source": "Lee Hakhyun",
+      "target": "Ли Хакхён",
+      "category": "side_characters",
+      "notes": "Протагонист побочной истории, автор ORV из другой мировой линии.",
+      "aliases": [
+        "Хакхён"
+      ],
+      "forbidden": [
+        "Ли Хакхюн"
+      ]
+    },
+    {
+      "source": "Cheon Inho",
+      "target": "Чхон Инхо",
+      "category": "side_characters",
+      "notes": "",
+      "aliases": [
+        "Инхо"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Lee Dansoo",
+      "target": "Ли Дансу",
+      "category": "side_characters",
+      "notes": "Вариант транскрипции имени Ли Дансу в английском переводе; унифицировать.",
+      "aliases": [
+        "Дансу"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Kim Cheolyang",
+      "target": "Ким Чхольян",
+      "category": "side_characters",
+      "notes": "",
+      "aliases": [
+        "Чхольян"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Uriel",
+      "target": "Уриэль",
+      "category": "constellations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Monarch of the Small Fries",
+      "target": "Владыка Мелкой Сошки",
+      "category": "constellations",
+      "notes": "",
+      "aliases": [
+        "Монарх Мелкой Сошки"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Star Stream",
+      "target": "Звёздный Поток",
+      "category": "nebulae",
+      "notes": "",
+      "aliases": [
+        "Звездный Поток"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Constellation",
+      "target": "Созвездие",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Incarnation",
+      "target": "Воплощение",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Scenario",
+      "target": "Сценарий",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Ways of Survival",
+      "target": "Пути выживания",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Omniscient Reader's Viewpoint",
+      "target": "Точка зрения всеведущего читателя",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Geumho Station",
+      "target": "Станция Кымхо",
+      "category": "locations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    }
+  ],
+  "items": [
+    {
+      "block_index": 0,
+      "kind": "quote",
+      "lines": [
+        "「When you say 'kill', do you mean I have to kill them myself?」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 1,
+      "kind": "paragraph",
+      "lines": [
+        "Although it doesn't appear in Omniscient Reader, there is an incarnation that solved the first scenario using 'suicide' in 'Ways of Survival'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 2,
+      "kind": "paragraph",
+      "lines": [
+        "Fingersnapper 'Christina Page'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 3,
+      "kind": "paragraph",
+      "lines": [
+        "A former legal hypnosis specialist at the FBI, she solved the first scenario by brainwashing a criminal she was working with into committing suicide."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 4,
+      "kind": "paragraph",
+      "lines": [
+        "'Demagogy Killing.'"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 5,
+      "kind": "paragraph",
+      "lines": [
+        "The way I was credited was similar."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 6,
+      "kind": "paragraph",
+      "lines": [
+        "The characters who believed the misinformation chose to 'take their own lives' because of me, and I was credited for an 'indirect murder' for causing the mass suicide."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 7,
+      "kind": "paragraph",
+      "lines": [
+        "I wondered if such a murder was even possible, but it happened."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 8,
+      "kind": "system_message",
+      "lines": [
+        "[The character you are currently possessing is 'Demagogue Cheon Inho'.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 9,
+      "kind": "paragraph",
+      "lines": [
+        "Perhaps it's because he's the one I'm possessing."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 10,
+      "kind": "system_message",
+      "lines": [
+        "[Your attunement to the character you are currently possessing is too high.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 11,
+      "kind": "system_message",
+      "lines": [
+        "[Disable some of the possessed character's attributes.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 12,
+      "kind": "paragraph",
+      "lines": [
+        "As I looked down at my bloody hands, I slowly realized what I had done."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 13,
+      "kind": "paragraph",
+      "lines": [
+        "If I hadn't possessed Cheon Inho, what would have happened to the people of Geumho Station?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 14,
+      "kind": "quote",
+      "lines": [
+        "「Wouldn't they have been killed by Cheon Inho the same way anyway?」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 15,
+      "kind": "paragraph",
+      "lines": [
+        "If so, was it the writer Lee Hakhyun or the character Cheon Inho who killed them?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 16,
+      "kind": "paragraph",
+      "lines": [
+        "In this world, am I a murderer who killed people or a writer who described the death of a character?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 17,
+      "kind": "paragraph",
+      "lines": [
+        "As I breathed in and out, my complicated thoughts quickly subsided."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 18,
+      "kind": "system_message",
+      "lines": [
+        "[The exclusive attribute is activated.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 19,
+      "kind": "paragraph",
+      "lines": [
+        "Now was not the time for moral tension."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 20,
+      "kind": "paragraph",
+      "lines": [
+        "I would encounter people like Life Leader Kim Cheolyang many times in the future."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 21,
+      "kind": "paragraph",
+      "lines": [
+        "I must continue to live in this world by killing people."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 22,
+      "kind": "system_message",
+      "lines": [
+        "[Compensation settlement is delayed due to an unexpected scenario check. Please wait.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 23,
+      "kind": "paragraph",
+      "lines": [
+        "At least until I figure out the secrets of this world."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 24,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Monarch of the Small Fries' is interested in you.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 25,
+      "kind": "system_message",
+      "lines": [
+        "[The constellations of the 'absolute evil' system are interested in you.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 26,
+      "kind": "system_message",
+      "lines": [
+        "[A few constellations are curious about your name.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 27,
+      "kind": "paragraph",
+      "lines": [
+        "I came to my senses as the messages from the constellations began in earnest."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 28,
+      "kind": "system_message",
+      "lines": [
+        "[The constellations of the 'absolute evil' system are backing you.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 29,
+      "kind": "system_message",
+      "lines": [
+        "[Constellations have sponsored you 300 coins.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 30,
+      "kind": "paragraph",
+      "lines": [
+        "I had the attention of the constellations of the 'absolute evil' system."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 31,
+      "kind": "paragraph",
+      "lines": [
+        "Apparently, they had interpreted my 'demagogy killing' in a malicious way."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 32,
+      "kind": "paragraph",
+      "lines": [
+        "This did not bode well."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 33,
+      "kind": "paragraph",
+      "lines": [
+        "This would make it harder for me to get sponsorship from the constellations of the 'absolute good' system."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 34,
+      "kind": "system_message",
+      "lines": [
+        "[The constellations of the 'absolute good' system are shocked by the local tragedy.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 35,
+      "kind": "system_message",
+      "lines": [
+        "[The constellations of the 'absolute good' system are moved by your heroism.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 36,
+      "kind": "paragraph",
+      "lines": [
+        "Huh?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 37,
+      "kind": "system_message",
+      "lines": [
+        "[The constellations of the 'absolute good' system are impressed by your good intentions in trying to save everyone.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 38,
+      "kind": "system_message",
+      "lines": [
+        "[Constellations have sponsored you 300 coins.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 39,
+      "kind": "system_message",
+      "lines": [
+        "[The constellations of the 'absolute evil' system are questioning what the hell they are talking about.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 40,
+      "kind": "paragraph",
+      "lines": [
+        "Everyone seems to have their own interpretation of this."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 41,
+      "kind": "paragraph",
+      "lines": [
+        "\"Hey...... are you all right?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 42,
+      "kind": "paragraph",
+      "lines": [
+        "I turned my head to see the worried-looking reader ahjussi."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 43,
+      "kind": "paragraph",
+      "lines": [
+        "\"Uh, yeah. And you?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 44,
+      "kind": "paragraph",
+      "lines": [
+        "\"I'm fine. I hope so.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 45,
+      "kind": "paragraph",
+      "lines": [
+        "The reader ahjussi's face was still white. It would be even stranger if he was still sane under the circumstances."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 46,
+      "kind": "paragraph",
+      "lines": [
+        "I stiffly bowed my head in greeting."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 47,
+      "kind": "paragraph",
+      "lines": [
+        "\"Thank you for earlier. You saved my life.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 48,
+      "kind": "paragraph",
+      "lines": [
+        "Honestly, the credit should go to him, not me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 49,
+      "kind": "paragraph",
+      "lines": [
+        "He fought against the Cheoldoo Group's boss to save me with a physique that was at least as good as Kim Dokja's."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 50,
+      "kind": "system_message",
+      "lines": [
+        "[The constellations of the 'absolute good' system's eyes are shining.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 51,
+      "kind": "paragraph",
+      "lines": [
+        "However, he was actually embarrassed."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 52,
+      "kind": "paragraph",
+      "lines": [
+        "\"No, rather, I owe you. If you hadn't saved me, I would be lying there too, but...... the germs worked for you?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 53,
+      "kind": "paragraph",
+      "lines": [
+        "Ahjussi still doesn't know that I 'demagogy killed' the people of Geumho Station."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 54,
+      "kind": "paragraph",
+      "lines": [
+        "I thought about just being honest, but I figured it was probably better not to."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 55,
+      "kind": "paragraph",
+      "lines": [
+        "\"I don't know either, they also killed germs together.......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 56,
+      "kind": "paragraph",
+      "lines": [
+        "\"Maybe only your germs died? Although I don't know if that's possible.......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 57,
+      "kind": "paragraph",
+      "lines": [
+        "He seemed to conclude that was the only answer. Instead of answering him, I looked toward the bodies."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 58,
+      "kind": "paragraph",
+      "lines": [
+        "He interpreted my silence and he quickly added."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 59,
+      "kind": "paragraph",
+      "lines": [
+        "\"It's not your fault, you did the best you could.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 60,
+      "kind": "paragraph",
+      "lines": [
+        "The reader ahjussi let out a small sigh, looked at me with a pitying look on his face, and then looked back at the dead people and muttered."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 61,
+      "kind": "paragraph",
+      "lines": [
+        "\"Honestly..... they didn't seem to be good people.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 62,
+      "kind": "paragraph",
+      "lines": [
+        "I felt guilty for trying to deceive a naive middle-aged man, but I thought it was better than telling him the truth."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 63,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Monarch of the Small Fries' admires your wickedness.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 64,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Woman Who Pours Water into a Bottomless Pit' is touched by your heart.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 65,
+      "kind": "paragraph",
+      "lines": [
+        "Which character does this ahjussi possess, anyway?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 66,
+      "kind": "paragraph",
+      "lines": [
+        "Given his unfamiliar appearance, I'm pretty sure he's an extra."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 67,
+      "kind": "paragraph",
+      "lines": [
+        "Come to think of it, I have the skill to figure it out."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 68,
+      "kind": "system_message",
+      "lines": [
+        "[The information of this person can't be read in 'Character List'.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 69,
+      "kind": "system_message",
+      "lines": [
+        "[This person is a 'character' but not a 'character'.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 70,
+      "kind": "paragraph",
+      "lines": [
+        "I see what the situation is."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 71,
+      "kind": "paragraph",
+      "lines": [
+        "This man's body is a character, but the man's spirit that's possessing it is not."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 72,
+      "kind": "system_message",
+      "lines": [
+        "[The exclusive skill has been activated.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 73,
+      "kind": "paragraph",
+      "lines": [
+        "It was then that a strange message popped up."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 74,
+      "kind": "system_message",
+      "lines": [
+        "[The exclusive skill 'Readers' Comments List' has been activated.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 75,
+      "kind": "paragraph",
+      "lines": [
+        "Readers' Comments List?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 76,
+      "kind": "system_message",
+      "lines": [
+        "[Do you want to use 'Readers' Comments List' in this person?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 77,
+      "kind": "paragraph",
+      "lines": [
+        "I nodded tentatively."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 78,
+      "kind": "system_message",
+      "lines": [
+        "[Checking the reader's profile information.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 79,
+      "kind": "system_window",
+      "lines": [
+        "ID: wldbsdldkQk80",
+        "Platform: Textia",
+        "Total Comments : 32",
+        "Reader level : 16"
+      ],
+      "expected_br_counts": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "block_index": 80,
+      "kind": "system_message",
+      "lines": [
+        "[You can use coins to view the comments written by this reader.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 81,
+      "kind": "system_message",
+      "lines": [
+        "[Number of comments currently available for free: 3.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 82,
+      "kind": "paragraph",
+      "lines": [
+        "No, I can see this?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 83,
+      "kind": "paragraph",
+      "lines": [
+        "I looked at the sorrowful ahjussi's profile."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 84,
+      "kind": "paragraph",
+      "lines": [
+        "Should I see just one?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 85,
+      "kind": "system_window",
+      "lines": [
+        "Jiyoon-ah, are you reading a novel in your room again?",
+        "—(Omniscient Reader's Viewpoint, Chapter 1)"
+      ],
+      "expected_br_counts": [
+        0,
+        0
+      ]
+    },
+    {
+      "block_index": 86,
+      "kind": "paragraph",
+      "lines": [
+        "Ahjussi's first comment immediately came to my mind."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 87,
+      "kind": "paragraph",
+      "lines": [
+        "The story about having a daughter must be true."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 88,
+      "kind": "paragraph",
+      "lines": [
+        "Just one more."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 89,
+      "kind": "system_window",
+      "lines": [
+        "Jiyoon-ah, open the door. I know you're reading the novel.",
+        "—(Omniscient Reader's Viewpoint, Chapter 7)"
+      ],
+      "expected_br_counts": [
+        0,
+        0
+      ]
+    },
+    {
+      "block_index": 90,
+      "kind": "paragraph",
+      "lines": [
+        "I thought I knew how this ahjussi came to find Omniscient Reader."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 91,
+      "kind": "paragraph",
+      "lines": [
+        "I've already seen two, so let's just take a look at the rest."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 92,
+      "kind": "system_window",
+      "lines": [
+        "How do I pay for the next episode?",
+        "—(Omniscient Reader's Viewpoint, Chapter 25)"
+      ],
+      "expected_br_counts": [
+        0,
+        0
+      ]
+    },
+    {
+      "block_index": 93,
+      "kind": "system_message",
+      "lines": [
+        "[Pay coins to see additional comments.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 94,
+      "kind": "paragraph",
+      "lines": [
+        "For some reason, I felt like I could trust this man."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 95,
+      "kind": "paragraph",
+      "lines": [
+        "Feeling unnecessarily apologetic, I held out my hand to him."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 96,
+      "kind": "paragraph",
+      "lines": [
+        "\"Allow me to introduce myself.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 97,
+      "kind": "paragraph",
+      "lines": [
+        "\"Okay.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 98,
+      "kind": "paragraph",
+      "lines": [
+        "\"My name is Cheon Inho.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 99,
+      "kind": "paragraph",
+      "lines": [
+        "I could see him flustered by my words."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 100,
+      "kind": "paragraph",
+      "lines": [
+        "I pointed a finger at my face and smiled weakly."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 101,
+      "kind": "paragraph",
+      "lines": [
+        "\"That's his name.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 102,
+      "kind": "paragraph",
+      "lines": [
+        "\"Oh, I see, that sounds like a name I've heard before.......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 103,
+      "kind": "paragraph",
+      "lines": [
+        "He didn't seem to recognize Cheon Inho."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 104,
+      "kind": "paragraph",
+      "lines": [
+        "\"He's the villain in the beginning, at Geumho Station.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 105,
+      "kind": "paragraph",
+      "lines": [
+        "\"Oh......!\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 106,
+      "kind": "paragraph",
+      "lines": [
+        "\"Yeah. That's right, the bad guy.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 107,
+      "kind": "paragraph",
+      "lines": [
+        "He had other nicknames, such as 'the one to be torn to pieces' and 'someone to burn to death with Hellfire', but I didn't say those."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 108,
+      "kind": "paragraph",
+      "lines": [
+        "Ahjussi's face had already turned pale."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 109,
+      "kind": "paragraph",
+      "lines": [
+        "\"W-what should we do then?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 110,
+      "kind": "paragraph",
+      "lines": [
+        "\"It's still early, so there's room for renewal, right? What about you? Who are you?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 111,
+      "kind": "paragraph",
+      "lines": [
+        "\"I'm Lee Dansoo...... it says.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 112,
+      "kind": "paragraph",
+      "lines": [
+        "That seems to be the name of the person ahjussi's possessing."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 113,
+      "kind": "paragraph",
+      "lines": [
+        "Lee Dansoo, Lee Dansoo."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 114,
+      "kind": "paragraph",
+      "lines": [
+        "I didn't remember anything off the top of my head."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 115,
+      "kind": "paragraph",
+      "lines": [
+        "By the way, if he knows the name of the person he's possessing, can he see his attribute window?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 116,
+      "kind": "paragraph",
+      "lines": [
+        "\"I'll give you my attributes and skills.......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 117,
+      "kind": "paragraph",
+      "lines": [
+        "\"Wait, you can't say things like that.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 118,
+      "kind": "paragraph",
+      "lines": [
+        "\"What? Oh, yeah.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 119,
+      "kind": "paragraph",
+      "lines": [
+        "The old man came to his senses as if he had remembered something."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 120,
+      "kind": "paragraph",
+      "lines": [
+        "\"You sound just like Kim Dokja, hehe.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 121,
+      "kind": "paragraph",
+      "lines": [
+        "\"Yeah. It's better to act like him right now.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 122,
+      "kind": "paragraph",
+      "lines": [
+        "\"Did you finish reading 'that novel'?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 123,
+      "kind": "paragraph",
+      "lines": [
+        "\"Yes.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 124,
+      "kind": "paragraph",
+      "lines": [
+        "Well, technically, I didn't read it, I wrote it."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 125,
+      "kind": "paragraph",
+      "lines": [
+        "\"Then everyone who read that novel is like us.......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 126,
+      "kind": "paragraph",
+      "lines": [
+        "I suddenly realized what he was thinking."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 127,
+      "kind": "paragraph",
+      "lines": [
+        "\"Don't worry too much. I'm sure they all survived, just like us.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 128,
+      "kind": "paragraph",
+      "lines": [
+        "Especially his daughter."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 129,
+      "kind": "paragraph",
+      "lines": [
+        "She didn't study, she just read Omniscient Reader, so she 100% survived. The old man smiled weakly."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 130,
+      "kind": "paragraph",
+      "lines": [
+        "\"Thank you.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 131,
+      "kind": "paragraph",
+      "lines": [
+        "\"Shall we call ourselves by the names we just mentioned from now on?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 132,
+      "kind": "paragraph",
+      "lines": [
+        "\"All right.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 133,
+      "kind": "paragraph",
+      "lines": [
+        "He nodded, his eyes slightly relaxed."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 134,
+      "kind": "paragraph",
+      "lines": [
+        "It wasn't like we'd had a conversation where he'd asked me who my favorite was, but I felt like we'd suddenly formed a plausible bond."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 135,
+      "kind": "paragraph",
+      "lines": [
+        "But that was the end of our fraternity."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 136,
+      "kind": "system_message",
+      "lines": [
+        "[Survivors from the areas 3-4 of Geumho Station: Cheon Inho, Lee Dansoo. A total of 2 survivors.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 137,
+      "kind": "paragraph",
+      "lines": [
+        "The system message that had been interrupted began to play again."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 138,
+      "kind": "system_message",
+      "lines": [
+        "[Additional compensation settlement will begin.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 139,
+      "kind": "system_message",
+      "lines": [
+        "[200 coins have been earned as additional compensation.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 140,
+      "kind": "paragraph",
+      "lines": [
+        "Subsequently, Bihyung appeared out of thin air. I didn't know what it was, but it was a sign that I had finally solved the first scenario's many problems."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 141,
+      "kind": "constellation",
+      "lines": [
+        "[It's really weird. There were some unusual areas, but none of them solved the scenario in this way...... I never thought you could use the <Star Stream>'s 'directing system' in this way.......]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 142,
+      "kind": "paragraph",
+      "lines": [
+        "Bihyung looked down at me and grumbled for a while, before smiling wryly and saying."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 143,
+      "kind": "constellation",
+      "lines": [
+        "[Anyway, congratulations, you passed the first scenario with flying colors.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 144,
+      "kind": "paragraph",
+      "lines": [
+        "I already knew what Bihyung was going to say next. Probably the same goes for the man next to me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 145,
+      "kind": "constellation",
+      "lines": [
+        "[Now, shouldn't there be a reward for overcoming the hardships? As a reward for the first scenario, you're entitled to the sponsorship of the 'constellations'. Waahhh! How about it? Aren't you looking forward to it?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 146,
+      "kind": "paragraph",
+      "lines": [
+        "We were about to embark on the first key event of 'Omniscient Reader', the Sponsor Selection."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 147,
+      "kind": "paragraph",
+      "lines": [
+        "However, Bihyung scratched his head."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 148,
+      "kind": "constellation",
+      "lines": [
+        "[Hmm, that's weird. You are not surprised nor confused.......]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 149,
+      "kind": "paragraph",
+      "lines": [
+        "Of course not, we already knew that."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 150,
+      "kind": "paragraph",
+      "lines": [
+        "You'll be just like me after you've said the same line a hundred times."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 151,
+      "kind": "constellation",
+      "lines": [
+        "[If you haven't realized by now, you are incredibly weak, and if you are thrown into the scenarios that will take place.......]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 152,
+      "kind": "paragraph",
+      "lines": [
+        "You won't be able to catch a single ground rat."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 153,
+      "kind": "paragraph",
+      "lines": [
+        "I know."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 154,
+      "kind": "paragraph",
+      "lines": [
+        "Bihyung gave his speech with an expression of bewilderment as he saw me yawning, stopping only when he heard the constellations' bitter comments."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 155,
+      "kind": "system_message",
+      "lines": [
+        "[A few constellations are tired of Bihyung's explanations.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 156,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Monarch of the Small Fries' urges him to get on with it!]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 157,
+      "kind": "paragraph",
+      "lines": [
+        "The constellations twinkled above Bihyung's head, which seemed to brighten at first glance."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 158,
+      "kind": "paragraph",
+      "lines": [
+        "I wonder how many people have gathered for this <Sponsor Selection>?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 159,
+      "kind": "constellation",
+      "lines": [
+        "[Anyway, the constellations are impatient. Let's get started!]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 160,
+      "kind": "paragraph",
+      "lines": [
+        "It was still very early in the story, so I didn't expect any great constellations to come."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 161,
+      "kind": "paragraph",
+      "lines": [
+        "There's a possibility that a great constellation like the Great Sage Heaven's Equal or Uriel will appear to Kim Dokja, but that's only because he was the protagonist."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 162,
+      "kind": "paragraph",
+      "lines": [
+        "At best, I'll have the 'Monarch of the Small Fries' or something."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 163,
+      "kind": "paragraph",
+      "lines": [
+        "I didn't expect it."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 164,
+      "kind": "paragraph",
+      "lines": [
+        "I really didn't expect that much."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 165,
+      "kind": "paragraph",
+      "lines": [
+        "But......."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 166,
+      "kind": "paragraph",
+      "lines": [
+        "It won't be Great Sage, but...... there could be a good constellation, right?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 167,
+      "kind": "paragraph",
+      "lines": [
+        "I had a really hard time......."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 168,
+      "kind": "paragraph",
+      "lines": [
+        "And a screen popped up in front of me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 169,
+      "kind": "system_message",
+      "lines": [
+        "[There are a total of 10 constellations waiting for your choice.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 173,
+      "kind": "paragraph",
+      "lines": [
+        "Author's Note"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 174,
+      "kind": "paragraph",
+      "lines": [
+        "Doki doki"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    }
+  ],
+  "token_estimate": {
+    "source_chars": 10755,
+    "estimated_input_tokens": 3817,
+    "estimated_output_tokens_ru": 5377,
+    "estimated_total_tokens": 9194
+  }
+}

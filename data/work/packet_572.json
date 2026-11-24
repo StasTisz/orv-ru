@@ -1,0 +1,2846 @@
+{
+  "schema_version": 1,
+  "chapter_number": 572,
+  "title": "572 Episode 3. Protagonist(?) (9)",
+  "instructions": "Переведите `title` и `lines` каждого элемента в `items` на русский язык. Не меняйте `block_index`, не добавляйте и не удаляйте строки в `lines`, сохраняйте точное количество тегов <br> внутри каждой строки.",
+  "expected_output_format": {
+    "chapter_number": 572,
+    "title": "<переведённый заголовок>",
+    "items": [
+      {
+        "block_index": 0,
+        "lines": [
+          "<переведённая строка>"
+        ]
+      }
+    ]
+  },
+  "rules": {
+    "honorifics": "Сохранять ключевые корейские обращения в русской транскрипции: -сси, аджосси, хён, нуна, онни, оппа, -ним (там, где они передают дистанцию, вежливость или близость персонажей).",
+    "profanity_and_tone": "Не смягчать резкие реплики, грубость и ругательства; сохранять живой эмоциональный накал сцен.",
+    "story_fable_tale": "Системные и лорные понятия Story / Fable / Tale (с заглавной буквы как сущность Звёздного Потока) унифицировать как «История» (или «Гигантская История»). Обычные бытовые значения переводить по контексту («рассказ», «история», «сказка»).",
+    "fear_concept": "Понятие Fear (сущность/феномен Царства Страха, с заглавной буквы) переводить как «Страх» (с большой буквы в терминологическом смысле); обычную эмоцию — со строчной.",
+    "brackets_and_quotes": "Строго сохранять типографику ORV: [...] — системные сообщения и навыки, 「...」 — цитаты и внутренний голос, 【...】 — речь Внешних Богов, <...> — Туманности и корпорации.",
+    "jang_hayoung_pronouns": "Чан Хаён: когда о ней/нём говорят посторонние — мужской род (он/его); когда говорит о себе сам(а) или с близкими — женский род (она/её), строго по контексту сцены.",
+    "weapons_41st_yjh": "Оружие Ю Джунхёка 41-й регрессии — большое копьё («Копьё Тёмной Небесной Луны»), не меч и не алебарда.",
+    "sneaky_vs_secretive": "Secretive Plotter («Скрытный Интриган») и Sneaky Schemer («Коварный Интриган») — две РАЗНЫЕ сущности. Категорически запрещено подменять одну другой.",
+    "korean_name_declension": "Мужские корейские имена склонять естественно по нормам русского языка (Ким Докча -> Ким Докчи/Докчу, Ю Джунхёк -> Ю Джунхёка), а женские имена, оканчивающиеся на согласный, оставлять несклоняемыми (Хан Суён, Чон Хивон, Син Юсон, Ли Джихё, Кён Сэин)."
+  },
+  "glossary": [
+    {
+      "source": "Kim Dokja",
+      "target": "Ким Докча",
+      "category": "characters",
+      "notes": "Главный герой; игра слов с «докча» (читатель / единственный ребёнок).",
+      "aliases": [
+        "Докча"
+      ],
+      "forbidden": [
+        "Ким Докжа",
+        "Ким Докчжа"
+      ]
+    },
+    {
+      "source": "Yoo Joonghyuk",
+      "target": "Ю Джунхёк",
+      "category": "characters",
+      "notes": "Регрессор, протагонист «Путей выживания».",
+      "aliases": [
+        "Джунхёк"
+      ],
+      "forbidden": [
+        "Ю Чонхёк",
+        "Ю Джонхёк",
+        "Ю Чунхёк"
+      ]
+    },
+    {
+      "source": "Jung Heewon",
+      "target": "Чон Хивон",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Хивон"
+      ],
+      "forbidden": [
+        "Джун Хивон"
+      ]
+    },
+    {
+      "source": "Anna Croft",
+      "target": "Анна Крофт",
+      "category": "characters",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Lee Jihye",
+      "target": "Ли Джихё",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Джихё"
+      ],
+      "forbidden": [
+        "Ли Чжихё"
+      ]
+    },
+    {
+      "source": "Lee Hyunsung",
+      "target": "Ли Хёнсон",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Хёнсон"
+      ],
+      "forbidden": [
+        "Ли Хёнсунг"
+      ]
+    },
+    {
+      "source": "Lee Gilyoung",
+      "target": "Ли Гильён",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Гильён"
+      ],
+      "forbidden": [
+        "Ли Кильён"
+      ]
+    },
+    {
+      "source": "Yoo Sangah",
+      "target": "Ю Сана",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Сана"
+      ],
+      "forbidden": [
+        "Ю Сангах"
+      ]
+    },
+    {
+      "source": "Kim Namwoon",
+      "target": "Ким Намун",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Намун"
+      ],
+      "forbidden": [
+        "Ким Намвун"
+      ]
+    },
+    {
+      "source": "Han Myungoh",
+      "target": "Хан Мёно",
+      "category": "characters",
+      "notes": "",
+      "aliases": [
+        "Мёно"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Bihyung",
+      "target": "Бихён",
+      "category": "characters",
+      "notes": "",
+      "aliases": [],
+      "forbidden": [
+        "Бихеон"
+      ]
+    },
+    {
+      "source": "Lee Hakhyun",
+      "target": "Ли Хакхён",
+      "category": "side_characters",
+      "notes": "Протагонист побочной истории, автор ORV из другой мировой линии.",
+      "aliases": [
+        "Хакхён"
+      ],
+      "forbidden": [
+        "Ли Хакхюн"
+      ]
+    },
+    {
+      "source": "Cheon Inho",
+      "target": "Чхон Инхо",
+      "category": "side_characters",
+      "notes": "",
+      "aliases": [
+        "Инхо"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Kyung Sein",
+      "target": "Кён Сэин",
+      "category": "side_characters",
+      "notes": "",
+      "aliases": [
+        "Сэин"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Ji Eunyu",
+      "target": "Чи Ыню",
+      "category": "side_characters",
+      "notes": "",
+      "aliases": [
+        "Ыню"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Dansoo",
+      "target": "Дансу",
+      "category": "side_characters",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Sneaky Schemer",
+      "target": "Коварный Интриган",
+      "category": "constellations",
+      "notes": "Отдельная сущность (야비한 모략가), не заменять на «Скрытного Интригана».",
+      "aliases": [],
+      "forbidden": [
+        "Скрытный Интриган",
+        "Скрытый Проектировщик"
+      ]
+    },
+    {
+      "source": "Evil Sophist",
+      "target": "Злобный Софист",
+      "category": "constellations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Constellation",
+      "target": "Созвездие",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Dokkaebi",
+      "target": "Токкэби",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": [
+        "Доккаэби",
+        "Доккаби"
+      ]
+    },
+    {
+      "source": "Regressor",
+      "target": "Регрессор",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Probability",
+      "target": "Вероятность",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": [
+        "Правдоподобие"
+      ]
+    },
+    {
+      "source": "Scenario",
+      "target": "Сценарий",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Ways of Survival",
+      "target": "Пути выживания",
+      "category": "terms",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "[Incite]",
+      "target": "[Подстрекательство]",
+      "category": "skills",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "[Lie Detection]",
+      "target": "[Распознавание Лжи]",
+      "category": "skills",
+      "notes": "",
+      "aliases": [
+        "[Детектор Лжи]"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Lie Detection",
+      "target": "Распознавание Лжи",
+      "category": "skills",
+      "notes": "",
+      "aliases": [
+        "Детектор Лжи"
+      ],
+      "forbidden": []
+    },
+    {
+      "source": "Snowfield",
+      "target": "Снежное Поле",
+      "category": "locations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    },
+    {
+      "source": "Chungmuro",
+      "target": "Чхунмуро",
+      "category": "locations",
+      "notes": "",
+      "aliases": [],
+      "forbidden": []
+    }
+  ],
+  "items": [
+    {
+      "block_index": 0,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Sneaky Schemer' is warning you.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 1,
+      "kind": "system_message",
+      "lines": [
+        "[The constellation 'Sneaky Schemer' is glaring at 'Yoo Joonghyuk' with cold eyes.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 2,
+      "kind": "paragraph",
+      "lines": [
+        "An alarm bell rang in my head."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 3,
+      "kind": "paragraph",
+      "lines": [
+        "I'm meeting Yoo Joonghyuk first?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 4,
+      "kind": "paragraph",
+      "lines": [
+        "What about Lee Hyunsung? Yoo Sangah? Lee Gilyoung and Han Myungoh?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 5,
+      "kind": "paragraph",
+      "lines": [
+        "No, do they 'all' really exist?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 6,
+      "kind": "paragraph",
+      "lines": [
+        "The moment I met Yoo Joonghyuk's piercing eyes, an eerie sensation washed over me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 7,
+      "kind": "quote",
+      "lines": [
+        "「The original Cheon Inho didn't meet Yoo Joonghyuk now.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 8,
+      "kind": "paragraph",
+      "lines": [
+        "I managed to keep my composure."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 9,
+      "kind": "paragraph",
+      "lines": [
+        "A quick glance behind me revealed that Jung Heewon, Kyung Sein, and Dansoo ahjussi hadn't woken up yet."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 10,
+      "kind": "paragraph",
+      "lines": [
+        "I have no choice but to try to talk my way out of this."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 11,
+      "kind": "paragraph",
+      "lines": [
+        "Luckily, there were many approaches that could be used if the opponent was Yoo Joonghyuk."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 12,
+      "kind": "paragraph",
+      "lines": [
+        "In the early stages, Yoo Joonghyuk is a bit simple-minded, so I might be able to get out of the situation by claiming to be a prophet like Kim Dokja."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 13,
+      "kind": "paragraph",
+      "lines": [
+        "\"Answer me, why are you hanging around in this place?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 14,
+      "kind": "paragraph",
+      "lines": [
+        "However, the moment I heard those words, I felt something strange."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 15,
+      "kind": "paragraph",
+      "lines": [
+        "First, I noticed the weapon in his hand."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 16,
+      "kind": "paragraph",
+      "lines": [
+        "A spear that looked like it was carved from the bones of a monster species."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 17,
+      "kind": "paragraph",
+      "lines": [
+        "Suddenly, I felt goosebumps."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 18,
+      "kind": "quote",
+      "lines": [
+        "「3rd round Yoo Joonghyuk doesn't use a spear.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 19,
+      "kind": "paragraph",
+      "lines": [
+        "Without hesitation, I activated 'Character List'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 20,
+      "kind": "system_message",
+      "lines": [
+        "['Character List' is activating!]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 21,
+      "kind": "system_message",
+      "lines": [
+        "[The exclusive skill 'Character List' is activated!]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 22,
+      "kind": "system_message",
+      "lines": [
+        "[There is too much information about this person. 'Character List' is converted to 'Character Summary'.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 23,
+      "kind": "paragraph",
+      "lines": [
+        "Along with a slight dizziness, Yoo Joonghyuk's information flashed before my eyes."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 24,
+      "kind": "system_window",
+      "lines": [
+        "<Character Summary>",
+        "Name: Yoo Joonghyuk",
+        "......(Omitted)......",
+        "Exclusive Skills: [Sage's Eye Lv.9], [Hand to Hand Combat Lv.10], [Weapons Training Lv.10], [Mental Barrier Lv.6], [Crowd Control Lv.7], [Reasoning Lv.7], [Lie Detection Lv.7]......."
+      ],
+      "expected_br_counts": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "block_index": 25,
+      "kind": "paragraph",
+      "lines": [
+        "An endless list of skills."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 26,
+      "kind": "paragraph",
+      "lines": [
+        "However, that's not what surprised me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 27,
+      "kind": "paragraph",
+      "lines": [
+        "The moment I saw Yoo Joonghyuk's 'attributes' and 'Regressor' on the list, my mind went blank."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 28,
+      "kind": "quote",
+      "lines": [
+        "「How the hell could this happen?」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 29,
+      "kind": "paragraph",
+      "lines": [
+        "There was only one thought in my head."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 30,
+      "kind": "quote",
+      "lines": [
+        "「If I stay here, I'll die.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 31,
+      "kind": "paragraph",
+      "lines": [
+        "And then."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 32,
+      "kind": "paragraph",
+      "lines": [
+        "\"You must have met Anna Croft in the Chungmuro Tunnel. You recalled the memories of the last round.......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 33,
+      "kind": "paragraph",
+      "lines": [
+        "I stared at Yoo Joonghyuk, dumbfounded."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 34,
+      "kind": "paragraph",
+      "lines": [
+        "What was he talking about?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 35,
+      "kind": "paragraph",
+      "lines": [
+        "\"Cheon Inho, why are you here? If you remembered, you would have remembered the promise we made.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 36,
+      "kind": "paragraph",
+      "lines": [
+        "Suddenly, my head was spinning."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 37,
+      "kind": "paragraph",
+      "lines": [
+        "What the hell is this guy talking about?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 38,
+      "kind": "paragraph",
+      "lines": [
+        "When I didn't answer, Yoo Joonghyuk's expression hardened slightly."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 39,
+      "kind": "paragraph",
+      "lines": [
+        "\"Why did you come looking for me? Are you unhappy with our promise now?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 40,
+      "kind": "paragraph",
+      "lines": [
+        "It was a major crisis."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 41,
+      "kind": "paragraph",
+      "lines": [
+        "There was no mention of this development anywhere in Omniscient Reader. The same was true for 'Ways of Survival'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 42,
+      "kind": "system_message",
+      "lines": [
+        "[You want to do something unexpected.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 43,
+      "kind": "system_message",
+      "lines": [
+        "[The activation conditions for the exclusive skill '□□' have been met.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 44,
+      "kind": "paragraph",
+      "lines": [
+        "If you can, you should experiment with all your options. Moreover, if your opponent is 'Yoo Joonghyuk'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 45,
+      "kind": "system_message",
+      "lines": [
+        "[Your creativity is currently depleted and you can't enter the 'Snowfield'.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 46,
+      "kind": "system_message",
+      "lines": [
+        "[You can take a penalty and enter the 'Snowfield' once more.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 47,
+      "kind": "system_message",
+      "lines": [
+        "[If you make an additional entry, you will no longer be able to enter today.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 48,
+      "kind": "system_message",
+      "lines": [
+        "[Do you want to enter the 'Snowfield'?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 49,
+      "kind": "paragraph",
+      "lines": [
+        "For a moment, I was worried."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 50,
+      "kind": "paragraph",
+      "lines": [
+        "Is this the last entry of the day?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 51,
+      "kind": "quote",
+      "lines": [
+        "「I'm not entering.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 52,
+      "kind": "paragraph",
+      "lines": [
+        "In the end, I canceled the skill."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 53,
+      "kind": "paragraph",
+      "lines": [
+        "There could be a bigger crisis than this, I couldn't risk it hastily."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 54,
+      "kind": "paragraph",
+      "lines": [
+        "I had to trust my high level eloquence for now."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 55,
+      "kind": "paragraph",
+      "lines": [
+        "I took a deep breath and began my story."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 56,
+      "kind": "paragraph",
+      "lines": [
+        "\"Do you think I came here for that appointment?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 57,
+      "kind": "paragraph",
+      "lines": [
+        "I could feel him pause for a moment. Whether he did or not, I acted shamelessly."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 58,
+      "kind": "paragraph",
+      "lines": [
+        "\"I was just looking around to see if there were any items to pick up nearby. How naive of you to think I'd come to see you first.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 59,
+      "kind": "paragraph",
+      "lines": [
+        "As I said this, I rummaged through the body of the dead poisonous rhinoceros."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 60,
+      "kind": "paragraph",
+      "lines": [
+        "The poisonous rhinoceros was a 7th grade monster."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 61,
+      "kind": "paragraph",
+      "lines": [
+        "If I could get a piece of its body now, it would be very useful in the early stages."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 62,
+      "kind": "paragraph",
+      "lines": [
+        "\"You.......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 63,
+      "kind": "paragraph",
+      "lines": [
+        "I turned my head at the sound of the voice and saw Yoo Joonghyuk looking down at me with disdain."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 64,
+      "kind": "paragraph",
+      "lines": [
+        "But why? Contempt is definitely contempt."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 65,
+      "kind": "paragraph",
+      "lines": [
+        "\"No matter how many rounds I do, your trashy behavior doesn't change.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 66,
+      "kind": "paragraph",
+      "lines": [
+        "He was smiling strangely."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 67,
+      "kind": "paragraph",
+      "lines": [
+        "I felt my hopes rise a little."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 68,
+      "kind": "paragraph",
+      "lines": [
+        "\"I'm flattered.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 69,
+      "kind": "paragraph",
+      "lines": [
+        "As I began to cut off the tiny horn of the poisonous rhinoceros, Yoo Joonghyuk protested."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 70,
+      "kind": "paragraph",
+      "lines": [
+        "\"That's mine.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 71,
+      "kind": "paragraph",
+      "lines": [
+        "\"You can keep the tiny horn.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 72,
+      "kind": "paragraph",
+      "lines": [
+        "\"Have you always been greedy for things like this?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 73,
+      "kind": "paragraph",
+      "lines": [
+        "I felt hurt for a moment, but the water was already spilled anyway."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 74,
+      "kind": "paragraph",
+      "lines": [
+        "\"I'm not as strong from the beginning as someone.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 75,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk gave me a strange look."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 76,
+      "kind": "paragraph",
+      "lines": [
+        "\"This round is really weird. That happened in the first scenario too........\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 77,
+      "kind": "paragraph",
+      "lines": [
+        "\"What happened?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 78,
+      "kind": "paragraph",
+      "lines": [
+        "\"None of your business.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 79,
+      "kind": "paragraph",
+      "lines": [
+        "\"What happened to Lee Hyunsung and Kim Namwoon? Why didn't they come with you?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 80,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk's eyes turned cold at my questions."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 81,
+      "kind": "paragraph",
+      "lines": [
+        "\"Don't think too much of yourself, Cheon Inho, do you really think we're colleagues or something? I'm sure you didn't forget what happened last round.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 82,
+      "kind": "paragraph",
+      "lines": [
+        "I'm confused."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 83,
+      "kind": "paragraph",
+      "lines": [
+        "We made a promise, and now he says we're not colleagues."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 84,
+      "kind": "paragraph",
+      "lines": [
+        "What is our relationship then?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 85,
+      "kind": "paragraph",
+      "lines": [
+        "\"Don't forget what you're supposed to do. Don't make me regret hiring a scumbag like you.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 86,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk glared at me with a scary look, and I couldn't help but widen my eyes."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 87,
+      "kind": "paragraph",
+      "lines": [
+        "Even narrow eyes can open wide."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 88,
+      "kind": "paragraph",
+      "lines": [
+        "\"Thanks for the rant.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 89,
+      "kind": "paragraph",
+      "lines": [
+        "\"You're even more loudmouthed than last round. Stop procrastinating and go back. You have work to do.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 90,
+      "kind": "paragraph",
+      "lines": [
+        "With those words, Yoo Joonghyuk gathered up several key parts of the 'poisonous rhinoceros' and turned back toward the tunnel."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 91,
+      "kind": "paragraph",
+      "lines": [
+        "\"Don't come looking for me until you've sorted out what I ordered you to do. Next time you wander around, I'll kill you.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 92,
+      "kind": "paragraph",
+      "lines": [
+        "I watched Yoo Joonghyuk walk away, step by step, and somehow it didn't feel real."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 93,
+      "kind": "quote",
+      "lines": [
+        "「I survived.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 94,
+      "kind": "paragraph",
+      "lines": [
+        "Relief washed over me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 95,
+      "kind": "paragraph",
+      "lines": [
+        "I don't know why, but I survived. I had succeeded in fooling that 'Yoo Joonghyuk' safely."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 96,
+      "kind": "paragraph",
+      "lines": [
+        "It was then that I heard a rustling sound from the side. Jung Heewon, who suddenly came to her senses, was sitting up a few steps away from me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 97,
+      "kind": "paragraph",
+      "lines": [
+        "\"Ouch, it hurts. Inho-ssi. Are you okay? Did you get hurt?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 98,
+      "kind": "paragraph",
+      "lines": [
+        "In a moment of panic, I quickly rushed toward her. Through the thick dust, the sound of Yoo Joonghyuk's footsteps stopped."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 99,
+      "kind": "paragraph",
+      "lines": [
+        "\"That's weird.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 100,
+      "kind": "paragraph",
+      "lines": [
+        "I felt my heart drop."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 101,
+      "kind": "paragraph",
+      "lines": [
+        "\"I'm sure it wasn't part of your plan to take such a woman with you.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 102,
+      "kind": "paragraph",
+      "lines": [
+        "Goosebumps spread from head to toe. Standing over the ruins, Yoo Joonghyuk stared at me with cold eyes."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 103,
+      "kind": "paragraph",
+      "lines": [
+        "I tried my best to hide my panic."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 104,
+      "kind": "paragraph",
+      "lines": [
+        "\"What does it matter who I take with me?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 105,
+      "kind": "paragraph",
+      "lines": [
+        "Instead of answering, Yoo Joonghyuk started walking back toward me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 106,
+      "kind": "paragraph",
+      "lines": [
+        "An ominous feeling crept up on me. I instinctively felt a sense of crisis."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 107,
+      "kind": "paragraph",
+      "lines": [
+        "Now."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 108,
+      "kind": "system_message",
+      "lines": [
+        "[You want to do something unexpected.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 109,
+      "kind": "system_message",
+      "lines": [
+        "[Describe your own behavior.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 110,
+      "kind": "system_message",
+      "lines": [
+        "[You have spent 5 probability points.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 111,
+      "kind": "system_message",
+      "lines": [
+        "[The activation conditions for the exclusive skill '■■' have been met.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 112,
+      "kind": "paragraph",
+      "lines": [
+        "My writer's intuition was warning me. I had to use it now. If I failed to overcome this crisis, I would die."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 113,
+      "kind": "system_message",
+      "lines": [
+        "[You have exhausted the number of additional entrances to the 'Snowfield'.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 114,
+      "kind": "system_message",
+      "lines": [
+        "[You will get a probability penalty.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 115,
+      "kind": "system_message",
+      "lines": [
+        "[You have entered the 'Snowfield'.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 116,
+      "kind": "system_message",
+      "lines": [
+        "[Describe the next action of 'Cheon Inho'.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 117,
+      "kind": "system_window",
+      "lines": [
+        "# Cheon Inho's Death",
+        "",
+        "■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■",
+        "* At your current skill level, you can write a total of 150 additional characters."
+      ],
+      "expected_br_counts": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "block_index": 118,
+      "kind": "system_message",
+      "lines": [
+        "[You have received a penalty.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 119,
+      "kind": "system_message",
+      "lines": [
+        "[You can stay in the 'Snowfield' for a total of 2 minutes.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 120,
+      "kind": "paragraph",
+      "lines": [
+        "The title of the scene was terrible."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 121,
+      "kind": "paragraph",
+      "lines": [
+        "'Cheon Inho's Death'."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 122,
+      "kind": "paragraph",
+      "lines": [
+        "I quickly began to write a sentence. Roughly, it was about Cheon Inho convincing Yoo Joonghyuk with his amazing speech, overcoming the crisis and becoming his colleague."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 123,
+      "kind": "system_message",
+      "lines": [
+        "[This story is very unlikely.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 124,
+      "kind": "system_message",
+      "lines": [
+        "[This story's reproduction success rate is 1%.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 125,
+      "kind": "system_message",
+      "lines": [
+        "[You're running out of probability.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 126,
+      "kind": "system_message",
+      "lines": [
+        "[Do you want to check the reader's feedback?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 127,
+      "kind": "system_window",
+      "lines": [
+        "rlaehrwk37: Will Yoo Joonghyuk really accept Cheon Inho as his colleague?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 128,
+      "kind": "paragraph",
+      "lines": [
+        "I guess this was too much."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 129,
+      "kind": "paragraph",
+      "lines": [
+        "I decided to play the hidden card I had been saving."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 130,
+      "kind": "quote",
+      "lines": [
+        "「Then, Cheon Inho said. \"Yoo Joonghyuk, you need a reliable companion. You can't break through the 46th scenario alone. Shouldn't you be well aware of it?\"....... (147 characters in total)」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 131,
+      "kind": "paragraph",
+      "lines": [
+        "As I was writing this, I realized that this line could work, because it's exactly what Kim Dokja said in the original novel."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 132,
+      "kind": "paragraph",
+      "lines": [
+        "In other words, it was a cheat key that worked unconditionally."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 133,
+      "kind": "system_message",
+      "lines": [
+        "[This story is out of character.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 134,
+      "kind": "system_message",
+      "lines": [
+        "[This story's reproduction success rate is 3%.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 135,
+      "kind": "system_message",
+      "lines": [
+        "[You're running out of probability.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 136,
+      "kind": "system_message",
+      "lines": [
+        "[Do you want to check the reader's feedback?]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 137,
+      "kind": "system_window",
+      "lines": [
+        "rlaehrwk81: Have you forgotten who you are?",
+        "rlaehrwk37: A Cheon Inho has a Cheon Inho's life."
+      ],
+      "expected_br_counts": [
+        0,
+        0
+      ]
+    },
+    {
+      "block_index": 138,
+      "kind": "paragraph",
+      "lines": [
+        "Yes, a Lee Hakhyun has a Lee Hakhyun's life, so let's write it down like Lee Hakhyun."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 139,
+      "kind": "quote",
+      "lines": [
+        "「Then, Cheon Inho said. \"Yoo Joonghyuk. Actually, my name is not Cheon Inho, but Kim Dokja. I've read all of your novel and.......\" (149 characters in total)」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 140,
+      "kind": "system_message",
+      "lines": [
+        "[This story is a mess.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 141,
+      "kind": "paragraph",
+      "lines": [
+        "[This story's reproduction success rate is 0.01%.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 142,
+      "kind": "quote",
+      "lines": [
+        "「Then, Cheon Inho said. \"Respected Yoo Joonghyuk, please make me your subordinate!\"...... (148 characters in total)」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 143,
+      "kind": "system_message",
+      "lines": [
+        "[This story is ordinary.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 144,
+      "kind": "system_message",
+      "lines": [
+        "[This story's reproduction success rate is 3%.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 145,
+      "kind": "quote",
+      "lines": [
+        "「Then, Cheon Inho said. \"Actually, I'm a prophet...... (147 characters in total)」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 146,
+      "kind": "system_message",
+      "lines": [
+        "[You story is impossible anyway.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 147,
+      "kind": "system_message",
+      "lines": [
+        "[The 'Snowfield' begins to doubt your talent.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 148,
+      "kind": "system_message",
+      "lines": [
+        "[This story's reproduction success rate is 1%.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 149,
+      "kind": "paragraph",
+      "lines": [
+        "Maybe this is the end of a Lee Hakhyun's life."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 150,
+      "kind": "system_message",
+      "lines": [
+        "[There are 10 seconds remaining.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 151,
+      "kind": "paragraph",
+      "lines": [
+        "I remembered Ji Eunyu's advice one last time."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 152,
+      "kind": "quote",
+      "lines": [
+        "「Now, what does Yoo Joonghyuk want?」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 153,
+      "kind": "paragraph",
+      "lines": [
+        "I closed my eyes and thought about it. And I realized."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 154,
+      "kind": "system_message",
+      "lines": [
+        "[Failed to recreate the scene.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 155,
+      "kind": "paragraph",
+      "lines": [
+        "There's no way I could know that. I can't even understand what he's saying right now, so how can I know what he wants?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 156,
+      "kind": "system_message",
+      "lines": [
+        "[Leaving the 'Snowfield'.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 157,
+      "kind": "system_message",
+      "lines": [
+        "[Your creativity has been exhausted. You can no longer enter the 'Snowfield' today.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 158,
+      "kind": "paragraph",
+      "lines": [
+        "The colors returned to the world, and Yoo Joonghyuk's steps began to move again."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 159,
+      "kind": "paragraph",
+      "lines": [
+        "I swallowed and kept an eye on the situation. I had failed to recreate the scene, but I wasn't ready to give up yet."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 160,
+      "kind": "paragraph",
+      "lines": [
+        "\"There are a lot of weirdos this round, right from the start.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 161,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk's dismal voice echoed through the cold night air."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 162,
+      "kind": "paragraph",
+      "lines": [
+        "\"They were nothing until the last round, but they all suddenly came up to me and said strange things as if they were possessed.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 163,
+      "kind": "paragraph",
+      "lines": [
+        "I thought I knew what Yoo Joonghyuk was talking about now."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 164,
+      "kind": "paragraph",
+      "lines": [
+        "Wait. No way."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 165,
+      "kind": "paragraph",
+      "lines": [
+        "\"They said that I needed a companion to break through the 46th scenario, or that they were prophets.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 166,
+      "kind": "paragraph",
+      "lines": [
+        "A cold sweat began to run down my back."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 167,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk was smiling with a strange expression."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 168,
+      "kind": "paragraph",
+      "lines": [
+        "\"There was also one who said he would take me to the end of the world.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 169,
+      "kind": "paragraph",
+      "lines": [
+        "\"Inho-ssi, step back.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 170,
+      "kind": "paragraph",
+      "lines": [
+        "Jung Heewon, who noticed something was strange, stood in front of me, holding the ground rat knife."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 171,
+      "kind": "paragraph",
+      "lines": [
+        "The next moment, Yoo Joonghyuk's figure disappeared."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 172,
+      "kind": "paragraph",
+      "lines": [
+        "The hairs on the back of my neck stood up, and I heard the sound of wind blowing in the distance. It was as if the Grim Reaper was speaking to me from the darkness. It was the implacable language of death that I could not answer."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 173,
+      "kind": "system_message",
+      "lines": [
+        "[The character 'Jung Heewon' has used 'Kendo Lv.1'!]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 174,
+      "kind": "paragraph",
+      "lines": [
+        "Nevertheless, Jung Heewon answered him."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 175,
+      "kind": "paragraph",
+      "lines": [
+        "A creaking sound was heard in front of her, and dazzling sparks burst out in all directions."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 176,
+      "kind": "paragraph",
+      "lines": [
+        "Jung Heewon's sword, which received Yoo Joonghyuk's spear, was trembling precariously."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 177,
+      "kind": "paragraph",
+      "lines": [
+        "\"You're good at Kendo. You're a similar type as Lee Jihye.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 178,
+      "kind": "paragraph",
+      "lines": [
+        "\"Inho-ssi! Who is this person?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 179,
+      "kind": "paragraph",
+      "lines": [
+        "As I looked at the blood dripping from Yoo Joonghyuk's spear pole, I had an eerie feeling."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 180,
+      "kind": "paragraph",
+      "lines": [
+        "I wanted to ask him, what happened to all those 'prophets' you met?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 181,
+      "kind": "paragraph",
+      "lines": [
+        "\"Cheon Inho.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 182,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk turned to me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 183,
+      "kind": "paragraph",
+      "lines": [
+        "\"Are you really Cheon Inho?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 184,
+      "kind": "system_message",
+      "lines": [
+        "[The character 'Yoo Joonghyuk' has used 'Lie Detection Lv.7'!]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 185,
+      "kind": "paragraph",
+      "lines": [
+        "His [Lie Detection] is level 7."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 186,
+      "kind": "paragraph",
+      "lines": [
+        "Perhaps, this was my last chance."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 187,
+      "kind": "system_message",
+      "lines": [
+        "[The exclusive skill 'Incite Lv.3' is strongly activated!]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 188,
+      "kind": "quote",
+      "lines": [
+        "「I am Cheon Inho.」"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 189,
+      "kind": "paragraph",
+      "lines": [
+        "In other words, as long as the acting was perfect, there was a possibility of deceiving him."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 190,
+      "kind": "paragraph",
+      "lines": [
+        "\"If I'm not Cheon Inho, then who the hell is Cheon Inho. What are you doing?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 191,
+      "kind": "paragraph",
+      "lines": [
+        "My heart was pounding."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 192,
+      "kind": "paragraph",
+      "lines": [
+        "And after a while,"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 193,
+      "kind": "system_message",
+      "lines": [
+        "[The character 'Yoo Joonghyuk' has confirmed that the statement is true.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 194,
+      "kind": "paragraph",
+      "lines": [
+        "That's it. He'll have no choice but to believe me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 195,
+      "kind": "paragraph",
+      "lines": [
+        "However, Yoo Joonghyuk's expression was strange."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 196,
+      "kind": "paragraph",
+      "lines": [
+        "\"[Lie Detection] isn't always perfect, in the previous round you lied to me without using [Poker Face].\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 197,
+      "kind": "paragraph",
+      "lines": [
+        "\".......\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 198,
+      "kind": "paragraph",
+      "lines": [
+        "\"Cheon Inho. What was the first thing you decided to do?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 199,
+      "kind": "paragraph",
+      "lines": [
+        "I was speechless for a moment."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 200,
+      "kind": "paragraph",
+      "lines": [
+        "\"That.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 201,
+      "kind": "paragraph",
+      "lines": [
+        "If I made a mistake here, I could be caught by [Lie Detection]."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 202,
+      "kind": "paragraph",
+      "lines": [
+        "Should I use [Incite] once more? Or—"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 203,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk looked at me with an unreadable gaze and said."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 204,
+      "kind": "paragraph",
+      "lines": [
+        "\"I'll give you a chance.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 205,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk's spear instantly flashed, sending Jung Heewon's sword flying into the air."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 206,
+      "kind": "paragraph",
+      "lines": [
+        "Just as Jung Heewon reached out to grab the sword in surprise, Yoo Joonghyuk's spear moved once more."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 207,
+      "kind": "paragraph",
+      "lines": [
+        "The fight was quick to end."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 208,
+      "kind": "paragraph",
+      "lines": [
+        "Blood gushed from both her knees, and Jung Heewon, who lost her balance, fell forward."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 209,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk's left hand moved."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 210,
+      "kind": "paragraph",
+      "lines": [
+        "\"Keok.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 211,
+      "kind": "paragraph",
+      "lines": [
+        "He lifted Jung Heewon's neck and moved to the end of the bridge."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 212,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk looked back in my direction and said."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 213,
+      "kind": "paragraph",
+      "lines": [
+        "\"What I need is the great villain Cheon Inho, 'The One Who Deceived the Stars', the 'Evil Sophist'.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 214,
+      "kind": "paragraph",
+      "lines": [
+        "I don't know why Cheon Inho had such grandiose nicknames, but Yoo Joonghyuk's purpose was clear."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 215,
+      "kind": "paragraph",
+      "lines": [
+        "\"If you're really the 'Cheon Inho' I know, prove it.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 216,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk's left hand moved slowly."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 217,
+      "kind": "paragraph",
+      "lines": [
+        "Jung Heewon's complexion turned pale as she struggled. Beneath her feet, the hell road of the Han River, where the ichthyosaur passed, unfolded."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 218,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk asked."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 219,
+      "kind": "paragraph",
+      "lines": [
+        "\"Is this woman your colleague?\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 220,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk was testing me now."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 221,
+      "kind": "paragraph",
+      "lines": [
+        "Was I really the 'Cheon Inho' he remembered?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 222,
+      "kind": "paragraph",
+      "lines": [
+        "Jung Heewon was looking at me with trembling eyes."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 223,
+      "kind": "paragraph",
+      "lines": [
+        "Perhaps, there was only one way to save her now."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 224,
+      "kind": "paragraph",
+      "lines": [
+        "I slowly closed my eyes and opened them again. The cold night air rushed into my lungs, and for a moment, I felt like a different person."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 225,
+      "kind": "system_message",
+      "lines": [
+        "[The exclusive skill 'Incite Lv.3' is strongly activated!]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 226,
+      "kind": "system_message",
+      "lines": [
+        "[The synchronization rate with the possessed target is increasing rapidly!]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 227,
+      "kind": "paragraph",
+      "lines": [
+        "\"Let me make one thing clear.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 228,
+      "kind": "paragraph",
+      "lines": [
+        "I said with my trademark sly smile, whispering the secret."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 229,
+      "kind": "paragraph",
+      "lines": [
+        "\"I don't have any colleagues.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 230,
+      "kind": "paragraph",
+      "lines": [
+        "Deep disappointment flashed through Jung Heewon's eyes as she looked at me."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 231,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk nodded."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 232,
+      "kind": "paragraph",
+      "lines": [
+        "\"That's definitely Cheon Inho.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 233,
+      "kind": "paragraph",
+      "lines": [
+        "I let out a breath of relief."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 234,
+      "kind": "paragraph",
+      "lines": [
+        "This was the right answer."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 235,
+      "kind": "paragraph",
+      "lines": [
+        "I was sure it was."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 236,
+      "kind": "paragraph",
+      "lines": [
+        "\"Then it wouldn't matter if this woman died.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 237,
+      "kind": "paragraph",
+      "lines": [
+        "What?"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 238,
+      "kind": "paragraph",
+      "lines": [
+        "Yoo Joonghyuk's hand opened wide, and Jung Heewon's body fell down."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 239,
+      "kind": "paragraph",
+      "lines": [
+        "I focused all my strength into my legs and flew toward her."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 240,
+      "kind": "paragraph",
+      "lines": [
+        "\"As expected, you aren't Cheon Inho.\""
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 241,
+      "kind": "paragraph",
+      "lines": [
+        "The world spun, and Jung Heewon and I began to plummet down the bridge."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 242,
+      "kind": "paragraph",
+      "lines": [
+        "The chilly breeze scratched my cheeks, and I could smell the fishy odor of water."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 243,
+      "kind": "paragraph",
+      "lines": [
+        "I looked up at the dizzying sight and saw Yoo Joonghyuk looking down at us from the bridge."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 244,
+      "kind": "paragraph",
+      "lines": [
+        "Release your hand and get lost, you son of a bitch."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 245,
+      "kind": "paragraph",
+      "lines": [
+        "The next thing I know, the cold water of the Han River assaulted my senses, and my vision turned black with shock."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 246,
+      "kind": "paragraph",
+      "lines": [
+        "And then a message came in."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 247,
+      "kind": "system_message",
+      "lines": [
+        "[The dokkaebi 'Bihyung' has agreed to a 'Stream Contract' with you.]"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 251,
+      "kind": "paragraph",
+      "lines": [
+        "Author's Note"
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    },
+    {
+      "block_index": 252,
+      "kind": "paragraph",
+      "lines": [
+        "Don't let go of that hand..."
+      ],
+      "expected_br_counts": [
+        0
+      ]
+    }
+  ],
+  "token_estimate": {
+    "source_chars": 14745,
+    "estimated_input_tokens": 4941,
+    "estimated_output_tokens_ru": 7372,
+    "estimated_total_tokens": 12313
+  }
+}

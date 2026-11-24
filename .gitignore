@@ -1,4 +1,4 @@
-# Python
+# Python bytecode & cache
 __pycache__/
 *.py[cod]
 *$py.class
@@ -11,20 +11,22 @@ venv/
 dist/
 build/
 
-# Copyrighted source/translated novel content & generated artifacts
-data/
+# Build outputs & generated artifacts (regenerated via scripts)
 output/
 site/
 *.epub
+
+# External reference corpora
 reference-orv-reader/
 
-# Secrets & OS
+# Secrets, local environment & OS junk
 .env
 .env.*
 .DS_Store
+Thumbs.db
 
-# wrangler files
-.wrangler
+# Cloudflare Wrangler
+.wrangler/
 .dev.vars*
 !.dev.vars.example
 !.env.example
