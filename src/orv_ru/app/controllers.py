@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from typing import Any
 
@@ -14,6 +15,14 @@ from orv_ru.parsing import OrvMarkupParser, OrvMarkupSerializer, StructuralValid
 from orv_ru.ports.renderer import BookBuilder, EpubBuildReport, SiteBuilder, SiteBuildReport
 from orv_ru.ports.repository import ChapterReader, ChapterRepository
 from orv_ru.ports.translator import LLMClient
+from orv_ru.qa import (
+    AuditSummary,
+    AutoFixChange,
+    ChapterAuditReport,
+    QualityAuditor,
+    TypographyAutoFixer,
+    build_suspects_payload,
+)
 from orv_ru.rendering import AssetResolver, EpubBookBuilder, HtmlBlockRenderer, StaticSiteBuilder
 from orv_ru.storage import FileSystemChapterRepository
 from orv_ru.translation import (
@@ -42,6 +51,8 @@ class WorkspaceController:
         site_builder: SiteBuilder,
         epub_builder: BookBuilder,
         glossary_checker: GlossaryChecker | None = None,
+        quality_auditor: QualityAuditor | None = None,
+        auto_fixer: TypographyAutoFixer | None = None,
         *,
         active_story: StoryMetadata | None = None,
         parser: OrvMarkupParser | None = None,
@@ -54,6 +65,8 @@ class WorkspaceController:
         self._site_builder = site_builder
         self._epub_builder = epub_builder
         self._glossary_checker = glossary_checker or GlossaryChecker()
+        self._quality_auditor = quality_auditor or QualityAuditor()
+        self._auto_fixer = auto_fixer or TypographyAutoFixer()
         self._active_story = active_story or config.story
         self._parser = parser or OrvMarkupParser()
         self._serializer = serializer or OrvMarkupSerializer()
@@ -123,6 +136,8 @@ class WorkspaceController:
             site_builder=self._site_builder,
             epub_builder=self._epub_builder,
             glossary_checker=self._glossary_checker,
+            quality_auditor=self._quality_auditor,
+            auto_fixer=self._auto_fixer,
             active_story=entry.story,
             parser=self._parser,
             serializer=self._serializer,
@@ -240,9 +255,10 @@ class WorkspaceController:
         payload_data: dict[str, Any],
         *,
         strict_glossary: bool = False,
+        auto_fix: bool = False,
         dry_run: bool = False,
     ) -> dict[str, Any]:
-        """Apply, validate, and optionally persist a translated JSON payload."""
+        """Apply, optionally auto-fix typography, validate, and persist a translated payload."""
         source = self._source_repo.load(chapter_number)
         payload = TranslatedPayload.from_dict(
             payload_data, fallback_chapter_number=chapter_number
@@ -254,8 +270,15 @@ class WorkspaceController:
             )
 
         translated = apply_payload(source, payload)
+        fixes_applied: tuple[AutoFixChange, ...] = ()
+        if auto_fix:
+            fix_res = self._auto_fixer.fix_chapter(translated, source)
+            translated = fix_res.chapter
+            fixes_applied = fix_res.changes
+
         structural_report = self._validator.validate_translation(source, translated)
         glossary_report = self._glossary_checker.check(source, translated, self.load_glossary())
+        qa_report = self._quality_auditor.audit_chapter(translated, source)
 
         accepted = (
             structural_report.is_valid
@@ -274,7 +297,82 @@ class WorkspaceController:
             "output_path": str(saved_path) if saved_path is not None else None,
             "structural_validation": serialize_report(structural_report),
             "glossary_validation": serialize_report(glossary_report),
+            "qa_fixes": [f.to_dict() for f in fixes_applied],
+            "qa_audit": serialize_report(qa_report),
         }
+
+    def audit_chapters(
+        self,
+        chapter_numbers: list[int] | None = None,
+        *,
+        fix: bool = False,
+        suspects_output: Path | None = None,
+    ) -> AuditSummary:
+        """Run Level 1 deterministic QA checks (and optional typography auto-fix)."""
+        source_set = set(self._source_repo.list_chapter_numbers())
+        translated_nums = self._translated_repo.list_chapter_numbers()
+        translated_set = set(translated_nums)
+        targets = sorted(chapter_numbers) if chapter_numbers is not None else translated_nums
+
+        chapter_reports: list[ChapterAuditReport] = []
+        suspect_inputs: list[tuple[Chapter, Chapter | None, ValidationReport]] = []
+
+        for num in targets:
+            if num not in translated_set:
+                chapter_reports.append(
+                    ChapterAuditReport(
+                        report=ValidationReport(
+                            chapter_number=num,
+                            issues=(
+                                ValidationIssue(
+                                    code="MISSING_TRANSLATION",
+                                    severity=Severity.ERROR,
+                                    message=f"Translated chapter {num}.txt does not exist.",
+                                ),
+                            ),
+                        )
+                    )
+                )
+                continue
+
+            src = self._source_repo.load(num) if num in source_set else None
+            dst = self._translated_repo.load(num)
+            fixes: tuple[AutoFixChange, ...] = ()
+            if fix:
+                fix_res = self._auto_fixer.fix_chapter(dst, src)
+                if fix_res.changes:
+                    self._translated_repo.save(fix_res.chapter)
+                    dst = fix_res.chapter
+                    fixes = fix_res.changes
+
+            report = self._quality_auditor.audit_chapter(dst, src)
+            chapter_reports.append(ChapterAuditReport(report=report, fixes_applied=fixes))
+            if report.issues:
+                suspect_inputs.append((dst, src, report))
+
+        if suspects_output is not None:
+            suspects_payload = build_suspects_payload(
+                story_slug=self._active_story.slug,
+                chapter_pairs=suspect_inputs,
+            )
+            suspects_output.parent.mkdir(parents=True, exist_ok=True)
+            suspects_output.write_text(
+                json.dumps(suspects_payload, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+
+        error_count = sum(len(rep.report.errors) for rep in chapter_reports)
+        warning_count = sum(len(rep.report.warnings) for rep in chapter_reports)
+        fixes_count = sum(len(rep.fixes_applied) for rep in chapter_reports)
+        return AuditSummary(
+            story_slug=self._active_story.slug,
+            checked_chapters=len(chapter_reports),
+            error_count=error_count,
+            warning_count=warning_count,
+            fixes_count=fixes_count,
+            is_valid=(error_count == 0),
+            chapters=tuple(chapter_reports),
+        )
 
     def check_glossary(self, chapter_numbers: list[int] | None = None) -> ValidationSummary:
         """Run deterministic glossary compliance checks across translated chapters."""

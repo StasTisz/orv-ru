@@ -102,9 +102,43 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Reject payload if glossary warnings are present",
     )
     imp_p.add_argument(
+        "--auto-fix",
+        action="store_true",
+        help="Deterministically normalize safe Russian typography before saving",
+    )
+    imp_p.add_argument(
         "--dry-run",
         action="store_true",
         help="Validate without writing the translated .txt file",
+    )
+
+    aud_p = sub.add_parser(
+        "audit",
+        parents=[sub_common],
+        help="Run deterministic Level 1 QA checks, optional auto-fix, and export suspects",
+    )
+    aud_p.add_argument(
+        "--chapters",
+        type=int,
+        nargs="+",
+        default=None,
+        help="Specific chapter numbers to audit",
+    )
+    aud_p.add_argument(
+        "--fix",
+        action="store_true",
+        help="Apply safe deterministic typography fixes in-place before auditing",
+    )
+    aud_p.add_argument(
+        "--strict",
+        action="store_true",
+        help="Treat QA warnings as exit code 1",
+    )
+    aud_p.add_argument(
+        "--export-suspects",
+        type=Path,
+        default=None,
+        help="Optional path to export compact suspects JSON for flagged blocks only",
     )
 
     gl_p = sub.add_parser(
@@ -240,14 +274,20 @@ def _cmd_import_translation(args: argparse.Namespace, controller: WorkspaceContr
         args.chapter,
         raw_payload,
         strict_glossary=args.strict_glossary,
+        auto_fix=args.auto_fix,
         dry_run=args.dry_run,
     )
     st_val = res["structural_validation"]
     gl_val = res["glossary_validation"]
+    qa_val = res["qa_audit"]
     lines = [
         f"Глава {args.chapter}: {'ПРИНЯТА' if res['accepted'] else 'ОТКЛОНЕНА'}",
         f"Структура: ошибок={st_val['error_count']}, предупреждений={st_val['warning_count']}",
         f"Глоссарий: ошибок={gl_val['error_count']}, предупреждений={gl_val['warning_count']}",
+        (
+            f"QA-аудит: исправлений={len(res['qa_fixes'])}, "
+            f"предупреждений={qa_val['warning_count']}"
+        ),
     ]
     if res["saved"]:
         lines.append(f"Сохранено в: {res['output_path']}")
@@ -364,6 +404,33 @@ def _cmd_build_epub(args: argparse.Namespace, controller: WorkspaceController) -
     return 0
 
 
+def _cmd_audit(args: argparse.Namespace, controller: WorkspaceController) -> int:
+    summary = controller.audit_chapters(
+        chapter_numbers=args.chapters,
+        fix=args.fix,
+        suspects_output=args.export_suspects,
+    )
+    lines = [
+        (
+            f"QA-аудит ({summary.story_slug}): глав={summary.checked_chapters}, "
+            f"автоисправлений={summary.fixes_count}"
+        ),
+        f"Ошибок: {summary.error_count} | Предупреждений: {summary.warning_count}",
+    ]
+    for ch in summary.chapters:
+        for issue in ch.report.issues:
+            loc = f"блок {issue.block_index}" if issue.block_index is not None else "заголовок"
+            lines.append(
+                f"  [{issue.severity.upper()}] гл.{ch.chapter_number} ({loc}) "
+                f"{issue.code}: {issue.message}"
+            )
+    if args.export_suspects is not None:
+        lines.append(f"Подозрительные блоки сохранены в: {args.export_suspects}")
+    _print_output(summary.to_dict(), as_json=args.as_json, text_lines=lines)
+    ok = summary.is_valid and (not args.strict or summary.warning_count == 0)
+    return 0 if ok else 1
+
+
 def _cmd_serve(args: argparse.Namespace, controller: WorkspaceController) -> int:
     site_dir = controller.config.paths.site_output
     if not site_dir.is_dir():
@@ -388,6 +455,7 @@ _COMMAND_HANDLERS: dict[str, _CommandHandler] = {
     "export-packet": _cmd_export_packet,
     "import-translation": _cmd_import_translation,
     "check-glossary": _cmd_check_glossary,
+    "audit": _cmd_audit,
     "translate": _cmd_translate,
     "build-site": _cmd_build_site,
     "build-epub": _cmd_build_epub,
