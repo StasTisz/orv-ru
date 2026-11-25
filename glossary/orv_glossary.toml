@@ -56,9 +56,9 @@ target = "Анна Крофт"
 
 [[characters]]
 source = "Lee Jihye"
-target = "Ли Джихё"
-aliases = ["Джихё"]
-forbidden = ["Ли Чжихё"]
+target = "Ли Джихе"
+aliases = ["Джихе"]
+forbidden = ["Ли Чжихе"]
 
 [[characters]]
 source = "Lee Hyunsung"
@@ -112,13 +112,13 @@ aliases = ["Миа"]
 
 [[characters]]
 source = "Han Myungoh"
-target = "Хан Мёно"
-aliases = ["Мёно"]
+target = "Хан Мёнго"
+aliases = ["Мёнго"]
 
 [[characters]]
 source = "Lee Sookyung"
-target = "Ли Сугён"
-aliases = ["Сугён"]
+target = "Ли Сукён"
+aliases = ["Сукён"]
 
 [[characters]]
 source = "Bihyung"
@@ -131,7 +131,7 @@ target = "Бию"
 
 [[characters]]
 source = "Breaking the Sky Sword Saint"
-target = "Святая Меча, Рассекающего Небеса"
+target = "Святая, Рассекающая Небеса Мечом"
 aliases = ["Святая Меча"]
 
 [[characters]]
@@ -315,7 +315,7 @@ target = "Хо Пун"
 
 [[constellations]]
 source = "Demon King of Salvation"
-target = "Король Демонов Спасения"
+target = "Демонический Король Спасения"
 
 [[constellations]]
 source = "Oldest Dream"
@@ -372,7 +372,7 @@ target = "Морской Бог Войны"
 
 [[constellations]]
 source = "Mass Production Maker"
-target = "Мастер Массового Производства"
+target = "Массовый Производитель"
 
 [[constellations]]
 source = "Monarch of the Small Fries"
@@ -394,10 +394,6 @@ target = "Злобный Софист"
 
 [[constellations]]
 source = "Heir of the Eternal Name"
-target = "Наследник Вечного Имени"
-
-[[constellations]]
-source = "Heir to the Eternal Name"
 target = "Наследник Вечного Имени"
 
 [[constellations]]
@@ -563,7 +559,6 @@ target = "Олимп"
 [[nebulae]]
 source = "Olympus Technology"
 target = "Олимп Текнолоджи"
-aliases = ["Технологии Олимпа"]
 
 [[nebulae]]
 source = "Asgard"
@@ -644,8 +639,7 @@ target = "Секта Нищих"
 
 [[nebulae]]
 source = "Ten Evils"
-target = "Десять Злодеев"
-aliases = ["Десятка Зол"]
+target = "Десять Зол"
 
 [[nebulae]]
 source = "Round Table"
@@ -657,11 +651,11 @@ target = "Заратустра"
 
 [[nebulae]]
 source = "Recorders of Fear"
-target = "Летописцы Страха"
+target = "Регистраторы Страха"
 
 [[nebulae]]
 source = "Recorder of Fear"
-target = "Летописец Страха"
+target = "Регистратор Страха"
 
 [[nebulae]]
 source = "Han Sooyoung Corporation"
@@ -699,7 +693,6 @@ forbidden = ["Доккаэби", "Доккаби"]
 [[terms]]
 source = "Wenny"
 target = "Венни"
-aliases = ["Домовой"]
 notes = "Раса венни / «люди-венни» (Wenny people)."
 
 [[terms]]
@@ -725,27 +718,22 @@ target = "Возвращенец"
 [[terms]]
 source = "Reincarnator"
 target = "Реинкарнатор"
-aliases = ["Перерожденец"]
 
 [[terms]]
 source = "Myth-grade"
 target = "Мифического ранга"
-aliases = ["Мифический ранг", "мифического класса"]
 
 [[terms]]
 source = "Narrative-grade"
-target = "Легендарного ранга"
-aliases = ["Нарративного ранга", "легендарного класса"]
+target = "Повествовательного ранга"
 
 [[terms]]
 source = "Fable-grade"
-target = "Сказательного ранга"
-aliases = ["легендарного ранга"]
+target = "Легендарного ранга"
 
 [[terms]]
 source = "Historical-grade"
 target = "Исторического ранга"
-aliases = ["исторического класса"]
 
 [[terms]]
 source = "Giant Story"
@@ -856,17 +844,10 @@ target = "[Аватар]"
 [[skills]]
 source = "[Future Sight]"
 target = "[Предвидение]"
-aliases = ["[Взгляд в будущее]"]
 
 [[skills]]
 source = "[Lie Detection]"
-target = "[Распознавание Лжи]"
-aliases = ["[Детектор Лжи]"]
-
-[[skills]]
-source = "Lie Detection"
-target = "Распознавание Лжи"
-aliases = ["Детектор Лжи"]
+target = ["[Детектор Лжи]"]
 
 [[skills]]
 source = "[Bookmark]"
@@ -888,7 +869,6 @@ target = "[Искусство Меча, Рассекающего Небеса]"
 [[skills]]
 source = "[Time of Judgment]"
 target = "[Час Правосудия]"
-aliases = ["[Время Суда]"]
 
 [[skills]]
 source = "[Character List]"
@@ -897,12 +877,10 @@ target = "[Список Персонажей]"
 [[skills]]
 source = "[Character Summary]"
 target = "[Сводка Персонажа]"
-aliases = ["[Окно Персонажа]"]
 
 [[skills]]
 source = "[Baekcheong-ganggi]"
 target = "[Бело-Синяя Аура Меча]"
-aliases = ["[Пэкчхон-ганги]"]
 
 [[skills]]
 source = "[White and Blue Steel]"
@@ -949,7 +927,6 @@ target = "[Божественные Кулаки Ста Шагов]"
 [[skills]]
 source = "[Midday Tryst]"
 target = "[Полуденная Встреча]"
-aliases = ["[Полуденное Свидание]"]
 
 [[skills]]
 source = "[Sentence Enhancement]"
@@ -1014,7 +991,6 @@ target = "Абсолютный Трон"
 [[items]]
 source = "Dark Heavenly Moon Spear"
 target = "Копьё Тёмной Небесной Луны"
-aliases = ["Копье Темной Небесной Луны"]
 
 [[items]]
 source = "Unrealized Thought"
@@ -1026,7 +1002,6 @@ notes = "Использовать строго в единственном чи�
 [[items]]
 source = "Thoughts of Almost Everything"
 target = "Мысли Обо Всём"
-aliases = ["Мысли обо всем"]
 
 # ==============================================================================
 # Локации и ключевые места побочной истории и основного сюжета
@@ -1038,7 +1013,7 @@ target = "Снежное Поле"
 
 [[locations]]
 source = "Fear Realm"
-target = "Царство Страха"
+target = "Измерение Страха"
 
 [[locations]]
 source = "Recycling Center"
@@ -1050,7 +1025,7 @@ target = "Разлом Времени"
 
 [[locations]]
 source = "Geumho Station"
-target = "Станция Кымхо"
+target = "Станция Гымхо"
 
 [[locations]]
 source = "Chungmuro"
