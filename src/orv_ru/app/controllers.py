@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Any
 
@@ -19,7 +20,10 @@ from orv_ru.qa import (
     AuditSummary,
     AutoFixChange,
     ChapterAuditReport,
+    MorphologyAuditor,
+    PolishResult,
     QualityAuditor,
+    SuspectsPolisher,
     TypographyAutoFixer,
     build_suspects_payload,
 )
@@ -52,6 +56,7 @@ class WorkspaceController:
         epub_builder: BookBuilder,
         glossary_checker: GlossaryChecker | None = None,
         quality_auditor: QualityAuditor | None = None,
+        morphology_auditor: MorphologyAuditor | None = None,
         auto_fixer: TypographyAutoFixer | None = None,
         *,
         active_story: StoryMetadata | None = None,
@@ -66,6 +71,7 @@ class WorkspaceController:
         self._epub_builder = epub_builder
         self._glossary_checker = glossary_checker or GlossaryChecker()
         self._quality_auditor = quality_auditor or QualityAuditor()
+        self._morphology_auditor = morphology_auditor or MorphologyAuditor()
         self._auto_fixer = auto_fixer or TypographyAutoFixer()
         self._active_story = active_story or config.story
         self._parser = parser or OrvMarkupParser()
@@ -137,6 +143,7 @@ class WorkspaceController:
             epub_builder=self._epub_builder,
             glossary_checker=self._glossary_checker,
             quality_auditor=self._quality_auditor,
+            morphology_auditor=self._morphology_auditor,
             auto_fixer=self._auto_fixer,
             active_story=entry.story,
             parser=self._parser,
@@ -306,9 +313,10 @@ class WorkspaceController:
         chapter_numbers: list[int] | None = None,
         *,
         fix: bool = False,
+        use_morphology: bool = True,
         suspects_output: Path | None = None,
     ) -> AuditSummary:
-        """Run Level 1 deterministic QA checks (and optional typography auto-fix)."""
+        """Run Level 1 + Level 2 deterministic QA checks (and optional typography auto-fix)."""
         source_set = set(self._source_repo.list_chapter_numbers())
         translated_nums = self._translated_repo.list_chapter_numbers()
         translated_set = set(translated_nums)
@@ -345,7 +353,13 @@ class WorkspaceController:
                     dst = fix_res.chapter
                     fixes = fix_res.changes
 
-            report = self._quality_auditor.audit_chapter(dst, src)
+            l1_report = self._quality_auditor.audit_chapter(dst, src)
+            combined_issues = list(l1_report.issues)
+            if use_morphology:
+                l2_report = self._morphology_auditor.audit_chapter(dst)
+                combined_issues.extend(l2_report.issues)
+
+            report = ValidationReport(chapter_number=num, issues=tuple(combined_issues))
             chapter_reports.append(ChapterAuditReport(report=report, fixes_applied=fixes))
             if report.issues:
                 suspect_inputs.append((dst, src, report))
@@ -473,8 +487,13 @@ class WorkspaceController:
         force: bool = False,
         max_chars: int = 3500,
         max_retries: int = 2,
+        workers: int = 1,
+        suspects_output: Path | None = None,
     ) -> dict[str, Any]:
         """Run resumable LLM translation across selected chapters, saving each valid result."""
+        if workers <= 0:
+            raise ValueError(f"--workers must be positive, got {workers}")
+
         targets, skipped = self._select_translation_targets(
             chapter_numbers=chapter_numbers, next_count=next_count, force=force
         )
@@ -485,28 +504,66 @@ class WorkspaceController:
             glossary_checker=self._glossary_checker,
             prompt_builder=PromptBuilder(self._active_story),
             chunker=ChapterChunker(max_chars=max_chars),
+            auto_fixer=self._auto_fixer,
             max_retries=max_retries,
         )
 
         translated_results: list[dict[str, Any]] = []
         failed_results: list[dict[str, Any]] = []
 
-        for num in targets:
+        def _run_one(num: int) -> tuple[int, Any]:
             src = self._source_repo.load(num)
-            try:
-                res = pipeline.translate(src, glossary.entries, rules=glossary.rules)
-                out_path = self._translated_repo.save(res.chapter)
-                translated_results.append(
-                    {
-                        "chapter_number": num,
-                        "chunks_processed": res.chunks_processed,
-                        "attempts": res.attempts,
-                        "glossary_warnings": len(res.glossary_report.warnings),
-                        "output_path": str(out_path),
-                    }
-                )
-            except Exception as exc:
-                failed_results.append({"chapter_number": num, "error": str(exc)})
+            res = pipeline.translate(src, glossary.entries, rules=glossary.rules)
+            out_path = self._translated_repo.save(res.chapter)
+            return num, (res, out_path)
+
+        if workers == 1 or len(targets) <= 1:
+            for num in targets:
+                try:
+                    _, (res, out_path) = _run_one(num)
+                    translated_results.append(
+                        {
+                            "chapter_number": num,
+                            "chunks_processed": res.chunks_processed,
+                            "attempts": res.attempts,
+                            "glossary_warnings": len(res.glossary_report.warnings),
+                            "output_path": str(out_path),
+                        }
+                    )
+                except Exception as exc:
+                    failed_results.append({"chapter_number": num, "error": str(exc)})
+        else:
+            with ThreadPoolExecutor(max_workers=workers) as pool:
+                future_map = {pool.submit(_run_one, num): num for num in targets}
+                for fut in as_completed(future_map):
+                    num = future_map[fut]
+                    try:
+                        _, (res, out_path) = fut.result()
+                        translated_results.append(
+                            {
+                                "chapter_number": num,
+                                "chunks_processed": res.chunks_processed,
+                                "attempts": res.attempts,
+                                "glossary_warnings": len(res.glossary_report.warnings),
+                                "output_path": str(out_path),
+                            }
+                        )
+                    except Exception as exc:
+                        failed_results.append({"chapter_number": num, "error": str(exc)})
+
+            translated_results.sort(key=lambda item: int(item["chapter_number"]))
+            failed_results.sort(key=lambda item: int(item["chapter_number"]))
+
+        qa_warnings = 0
+        if suspects_output is not None and translated_results:
+            done_nums = [int(item["chapter_number"]) for item in translated_results]
+            audit_res = self.audit_chapters(
+                chapter_numbers=done_nums,
+                fix=False,
+                use_morphology=True,
+                suspects_output=suspects_output,
+            )
+            qa_warnings = audit_res.warning_count
 
         return {
             "skipped_already_valid": skipped,
@@ -514,7 +571,32 @@ class WorkspaceController:
             "failed": failed_results,
             "translated_count": len(translated_results),
             "failed_count": len(failed_results),
+            "qa_warnings": qa_warnings,
+            "suspects_output": str(suspects_output) if suspects_output is not None else None,
         }
+
+    def polish_suspects(
+        self,
+        llm_client: LLMClient,
+        suspects_data: dict[str, Any],
+        *,
+        batch_size: int = 10,
+        dry_run: bool = False,
+    ) -> PolishResult:
+        """Use a strong LLM client to polish only the flagged blocks in `suspects_data`."""
+        polisher = SuspectsPolisher(
+            llm_client=llm_client,
+            validator=self._validator,
+            glossary_checker=self._glossary_checker,
+            batch_size=batch_size,
+        )
+        return polisher.polish_payload(
+            suspects_data=suspects_data,
+            source_repo=self._source_repo,
+            translated_repo=self._translated_repo,
+            glossary=self.load_glossary(),
+            dry_run=dry_run,
+        )
 
     def build_site(
         self,

@@ -1,7 +1,11 @@
 """Black-box #4: Glossary, protected payload export/import, chunker, and LLM pipeline."""
 
 from orv_ru.translation.chunker import ChapterChunker, TranslationChunk
-from orv_ru.translation.clients import GeminiLLMClient, extract_json_object
+from orv_ru.translation.clients import (
+    GeminiLLMClient,
+    OpenAICompatibleLLMClient,
+    extract_json_object,
+)
 from orv_ru.translation.exceptions import (
     LLMClientError,
     TranslationError,
@@ -29,6 +33,7 @@ __all__ = [
     "GlossaryChecker",
     "GlossaryLoader",
     "LLMClientError",
+    "OpenAICompatibleLLMClient",
     "PromptBuilder",
     "TranslatableItem",
     "TranslatedItem",

@@ -9,6 +9,8 @@ dependencies = []
 [project.optional-dependencies]
 dev = ["pytest>=8.0", "ruff>=0.6", "mypy>=1.11"]
 gemini = ["google-genai>=1.0"]
+openai = ["openai>=1.0"]
+qa = ["pymorphy3>=2.0", "razdel>=0.5"]
 
 [project.scripts]
 orv-ru = "orv_ru.app.cli:main"
@@ -35,5 +37,5 @@ strict = true
 mypy_path = "src"
 
 [[tool.mypy.overrides]]
-module = ["google", "google.*"]
+module = ["google", "google.*", "pymorphy3", "pymorphy3.*", "razdel", "razdel.*"]
 ignore_missing_imports = true

@@ -2,14 +2,16 @@
 
 from __future__ import annotations
 
+import re
 from typing import Any
 
-from orv_ru.domain.blocks import count_br_tags
+from orv_ru.domain.blocks import BlockKind, count_br_tags
 from orv_ru.domain.chapter import Chapter
 from orv_ru.domain.story import GlossaryEntry
 from orv_ru.domain.validation import Severity, ValidationIssue, ValidationReport
 from orv_ru.parsing.validator import StructuralValidator
 from orv_ru.ports.translator import LLMClient, TranslationResult
+from orv_ru.qa.autofix import TypographyAutoFixer
 from orv_ru.translation.chunker import ChapterChunker, TranslationChunk
 from orv_ru.translation.clients import extract_json_object
 from orv_ru.translation.exceptions import TranslationError, TranslationValidationError
@@ -23,6 +25,9 @@ from orv_ru.translation.packet import (
 )
 from orv_ru.translation.prompt_builder import PromptBuilder
 
+_LATIN_LEAK_RE = re.compile(r"\b[a-z]{3,}(?:\s+[a-z]{2,}){3,}\b")
+_SKILL_BRACKET_RE = re.compile(r"\[(?!\d+\])([^\[\]\n]+)\]")
+
 
 class ChapterTranslationPipeline:
     """Orchestrates chunking, prompting, retries, structural QA, and glossary QA."""
@@ -35,6 +40,7 @@ class ChapterTranslationPipeline:
         prompt_builder: PromptBuilder,
         *,
         chunker: ChapterChunker | None = None,
+        auto_fixer: TypographyAutoFixer | None = None,
         max_retries: int = 2,
     ) -> None:
         self._llm = llm_client
@@ -42,6 +48,7 @@ class ChapterTranslationPipeline:
         self._glossary_checker = glossary_checker
         self._prompt_builder = prompt_builder
         self._chunker = chunker or ChapterChunker()
+        self._auto_fixer = auto_fixer or TypographyAutoFixer()
         self._max_retries = max_retries
 
     def translate(
@@ -83,7 +90,9 @@ class ChapterTranslationPipeline:
             title=translated_title,
             items=tuple(collected_items),
         )
-        translated_chapter = apply_payload(chapter, payload)
+        translated_chapter = self._auto_fixer.fix_chapter(
+            apply_payload(chapter, payload), chapter
+        ).chapter
 
         structural_report = self._validator.validate_translation(chapter, translated_chapter)
         if not structural_report.is_valid:
@@ -232,6 +241,27 @@ class ChapterTranslationPipeline:
                         f"block_index {expected.block_index} line {line_pos}: expected {exp_br} "
                         f"<br> tag(s), got {got_br}."
                     )
+                if expected.kind != BlockKind.NOTICE:
+                    src_skills = _SKILL_BRACKET_RE.findall(src_line)
+                    dst_skills = _SKILL_BRACKET_RE.findall(dst_line)
+                    if len(src_skills) != len(dst_skills):
+                        errors.append(
+                            f"block_index {expected.block_index} line {line_pos}: preserve `[...]` "
+                            f"skill/system brackets (expected {len(src_skills)}, got {len(dst_skills)})."
+                        )
+                    latin_match = _LATIN_LEAK_RE.search(dst_line)
+                    if latin_match and not (
+                        latin_match.group(0) in src_line and len(latin_match.group(0)) < 28
+                    ):
+                        errors.append(
+                            f"block_index {expected.block_index} line {line_pos}: untranslated "
+                            f"English fragment '{latin_match.group(0)}'."
+                        )
+                    if len(src_line.strip()) >= 60 and len(dst_line.strip()) < len(src_line.strip()) * 0.40:
+                        errors.append(
+                            f"block_index {expected.block_index} line {line_pos}: translation "
+                            "looks truncated compared to source length."
+                        )
                 for entry in forbidden_entries:
                     if compile_source_pattern(entry.source).search(src_line):
                         for bad in entry.forbidden:

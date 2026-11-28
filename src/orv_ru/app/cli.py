@@ -13,7 +13,8 @@ from pathlib import Path
 from typing import Any
 
 from orv_ru.app.controllers import WorkspaceController
-from orv_ru.translation import GeminiLLMClient
+from orv_ru.ports.translator import LLMClient
+from orv_ru.translation import GeminiLLMClient, OpenAICompatibleLLMClient
 
 _CommandHandler = Callable[[argparse.Namespace, WorkspaceController], int]
 
@@ -135,11 +136,30 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Treat QA warnings as exit code 1",
     )
     aud_p.add_argument(
+        "--no-morphology",
+        action="store_true",
+        help="Skip Level 2 pymorphy3/razdel morphological checks",
+    )
+    aud_p.add_argument(
         "--export-suspects",
         type=Path,
         default=None,
         help="Optional path to export compact suspects JSON for flagged blocks only",
     )
+
+    pol_p = sub.add_parser(
+        "polish-suspects",
+        parents=[sub_common],
+        help="Polish only flagged suspect blocks from suspects.json via a strong LLM",
+    )
+    pol_p.add_argument("file", type=Path, help="Path to suspects.json file")
+    pol_p.add_argument("--provider", choices=("gemini", "openai"), default="openai")
+    pol_p.add_argument("--model", default="glm-5.4", help="Model ID (default: glm-5.4)")
+    pol_p.add_argument("--base-url", default=None, help="OpenAI-compatible base URL")
+    pol_p.add_argument("--api-key-env", default=None, help="Environment variable with API key")
+    pol_p.add_argument("--reasoning-effort", default=None, help="Reasoning effort (e.g. high)")
+    pol_p.add_argument("--batch-size", type=int, default=10, help="Suspects per LLM batch")
+    pol_p.add_argument("--dry-run", action="store_true", help="Validate polish fixes without saving")
 
     gl_p = sub.add_parser(
         "check-glossary",
@@ -179,10 +199,30 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Translate next N untranslated chapters",
     )
     tr_p.add_argument(
-        "--model", default="gemini-2.5-pro", help="Gemini model ID (default: gemini-2.5-pro)"
+        "--provider",
+        choices=("gemini", "openai"),
+        default="gemini",
+        help="LLM provider backend (gemini or openai-compatible, e.g. ZCode GLM)",
+    )
+    tr_p.add_argument(
+        "--model", default="gemini-2.5-pro", help="Model ID (e.g. gemini-2.5-pro or GLM-5.3-Flash)"
+    )
+    tr_p.add_argument("--base-url", default=None, help="OpenAI-compatible base URL (or OPENAI_BASE_URL)")
+    tr_p.add_argument("--api-key-env", default=None, help="Env variable holding API key")
+    tr_p.add_argument(
+        "--reasoning-effort",
+        default=None,
+        help="Optional reasoning effort for OpenAI-compatible reasoning models (e.g. high)",
     )
     tr_p.add_argument("--max-chars", type=int, default=3500, help="Max characters per LLM chunk")
     tr_p.add_argument("--max-retries", type=int, default=2, help="Self-healing retries per chunk")
+    tr_p.add_argument("--workers", type=int, default=1, help="Parallel chapter translation workers")
+    tr_p.add_argument(
+        "--export-suspects",
+        type=Path,
+        default=None,
+        help="Optional path to save suspects JSON after translation",
+    )
     tr_p.add_argument("--force", action="store_true", help="Re-translate even valid chapters")
     tr_p.add_argument(
         "--dry-run",
@@ -316,6 +356,18 @@ def _cmd_check_glossary(args: argparse.Namespace, controller: WorkspaceControlle
     return 0 if ok else 1
 
 
+def _build_llm_client(args: argparse.Namespace) -> LLMClient:
+    if args.provider == "openai":
+        key_env = args.api_key_env or "OPENAI_API_KEY"
+        return OpenAICompatibleLLMClient(
+            model=args.model,
+            base_url=args.base_url,
+            api_key_env=key_env,
+            reasoning_effort=args.reasoning_effort,
+        )
+    return GeminiLLMClient(model=args.model)
+
+
 def _cmd_translate(args: argparse.Namespace, controller: WorkspaceController) -> int:
     if args.dry_run:
         plan = controller.plan_translation(
@@ -338,7 +390,7 @@ def _cmd_translate(args: argparse.Namespace, controller: WorkspaceController) ->
         _print_output(plan, as_json=args.as_json, text_lines=lines)
         return 0
 
-    client = GeminiLLMClient(model=args.model)
+    client = _build_llm_client(args)
     result = controller.translate_chapters(
         client,
         chapter_numbers=args.chapters,
@@ -346,18 +398,42 @@ def _cmd_translate(args: argparse.Namespace, controller: WorkspaceController) ->
         force=args.force,
         max_chars=args.max_chars,
         max_retries=args.max_retries,
+        workers=args.workers,
+        suspects_output=args.export_suspects,
     )
     lines = [
         (
             f"Переведено глав: {result['translated_count']}, "
             f"пропущено: {len(result['skipped_already_valid'])}, "
-            f"ошибок: {result['failed_count']}"
+            f"ошибок: {result['failed_count']}, "
+            f"QA-замечаний: {result['qa_warnings']}"
         )
     ]
     for item in result["failed"]:
         lines.append(f"  [ERROR] гл.{item['chapter_number']}: {item['error']}")
     _print_output(result, as_json=args.as_json, text_lines=lines)
     return 0 if result["failed_count"] == 0 else 1
+
+
+def _cmd_polish_suspects(args: argparse.Namespace, controller: WorkspaceController) -> int:
+    suspects_data: dict[str, Any] = json.loads(args.file.read_text(encoding="utf-8"))
+    client = _build_llm_client(args)
+    res = controller.polish_suspects(
+        client,
+        suspects_data,
+        batch_size=args.batch_size,
+        dry_run=args.dry_run,
+    )
+    lines = [
+        (
+            f"Проверено подозрений: {res.suspects_reviewed}, "
+            f"обновлено блоков: {res.blocks_updated}, "
+            f"отклонено: {res.blocks_rejected}"
+        ),
+        f"Сохранены главы: {list(res.chapters_saved)}",
+    ]
+    _print_output(res.to_dict(), as_json=args.as_json, text_lines=lines)
+    return 0
 
 
 def _cmd_build_site(args: argparse.Namespace, controller: WorkspaceController) -> int:
@@ -408,6 +484,7 @@ def _cmd_audit(args: argparse.Namespace, controller: WorkspaceController) -> int
     summary = controller.audit_chapters(
         chapter_numbers=args.chapters,
         fix=args.fix,
+        use_morphology=not args.no_morphology,
         suspects_output=args.export_suspects,
     )
     lines = [
@@ -456,6 +533,7 @@ _COMMAND_HANDLERS: dict[str, _CommandHandler] = {
     "import-translation": _cmd_import_translation,
     "check-glossary": _cmd_check_glossary,
     "audit": _cmd_audit,
+    "polish-suspects": _cmd_polish_suspects,
     "translate": _cmd_translate,
     "build-site": _cmd_build_site,
     "build-epub": _cmd_build_epub,
